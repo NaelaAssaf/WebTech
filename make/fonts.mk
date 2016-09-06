@@ -5,7 +5,7 @@
 # ============================================================================ #
 
 fonts_srcdir   := assets-src/scss/vendor/bootstrap/assets/fonts/bootstrap
-fonts_destdir  := BIT01-webtech/assets/fonts
+fonts_destdir  := public/assets/fonts
 fonts_srclist  := $(shell find $(fonts_srcdir) -name "glyphicons-halflings-regular.*")
 fonts_destlist := $(subst $(fonts_srcdir),$(fonts_destdir),$(fonts_srclist))
 

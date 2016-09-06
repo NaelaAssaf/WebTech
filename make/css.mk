@@ -9,7 +9,7 @@ sass := /usr/bin/sass
 scss_dir := assets-src/scss
 scss_files := $(shell find $(scss_dir) -maxdepth 1 -name "*.scss" -not -name "_*")
 
-css_dir := BIT01-webtech/assets/css
+css_dir := public/assets/css
 css_files := $(addprefix $(css_dir)/,$(notdir $(scss_files:.scss=.css)))
 
 # ---------------------------------------------------------------------------- #

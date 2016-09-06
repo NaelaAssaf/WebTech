@@ -13,7 +13,7 @@ update:
 
 .PHONY: serve
 serve:
-	php -S localhost:8000 -t BIT01-webtech
+	php -S localhost:8000 -t public
 
 # ============================================================================ #
 # Include all *.mk files in ./make
