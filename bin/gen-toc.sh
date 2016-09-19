@@ -27,6 +27,7 @@ for file in "$@"; do
 
    path=$(${BINDIR}/sluggify.sh ${file})
    
-   pandoc --toc --template ${template} ${file} | sed "s|href=\"#|href=\"${BASE_URL}/${path}#|g"
+   # pandoc --toc --template ${template} ${file} | sed "s|href=\"#|href=\"${BASE_URL}/${path}#|g"
+   pandoc --toc --template ${template} ${file} | sed "s|href=\"#|href=\"${path}#|g"
 
 done
