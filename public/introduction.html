@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="generator" content="pandoc" />
+
+        <meta name="author" content="Arne Soete" />
+   
+        <meta name="date" content="2016-09-21" />
+   
+   
+   <title> - BIT01 Webtechnology -</title>
+
+   
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+   
+   
+   </head>
+<body>
+   
+   
+
+<div class="container-fluid">
+
+   <div class="row">
+
+      <!-- TOC -->
+
+      <div class="col-md-2">
+         <div class="complete-toc">
+                           <h3>Table of contents</h3>
+               <ul> <li><a href=introduction.html#introduction>Introduction</a><ul> <li><a href=introduction.html#resources>Resources</a></li> </ul></li> </ul>
+                     </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+
+      <div class="col-md-10">
+         
+         <div class="site-header">
+            BIT01 Webtechnology
+         </div>
+
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>The purpose of this course is provide and intro to web technologies (HTML, CSS) and dynamic webpages via en introduction to PHP</p>
+<h2 id="resources"><span class="header-section-number">1.1</span> Resources</h2>
+<p>The main cursus is the website located at <a href="https://asoete.github.io/BIT01-webtech" class="uri">https://asoete.github.io/BIT01-webtech</a>.</p>
+         <div class="row">
+            <footer class="col-md-24">
+               <p class="text-center text-muted">
+                  Last modified by
+                  <a href="mailto:arne.soete@howest.be">Arne Soete</a>
+                  at 2016-09-21
+               </p>
+            </footer>
+         </div>
+      </div>
+   </div>
+
+   <!-- FOOTER -->
+
+</div>
+
+<script type="text/javascript">
+(function(){
+
+   var lis = document.querySelectorAll('.complete-toc > ul > li > a');
+
+   var currentPage = location.pathname.split('/').pop();
+
+   for(var i = 0; i < lis.length; ++i ) {
+
+      if( lis[i].pathname.split('/').pop() == currentPage ) {
+
+         console.log(lis[i].parentNode)
+         lis[i].parentNode.classList.add('active');
+      }
+   }
+})()
+</script>
+
+</body>
+</html>
