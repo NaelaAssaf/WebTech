@@ -5,5 +5,5 @@ generator := $(bindir)/gen-toc.sh
 .PHONY: toc
 toc: $(toc.html)
 
-$(toc.html): $(generator) $(mdfiles) | $(pandoc) $(incsdir)
+$(toc.html): $(generator) bin/sluggify.sh $(mdfiles) | $(pandoc) $(incsdir)
 	$(generator) $(mdfiles) > $(toc.html)

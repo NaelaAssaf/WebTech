@@ -1,3 +1,14 @@
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.1)) !default; 
+$font-size-h2:            floor(($font-size-base * 1.8)) !default; 
+$font-size-h3:            floor(($font-size-base * 1.6)) !default;
+$font-size-h4:            floor(($font-size-base * 1.4)) !default;
+$font-size-h5:            floor(($font-size-base * 1.2)) !default;
+$font-size-h6:            floor(($font-size-base * 1.0)) !default; 
+
 // Core variables and mixins
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/mixins";
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/variables";
@@ -23,8 +34,80 @@
 // Components
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/forms";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/navbar";
-// @import "vendor/bootstrap/assets/stylesheets/bootstrap/navs";
+@import "vendor/bootstrap/assets/stylesheets/bootstrap/navs";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/alerts";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/panels";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/badges";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/labels";
+
+// ========================================================================== //
+// TOC
+// ========================================================================== //
+
+.complete-toc {
+
+   padding-right: 10px;
+   @media (min-width: $screen-md-min) {
+      height: 100vh;
+      overflow-y: scroll;
+   }
+
+   @media (max-width: $screen-md-min) {
+      border-bottom: solid lightgray 0.5em;
+      padding-bottom: 1em;
+      maring-bottom: 1em;
+   }
+
+   &>ul {
+
+      @extend .nav;
+      @extend .nav-pills;
+      @extend .nav-stacked;
+
+      & > li.active > a{
+         font-weight: bold;
+      }
+   }
+}
+
+// ========================================================================== //
+// Site
+// ========================================================================== //
+
+.site-header {
+
+   // text-decoration         : underline overline;
+   background                 : midnightblue;
+   border-bottom-left-radius  : 1em;
+   border-bottom-right-radius : 1em;
+   box-shadow                 : 0 0 .9em gray;
+   color                      : white;
+   font-size                  : 1.1em;
+   font-variant               : small-caps;
+   font-weight                : bold;
+   letter-spacing             : .2em;
+   padding                    : 1em;
+   position                   : fixed;
+   right                      : 1em;
+   top: 0px;
+   opacity: 0.5;
+}
+
+// ========================================================================== //
+// Footer
+// ========================================================================== //
+
+footer {
+
+   margin-top: 2em;
+   padding: 2em;
+   border-top: solid lightgray 1px;
+}
+
+// ========================================================================== //
+// Print
+// ========================================================================== //
+
+@media print {
+    h1 {page-break-before: always;}
+}

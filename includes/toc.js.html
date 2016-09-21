@@ -1,0 +1,17 @@
+<script type="text/javascript">
+(function(){
+
+   var lis = document.querySelectorAll('.complete-toc > ul > li > a');
+
+   var currentPage = location.pathname.split('/').pop();
+
+   for(var i = 0; i < lis.length; ++i ) {
+
+      if( lis[i].pathname.split('/').pop() == currentPage ) {
+
+         console.log(lis[i].parentNode)
+         lis[i].parentNode.classList.add('active');
+      }
+   }
+})()
+</script>
