@@ -5,7 +5,7 @@ includes := $(wildcard includes/*)
 .PHONY: html
 html: $(htmlfiles)
 
-$(pubdir)/%.html: $(mddir)/??-%.md $(template) make/html.mk $(toc.html) $(includes)
+$(pubdir)/%.html: $(mddir)/??-%.md $(template) make/html.mk $(toc.html) $(includes) m4/*
 	cat m4/common_macros.m4 $< | m4 -P | pandoc \
 	   --template $(template) \
 	   --title-prefix "BIT01 Webtechnology - " \
