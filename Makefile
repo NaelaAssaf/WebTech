@@ -1,5 +1,5 @@
 pandoc  := /usr/bin/pandoc
-pubdir  := public
+pubdir  := docs
 incsdir := inc
 tpldir  := templates
 bindir  := bin
