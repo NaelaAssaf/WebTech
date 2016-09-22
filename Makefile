@@ -21,7 +21,7 @@ update:
 
 .PHONY: serve
 serve:
-	php -S localhost:8000 -t public & firefox -new-tab localhost:8000 & wait
+	php -S localhost:8000 -t $(pubdir) & firefox -new-tab localhost:8000 & wait
 
 # ============================================================================ #
 # Include all *.mk files in ./make
