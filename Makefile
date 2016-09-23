@@ -1,10 +1,14 @@
-pandoc  := /usr/bin/pandoc
-pubdir  := docs
-incsdir := inc
-tpldir  := templates
-bindir  := bin
-mddir   := md
-mdfiles := $(sort $(wildcard $(mddir)/*md))
+pandoc        := /usr/bin/pandoc
+pubdir        := docs
+incsdir       := inc
+tpldir        := templates
+bindir        := bin
+mddir         := md
+mdfiles       := $(sort $(wildcard $(mddir)/*md))
+embedssrcdir  := embeds
+embedsdestdir := $(pubdir)/embeds
+embeds.php    := $(addprefix $(pubdir)/,$(shell find $(embedssrcdir) -type f ))
+embeds.html   := $(embeds.php:.php=.html)
 
 # ============================================================================ #
 # Procelain

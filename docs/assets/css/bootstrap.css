@@ -2908,10 +2908,21 @@ input[type="button"].btn-block {
   font-weight: bold;
   letter-spacing: .2em;
   padding: 1em;
-  position: fixed;
-  right: 1em;
-  top: 0px;
+  top: 0;
+  margin-bottom: 2em;
+  text-align: center;
   opacity: 0.5; }
+
+.embed-src {
+  background: #f6f6f6;
+  padding: 1em;
+  font-size: 0.9em; }
+
+.embed--output {
+  border-left: solid lightblue  0.5em; }
+
+pre.embed--output {
+  padding: 8px; }
 
 footer {
   margin-top: 2em;

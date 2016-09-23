@@ -88,10 +88,33 @@ $font-size-h6:            floor(($font-size-base * 1.0)) !default;
    font-weight                : bold;
    letter-spacing             : .2em;
    padding                    : 1em;
-   position                   : fixed;
-   right                      : 1em;
-   top: 0px;
+   // position                   : sticky;
+   top: 0;
+   margin-bottom: 2em;
+   text-align: center;
    opacity: 0.5;
+}
+
+// ========================================================================== //
+// Embeds
+// ========================================================================== //
+
+.embed-src {
+
+   background: #f6f6f6;
+   padding: 1em;
+   font-size: 0.9em;
+}
+
+.embed--output {
+
+   border-left: solid lightblue  0.5em;
+
+}
+
+pre.embed--output {
+
+   padding: 8px;
 }
 
 // ========================================================================== //
