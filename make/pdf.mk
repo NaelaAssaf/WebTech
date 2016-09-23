@@ -1,4 +1,4 @@
-pdfdestdir  := $(pubdir)/assets/pdf
+pdfdestdir  := pdf
 pdffile     := $(pdfdestdir)/cursus.pdf
 wkhtmltopdf := /opt/wkhtmltox/bin/wkhtmltopdf
 
