@@ -79,31 +79,31 @@ $lightgray-bg : #f6f6f6;
 
 .site-header {
 
-   // text-decoration         : underline overline;
    // background                 : midnightblue;
-   background                 : $lightgray-bg;
    // border-bottom-left-radius  : 1em;
    // border-bottom-right-radius : 1em;
    // box-shadow                 : 1 0 .9em gray;
-   color                      : #888;
-   font-family: monospace;
-   font-size                  : 1.1em;
-   font-variant               : small-caps;
-   font-weight                : bold;
-   letter-spacing             : .2em;
-   padding                    : 1em;
+   // opacity                    : 0.5;
    // position                   : sticky;
-   top: 0;
-   margin-bottom: 2em;
-   text-align: center;
-   // opacity: 0.5;
+   // text-decoration            : underline overline;
+   background                    : $lightgray-bg;
+   color                         : #888;
+   font-family                   : monospace;
+   font-size                     : 1.1em;
+   font-variant                  : small-caps;
+   font-weight                   : bold;
+   letter-spacing                : .2em;
+   margin-bottom                 : 2em;
+   padding                       : 1em;
+   text-align                    : center;
+   top                           : 0;
 }
 
 // ========================================================================== //
 // Embeds
 // ========================================================================== //
 
-.embed-src {
+div.sourceCode{
 
    background: $lightgray-bg;
    padding: 1em;

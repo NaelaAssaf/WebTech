@@ -2905,12 +2905,12 @@ input[type="button"].btn-block {
   font-variant: small-caps;
   font-weight: bold;
   letter-spacing: .2em;
-  padding: 1em;
-  top: 0;
   margin-bottom: 2em;
-  text-align: center; }
+  padding: 1em;
+  text-align: center;
+  top: 0; }
 
-.embed-src {
+div.sourceCode {
   background: #f6f6f6;
   padding: 1em;
   font-size: 0.9em; }
