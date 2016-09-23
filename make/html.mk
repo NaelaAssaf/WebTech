@@ -1,20 +1,22 @@
-htmlfiles := $(addprefix $(pubdir)/,$(shell $(bindir)/sluggify.sh $(mdfiles)) index.html)
-template  := templates/article.html
-includes  := $(wildcard includes/*)
+htmlfiles       := $(addprefix $(pubdir)/,$(shell $(bindir)/sluggify.sh $(mdfiles)) index.html)
+fullcursus.header := $(incsdir)/full-cursus-header.yml
+fullcursus.html := $(pubdir)/cursus.html
+template        := templates/article.html
+includes        := $(wildcard includes/*)
+m4              := m4 -I $(embedssrcdir) -P
 
 common_depens := make/html.mk $(toc.html) $(includes) m4/* $(embeds.html)
 
 .PHONY: html
-html: $(htmlfiles)
+html: $(htmlfiles) $(fullcursus.html)
 
 $(pubdir)/%.html: $(mddir)/??-%.md $(template) $(common_depens)
-	cat m4/common_macros.m4 $< | m4 -I $(embedssrcdir) -P | pandoc \
+	cat m4/common_macros.m4 $< | $(m4)  | pandoc \
 	   --template $(template) \
 	   --title-prefix "BIT01 Webtechnology - " \
-	   --toc \
 	   --base-header-level=1 \
 	   --number-sections \
-	   --variable "completetoc=$(shell cat $(toc.html))" \
+	   --variable "completetoc=$$(cat $(toc.html))" \
 	   --css=assets/css/bootstrap.css \
 	   --include-after-body includes/toc.js.html \
 	   -o $@
@@ -22,12 +24,13 @@ $(pubdir)/%.html: $(mddir)/??-%.md $(template) $(common_depens)
 $(pubdir)/index.html: | $(pubdir)/introduction.html
 	ln -sr $| $@
 
-$(pubdir)/cursus.html: $(mdfiles) $(allinone_template) $(common_depens)
-	cat m4/common_macros.m4 $(mdfiles) | m4 -P | pandoc \
-	   -s \
+$(fullcursus.html): $(fullcursus.header) $(mdfiles) $(template) $(common_depens)
+	cat m4/common_macros.m4 $(fullcursus.header) $(mdfiles) | $(m4)  | pandoc \
+	   --template $(template) \
 	   --title-prefix "BIT01 Webtechnology - " \
-	   --toc \
-	   --base-header-level=2 \
+	   --base-header-level=1 \
 	   --number-sections \
+	   --variable "completetoc=$$(cat $(toc.html))" \
 	   --css=assets/css/bootstrap.css \
+	   --include-after-body includes/toc.js.html \
 	   -o $@

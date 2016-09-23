@@ -11,7 +11,7 @@ and dynamic webpages via m4_PHP.
 
 ## Resources
 
-The main cursus is the website located at <https://asoete.github.io/BIT01-webtech>.
+The main cursus is the website located at <https://asoete.github.io/howest-webtechnology>.
 
 ## Code
 

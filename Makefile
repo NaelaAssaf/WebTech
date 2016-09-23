@@ -1,6 +1,6 @@
 pandoc        := /usr/bin/pandoc
 pubdir        := docs
-incsdir       := inc
+incsdir       := includes
 tpldir        := templates
 bindir        := bin
 mddir         := md
