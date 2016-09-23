@@ -6,12 +6,14 @@ title: Introduction
 
 # Introduction
 
-The purpose of this course is provide and intro to web technologies (m4_HTML, m4_CSS)
-and dynamic webpages via m4_PHP.
+The purpose of this course is provide and intro to web technologies (HTML, CSS)
+and dynamic webpages via PHP.
 
 ## Resources
 
 The main cursus is the website located at <https://asoete.github.io/howest-webtechnology>.
+
+A PDF version of the main cursus can be found [here](https://asoete.github.io/howest-webtechnology/assets/pdf/cursus.pdf).
 
 ## Code
 

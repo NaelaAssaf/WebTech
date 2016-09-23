@@ -1,5 +1,9 @@
 m4_changequote(`[[', `]]')
 
+m4_define(CSS,<abbr title="Cascading Style Sheets">[[[[CSS]]]]</abbr>)
+m4_define(HTML,<abbr title="HyperText Markup Language">[[[[HTML]]]]</abbr>)
+m4_define(PHP,<abbr title="Hypertext Preprocessor">[[[[PHP]]]]</abbr>)
+
 m4_define(m4_embed_doc,[[docs/embeds/$1.html]])
 
 m4_define(m4_timestamp,m4_esyscmd(date +"%F"))
