@@ -2898,11 +2898,9 @@ input[type="button"].btn-block {
     font-weight: bold; }
 
 .site-header {
-  background: midnightblue;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  box-shadow: 0 0 .9em gray;
-  color: white;
+  background: #f6f6f6;
+  color: #888;
+  font-family: monospace;
   font-size: 1.1em;
   font-variant: small-caps;
   font-weight: bold;
@@ -2910,8 +2908,7 @@ input[type="button"].btn-block {
   padding: 1em;
   top: 0;
   margin-bottom: 2em;
-  text-align: center;
-  opacity: 0.5; }
+  text-align: center; }
 
 .embed-src {
   background: #f6f6f6;
