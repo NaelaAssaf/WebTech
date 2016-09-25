@@ -1,4 +1,4 @@
-pdfdestdir  := pdf
+pdfdestdir  := pdfs
 pdffile     := $(pdfdestdir)/cursus.pdf
 wkhtmltopdf := /opt/wkhtmltox/bin/wkhtmltopdf
 
@@ -6,7 +6,7 @@ wkhtmltopdf := /opt/wkhtmltox/bin/wkhtmltopdf
 pdf: $(pdffile)
 
 $(pdffile): $(shell find $(pubdir)/* -type f) | $(pdfdestdir) $(wkhtmltopdf)
-	$(wkhtmltopdf) toc localhost:8000/cursus.html $@
+	$(wkhtmltopdf) localhost:8000/cursus.html $@
 
 
 $(pdfdestdir):
