@@ -5,7 +5,7 @@ wkhtmltopdf := /opt/wkhtmltox/bin/wkhtmltopdf
 .PHONY: pdf
 pdf: $(pdffile)
 
-$(pdffile): $(shell find $(pubdir)/* -type f) | $(pdfdestdir) $(wkhtmltopdf)
+$(pdffile): $(shell find $(pubdir)/* -type f) make/pdf.mk | $(pdfdestdir) $(wkhtmltopdf)
 	$(wkhtmltopdf) localhost:8000/cursus.html $@
 
 

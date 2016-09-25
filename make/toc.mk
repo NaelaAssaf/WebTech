@@ -10,4 +10,4 @@ $(toc.html): $(generator) bin/sluggify.sh $(mdfiles) | $(pandoc) $(incsdir)
 	$(generator) $(mdfiles) > $(toc.html)
 
 $(localtoc.html): $(mdfiles) | $(pandoc) $(incsdir)
-	$(pandoc) $(mdfiles) --toc --template $(toctpl) -o $@
+	$(pandoc) $(mdfiles) --toc --toc-depth 2 --template $(toctpl) -o $@

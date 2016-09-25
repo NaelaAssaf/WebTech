@@ -11,7 +11,7 @@
         <meta name="date" content="2016-09-25" />
    
    
-   <title>A gentle introduction - BIT01 Webtechnology -</title>
+   <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
 
          <style type="text/css">
          div.sourceCode { overflow-x: auto; }
@@ -65,22 +65,25 @@
 
       <!-- TOC -->
 
-      <div class="col-md-2 complete-toc">
+      <div class="col-md-2 fixedsticky complete-toc">
                      <h3>Table of contents</h3>
             <ul>
             <li><a href="#introduction">Introduction</a><ul>
-            <li><a href="#resources">Resources</a><ul>
-            <li><a href="#additional-resources">Additional resources</a></li>
-            </ul></li>
+            <li><a href="#resources">Resources</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#code-in-this-document">Code in this document</a></li>
             </ul></li>
-            <li><a href="#getting-started">Getting started</a><ul>
-            <li><a href="#get-local-copy-of-the-exercises-and-this-guide.-optional">Get local copy of the exercises and this guide. <small>(Optional)</small></a></li>
-            </ul></li>
+            <li><a href="#getting-started">Getting started</a></li>
             <li><a href="#html-basics">HTML Basics</a><ul>
-            <li><a href="#html-hello-world">HTML: Hello World</a></li>
-            <li><a href="#headers-h">Headers: <code>&lt;H*&gt;</code></a></li>
+            <li><a href="#tags">Tags</a></li>
+            <li><a href="#attributes">Attributes</a></li>
+            <li><a href="#a-valid-html-document">A valid HTML document</a></li>
+            <li><a href="#the-document-head">The document head</a></li>
+            <li><a href="#the-document-body">The document body</a></li>
+            <li><a href="#headers-h">Headers: <code>H*</code></a></li>
+            <li><a href="#containers">Containers</a></li>
+            <li><a href="#formatting-tags">Formatting tags</a></li>
+            <li><a href="#attributes-1">Attributes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -96,33 +99,33 @@
       <div class="col-md-10">
 
          <div class="site-header">
-            BIT01 Webtechnology &mdash; A gentle introduction
+            BIT01 Webtechnology &mdash; An intro to <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="Hypertext Preprocessor">PHP</abbr>
          </div>
 
-<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 <p>The purpose of this course is to provide an intro to web technologies (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>) and dynamic webpages via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
-<h2 id="resources"><span class="header-section-number">1.1</span> Resources</h2>
+<h2 id="resources">Resources</h2>
 <p>The main documentation for this course is a site an can be found at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>. The main advantage of a using a site as a textbook is that the included examples and snippets can be rendered/formatted by the browser on the fly.</p>
 <p>A <a href="pdfs/cursus.pdf">PDF version</a> of this document is also available. But keep in mind that some <abbr title="HyperText Markup Language">HTML</abbr> features can get lost in the conversion to a pdf.</p>
 <p>There are no slides available, all key aspects of this course will introduced via examples during the lessons. These examples and the solutions of the exercises made during this course will be published <a href="fo://github.com/asoete/howest-webtechnology-code">here</a>.</p>
 <p>Keep in mind that this course is a very practical one and that making exercises is the best way to learn, get familiar, with all the aspects featured in this course.</p>
-<h3 id="additional-resources"><span class="header-section-number">1.1.1</span> Additional resources</h3>
+<h3 id="additional-resources">Additional resources</h3>
 <p>An in depth guide/reference/manual for <abbr title="Hypertext Preprocessor">PHP</abbr> can be found at <a href="http://php.net" class="uri">http://php.net</a></p>
 <p>For an <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> reference see <a href="http://www.w3schools.com/html" class="uri">http://www.w3schools.com/html</a> and <a href="http://www.w3schools.com/css" class="uri">http://www.w3schools.com/css</a></p>
-<h2 id="contact"><span class="header-section-number">1.2</span> Contact</h2>
+<h2 id="contact">Contact</h2>
 <p>If you have questions about this course and/or it's content please ask... You can contact me via <script type="text/javascript">
 <!--
 h='&#104;&#x6f;&#x77;&#x73;&#116;&#46;&#98;&#x65;';a='&#64;';n='&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;&#32;&#x61;&#116;&#32;&#104;&#x6f;&#x77;&#x73;&#116;&#32;&#100;&#x6f;&#116;&#32;&#98;&#x65;</noscript></p>
-<h2 id="code-in-this-document"><span class="header-section-number">1.3</span> Code in this document</h2>
+<h2 id="code-in-this-document">Code in this document</h2>
 <p>This course will feature a lot of code. The source-code of all the snippets in this manual can be found <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds">here</a>.</p>
 <p>The source and the output of each snippets are always displayed whenever a snippet is included.</p>
 <p>Example:</p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php" taret="_blank">src</a></span></p>
 <div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
 
 <span class="fu">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span>
@@ -139,11 +142,12 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 &lt;/p&gt;</code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0">
+<p><span class="embed--srcfile">output of introduction/embed_example</span></p>
+<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
-<h1 id="getting-started"><span class="header-section-number">2</span> Getting started</h1>
+<h1 id="getting-started">Getting started</h1>
 <p>This course requires some software to be installed.</p>
 <ul>
 <li>A web browser: <a href="https://firefox.com">firefox</a></li>
@@ -154,24 +158,246 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
 <p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
-<h2 id="get-local-copy-of-the-exercises-and-this-guide.-optional"><span class="header-section-number">2.1</span> Get local copy of the exercises and this guide. <small>(Optional)</small></h2>
-<p>This guide and all the exercises are hosted on <a href="https.github.com">GitHub</a>.</p>
-<p>Therefore a basic understanding of git is required to get all the source material.</p>
+<p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
+<p>If you choose not to use the command line and git. Snapshots of each lessons exercises and examples will be made available for download <a href="https://github.com/asoete/howest-webtechnology-examples/releases">here</a>.</p>
+<h3 id="init-workspace">Init workspace</h3>
+<ul>
+<li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> ~/Documents/webtechnology
+<span class="kw">cd</span>  ~/Documents/webtechnology</code></pre></div></li>
+<li><p>Create your own exercises directory</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> exercises</code></pre></div></li>
+</ul>
+<h3 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h3>
+<ul>
+<li><p>Get an initial copy of the repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions</code></pre></div>
+This will create a <code>examples-solutions</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
+<li><p>To get the latest version/updates run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folder</span>
+<span class="kw">git</span> pull origin master</code></pre></div>
+<div class="alert alert-warning">
+<strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
+</div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
+<span class="kw">git</span> reset --hard origin/master</code></pre></div>
+This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
+</div></li>
+</ul>
+<h3 id="get-local-copy-of-this-site.-optional">Get local copy of this site. <small>(Optional)</small></h3>
+<ul>
+<li><p>Get an initial copy of the repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git webtechnology-site</code></pre></div></li>
+<li><p>To get the latest version/updates</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
+<span class="kw">git</span> pull origin master</code></pre></div></li>
+<li><p>Start a local instance of the site:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
+<span class="kw">make</span> serve</code></pre></div>
+<p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p></li>
+</ul>
+<h3 id="final-result">Final result</h3>
+<p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>
+<pre><code>~/Documents/webtechnology
+├── examples-solutions
+├── exercises
+└── site</code></pre>
+<h1 id="html-basics">HTML Basics</h1>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> This course is based on the <a href="https://www.w3.org/TR/html5/"><abbr title="HyperText Markup Language">HTML</abbr></a> specification and can differ from older specifications like XHTML and <abbr title="HyperText Markup Language">HTML</abbr>
+</div>
+<p></small></p>
+<p><abbr title="HyperText Markup Language">HTML</abbr> is an <abbr title="Extensible Markup Language">XML</abbr> subset. This means it is composed out of tags with, optionally, attributes.</p>
+<h2 id="tags">Tags</h2>
+<p>A tag is delimited by <code>&lt;</code> and <code>&gt;</code>, for example: <code>&lt;body&gt;</code>.</p>
+<p>There are two types of <abbr title="HyperText Markup Language">HTML</abbr>-tags:</p>
+<ul>
+<li>Non self-enclosing tags</li>
+<li>Self-enclosing tags</li>
+</ul>
+<h3 id="non-self-enclosing-tags">Non self-enclosing tags</h3>
+<p>Non self-enclosing tags exist out of two parts:</p>
 <ol style="list-style-type: decimal">
-<li><p>Get an initial copy of the repository;</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git </code></pre></div></li>
-<li><h2 id="hmmm"><span class="header-section-number">2.1</span> hmmm</h2>
-<h2 id="title-html-basics"><span class="header-section-number">2.1</span> title: <abbr title="HyperText Markup Language">HTML</abbr> basics</h2></li>
+<li>An opening part: <code>&lt;tag&gt;</code></li>
+<li>And a closing part: <code>&lt;/tag&gt;</code>.<br />
+The closing part is identified by the forward slash (<code>/</code>) before the tag-name.</li>
 </ol>
-<h1 id="html-basics"><span class="header-section-number">3</span> HTML Basics</h1>
-<h2 id="html-hello-world"><span class="header-section-number">3.1</span> HTML: Hello World</h2>
+<p>These <em>parts</em> are used to contain/format certain content.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</code></pre></div>
+<p>Example: <code>&lt;strong&gt;Bold Font&lt;/strong&gt;</code> <small> (This tags formats its content in a bold font: <strong>Bold Font</strong>) </small></p>
+<h3 id="self-enclosing-tags">Self-enclosing tags</h3>
+<p>A self-enclosing tag has no content to format. So the closing part is left of:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;tag&gt;</span></code></pre></div>
+<p>Example: <code>&lt;br&gt;</code> <small>(this will insert a newline into your <abbr title="HyperText Markup Language">HTML</abbr>)</small></p>
+<p>Sometimes you may see self-closing tags used like <code>&lt;tag /&gt;</code>, this trailing tag is optional since HTML5 and can be left of.</p>
+<h2 id="attributes">Attributes</h2>
+<p>Attributes modify the behaviour of a tag.</p>
+<p>For example the <code>a</code>-tag converts a peace of text into a clickable link.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;a&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></code></pre></div>
+<p>The <code>href</code>-attribute defines where the link should take you:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></code></pre></div>
+<p>Attributes are also used to modify the appearance of a tag. Later in this course we'll see more detailed examples of this.</p>
+<h2 id="a-valid-html-document">A valid HTML document</h2>
+<p>A valid HTML5 document requires a bit of boilerplate:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+    <span class="co">&lt;!-- Your webpages metadata --&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+    <span class="co">&lt;!-- your webpage specific content --&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre></div>
+<p>This minimal markup tells the browser to treat the document as HTML5.</p>
+<h2 id="the-document-head">The document head</h2>
+<p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag allows the developer to define meta-data about the webpage. It is a wrapper around multiple other tags.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
+    <span class="co">&lt;!-- meta tags here --&gt;</span>
+<span class="kw">&lt;/head&gt;</span></code></pre></div>
+<p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag may only be defined once in the complete document.</p>
+<h3 id="title">Title</h3>
+<p>The title tag sets the web-page title. This title is displayed by the browser in the browser-tab.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;title&gt;</span>My web-page&#39;s title...<span class="kw">&lt;/title&gt;</span>
+<span class="kw">&lt;/head&gt;</span></code></pre></div>
+<h3 id="style">Style</h3>
+<p>We will address styling later in this course but for now it is sufficient to know that style information should be included in the head of a web-page.</p>
+<h4 id="raw-style">Raw style</h4>
+<p>The <a href="http://www.w3schools.com/tags/tag_style.asp" class="w3c-ref"><code>style</code></a>-tag allows to include raw <abbr title="Cascading Style Sheets">CSS</abbr> rules in the documents</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+        <span class="co">/* style information here */</span>
+    <span class="kw">&lt;/style&gt;</span>
+<span class="kw">&lt;/head&gt;</span></code></pre></div>
+<h4 id="external-style-sheets">External style sheets</h4>
+<p>The <a href="http://www.w3schools.com/tags/tag_link.asp" class="w3c-ref"><code>link</code></a>-tag allows to external style sheets into the document. <small> (Do not confuse this tag with the <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a>-tag...). </small></p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/link/to/file.css&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/head&gt;</span></code></pre></div>
+<p>We will only ever include <abbr title="Cascading Style Sheets">CSS</abbr>-files to style our web-pages. The provided attributes in the example are required to include a <abbr title="Cascading Style Sheets">CSS</abbr>-file and avoid browser quirks.</p>
+<h2 id="the-document-body">The document body</h2>
+<p>The <a href="http://www.w3schools.com/tags/tag_body.asp" class="w3c-ref"><code>body</code></a>-tag should wrap all the content to be displayed.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;body&gt;</span>
+    <span class="co">&lt;!-- all displayed tags and content go here --&gt;</span>
+<span class="kw">&lt;/body&gt;</span></code></pre></div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Create a valid <abbr title="HyperText Markup Language">HTML</abbr>-document with
+<ul>
+<li>Title: Hello World</li>
+<li>Content: <code>Hello World from the my first web-page</code></li>
+</ul></li>
+</ul>
+</div>
+<h3 id="html-hello-world">HTML: Hello World</h3>
 <p>Create a text file name <code class="file">hello-world.html</code></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gedit</span> hello-world.html</code></pre></div>
 <p>With contents:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">Hello World</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;title&gt;</span>Hello World<span class="kw">&lt;/title&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+    Hello World from my first web-page.
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre></div>
 <p>Open the local <abbr title="HyperText Markup Language">HTML</abbr> file in the browser.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">firefox</span> <span class="kw">&lt;</span>file.html<span class="kw">&gt;</span></code></pre></div>
-<h2 id="headers-h"><span class="header-section-number">3.2</span> Headers: <code>&lt;H*&gt;</code></h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">firefox</span> hello-world.html</code></pre></div>
+<h2 id="headers-h">Headers: <code>H*</code></h2>
+<p>The purpose of a header is to indicate the start of a new block a add an appropriate heading.</p>
+<p>The <a href="http://www.w3schools.com/tags/tag_hn.asp" class="w3c-ref"><code>hn</code></a>-tags come in 6 variations. From to highest order header <code>h1</code> to the lowest <code>h6</code>.</p>
+<p>The browser auto-formats these headers accordingly from largest to smallest font-size.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/headers.html">html-intro/headers</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/headers.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&lt;h1&gt;<span class="fu">Header</span> <span class="dv">1</span>&lt;/h1&gt;
+&lt;h2&gt;<span class="fu">Header</span> <span class="dv">2</span>&lt;/h2&gt;
+&lt;h3&gt;<span class="fu">Header</span> <span class="dv">3</span>&lt;/h3&gt;
+&lt;h4&gt;<span class="fu">Header</span> <span class="dv">4</span>&lt;/h4&gt;
+&lt;h5&gt;<span class="fu">Header</span> <span class="dv">5</span>&lt;/h5&gt;
+&lt;h6&gt;<span class="fu">Header</span> <span class="dv">6</span>&lt;/h1&gt;</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/headers</span></p>
+<iframe src="embeds/html-intro/headers.html" class="embed--output" height="280px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h2 id="containers">Containers</h2>
+<p>The purpose of these types of tags is to wrap other content. Why the content should be wrapped can vary:</p>
+<ul>
+<li>To indicate semantic meaning (new paragraph, a quote, ...)</li>
+<li>To position and/or style the contents in the container.</li>
+</ul>
+<h3 id="paragraphs-p">Paragraphs <code>p</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_p.asp" class="w3c-ref"><code>p</code></a>-tag encloses a blob of related text into a paragraph</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/p-tag.html">html-intro/p-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/p-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
+&lt;p&gt;
+   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/p&gt;
+&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/p-tag</span></p>
+<iframe src="embeds/html-intro/p-tag.html" class="embed--output" height="160px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="generic-container-div">Generic container <code>div</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_div.asp" class="w3c-ref"><code>div</code></a> defines a <em>division</em> in the document. It is used al lot to wrap some content and apply styles.</p>
+<p>It has no special styles by default</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/div-tag.html">html-intro/div-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/div-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
+&lt;div&gt;
+   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/div&gt;
+&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/div-tag</span></p>
+<iframe src="embeds/html-intro/div-tag.html" class="embed--output" height="130px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="blockquote-blockquote">Blockquote <code>blockquote</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_blockquote.asp" class="w3c-ref"><code>blockquote</code></a>-tag is used to denote some block of text as a quote from another source.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/blockquote-tag.html">html-intro/blockquote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/blockquote-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
+&lt;blockquote&gt;
+   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/blockquote&gt;
+&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/blockquote-tag</span></p>
+<iframe src="embeds/html-intro/blockquote-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h2 id="formatting-tags">Formatting tags</h2>
+<h2 id="attributes-1">Attributes</h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">

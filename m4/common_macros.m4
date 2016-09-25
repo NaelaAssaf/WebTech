@@ -14,11 +14,30 @@ m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_embed_doc,[[docs/embeds/$1.html]])
 m4_define(m4_embed2href,[[[$1](embeds/$1.html)]])
-m4_define(m4_embed2src,[[ [src](https://github.com/asoete/howest-webtechnology/tree/master/embeds/$1.php)]])
+m4_define(m4_embed2src,[[<a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/$1.php" taret="_blank">src</a>]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_indent,[[<div class="[[m4_indent]]">$1</div>]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_define(m4_warning,[[<div class="alert alert-warning"><strong>Warning:</strong> $1</div>]])
+m4_define(m4_info,[[<div class="alert alert-info"><strong>Info:</strong> $1</div>]])
+m4_define(m4_note,m4_info($1))
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_define(m4_exercise,[[
+<div class="exercise">
+<h4>Exercise:</h4>
+$1
+</div>
+]])
 
 m4_dnl -----------------------------------------------------------------------
 
@@ -54,7 +73,9 @@ m4_include($1.php)
 
 </div><div class="col-md-6 iframe-wrapper">
 
-<iframe src="embeds/$1.html" class="embed--output" height="$2" frameborder="0"></iframe>
+<span class="embed--srcfile">output of $1</span>
+
+<iframe src="embeds/$1.html" class="embed--output" height="$2" frameborder="0" scrolling="no"></iframe>
 
 </div></div>
 ]])

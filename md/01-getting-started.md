@@ -20,14 +20,78 @@ sudo dnf install firefox gedit php git
 
 Press `y` when prompted `Is this ok [y/N]:`{.text-muted}.
 
-## Get local copy of the exercises and this guide. <small>(Optional)</small>
+This document and all the exercises/examples are hosted on [GitHub](https.github.com).
+This means a local copy of the source can be obtained easily **and kept in
+sync with the latest changes and updates**.
 
-This guide and all the exercises are hosted on [GitHub](https.github.com).
+If you choose not to use the command line and git. Snapshots of each lessons
+exercises and examples will be made available for download
+[here](https://github.com/asoete/howest-webtechnology-examples/releases).
 
-Therefore a basic understanding of git is required to get all the source material.
+### Init workspace
 
-1. Get an initial copy of the repository;
+*
 ```bash
-git clone https://github.com/asoete/howest-webtechnology.git 
+mkdir ~/Documents/webtechnology
+cd  ~/Documents/webtechnology
 ```
-1. hmmm
+
+* Create your own exercises directory
+```bash
+mkdir exercises
+```
+
+### Get local copy of the _exercises and examples_ solutions
+
+* Get an initial copy of the repository:
+```bash
+git clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions
+```
+  This will create a `examples-solutions`-folder which will hold example
+  solutions for the exercises on a per lesson basis.
+* To get the latest version/updates run:
+```bash
+# in examples-solutions folder
+git pull origin master
+```
+  m4_warning([[If you made local modifications to any of the files in this
+  repository, this update command (`git pull`) will most likely fail. So don't
+  modify the contents in this folder...]])
+  m4_dnl
+  m4_info([[When you do encounter errors while pulling, run:
+```bash
+git fetch --all
+git reset --hard origin/master
+```
+  This will reset the repository to be identical to the one on GitHub. **Be
+  warned: local modifications will be lost...**
+  ]])
+
+### Get local copy of this site. <small>(Optional)</small>
+
+* Get an initial copy of the repository:
+```bash
+git clone https://github.com/asoete/howest-webtechnology.git webtechnology-site
+```
+* To get the latest version/updates
+```bash
+# in webtechnology-site folder
+git pull origin master
+```
+* Start a local instance of the site:
+```bash
+# in webtechnology-site folder
+make serve
+```
+   And open <http://localhost:8000> in a web browser.
+
+### Final result
+
+If you complete all of the steps above, you will end up with a workspace that looks like this:
+
+```
+~/Documents/webtechnology
+├── examples-solutions
+├── exercises
+└── site
+```

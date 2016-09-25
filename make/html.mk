@@ -13,9 +13,8 @@ html: $(htmlfiles) $(fullcursus.html)
 $(pubdir)/%.html: $(mddir)/??-%.md $(template) $(common_depens)
 	cat m4/common_macros.m4 $< | $(m4)  | pandoc \
 	   --template $(template) \
-	   --title-prefix "BIT01 Webtechnology - " \
+	   --title-prefix "BIT01 Webtechnology" \
 	   --base-header-level=1 \
-	   --number-sections \
 	   --variable "completetoc=$$(cat $(toc.html))" \
 	   --css=assets/css/bootstrap.css \
 	   --include-after-body includes/toc.js.html \
@@ -27,9 +26,8 @@ $(pubdir)/index.html: $(mddir)/index.html
 $(fullcursus.html): $(fullcursus.header) $(mdfiles) $(template) $(common_depens)
 	cat m4/common_macros.m4 $(fullcursus.header) $(mdfiles) | $(m4)  | pandoc \
 	   --template $(template) \
-	   --title-prefix "BIT01 Webtechnology - " \
+	   --title-prefix "BIT01 Webtechnology" \
 	   --base-header-level=1 \
-	   --number-sections \
 	   --variable "completetoc=$$(cat $(localtoc.html))" \
 	   --css=assets/css/bootstrap.css \
 	   -o $@

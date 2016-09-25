@@ -38,7 +38,7 @@ $lightgray-bg : #f6f6f6;
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/forms";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/navbar";
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/navs";
-// @import "vendor/bootstrap/assets/stylesheets/bootstrap/alerts";
+@import "vendor/bootstrap/assets/stylesheets/bootstrap/alerts";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/panels";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/badges";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/labels";
@@ -147,13 +147,16 @@ div.sourceCode{
 .embed--srcfile {
 
    position: absolute;
-   margin: 2em;
+   margin: 1.5em;
    margin-right: $grid-gutter-width;
    right: 0px;
    z-index: 1;
-   // color: gray;
    font-size: 0.75em;
    font-style: italic;
+
+   &:not(a) {
+      color: gray;
+   }
 }
 
 .embed--src {
@@ -163,9 +166,7 @@ div.sourceCode{
 
 .embed--output {
 
-   margin-top: 10px;
    border-left: solid lightblue  0.5em;
-
 }
 
 pre.embed--output {
@@ -176,6 +177,29 @@ pre.embed--output {
 iframe {
 
    width: 100%;
+   overflow-y: hidden;
+}
+
+// ========================================================================== //
+// W3C
+// ========================================================================== //
+
+a.w3c-ref {
+
+   border-width: 1px;
+   border-bottom-style: dotted ;
+}
+
+// ========================================================================== //
+// Exercise
+// ========================================================================== //
+
+.exercise{
+
+   border-left: solid steelblue 0.5em;
+   padding: 1em;
+   margin: 1em 0;
+   background: #FAFDFF;
 }
 
 // ========================================================================== //

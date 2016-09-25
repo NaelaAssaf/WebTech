@@ -11,7 +11,7 @@
         <meta name="date" content="2016-09-25" />
    
    
-   <title>Introduction - BIT01 Webtechnology -</title>
+   <title>Introduction - BIT01 Webtechnology</title>
 
          <style type="text/css">
          div.sourceCode { overflow-x: auto; }
@@ -65,7 +65,7 @@
 
       <!-- TOC -->
 
-      <div class="col-md-2 complete-toc">
+      <div class="col-md-2 fixedsticky complete-toc">
                      <h3>Table of contents</h3>
             <ul>
             <li><a href="introduction.html#introduction">Introduction</a><ul>
@@ -75,14 +75,19 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="getting-started.html#getting-started">Getting started</a><ul>
-            <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-this-guide.-optional">Get local copy of the exercises and this guide. <small>(Optional)</small></a></li>
-            </ul></li>
+            <li><a href="getting-started.html#getting-started">Getting started</a></li>
             </ul>
             <ul>
             <li><a href="html-intro.html#html-basics">HTML Basics</a><ul>
-            <li><a href="html-intro.html#html-hello-world">HTML: Hello World</a></li>
-            <li><a href="html-intro.html#headers-h">Headers: <code>&lt;H*&gt;</code></a></li>
+            <li><a href="html-intro.html#tags">Tags</a></li>
+            <li><a href="html-intro.html#attributes">Attributes</a></li>
+            <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
+            <li><a href="html-intro.html#the-document-head">The document head</a></li>
+            <li><a href="html-intro.html#the-document-body">The document body</a></li>
+            <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
+            <li><a href="html-intro.html#containers">Containers</a></li>
+            <li><a href="html-intro.html#formatting-tags">Formatting tags</a></li>
+            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -101,30 +106,30 @@
             BIT01 Webtechnology &mdash; Introduction
          </div>
 
-<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 <p>The purpose of this course is to provide an intro to web technologies (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>) and dynamic webpages via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
-<h2 id="resources"><span class="header-section-number">1.1</span> Resources</h2>
+<h2 id="resources">Resources</h2>
 <p>The main documentation for this course is a site an can be found at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>. The main advantage of a using a site as a textbook is that the included examples and snippets can be rendered/formatted by the browser on the fly.</p>
 <p>A <a href="pdfs/cursus.pdf">PDF version</a> of this document is also available. But keep in mind that some <abbr title="HyperText Markup Language">HTML</abbr> features can get lost in the conversion to a pdf.</p>
 <p>There are no slides available, all key aspects of this course will introduced via examples during the lessons. These examples and the solutions of the exercises made during this course will be published <a href="fo://github.com/asoete/howest-webtechnology-code">here</a>.</p>
 <p>Keep in mind that this course is a very practical one and that making exercises is the best way to learn, get familiar, with all the aspects featured in this course.</p>
-<h3 id="additional-resources"><span class="header-section-number">1.1.1</span> Additional resources</h3>
+<h3 id="additional-resources">Additional resources</h3>
 <p>An in depth guide/reference/manual for <abbr title="Hypertext Preprocessor">PHP</abbr> can be found at <a href="http://php.net" class="uri">http://php.net</a></p>
 <p>For an <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> reference see <a href="http://www.w3schools.com/html" class="uri">http://www.w3schools.com/html</a> and <a href="http://www.w3schools.com/css" class="uri">http://www.w3schools.com/css</a></p>
-<h2 id="contact"><span class="header-section-number">1.2</span> Contact</h2>
+<h2 id="contact">Contact</h2>
 <p>If you have questions about this course and/or it's content please ask... You can contact me via <script type="text/javascript">
 <!--
 h='&#104;&#x6f;&#x77;&#x73;&#116;&#46;&#98;&#x65;';a='&#64;';n='&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;&#32;&#x61;&#116;&#32;&#104;&#x6f;&#x77;&#x73;&#116;&#32;&#100;&#x6f;&#116;&#32;&#98;&#x65;</noscript></p>
-<h2 id="code-in-this-document"><span class="header-section-number">1.3</span> Code in this document</h2>
+<h2 id="code-in-this-document">Code in this document</h2>
 <p>This course will feature a lot of code. The source-code of all the snippets in this manual can be found <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds">here</a>.</p>
 <p>The source and the output of each snippets are always displayed whenever a snippet is included.</p>
 <p>Example:</p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php" taret="_blank">src</a></span></p>
 <div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
 
 <span class="fu">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span>
@@ -141,7 +146,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 &lt;/p&gt;</code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0">
+<p><span class="embed--srcfile">output of introduction/embed_example</span></p>
+<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>

@@ -9,7 +9,7 @@
    
    
    
-   <title>Getting started - BIT01 Webtechnology -</title>
+   <title>Getting started - BIT01 Webtechnology</title>
 
          <style type="text/css">
          div.sourceCode { overflow-x: auto; }
@@ -63,7 +63,7 @@
 
       <!-- TOC -->
 
-      <div class="col-md-2 complete-toc">
+      <div class="col-md-2 fixedsticky complete-toc">
                      <h3>Table of contents</h3>
             <ul>
             <li><a href="introduction.html#introduction">Introduction</a><ul>
@@ -73,14 +73,19 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="getting-started.html#getting-started">Getting started</a><ul>
-            <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-this-guide.-optional">Get local copy of the exercises and this guide. <small>(Optional)</small></a></li>
-            </ul></li>
+            <li><a href="getting-started.html#getting-started">Getting started</a></li>
             </ul>
             <ul>
             <li><a href="html-intro.html#html-basics">HTML Basics</a><ul>
-            <li><a href="html-intro.html#html-hello-world">HTML: Hello World</a></li>
-            <li><a href="html-intro.html#headers-h">Headers: <code>&lt;H*&gt;</code></a></li>
+            <li><a href="html-intro.html#tags">Tags</a></li>
+            <li><a href="html-intro.html#attributes">Attributes</a></li>
+            <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
+            <li><a href="html-intro.html#the-document-head">The document head</a></li>
+            <li><a href="html-intro.html#the-document-body">The document body</a></li>
+            <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
+            <li><a href="html-intro.html#containers">Containers</a></li>
+            <li><a href="html-intro.html#formatting-tags">Formatting tags</a></li>
+            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -99,7 +104,7 @@
             BIT01 Webtechnology &mdash; Getting started
          </div>
 
-<h1 id="getting-started"><span class="header-section-number">1</span> Getting started</h1>
+<h1 id="getting-started">Getting started</h1>
 <p>This course requires some software to be installed.</p>
 <ul>
 <li>A web browser: <a href="https://firefox.com">firefox</a></li>
@@ -110,14 +115,51 @@
 <p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
 <p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
-<h2 id="get-local-copy-of-the-exercises-and-this-guide.-optional"><span class="header-section-number">1.1</span> Get local copy of the exercises and this guide. <small>(Optional)</small></h2>
-<p>This guide and all the exercises are hosted on <a href="https.github.com">GitHub</a>.</p>
-<p>Therefore a basic understanding of git is required to get all the source material.</p>
-<ol style="list-style-type: decimal">
-<li><p>Get an initial copy of the repository;</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git </code></pre></div></li>
-<li><p>hmmm</p></li>
-</ol>
+<p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
+<p>If you choose not to use the command line and git. Snapshots of each lessons exercises and examples will be made available for download <a href="https://github.com/asoete/howest-webtechnology-examples/releases">here</a>.</p>
+<h3 id="init-workspace">Init workspace</h3>
+<ul>
+<li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> ~/Documents/webtechnology
+<span class="kw">cd</span>  ~/Documents/webtechnology</code></pre></div></li>
+<li><p>Create your own exercises directory</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> exercises</code></pre></div></li>
+</ul>
+<h3 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h3>
+<ul>
+<li><p>Get an initial copy of the repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions</code></pre></div>
+This will create a <code>examples-solutions</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
+<li><p>To get the latest version/updates run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folder</span>
+<span class="kw">git</span> pull origin master</code></pre></div>
+<div class="alert alert-warning">
+<strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
+</div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
+<span class="kw">git</span> reset --hard origin/master</code></pre></div>
+This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
+</div></li>
+</ul>
+<h3 id="get-local-copy-of-this-site.-optional">Get local copy of this site. <small>(Optional)</small></h3>
+<ul>
+<li><p>Get an initial copy of the repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git webtechnology-site</code></pre></div></li>
+<li><p>To get the latest version/updates</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
+<span class="kw">git</span> pull origin master</code></pre></div></li>
+<li><p>Start a local instance of the site:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
+<span class="kw">make</span> serve</code></pre></div>
+<p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p></li>
+</ul>
+<h3 id="final-result">Final result</h3>
+<p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>
+<pre><code>~/Documents/webtechnology
+├── examples-solutions
+├── exercises
+└── site</code></pre>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
