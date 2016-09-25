@@ -202,7 +202,7 @@ the lowest `h6`.
 The browser auto-formats these headers accordingly from largest to smallest
 font-size.
 
-m4_embed_php_as_html(html-intro/headers,280px)
+m4_embed_php_as_html(html-intro/headers,300px,.html)
 
 ## Containers
 
@@ -211,11 +211,13 @@ The purpose of these types of tags is to wrap other content. Why the content sho
 * To indicate semantic meaning (new paragraph, a quote, ...)
 * To position and/or style the contents in the container.
 
+They are also referred to as _block_-elements
+
 ### Paragraphs `p`
 
 The m4_tag(p)-tag encloses a blob of related text into a paragraph
 
-m4_embed_php_as_html(html-intro/p-tag,160px)
+m4_embed_php_as_html(html-intro/p-tag,180px,.html)
 
 ### Generic container `div`
 
@@ -224,14 +226,107 @@ some content and apply styles.
 
 It has no special styles by default
 
-m4_embed_php_as_html(html-intro/div-tag,130px)
+m4_embed_php_as_html(html-intro/div-tag,150px,.html)
 
 ### Blockquote `blockquote`
 
 The m4_tag(blockquote)-tag is used to denote some block of text as a quote from another source.
 
-m4_embed_php_as_html(html-intro/blockquote-tag,180px)
+m4_embed_php_as_html(html-intro/blockquote-tag,200px,.html)
 
-## Formatting tags
+## Inline tags
+
+These tags are inline because they do not start a new block (identified by new
+lines) as the previous tags.
+
+Their purpose is either to give a specific style and semantic meaning to an
+element or to extend a certain functionality to the element.
+
+### Anchors (links): `a`
+
+The m4_tag(a) is used to link to other web-pages.
+
+In order the function, the `href`-attribute is required on the m4_tag(a)-element.
+
+m4_embed_php_as_html(html-intro/a-tag,50px,.html)
+
+m4_exercise([[
+]])
+
+### A newline: `br`
+
+The m4_tag(br) insert a newline into the document.
+
+m4_embed_php_as_html(html-intro/br-tag,125px,.html)
+
+### Emphasise text: `em`
+
+The m4_tag(em)-tag allows to emphasise certain text.
+
+m4_embed_php_as_html(html-intro/em-tag,50px,.html)
+
+### Small text: `small`
+
+The m4_tag(small)-tag indicates the browser to use a smaller font-size to
+visualise this content.
+
+m4_embed_php_as_html(html-intro/small-tag,50px,.html)
+
+### Inline wrap text: `span`
+
+The m4_tag(a)
+
+m4_embed_php_as_html(html-intro/span-tag,50px,.html)
+
+### Strike text: `strike`
+
+The m4_tag(a)
+
+m4_embed_php_as_html(html-intro/strike-tag,50px,.html)
+
+### Bold text: `strong`
+
+The m4_tag(a)
+
+m4_embed_php_as_html(html-intro/strong-tag,50px,.html)
+
+### Inline quote text: `q`
+
+The m4_tag(a)
+
+m4_embed_php_as_html(html-intro/quote-tag,50px,.html)
+
+m4_exercise([[
+* Make a web-page with links to:
+
+    * google.com
+    * howest.be
+    * github.com
+
+* Print the following text so the sentences are broken up as below.
+
+    > | HTML is a markup language browser understand to format documents.
+    > | CSS is a way to style this markup.
+    > | PHP is a programming language.
+    > | It is used to dynamically generate HTML-markup.
+
+* Print the following text so `hello world` is emphasised.
+
+    > Let's emphasise hello world in this sentence.
+
+* Print the following text so `hello world` is smaller
+
+    > Let's make hello world smaller in this sentence.
+
+* Print the following text so `hello world` is bold
+
+    > Let's make hello world bold in this sentence.
+
+* Print the following text so `hello world` is crossed of.
+
+    > Let's strike hello world in this sentence.
+]])
 
 ## Attributes
+
+## Exercises

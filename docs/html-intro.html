@@ -84,8 +84,24 @@
             <li><a href="html-intro.html#the-document-body">The document body</a></li>
             <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
             <li><a href="html-intro.html#containers">Containers</a></li>
-            <li><a href="html-intro.html#formatting-tags">Formatting tags</a></li>
+            <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-intro.html#php-basics">PHP Basics</a><ul>
+            <li><a href="php-intro.html#execute-a-php-script">Execute a PHP-script</a></li>
+            <li><a href="php-intro.html#main-constructs">Main constructs</a></li>
+            <li><a href="php-intro.html#variables">Variables</a></li>
+            <li><a href="php-intro.html#loops">Loops</a></li>
+            <li><a href="php-intro.html#conditionals">Conditionals</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="html-extended.html#html-extended-beyond-the-basics">HTML extended: beyond the basics</a><ul>
+            <li><a href="html-extended.html#external-stylesheets">External stylesheets</a></li>
+            <li><a href="html-extended.html#forms">Forms</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -217,16 +233,16 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/headers.html">html-intro/headers</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/headers.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&lt;h1&gt;<span class="fu">Header</span> <span class="dv">1</span>&lt;/h1&gt;
-&lt;h2&gt;<span class="fu">Header</span> <span class="dv">2</span>&lt;/h2&gt;
-&lt;h3&gt;<span class="fu">Header</span> <span class="dv">3</span>&lt;/h3&gt;
-&lt;h4&gt;<span class="fu">Header</span> <span class="dv">4</span>&lt;/h4&gt;
-&lt;h5&gt;<span class="fu">Header</span> <span class="dv">5</span>&lt;/h5&gt;
-&lt;h6&gt;<span class="fu">Header</span> <span class="dv">6</span>&lt;/h1&gt;</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;h1&gt;</span>Header 1<span class="kw">&lt;/h1&gt;</span>
+<span class="kw">&lt;h2&gt;</span>Header 2<span class="kw">&lt;/h2&gt;</span>
+<span class="kw">&lt;h3&gt;</span>Header 3<span class="kw">&lt;/h3&gt;</span>
+<span class="kw">&lt;h4&gt;</span>Header 4<span class="kw">&lt;/h4&gt;</span>
+<span class="kw">&lt;h5&gt;</span>Header 5<span class="kw">&lt;/h5&gt;</span>
+<span class="kw">&lt;h6&gt;</span>Header 6<span class="kw">&lt;/h1&gt;</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/headers</span></p>
-<iframe src="embeds/html-intro/headers.html" class="embed--output" height="280px" frameborder="0" scrolling="no">
+<iframe src="embeds/html-intro/headers.html" class="embed--output" height="300px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
@@ -236,23 +252,24 @@ Exercise:
 <li>To indicate semantic meaning (new paragraph, a quote, ...)</li>
 <li>To position and/or style the contents in the container.</li>
 </ul>
+<p>They are also referred to as <em>block</em>-elements</p>
 <h3 id="paragraphs-p">Paragraphs <code>p</code></h3>
 <p>The <a href="http://www.w3schools.com/tags/tag_p.asp" class="w3c-ref"><code>p</code></a>-tag encloses a blob of related text into a paragraph</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/p-tag.html">html-intro/p-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/p-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
-&lt;p&gt;
-   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">Content before...
+<span class="kw">&lt;p&gt;</span>
+   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/p&gt;
-&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<span class="kw">&lt;/p&gt;</span>
+Content after...</code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/p-tag</span></p>
-<iframe src="embeds/html-intro/p-tag.html" class="embed--output" height="160px" frameborder="0" scrolling="no">
+<iframe src="embeds/html-intro/p-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
@@ -262,18 +279,18 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/div-tag.html">html-intro/div-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/div-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
-&lt;div&gt;
-   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">Content before...
+<span class="kw">&lt;div&gt;</span>
+   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/div&gt;
-&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<span class="kw">&lt;/div&gt;</span>
+Content after...</code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/div-tag</span></p>
-<iframe src="embeds/html-intro/div-tag.html" class="embed--output" height="130px" frameborder="0" scrolling="no">
+<iframe src="embeds/html-intro/div-tag.html" class="embed--output" height="150px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
@@ -282,23 +299,175 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/blockquote-tag.html">html-intro/blockquote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/blockquote-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php">&gt;&gt;&gt; Content before<span class="st">...</span> &lt;&lt;&lt;
-&lt;blockquote&gt;
-   Lorem ipsum dolor sit amet<span class="ot">,</span> consetetur sadipscing elitr<span class="ot">,</span> sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat<span class="ot">,</span> sed diam
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">Content before...
+<span class="kw">&lt;blockquote&gt;</span>
+   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-   kasd gubergren<span class="ot">,</span> no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/blockquote&gt;
-&gt;&gt;&gt; Content after<span class="st">...</span> &lt;&lt;&lt;</code></pre></div>
+   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<span class="kw">&lt;/blockquote&gt;</span>
+Content after...</code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/blockquote-tag</span></p>
-<iframe src="embeds/html-intro/blockquote-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
+<iframe src="embeds/html-intro/blockquote-tag.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
-<h2 id="formatting-tags">Formatting tags</h2>
+<h2 id="inline-tags">Inline tags</h2>
+<p>These tags are inline because they do not start a new block (identified by new lines) as the previous tags.</p>
+<p>Their purpose is either to give a specific style and semantic meaning to an element or to extend a certain functionality to the element.</p>
+<h3 id="anchors-links-a">Anchors (links): <code>a</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a> is used to link to other web-pages.</p>
+<p>In order the function, the <code>href</code>-attribute is required on the <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a>-element.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/a-tag.html">html-intro/a-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/a-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span>Link to goole<span class="kw">&lt;/a&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/a-tag</span></p>
+<iframe src="embeds/html-intro/a-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<h3 id="a-newline-br">A newline: <code>br</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_br.asp" class="w3c-ref"><code>br</code></a> insert a newline into the document.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/br-tag.html">html-intro/br-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/br-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is the first line.
+This is the second line, but in html all white space is replaced by a single
+space...<span class="kw">&lt;br&gt;</span> The &quot;br&quot;-tag however instructs the browser to continue on a new
+line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/br-tag</span></p>
+<iframe src="embeds/html-intro/br-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="emphasise-text-em">Emphasise text: <code>em</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_em.asp" class="w3c-ref"><code>em</code></a>-tag allows to emphasise certain text.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/em-tag.html">html-intro/em-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/em-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;em&gt;</span>emphasised<span class="kw">&lt;/em&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/em-tag</span></p>
+<iframe src="embeds/html-intro/em-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="small-text-small">Small text: <code>small</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_small.asp" class="w3c-ref"><code>small</code></a>-tag indicates the browser to use a smaller font-size to visualise this content.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/small-tag.html">html-intro/small-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/small-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;small&gt;</span>small<span class="kw">&lt;/small&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/small-tag</span></p>
+<iframe src="embeds/html-intro/small-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="inline-wrap-text-span">Inline wrap text: <code>span</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/span-tag.html">html-intro/span-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/span-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;span&gt;</span>span<span class="kw">&lt;/span&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/span-tag</span></p>
+<iframe src="embeds/html-intro/span-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="strike-text-strike">Strike text: <code>strike</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/strike-tag.html">html-intro/strike-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strike-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;strike&gt;</span>strike<span class="kw">&lt;/strike&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/strike-tag</span></p>
+<iframe src="embeds/html-intro/strike-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="bold-text-strong">Bold text: <code>strong</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/strong-tag.html">html-intro/strong-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strong-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;strong&gt;</span>strong<span class="kw">&lt;/strong&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/strong-tag</span></p>
+<iframe src="embeds/html-intro/strong-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="inline-quote-text-q">Inline quote text: <code>q</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/quote-tag.html">html-intro/quote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/quote-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">This is <span class="kw">&lt;q&gt;</span>quote<span class="kw">&lt;/q&gt;</span> inline...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/quote-tag</span></p>
+<iframe src="embeds/html-intro/quote-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li><p>Make a web-page with links to:</p>
+<ul>
+<li>google.com</li>
+<li>howest.be</li>
+<li>github.com</li>
+</ul></li>
+<li><p>Print the following text so the sentences are broken up as below.</p>
+<blockquote>
+<p><abbr title="HyperText Markup Language">HTML</abbr> is a markup language browser understand to format documents.<br />
+<abbr title="Cascading Style Sheets">CSS</abbr> is a way to style this markup.<br />
+<abbr title="Hypertext Preprocessor">PHP</abbr> is a programming language.<br />
+It is used to dynamically generate <abbr title="HyperText Markup Language">HTML</abbr>-markup.</p>
+</blockquote></li>
+<li><p>Print the following text so <code>hello world</code> is emphasised.</p>
+<blockquote>
+<p>Let's emphasise hello world in this sentence.</p>
+</blockquote></li>
+<li><p>Print the following text so <code>hello world</code> is smaller</p>
+<blockquote>
+<p>Let's make hello world smaller in this sentence.</p>
+</blockquote></li>
+<li><p>Print the following text so <code>hello world</code> is bold</p>
+<blockquote>
+<p>Let's make hello world bold in this sentence.</p>
+</blockquote></li>
+<li><p>Print the following text so <code>hello world</code> is crossed of.</p>
+<blockquote>
+<p>Let's strike hello world in this sentence.</p>
+</blockquote></li>
+</ul>
+</div>
 <h2 id="attributes-1">Attributes</h2>
+<h2 id="exercises">Exercises</h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">

@@ -9,7 +9,7 @@
    
    
    
-   <title>Getting started - BIT01 Webtechnology</title>
+   <title>PHP basics - BIT01 Webtechnology</title>
 
          <style type="text/css">
          div.sourceCode { overflow-x: auto; }
@@ -117,65 +117,90 @@
       <div class="col-md-10">
 
          <div class="site-header">
-            BIT01 Webtechnology &mdash; Getting started
+            BIT01 Webtechnology &mdash; <abbr title="Hypertext Preprocessor">PHP</abbr> basics
          </div>
 
-<h1 id="getting-started">Getting started</h1>
-<p>This course requires some software to be installed.</p>
-<ul>
-<li>A web browser: <a href="https://firefox.com">firefox</a></li>
-<li>A text editor: <a href="https://wiki.gnome.org/Apps/Gedit">gedit</a></li>
-<li><a href="http://www.php.net"><abbr title="Hypertext Preprocessor">PHP</abbr></a></li>
-<li><a href="https://www.git-scm.com">GIT</a></li>
-</ul>
-<p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
-<p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
-<p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
-<p>If you choose not to use the command line and git. Snapshots of each lessons exercises and examples will be made available for download <a href="https://github.com/asoete/howest-webtechnology-examples/releases">here</a>.</p>
-<h3 id="init-workspace">Init workspace</h3>
-<ul>
-<li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> ~/Documents/webtechnology
-<span class="kw">cd</span>  ~/Documents/webtechnology</code></pre></div></li>
-<li><p>Create your own exercises directory</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> exercises</code></pre></div></li>
-</ul>
-<h3 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h3>
-<ul>
-<li><p>Get an initial copy of the repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions</code></pre></div>
-This will create a <code>examples-solutions</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
-<li><p>To get the latest version/updates run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folder</span>
-<span class="kw">git</span> pull origin master</code></pre></div>
-<div class="alert alert-warning">
-<strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
+<blockquote>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+<p><a href="http://php.net" style="font-size:smaller;">source: php.net</a></p>
+</blockquote>
+<p>This means <abbr title="Hypertext Preprocessor">PHP</abbr> can be used to generate <abbr title="HyperText Markup Language">HTML</abbr>. This allows us to adhere to the DRY (<q>Don't Repeat Yourself</q>) principle.</p>
+<h1 id="php-basics">PHP Basics</h1>
+<h2 id="execute-a-php-script">Execute a PHP-script</h2>
+<p>To get acquainted with php we will start of on the command line and work our way up to <abbr title="Hypertext Preprocessor">PHP</abbr> as a web server.</p>
+<h3 id="the-php-binary">The PHP binary</h3>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> at its core is a program which reads a source file, interprets the directives an prints out the result.</p>
+<p>Basic invocation:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> <span class="kw">&lt;</span>script-to-execute<span class="kw">&gt;</span>.php</code></pre></div>
+<p>The above command will print the output to the <code>STDOUT</code>.</p>
+<h3 id="hello-world">Hello World</h3>
+<p>The obligatory <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">hello world</a>.</p>
+<p>Createt a file: <code>hello-world.php</code> with content:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/hello-world.html">php-basics/hello-world</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/hello-world.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
+
+<span class="fu">echo</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span>
+
+<span class="kw">?&gt;</span></code></pre></div>
 </div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/hello-world</span></p>
+<pre class="embed--output" style="height:;"><code>Hello World</code></pre>
+</div>
+</div>
+<small>
 <div class="alert alert-info">
-<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
-<span class="kw">git</span> reset --hard origin/master</code></pre></div>
-This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
-</div></li>
-</ul>
-<h3 id="get-local-copy-of-this-site.-optional">Get local copy of this site. <small>(Optional)</small></h3>
+<strong>Info:</strong> The echo statement prints a string. See <a href="#echo">echo</a> for more info
+</div>
+<p></small></p>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> If you get an <em>command not found</em> error, you probably have to install php. Run: <code>sudo dnf install php</code>
+</div>
+<p></small></p>
+<p>Run it via:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> hello-world.php</code></pre></div>
+<h2 id="main-constructs">Main constructs</h2>
+<h3 id="php-tags">PHP tags</h3>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> interprets only the code enclosed within the special <abbr title="Hypertext Preprocessor">PHP</abbr>-tags.</p>
 <ul>
-<li><p>Get an initial copy of the repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git webtechnology-site</code></pre></div></li>
-<li><p>To get the latest version/updates</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
-<span class="kw">git</span> pull origin master</code></pre></div></li>
-<li><p>Start a local instance of the site:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
-<span class="kw">make</span> serve</code></pre></div>
-<p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p></li>
+<li>Opening tag: <code>&lt;?php</code></li>
+<li>Closing tag: <code>?&gt;</code></li>
 </ul>
-<h3 id="final-result">Final result</h3>
-<p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>
-<pre><code>~/Documents/webtechnology
-├── examples-solutions
-├── exercises
-└── site</code></pre>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/php-tags.html">php-basics/php-tags</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/php-tags.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="fu">echo</span> <span class="st">&quot;Before php-tags&quot;</span><span class="ot">;</span>
+
+&lt;<span class="ot">?</span>php
+
+<span class="fu">echo</span> <span class="st">&quot;Within php-tags</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+
+<span class="kw">?&gt;</span>
+
+<span class="fu">echo</span> <span class="st">&quot;After php-tags&quot;</span><span class="ot">;</span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/php-tags</span></p>
+<pre class="embed--output" style="height:;"><code>echo &quot;Before php-tags&quot;;
+
+Within php-tags
+
+echo &quot;After php-tags&quot;;
+</code></pre>
+</div>
+</div>
+<p>Notice that the code outside of the <abbr title="Hypertext Preprocessor">PHP</abbr>-tags is not interpreted and this printed out unchanged.</p>
+<h3 id="print-output">Print output</h3>
+<h4 id="echo">Echo</h4>
+<h4 id="print">Print</h4>
+<h2 id="variables">Variables</h2>
+<h3 id="scalars">Scalars</h3>
+<h3 id="arrays">Arrays</h3>
+<h2 id="loops">Loops</h2>
+<h2 id="conditionals">Conditionals</h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">

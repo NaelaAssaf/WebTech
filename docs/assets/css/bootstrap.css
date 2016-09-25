@@ -3036,6 +3036,9 @@ pre {
   text-align: center;
   top: 0; }
 
+blockquote {
+  font-size: 1em; }
+
 pre {
   border: none;
   background: none;
