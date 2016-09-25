@@ -21,8 +21,8 @@ $(pubdir)/%.html: $(mddir)/??-%.md $(template) $(common_depens)
 	   --include-after-body includes/toc.js.html \
 	   -o $@
 
-$(pubdir)/index.html: | $(pubdir)/introduction.html
-	ln -sr $| $@
+$(pubdir)/index.html: $(mddir)/index.html
+	cp $< $@
 
 $(fullcursus.html): $(fullcursus.header) $(mdfiles) $(template) $(common_depens)
 	cat m4/common_macros.m4 $(fullcursus.header) $(mdfiles) | $(m4)  | pandoc \
@@ -30,7 +30,6 @@ $(fullcursus.html): $(fullcursus.header) $(mdfiles) $(template) $(common_depens)
 	   --title-prefix "BIT01 Webtechnology - " \
 	   --base-header-level=1 \
 	   --number-sections \
-	   --variable "completetoc=$$(cat $(toc.html))" \
+	   --variable "completetoc=$$(cat $(localtoc.html))" \
 	   --css=assets/css/bootstrap.css \
-	   --include-after-body includes/toc.js.html \
 	   -o $@
