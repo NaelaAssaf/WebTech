@@ -1,11 +1,9 @@
 .PHONY: embeds
 embeds: $(embeds.html)
 
-$(embedsdestdir)/%.html: $(embedssrcdir)/%.php | $(dir $(embeds.html))
+$(embedsdestdir)/%.html: $(embedssrcdir)/%.php
+	mkdir -p $(dir $@)
 	php -f $< > $@
 
-$(embedsdestdir)/%.css: $(embedssrcdir)/%.css | $(dir $(embeds.html))
+$(embedsdestdir)/%.css: $(embedssrcdir)/%.css
 	cp $< $@
-
-$(dir $(embeds.html)):
-	mkdir -p $@

@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-09-23" />
+        <meta name="date" content="2016-09-25" />
    
    
    <title>A gentle introduction - BIT01 Webtechnology -</title>
@@ -56,7 +56,7 @@
    
    </head>
 <body>
-   
+
    
 
 <div class="container-fluid">
@@ -65,87 +65,119 @@
 
       <!-- TOC -->
 
-      <div class="col-md-2 hidden-print">
-         <div class="complete-toc">
-                           <h3>Table of contents</h3>
-               <ul>
-               <li><a href="introduction.html#introduction">Introduction</a><ul>
-               <li><a href="introduction.html#resources">Resources</a></li>
-               <li><a href="introduction.html#code">Code</a></li>
-               </ul></li>
-               </ul>
-               <ul>
-               <li><a href="getting-started.html#getting-started">Getting started</a></li>
-               </ul>
-                     </div>
+      <div class="col-md-2 complete-toc">
+                     <h3>Table of contents</h3>
+            <ul>
+            <li><a href="#introduction">Introduction</a><ul>
+            <li><a href="#resources">Resources</a><ul>
+            <li><a href="#additional-resources">Additional resources</a></li>
+            </ul></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#code-in-this-document">Code in this document</a></li>
+            </ul></li>
+            <li><a href="#getting-started">Getting started</a><ul>
+            <li><a href="#get-local-copy-of-the-exercises-and-this-guide.-optional">Get local copy of the exercises and this guide. <small>(Optional)</small></a></li>
+            </ul></li>
+            <li><a href="#html-basics">HTML Basics</a><ul>
+            <li><a href="#html-hello-world">HTML: Hello World</a></li>
+            <li><a href="#headers-h">Headers: <code>&lt;H*&gt;</code></a></li>
+            </ul></li>
+            </ul>
+                  <hr>
+         <p class="text-center">
+            <small>
+               <a href="cursus.html">This document in one large webpage...</a>
+            </small>
+         </p>
       </div>
 
       <!-- MAIN CONTENT -->
 
       <div class="col-md-10">
-         
+
          <div class="site-header">
             BIT01 Webtechnology &mdash; A gentle introduction
          </div>
 
 <h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
-<p>The purpose of this course is provide and intro to web technologies (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>) and dynamic webpages via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
+<p>The purpose of this course is to provide an intro to web technologies (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>) and dynamic webpages via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <h2 id="resources"><span class="header-section-number">1.1</span> Resources</h2>
-<p>The main cursus is the website located at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>.</p>
-<p>A PDF version of the main cursus can be found <a href="https://asoete.github.io/howest-webtechnology/assets/pdf/cursus.pdf">here</a>.</p>
-<h2 id="code"><span class="header-section-number">1.2</span> Code</h2>
-<div class="row">
-<div class="col-md-12">
-<p>embed_example</p>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="sourceCode"><pre class="sourceCode php embed-src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
-
-<span class="fu">echo</span> <span class="st">&quot;Hello World</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
-
-<span class="fu">echo</span> <span class="st">&quot;&lt;h1&gt;Hello World&lt;/h1&gt;&quot;</span><span class="ot">;</span></code></pre></div>
-</div>
-<div class="col-md-6">
-<pre class="embed--output" style="height:;"><code>Hello World
-&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<p>embed_example</p>
-</div>
-</div>
+<p>The main documentation for this course is a site an can be found at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>. The main advantage of a using a site as a textbook is that the included examples and snippets can be rendered/formatted by the browser on the fly.</p>
+<p>A <a href="pdfs/cursus.pdf">PDF version</a> of this document is also available. But keep in mind that some <abbr title="HyperText Markup Language">HTML</abbr> features can get lost in the conversion to a pdf.</p>
+<p>There are no slides available, all key aspects of this course will introduced via examples during the lessons. These examples and the solutions of the exercises made during this course will be published <a href="fo://github.com/asoete/howest-webtechnology-code">here</a>.</p>
+<p>Keep in mind that this course is a very practical one and that making exercises is the best way to learn, get familiar, with all the aspects featured in this course.</p>
+<h3 id="additional-resources"><span class="header-section-number">1.1.1</span> Additional resources</h3>
+<p>An in depth guide/reference/manual for <abbr title="Hypertext Preprocessor">PHP</abbr> can be found at <a href="http://php.net" class="uri">http://php.net</a></p>
+<p>For an <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> reference see <a href="http://www.w3schools.com/html" class="uri">http://www.w3schools.com/html</a> and <a href="http://www.w3schools.com/css" class="uri">http://www.w3schools.com/css</a></p>
+<h2 id="contact"><span class="header-section-number">1.2</span> Contact</h2>
+<p>If you have questions about this course and/or it's content please ask... You can contact me via <script type="text/javascript">
+<!--
+h='&#104;&#x6f;&#x77;&#x73;&#116;&#46;&#98;&#x65;';a='&#64;';n='&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x61;&#114;&#110;&#x65;&#46;&#x73;&#x6f;&#x65;&#116;&#x65;&#32;&#x61;&#116;&#32;&#104;&#x6f;&#x77;&#x73;&#116;&#32;&#100;&#x6f;&#116;&#32;&#98;&#x65;</noscript></p>
+<h2 id="code-in-this-document"><span class="header-section-number">1.3</span> Code in this document</h2>
+<p>This course will feature a lot of code. The source-code of all the snippets in this manual can be found <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds">here</a>.</p>
+<p>The source and the output of each snippets are always displayed whenever a snippet is included.</p>
+<p>Example:</p>
 <div class="row">
 <div class="col-md-6">
-<div class="sourceCode"><pre class="sourceCode php embed-src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
+<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
 
-<span class="fu">echo</span> <span class="st">&quot;Hello World</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+<span class="fu">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span>
 
-<span class="fu">echo</span> <span class="st">&quot;&lt;h1&gt;Hello World&lt;/h1&gt;&quot;</span><span class="ot">;</span></code></pre></div>
+<span class="kw">if</span><span class="ot">(</span> <span class="fu">array_key_exists</span><span class="ot">(</span> <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="kw">$_POST</span> <span class="ot">)</span> <span class="ot">)</span> {
+
+    <span class="fu">unset</span><span class="ot">(</span><span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;KEY&#39;</span><span class="ot">]);</span>
+}
+
+<span class="kw">?&gt;</span>
+
+&lt;p&gt;
+   Markup is interpreted by the browser <span class="kw">and</span> formatted accordingly..
+&lt;/p&gt;</code></pre></div>
 </div>
-<div class="col-md-6">
-<iframe src="embeds/embed_example.html" class="embed--output" height frameborder="0">
+<div class="col-md-6 iframe-wrapper">
+<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0">
 </iframe>
 </div>
 </div>
 <h1 id="getting-started"><span class="header-section-number">2</span> Getting started</h1>
-<p>In order to follow this course, some software is required:</p>
+<p>This course requires some software to be installed.</p>
 <ul>
 <li>A web browser: <a href="https://firefox.com">firefox</a></li>
-<li>A text editor: gedit</li>
+<li>A text editor: <a href="https://wiki.gnome.org/Apps/Gedit">gedit</a></li>
 <li><a href="http://www.php.net"><abbr title="Hypertext Preprocessor">PHP</abbr></a></li>
 <li><a href="https://www.git-scm.com">GIT</a></li>
 </ul>
 <p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
+<p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
+<h2 id="get-local-copy-of-the-exercises-and-this-guide.-optional"><span class="header-section-number">2.1</span> Get local copy of the exercises and this guide. <small>(Optional)</small></h2>
+<p>This guide and all the exercises are hosted on <a href="https.github.com">GitHub</a>.</p>
+<p>Therefore a basic understanding of git is required to get all the source material.</p>
+<ol style="list-style-type: decimal">
+<li><p>Get an initial copy of the repository;</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git </code></pre></div></li>
+<li><h2 id="hmmm"><span class="header-section-number">2.1</span> hmmm</h2>
+<h2 id="title-html-basics"><span class="header-section-number">2.1</span> title: <abbr title="HyperText Markup Language">HTML</abbr> basics</h2></li>
+</ol>
+<h1 id="html-basics"><span class="header-section-number">3</span> HTML Basics</h1>
+<h2 id="html-hello-world"><span class="header-section-number">3.1</span> HTML: Hello World</h2>
+<p>Create a text file name <code class="file">hello-world.html</code></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gedit</span> hello-world.html</code></pre></div>
+<p>With contents:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">Hello World</code></pre></div>
+<p>Open the local <abbr title="HyperText Markup Language">HTML</abbr> file in the browser.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">firefox</span> <span class="kw">&lt;</span>file.html<span class="kw">&gt;</span></code></pre></div>
+<h2 id="headers-h"><span class="header-section-number">3.2</span> Headers: <code>&lt;H*&gt;</code></h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-09-23
+                  at 2016-09-25
                </p>
             </footer>
          </div>
@@ -156,23 +188,6 @@
 
 </div>
 
-<script type="text/javascript">
-(function(){
-
-   var lis = document.querySelectorAll('.complete-toc > ul > li > a');
-
-   var currentPage = location.pathname.split('/').pop();
-
-   for(var i = 0; i < lis.length; ++i ) {
-
-      if( lis[i].pathname.split('/').pop() == currentPage ) {
-
-         console.log(lis[i].parentNode)
-         lis[i].parentNode.classList.add('active');
-      }
-   }
-})()
-</script>
 
 </body>
 </html>

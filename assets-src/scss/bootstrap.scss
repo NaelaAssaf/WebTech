@@ -2,12 +2,12 @@ $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.1)) !default; 
-$font-size-h2:            floor(($font-size-base * 1.8)) !default; 
+$font-size-h1:            floor(($font-size-base * 2.1)) !default;
+$font-size-h2:            floor(($font-size-base * 1.8)) !default;
 $font-size-h3:            floor(($font-size-base * 1.6)) !default;
 $font-size-h4:            floor(($font-size-base * 1.4)) !default;
 $font-size-h5:            floor(($font-size-base * 1.2)) !default;
-$font-size-h6:            floor(($font-size-base * 1.0)) !default; 
+$font-size-h6:            floor(($font-size-base * 1.0)) !default;
 
 $lightgray-bg : #f6f6f6;
 
@@ -27,7 +27,7 @@ $lightgray-bg : #f6f6f6;
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/scaffolding";
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/tables";
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/buttons";
-// @import "vendor/bootstrap/assets/stylesheets/bootstrap/code";
+@import "vendor/bootstrap/assets/stylesheets/bootstrap/code";
 
 // Fancy stuff
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/button-groups";
@@ -53,6 +53,9 @@ $lightgray-bg : #f6f6f6;
    @media (min-width: $screen-md-min) {
       height: 100vh;
       overflow-y: scroll;
+      top: 0;
+      position: -webkit-sticky;
+      position: sticky;
    }
 
    @media (max-width: $screen-md-min) {
@@ -67,8 +70,26 @@ $lightgray-bg : #f6f6f6;
       @extend .nav-pills;
       @extend .nav-stacked;
 
-      & > li.active > a{
-         font-weight: bold;
+      & > li {
+         font-weight: bolder;
+
+         a {
+            padding-top: 3px;
+            padding-bottom: 3px;
+         }
+
+         &.active > a{
+            margin-top: 6px;
+            font-weight: bold;
+            padding-top: 3px;
+            padding-bottom: 3px;
+         }
+         li {
+
+            font-weight: normal;
+
+            a { padding: 2px; }
+         }
       }
    }
 }
@@ -102,15 +123,47 @@ $lightgray-bg : #f6f6f6;
 // Embeds
 // ========================================================================== //
 
+pre {
+   border: none;
+   background: none;
+   border-radius: 0;
+   margin-bottom: 0;
+}
+
 div.sourceCode{
 
    background: $lightgray-bg;
-   padding: 1em;
+   padding: 0.5em;
+   padding-bottom: 0;
+   margin-bottom: 0.5em;
    font-size: 0.9em;
+}
+
+.m4_indent {
+
+   margin-left: 40px;
+}
+
+.embed--srcfile {
+
+   position: absolute;
+   margin: 2em;
+   margin-right: $grid-gutter-width;
+   right: 0px;
+   z-index: 1;
+   // color: gray;
+   font-size: 0.75em;
+   font-style: italic;
+}
+
+.embed--src {
+
+   position: relative;
 }
 
 .embed--output {
 
+   margin-top: 10px;
    border-left: solid lightblue  0.5em;
 
 }
@@ -118,6 +171,11 @@ div.sourceCode{
 pre.embed--output {
 
    padding: 8px;
+}
+
+iframe {
+
+   width: 100%;
 }
 
 // ========================================================================== //

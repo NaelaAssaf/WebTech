@@ -39,7 +39,7 @@
    $endfor$
 </head>
 <body>
-   
+
    $for(include-before)$
       $include-before$
    $endfor$
@@ -51,19 +51,23 @@
 
       <!-- TOC -->
 
-      <div class="col-md-2 hidden-print">
-         <div class="complete-toc">
-            $if(completetoc)$
-               <h3>Table of contents</h3>
-               $completetoc$
-            $endif$
-         </div>
+      <div class="col-md-2 complete-toc">
+         $if(completetoc)$
+            <h3>Table of contents</h3>
+            $completetoc$
+         $endif$
+         <hr>
+         <p class="text-center">
+            <small>
+               <a href="cursus.html">This document in one large webpage...</a>
+            </small>
+         </p>
       </div>
 
       <!-- MAIN CONTENT -->
 
       <div class="col-md-10">
-         
+
          <div class="site-header">
             BIT01 Webtechnology &mdash; $title$
          </div>
