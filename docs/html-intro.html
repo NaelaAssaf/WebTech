@@ -85,23 +85,22 @@
             <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
             <li><a href="html-intro.html#containers">Containers</a></li>
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
-            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
-            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-intro.html#php-basics">PHP Basics</a><ul>
-            <li><a href="php-intro.html#execute-a-php-script">Execute a PHP-script</a></li>
-            <li><a href="php-intro.html#main-constructs">Main constructs</a></li>
-            <li><a href="php-intro.html#variables">Variables</a></li>
-            <li><a href="php-intro.html#loops">Loops</a></li>
+            <li><a href="php-intro.html#what-makes-a-php-script">What makes a PHP-script</a></li>
+            <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
             <li><a href="php-intro.html#conditionals">Conditionals</a></li>
+            <li><a href="php-intro.html#loops">Loops</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="html-extended.html#html-extended-beyond-the-basics">HTML extended: beyond the basics</a><ul>
-            <li><a href="html-extended.html#external-stylesheets">External stylesheets</a></li>
-            <li><a href="html-extended.html#forms">Forms</a></li>
+            <li><a href="html-extended.html#html-and-css">HTML and CSS</a><ul>
+            <li><a href="html-extended.html#attributes">Attributes</a></li>
+            <li><a href="html-extended.html#styles">Styles</a></li>
+            <li><a href="html-extended.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -246,6 +245,14 @@ Exercise:
 </iframe>
 </div>
 </div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Create a header for each <code>Hn</code>-tag</li>
+</ul>
+</div>
 <h2 id="containers">Containers</h2>
 <p>The purpose of these types of tags is to wrap other content. Why the content should be wrapped can vary:</p>
 <ul>
@@ -314,6 +321,20 @@ Content after...</code></pre></div>
 </iframe>
 </div>
 </div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Create a block of text an wrap it in.
+<ul>
+<li>No tags</li>
+<li>div tags</li>
+<li>p tags</li>
+<li>blockquote tags And notice the difference</li>
+</ul></li>
+</ul>
+</div>
 <h2 id="inline-tags">Inline tags</h2>
 <p>These tags are inline because they do not start a new block (identified by new lines) as the previous tags.</p>
 <p>Their purpose is either to give a specific style and semantic meaning to an element or to extend a certain functionality to the element.</p>
@@ -335,6 +356,15 @@ Content after...</code></pre></div>
 <h4>
 Exercise:
 </h4>
+<ul>
+<li>Create links to
+<ul>
+<li>google.com</li>
+<li>howest.be</li>
+<li>php.net</li>
+<li>github.com</li>
+</ul></li>
+</ul>
 </div>
 <h3 id="a-newline-br">A newline: <code>br</code></h3>
 <p>The <a href="http://www.w3schools.com/tags/tag_br.asp" class="w3c-ref"><code>br</code></a> insert a newline into the document.</p>
@@ -439,7 +469,7 @@ Exercise:
 <ul>
 <li>google.com</li>
 <li>howest.be</li>
-<li>github.com</li>
+<li>GitHub.com</li>
 </ul></li>
 <li><p>Print the following text so the sentences are broken up as below.</p>
 <blockquote>
@@ -466,8 +496,105 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 </blockquote></li>
 </ul>
 </div>
-<h2 id="attributes-1">Attributes</h2>
-<h2 id="exercises">Exercises</h2>
+<h2 id="multi-element-markup">Multi element markup</h2>
+<p>Some elements don't make any sense on their own. They should be part of a larger elements-group.</p>
+<h3 id="lists">Lists</h3>
+<p>A <abbr title="HyperText Markup Language">HTML</abbr>-list is composed of <a href="http://www.w3schools.com/tags/tag_li.asp" class="w3c-ref"><code>li</code></a>-tags enclosed by an <a href="http://www.w3schools.com/tags/tag_ul.asp" class="w3c-ref"><code>ul</code></a> or <a href="http://www.w3schools.com/tags/tag_ol.asp" class="w3c-ref"><code>ol</code></a>-tag.</p>
+<h4 id="unordered-lists-ul">Unordered lists <code>ul</code></h4>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/list-unordered.html">html-intro/list-unordered</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/list-unordered.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;ul&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 1<span class="kw">&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 2<span class="kw">&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 3<span class="kw">&lt;/li&gt;</span>
+<span class="kw">&lt;/ul&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/list-unordered</span></p>
+<iframe src="embeds/html-intro/list-unordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h4 id="ordered-lists-ol">Ordered lists <code>ol</code></h4>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/list-ordered.html">html-intro/list-ordered</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/list-ordered.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;ol&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 1<span class="kw">&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 2<span class="kw">&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;</span>list item 3<span class="kw">&lt;/li&gt;</span>
+<span class="kw">&lt;/ol&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/list-ordered</span></p>
+<iframe src="embeds/html-intro/list-ordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Make an unordered list with your name, age and gender as items</li>
+<li>Make your name bold, age emphasised and gender quoted.</li>
+<li>Make a top 3 ranked list of your favorite dishes</li>
+<li>Add a fourth dish, but with smaller font .</li>
+</ul>
+</div>
+<h3 id="tables">Tables</h3>
+<p>A simple table is composed out of:</p>
+<ul>
+<li>a table wrapper: <a href="http://www.w3schools.com/tags/tag_table.asp" class="w3c-ref"><code>table</code></a></li>
+<li>rows: <a href="http://www.w3schools.com/tags/tag_tr.asp" class="w3c-ref"><code>tr</code></a></li>
+<li>header cells <a href="http://www.w3schools.com/tags/tag_th.asp" class="w3c-ref"><code>th</code></a></li>
+<li>and normal cells <a href="http://www.w3schools.com/tags/tag_td.asp" class="w3c-ref"><code>td</code></a></li>
+</ul>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/simple-table.html">html-intro/simple-table</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/simple-table.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;table&gt;</span>
+   <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;th&gt;</span>Firstname<span class="kw">&lt;/th&gt;</span>
+      <span class="kw">&lt;th&gt;</span>Lastname<span class="kw">&lt;/th&gt;</span>
+      <span class="kw">&lt;th&gt;</span>Age<span class="kw">&lt;/th&gt;</span>
+   <span class="kw">&lt;/tr&gt;</span>
+   <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;td&gt;</span>John<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>Doe<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>21<span class="kw">&lt;/td&gt;</span>
+   <span class="kw">&lt;/tr&gt;</span>
+   <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;td&gt;</span>Jane<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>Doe<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>18<span class="kw">&lt;/td&gt;</span>
+   <span class="kw">&lt;/tr&gt;</span>
+
+<span class="kw">&lt;/table&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/simple-table</span></p>
+<iframe src="embeds/html-intro/simple-table.html" class="embed--output" height="120px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Make a table with two columns: name and score</li>
+<li>Add 3 rows
+<ul>
+<li>Jan -&gt; 12</li>
+<li>Piet -&gt; 15</li>
+<li>Joris -&gt; 7</li>
+</ul></li>
+<li>Make the names also headers</li>
+<li>Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.</li>
+</ul>
+</div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">

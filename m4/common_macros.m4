@@ -25,10 +25,12 @@ m4_dnl -----------------------------------------------------------------------
 m4_define(m4_warning,[[<div class="alert alert-warning"><strong>Warning:</strong> $1</div>]])
 m4_define(m4_info,[[<div class="alert alert-info"><strong>Info:</strong> $1</div>]])
 m4_define(m4_note,m4_info($1))
+m4_define(m4_danger,[[<div class="alert alert-danger"><strong>Danger:</strong> $1</div>]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
+m4_define(m4_phpfunc,[`$1`](http://php.net/manual/en/function.$1.php){.w3c-ref})
 
 m4_dnl -----------------------------------------------------------------------
 

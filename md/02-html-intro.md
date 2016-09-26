@@ -204,6 +204,10 @@ font-size.
 
 m4_embed_php_as_html(html-intro/headers,300px,.html)
 
+m4_exercise([[
+* Create a header for each `Hn`-tag
+]])
+
 ## Containers
 
 The purpose of these types of tags is to wrap other content. Why the content should be wrapped can vary:
@@ -234,6 +238,15 @@ The m4_tag(blockquote)-tag is used to denote some block of text as a quote from 
 
 m4_embed_php_as_html(html-intro/blockquote-tag,200px,.html)
 
+m4_exercise([[
+* Create a block of text an wrap it in.
+    * No tags
+    * div tags
+    * p tags
+    * blockquote tags
+  And notice the difference
+]])
+
 ## Inline tags
 
 These tags are inline because they do not start a new block (identified by new
@@ -251,6 +264,11 @@ In order the function, the `href`-attribute is required on the m4_tag(a)-element
 m4_embed_php_as_html(html-intro/a-tag,50px,.html)
 
 m4_exercise([[
+* Create links to
+    * google.com
+    * howest.be
+    * php.net
+    * github.com
 ]])
 
 ### A newline: `br`
@@ -301,7 +319,7 @@ m4_exercise([[
 
     * google.com
     * howest.be
-    * github.com
+    * GitHub.com
 
 * Print the following text so the sentences are broken up as below.
 
@@ -327,6 +345,48 @@ m4_exercise([[
     > Let's strike hello world in this sentence.
 ]])
 
-## Attributes
+## Multi element markup
 
-## Exercises
+Some elements don't make any sense on their own. They should be part of a
+larger elements-group.
+
+### Lists
+
+A HTML-list is composed of m4_tag(li)-tags enclosed by an m4_tag(ul) or
+m4_tag(ol)-tag.
+
+#### Unordered lists `ul`
+
+m4_embed_php_as_html(html-intro/list-unordered,100px,.html)
+
+#### Ordered lists `ol`
+
+m4_embed_php_as_html(html-intro/list-ordered,100px,.html)
+
+m4_exercise([[
+* Make an unordered list with your name, age and gender as items
+* Make your name bold, age emphasised and gender quoted.
+* Make a top 3 ranked list of your favorite dishes
+* Add a fourth dish, but with smaller font .
+]])
+
+### Tables
+
+A simple table is composed out of:
+
+* a table wrapper: m4_tag(table)
+* rows: m4_tag(tr)
+* header cells m4_tag(th)
+* and normal cells m4_tag(td)
+
+m4_embed_php_as_html(html-intro/simple-table,120px,.html)
+
+m4_exercise([[
+* Make a table with two columns: name and score
+* Add 3 rows
+    * Jan -> 12
+    * Piet -> 15
+    * Joris -> 7
+* Make the names also headers
+* Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.
+]])
