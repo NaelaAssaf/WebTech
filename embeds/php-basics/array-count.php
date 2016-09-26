@@ -8,7 +8,7 @@ $array[] = "Add item";
 
 echo count($array) . "\n";
 
-array_unshift( $array );
-array_unshift( $array );
+array_shift( $array );
+array_shift( $array );
 
 echo count($array) . "\n";
