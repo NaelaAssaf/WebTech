@@ -23,7 +23,7 @@ in mind that some HTML features can get lost in the conversion to a pdf.
 There are no slides available, all key aspects of this course will introduced
 via examples during the lessons. These examples and the solutions of the
 exercises made during this course will be published
-[here](fo://github.com/asoete/howest-webtechnology-code).
+[here](https://github.com/asoete/howest-webtechnology-code).
 
 Keep in mind that this course is a very practical one and that making exercises
 is the best way to learn, get familiar, with all the aspects featured in this
