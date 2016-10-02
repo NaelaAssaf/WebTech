@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-09-26" />
+        <meta name="date" content="2016-10-02" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -90,11 +90,13 @@
             <li><a href="#types-and-variables">Types and variables</a></li>
             <li><a href="#conditionals">Conditionals</a></li>
             <li><a href="#loops">Loops</a></li>
+            <li><a href="#exercises">Exercises</a></li>
+            <li><a href="#php-webserver">PHP Webserver</a></li>
             </ul></li>
             <li><a href="#html-and-css">HTML and CSS</a><ul>
             <li><a href="#attributes-1">Attributes</a></li>
             <li><a href="#styles">Styles</a></li>
-            <li><a href="#exercises">Exercises</a></li>
+            <li><a href="#exercises-2">Exercises</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -872,8 +874,8 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <h4 id="printingdisplaying-scalars">Printing/Displaying scalars</h4>
 <p>A scalar can be printed via two methods:</p>
 <ul>
-<li><a href="http://php.net/manual/en/function.echo.php" class="w3c-ref"><code>echo</code></a></li>
-<li><a href="http://php.net/manual/en/function.print.php" class="w3c-ref"><code>print</code></a></li>
+<li><a href="http://php.net/manual-lookup.php?pattern=echo" class="w3c-ref"><code>echo</code></a></li>
+<li><a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a></li>
 </ul>
 <h5 id="echo">Echo</h5>
 <p><em>Generic syntax:</em></p>
@@ -1150,7 +1152,7 @@ Array
 </div>
 </div>
 <h4 id="printdisplay-arrays">Print/Display arrays</h4>
-<p>The function <a href="http://php.net/manual/en/function.print_r.php" class="w3c-ref"><code>print_r</code></a> can be used to print an array.</p>
+<p>The function <a href="http://php.net/manual-lookup.php?pattern=print_r" class="w3c-ref"><code>print_r</code></a> can be used to print an array.</p>
 <p><em>Generic syntax:</em></p>
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array</span> <span class="ot">);</span></code></pre></div>
 <div class="row">
@@ -1266,7 +1268,7 @@ Array
 </div>
 <h4 id="manipulating-arrays">Manipulating arrays</h4>
 <h5 id="add-an-item-to-the-end-of-an-array">Add an item to the end of an array:</h5>
-<p>Adding an element in front of an array can be accomplished by the function <a href="http://php.net/manual/en/function.array_push.php" class="w3c-ref"><code>array_push</code></a>.</p>
+<p>Adding an element in front of an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-append.html">php-basics/array-append</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-append.php" taret="_blank">src</a></span></p>
@@ -1313,7 +1315,7 @@ Array
 </div>
 </div>
 <h5 id="add-an-item-in-front-of-an-array">Add an item in front of an array:</h5>
-<p>Adding an element at the end of an array can be accomplished by the function <a href="http://php.net/manual/en/function.array_unshift.php" class="w3c-ref"><code>array_unshift</code></a>.</p>
+<p>Adding an element at the end of an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_unshift" class="w3c-ref"><code>array_unshift</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-prepend.html">php-basics/array-prepend</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-prepend.php" taret="_blank">src</a></span></p>
@@ -1346,7 +1348,7 @@ Array
 </div>
 </div>
 <h5 id="extract-the-first-element-from-an-array">Extract the first element from an array</h5>
-<p>Extracting the first element from an array can be accomplished by the function <a href="http://php.net/manual/en/function.array_shift.php" class="w3c-ref"><code>array_shift</code></a>.</p>
+<p>Extracting the first element from an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_shift" class="w3c-ref"><code>array_shift</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-shift.html">php-basics/array-shift</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-shift.php" taret="_blank">src</a></span></p>
@@ -1378,7 +1380,7 @@ Array
 </div>
 </div>
 <h5 id="extract-the-last-element-from-an-array">Extract the last element from an array</h5>
-<p>Extracting the last element from an array can be accomplished by the function <a href="http://php.net/manual/en/function.array_pop.php" class="w3c-ref"><code>array_pop</code></a>.</p>
+<p>Extracting the last element from an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-pop.html">php-basics/array-pop</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-pop.php" taret="_blank">src</a></span></p>
@@ -1410,7 +1412,7 @@ Array
 </div>
 </div>
 <h5 id="count-the-elements-in-an-array">Count the elements in an array</h5>
-<p>Counting the elements in an array can be accomplished by the function <a href="http://php.net/manual/en/function.count.php" class="w3c-ref"><code>count</code></a>.</p>
+<p>Counting the elements in an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=count" class="w3c-ref"><code>count</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-count.html">php-basics/array-count</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-count.php" taret="_blank">src</a></span></p>
@@ -1437,6 +1439,52 @@ Array
 </code></pre>
 </div>
 </div>
+<h3 id="special-arrays">Special arrays</h3>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> has some special, reserved, arrays. These arrays are created and filled by <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
+<h4 id="argv">$argv</h4>
+<p>This array holds al the arguments passed to a <abbr title="Hypertext Preprocessor">PHP</abbr>-script from the command line.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print_r-argv.php <span class="st">&#39;arg1&#39;</span> <span class="st">&#39;arg2&#39;</span> 123 --options</code></pre></div>
+<pre class="run--output"><code>Could not open input file: print_r-argv.php
+</code></pre>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> Notice that the first argument in this array is always the name of the script!
+</div>
+<p></small></p>
+<h4 id="get">$_GET</h4>
+<p>The <code>$_GET</code>-array holds data sent to a webpage via a HTTP-get method.</p>
+<p>This corresponds with URL parameters.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">http</span>://example.com/page.php?arg1=hello<span class="kw">&amp;</span><span class="ot">arg2=</span>world<span class="kw">&amp;</span><span class="ot">end=</span>!</code></pre></div>
+<pre class="embed--output"><code>Array
+(
+    [arg1] =&gt; hello
+    [arg2] =&gt; world
+    [end] =&gt; !
+)</code></pre>
+<h4 id="post">$_POST</h4>
+<p>The <code>$_POST</code>-array holds data sent to a webpage via a HTTP-post method.</p>
+<p>This is typically done via a from submission...</p>
+<h4 id="session">$_SESSION</h4>
+<p>You can store inter-page data in the <code>$_SESSION</code> reserved array.</p>
+<p>This inter-page data is typically:</p>
+<ul>
+<li>user info</li>
+<li>preferences</li>
+</ul>
+<h4 id="file">$_FILE</h4>
+<p>When files are uploaded, <abbr title="Hypertext Preprocessor">PHP</abbr> stores information about these files in this array.</p>
+<p>Example:</p>
+<pre class="embed--output"><code>Array
+(
+    [file] =&gt; Array
+        (
+            [name] =&gt; MyFile.jpg
+            [type] =&gt; image/jpeg
+            [tmp_name] =&gt; /tmp/php/php6hst32
+            [error] =&gt; UPLOAD_ERR_OK
+            [size] =&gt; 98174
+        )
+)</code></pre>
 <h2 id="conditionals">Conditionals</h2>
 <p>It can be very handy to execute a piece of code only when certain requirement are met. This kind of behaviour can be accomplished via conditionals</p>
 <p>The <code>if</code> language structure defines the conditions to fulfil and the accompanying block of code to run if the conditions evaluate to <code>true</code> (enclosed in curly brackets <code>{}</code>).</p>
@@ -1582,7 +1630,7 @@ bool(false)
 </div>
 <small>
 <div class="alert alert-info">
-<strong>Info:</strong> <a href="http://php.net/manual/en/function.var_dump.php" class="w3c-ref"><code>var_dump</code></a> prints a variable with type information
+<strong>Info:</strong> <a href="http://php.net/manual-lookup.php?pattern=var_dump" class="w3c-ref"><code>var_dump</code></a> prints a variable with type information
 </div>
 <p></small></p>
 <h3 id="logical-operators">Logical operators</h3>
@@ -1873,6 +1921,421 @@ Key: `100` has value: `hello`
 </code></pre>
 </div>
 </div>
+<h2 id="exercises">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that:</p>
+<ul>
+<li>receives a number from the command line</li>
+<li>counts from zero to this number</li>
+<li>counts back from this number to zero</li>
+<li>counts from zero to the number in steps of three</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> count-to-number.php 9</code></pre></div>
+<pre class="run--output"><code>Count up from 0 to 9: 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Count down from 9 to 0: 
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Count up from 0 to 9 in steps of 3: 
+0
+3
+6
+9
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints a line of a asterisks <code>*</code> defined by a command line parameter.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-asterisks.php 9</code></pre></div>
+<pre class="run--output"><code>*********
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that</p>
+<ul>
+<li>prints a square of a asterisks <code>*</code> if one parameter is defined</li>
+<li>Prints a block with width and height if both parameters are defined.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-square-of-asterisks.php 9</code></pre></div>
+<pre class="run--output"><code>*********
+*********
+*********
+*********
+*********
+*********
+*********
+*********
+*********
+
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-square-of-asterisks.php 15 5</code></pre></div>
+<pre class="run--output"><code>***************
+***************
+***************
+***************
+***************
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints a left + bottom balanced triangle of asterisks with base defined by parameter.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-left-bottom-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>*
+**
+***
+****
+*****
+******
+*******
+********
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints a left + bottom balanced triangle with base defined by parameter.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-left-bottom-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>*
+**
+***
+****
+*****
+******
+*******
+********
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints a right + bottom balanced triangle of asterisks with base defined by parameter.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-right-bottom-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>        *
+       **
+      ***
+     ****
+    *****
+   ******
+  *******
+ ********
+ 
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints a center + bottom balanced triangle of asterisks with base defined by parameter.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-center-bottom-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>     
+    **
+   ****
+  ******
+ ********
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create al the triangles again but the base (maximum number of asterisks) should be on top instead of at the bottom...</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-left-top-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-right-top-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>*********
+ ********
+  *******
+   ******
+    *****
+     ****
+      ***
+       **
+        *
+
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-center-top-balanced-triangle.php 9</code></pre></div>
+<pre class="run--output"><code>*********
+ *******
+  *****
+   ***
+    *
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that:</p>
+<ul>
+<li>reads a list of numbers from the command line</li>
+<li>prints the list</li>
+<li>prints the number of numbers (count)</li>
+<li>calculates/prints the min, max and average of the numbers</li>
+<li>prints the list backwards (bonus)</li>
+<li>prints the list sorted (bonus)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> number-statistics.php 9 12 3 5 4 1 8 5</code></pre></div>
+<pre class="run--output"><code>The numbers received:
+number 0: 9
+number 1: 12
+number 2: 3
+number 3: 5
+number 4: 4
+number 5: 1
+number 6: 8
+number 7: 5
+
+Smallest number: 1
+Avg: 5.875
+Largest number: 12
+Number of numbers: 8
+
+The numbers in reverse order:
+number 7: 5
+number 6: 8
+number 5: 1
+number 4: 4
+number 3: 5
+number 2: 3
+number 1: 12
+number 0: 9
+
+Numbers from smallest to largest:
+1
+3
+4
+5
+5
+8
+9
+12
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that generates the reverse complement of DNA string:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
+comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
+<p>Bonus:</p>
+<p>Print bonds:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
+       |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> The <abbr title="Hypertext Preprocessor">PHP</abbr> functions: <a href="http://php.net/manual-lookup.php?pattern=str_split" class="w3c-ref"><code>str_split</code></a> amd <a href="http://php.net/manual-lookup.php?pattern=strlen" class="w3c-ref"><code>strlen</code></a> can be of use.
+</div>
+<p></small></p>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that generates the reverse complement of DNA string and can cope with:</p>
+<ul>
+<li>with Caps and non caps letters</li>
+<li>white space</li>
+<li>unvalid nucleotides (and report these)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></code></pre></div>
+<pre class="run--output"><code>orig.: ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC
+comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
+
+Invaid NT characters:
+X: 4 occurrences
+i: 1 occurrences
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints the nucleotide frequency of a DNA strand.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<pre class="run--output"><code>input: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
+
+   STATS:
+      A: 24 nts -&gt; 32.876712328767 %
+      T: 18 nts -&gt; 24.657534246575 %
+      G: 18 nts -&gt; 24.657534246575 %
+      C: 13 nts -&gt; 17.808219178082 %
+
+</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script that prints the frequency of the characters in a string.</p>
+<ul>
+<li>sort by frequency: low to hight + high to low</li>
+<li>sort by character (and reverse)</li>
+<li>case-insensitive (bonus)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></code></pre></div>
+<pre class="run--output"><code>input: Hello world, this is a random 123#$ string.
+
+STATS:
+&#39;H&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;e&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;l&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;o&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39; &#39;: 7 occurences -&gt; 16.279069767442 %
+&#39;w&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;r&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;d&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;,&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;t&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;h&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;i&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;s&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;a&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;n&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;m&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;1&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;2&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;#&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;$&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;g&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;.&#39;: 1 occurences -&gt; 2.3255813953488 %
+
+Order by frequentie:
+&#39;H&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;h&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;m&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;1&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;2&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;,&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;.&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;e&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;g&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;$&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;#&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;w&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;t&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;a&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;d&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;n&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;i&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;o&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;s&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;r&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;l&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39; &#39;: 7 occurences -&gt; 16.279069767442 %
+
+Order by character:
+&#39; &#39;: 7 occurences -&gt; 16.279069767442 %
+&#39;#&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;$&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;,&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;.&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;H&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;a&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;d&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;e&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;g&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;h&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;i&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;l&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;m&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;n&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;o&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;r&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;s&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;t&#39;: 2 occurences -&gt; 4.6511627906977 %
+&#39;w&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;1&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;2&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
+
+</code></pre>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> See: <a href="http://php.net/manual-lookup.php?pattern=sort" class="w3c-ref"><code>sort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=asort" class="w3c-ref"><code>asort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=ksort" class="w3c-ref"><code>ksort</code></a>,... for different sort functions
+</div>
+<p></small></p>
+</div>
+<h2 id="php-webserver">PHP Webserver</h2>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
+<h3 id="starting-a-server">Starting a server</h3>
+<p>The server is started with one command on the command line:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:<span class="kw">&lt;</span>port<span class="kw">&gt;</span> [-t /path/to/folder]</code></pre></div>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:8080</code></pre></div>
+<p>This previous command will start a web-server in the current working directory and will be accessible at the URL: <code>http://localhost:8080</code>.</p>
+<p>You can pick any port, as long as it is between 1024 and 65535. By convention <code>8000</code> or <code>8080</code> is picked because of he resemblance with the official HTTP-port: <code>80</code>.</p>
+<p>As mentioned before, by default the server will start in the current working directory. I you wish the root of the site to be another directory, specify it via the <code>-t</code> option.</p>
+<div class="alert alert-info">
+<strong>Info:</strong> More info about this command can be found by executing the <code>man php</code> command on the command line.
+</div>
+<p>By default the web-server will search and execute serve the <code>index.html</code> or <code>index.php</code> file in the servers root directory. (root directory = the directory where the server was started)</p>
+<h3 id="making-a-simple-page">Making a simple page</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> my-website
+<span class="kw">cd</span> my-website
+<span class="kw">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="kw">&gt;</span> index.html
+<span class="kw">php</span> -S localhost:8080
+<span class="kw">firefox</span> localhost:8080</code></pre></div>
+<p>You should be greeted with <code>Hello world</code>...</p>
+<p>Because the web-pages are served via a <abbr title="Hypertext Preprocessor">PHP</abbr> server, all <abbr title="Hypertext Preprocessor">PHP</abbr> files (ending in <code>.php</code>) will be interpreted by the webserver. This allows us to generate the <abbr title="HyperText Markup Language">HTML</abbr> content dynamically.</p>
+<h3 id="exercises-1">Exercises</h3>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that prints <code>hello world</code> when served by a web-server</p>
+</div>
 <h1 id="html-and-css">HTML and CSS</h1>
 <h2 id="attributes-1">Attributes</h2>
 <p>Attributes can modify the behaviour of an <abbr title="HyperText Markup Language">HTML</abbr>-element.</p>
@@ -1891,13 +2354,13 @@ Key: `100` has value: `hello`
 <p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to the element.</p>
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external stylesheet are better, more scalable, options. I can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
-<h2 id="exercises">Exercises</h2>
+<h2 id="exercises-2">Exercises</h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-09-26
+                  at 2016-10-02
                </p>
             </footer>
          </div>

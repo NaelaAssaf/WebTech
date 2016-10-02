@@ -30,7 +30,7 @@ m4_define(m4_danger,[[<div class="alert alert-danger"><strong>Danger:</strong> $
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
-m4_define(m4_phpfunc,[`$1`](http://php.net/manual/en/function.$1.php){.w3c-ref})
+m4_define(m4_phpfunc,[`$1`](http://php.net/manual-lookup.php?pattern=$1){.w3c-ref})
 
 m4_dnl -----------------------------------------------------------------------
 
@@ -83,4 +83,15 @@ m4_dnl <iframe src="embeds/$1.html" class="embed--output" height="$2" frameborde
 <iframe src="embeds/$1.html" class="embed--output" height="$2" frameborder="0" scrolling="no"></iframe>
 
 </div></div>
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_define(m4_run,[[
+```bash
+[[$2]]
+```
+```{.run--output}
+m4_esyscmd([[ cd exercises/$1 && $2]])
+```
 ]])
