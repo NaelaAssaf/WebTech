@@ -920,7 +920,7 @@ This previous command will start a web-server in the current working directory
 and will be accessible at the URL: `http://localhost:8080`.
 
 You can pick any port, as long as it is between 1024 and 65535. By convention
-`8000` or `8080` is picked because of he resemblance with the official
+`8000` or `8080` are picked because of he resemblance with the official
 HTTP-port: `80`.
 
 As mentioned before, by default the server will start in the current working
@@ -954,4 +954,23 @@ This allows us to generate the HTML content dynamically.
 
 m4_exercise([[
 Create a PHP page that prints `hello world` when served by a web-server
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a PHP page that resembles your CV.
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create three web-pages that interlink to one another.
+]])
+
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a web-page that prints an ordered list (array) of hobby's (dynamically)...
 ]])
