@@ -38,7 +38,7 @@ For an HTML and CSS reference see <http://www.w3schools.com/html> and <http://ww
 ## Contact
 
 If you have questions about this course and/or it's content please ask...
-You can contact me via [arne.soete@howst.be](mailto:arne.soete@howst.be)
+You can contact me via [arne.soete@howest.be](mailto:arne.soete@howest.be)
 
 ## Code in this document
 
