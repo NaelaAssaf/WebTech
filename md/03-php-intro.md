@@ -793,15 +793,6 @@ m4_run(php-basics,[[php print-left-bottom-balanced-triangle.php 9]])
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
-Create a script that prints a left + bottom balanced triangle with base defined
-by parameter.
-
-m4_run(php-basics,[[php print-left-bottom-balanced-triangle.php 9]])
-]])
-
-m4_dnl -----------------------------------------------------------------------
-
-m4_exercise([[
 Create a script that prints a right + bottom balanced triangle of asterisks with
 base defined by parameter.
 
