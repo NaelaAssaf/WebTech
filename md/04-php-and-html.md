@@ -1,0 +1,405 @@
+# PHP and HTML
+
+## PHP Webserver
+
+PHP has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.
+
+### Starting a server
+
+The server is started with one command on the command line:
+
+```bash
+php -S localhost:<port> [-t /path/to/folder]
+```
+
+Example:
+
+```bash
+php -S localhost:8080
+```
+
+This previous command will start a web-server in the current working directory
+and will be accessible at the URL: `http://localhost:8080`.
+
+You can pick any port, as long as it is between 1024 and 65535. By convention
+`8000` or `8080` are picked because of he resemblance with the official
+HTTP-port: `80`.
+
+As mentioned before, by default the server will start in the current working
+directory. I you wish the root of the site to be another directory, specify it
+via the `-t` option.
+
+m4_info([[More info about this command can be found by executing the `man php`
+command on the command line.]])
+
+By default the web-server will search and execute serve the `index.html` or
+`index.php` file in the servers root directory. (root directory = the directory
+where the server was started)
+
+### Making a simple page
+
+```bash
+mkdir my-website
+cd my-website
+echo "Hello world" > index.html
+php -S localhost:8080
+firefox localhost:8080
+```
+
+You should be greeted with `Hello world`...
+
+Because the web-pages are served via a PHP server, all PHP files (ending in
+`.php`) will be interpreted by the webserver.
+This allows us to generate the HTML content dynamically.
+
+### Exercises
+
+m4_exercise([[
+Create a PHP page that prints `hello world` when served by a web-server
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a PHP page that resembles your CV.
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a web-page that prints 
+
+* an ordered list of three your three favourite dishes (dynamically)
+* a list of (three) hobby's
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create three web-pages that interlink to one another.
+
+* Home
+    * Title
+    * Name
+    * Age
+* Hobby's
+    * Title
+    * list
+* Favourite dishes
+    * Title
+    * list
+
+]])
+
+
+## Include / Require
+
+PHP allows us to include one file into another. This is done via the m4_phpfunc(include) or m4_phpfunc(require);
+
+The difference between the two is that `require` will fail if the specified file
+can't be included where `include` will merely warn about the failed inclusion.
+
+```php
+include('path/to/file.php');
+
+require('path/to/another-file.php');
+```
+
+m4_exercise([[
+Create a web-page who includes another file.
+]])
+
+## Forms
+
+Forms can be used to send data from the web-page to the server. This data can
+be read an processed via PHP.
+
+A from is composed out of a form-tag and data tags.
+
+### Form tag
+
+```html
+<form action="<action>" method="<method>">
+    <!-- content -->
+</form>
+```
+
+The form tag has two required attributes:
+
+* action
+* method
+
+#### Action
+
+This attribute specifies the page the data should be sent to.
+
+The send the data back to the same page, specify: `#` or the URL of the current
+page.
+
+```html
+<form action="#"></form>
+<form action="http://server.com/script-handle-data,php"></form>
+```
+
+#### Method
+
+The method defines how the data should be send to the server.
+
+There are two main methods:
+
+* GET:
+* POST
+
+##### GET
+
+`GET` mains appending the data as URL parameters.
+
+Say we want to send the username and the age of a user back to the server, the URL could look like this:
+
+```
+http://server.com/script-to-handle-data.php?username=johnd&age=21
+```
+
+This method has two gotchas:
+
+1. The data is sent visible to the server. **Never use this method to send
+   sensitive data** back to the server.
+2. The number of characters allowed in an URL is limited. So large amounts of data can not be sent this way...
+
+
+An advantage of this method is that the URL with the data attached can be
+bookmarked or shared.
+
+##### POST
+
+`POST` The post method comes is where `GET` falls short.
+
+The data is sent in the body of the HTTP request and is this invisible and not
+limited by size.
+
+This method is most often used to send data from forms back to the server
+
+```html
+<form action="#" method="get"></form>
+<form action="#" method="post"></form>
+```
+
+### Data tags
+
+Other special tags are used to present or request data from the user.
+
+In order to send the data, contained in the elements, back to the server, the
+name attribute must be set on the elements. This name can than be used on the
+backend to retrieve the values entered by the user.
+
+#### Input
+
+```html
+<input type="text" value="" name="">
+```
+
+The input tag encompasses a lot of _"data types"_. The `type`-attribute can be used to modify the behaviour of this tag.
+
+Types:
+
+* checkbox
+* email
+* file
+* number
+* password
+* radio
+* text
+
+The value attributes holds the default value of the element. If not defined,
+the element will be empty.
+
+There the `radio` and `checkbox` type don't take a value (only) a state, the
+`checked` can be replaces the value attribute.
+
+m4_embed_php_as_html(php-and-html/input,330px,.html)
+
+m4_note([[In order to send files to the server, the form attribute: `enctype`
+must be set to `multipart/form-data`
+```html
+<form action="#" method="post" enctype="multipart/form-data"></form>
+```
+
+See later for more details on how to upload files...
+]])
+
+#### Select
+
+The select tag allows the user to choose options out of a predefined set:
+
+```html
+<select name="name-sent-backend">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+</select>
+```
+
+As can be seen in the example, a select is composed out of multiple options.
+
+The default behaviour is that only one option can be selected at once.
+
+This can be altered via the `multiple`-attribute.
+
+m4_embed_php_as_html(php-and-html/select,200px,.html)
+
+Sub-group can be created via `optgroup`
+
+m4_embed_php_as_html(php-and-html/select-groups,200px,.html)
+
+
+#### Textarea
+
+To send a block of text back to the server, use a `textarea`.
+
+m4_embed_php_as_html(php-and-html/textarea,100px,.html)
+
+
+#### Label
+
+The label is not an input/data tag, but a meta-data tag.
+
+This tag is used to add information about a data-tag. For example: label a
+password field as a password field.
+
+A side benefit of using lables is that clicking a label, will automatically
+focus it's corresponding data element.
+
+m4_embed_php_as_html(php-and-html/label,150px,.html)
+
+## PHP special data arrays
+
+When data is sent to a PHP server, PHP will automatically populate the
+corresponding special array according/
+
+Special arrays:
+
+* `$_GET`: Holds al the data sent via the GET method.
+* `$_POST`: Holds al the data sent via the POST method.
+* `$_REQUEST`: Holds al the data sent via GET and POST combined.
+* `$_FILES`: Holds all the info about the uploaded files.
+
+Example:
+
+```html
+<form action="#" method="post">
+    <input type="text" value="Hello World" name="name">
+    <input type="number" value="21 World" name="age">
+    <input type="submit" value="Submit" name="submit">
+</form>
+```
+
+```php
+print_r( $_POST );
+
+/*
+Array(
+    [name] => "Hello World",
+    [age] => 21
+)
+*/
+```
+
+This data can no be processed via PHP.
+
+To test if data was submitted, the value of the _submit button_ can be used.
+
+In the previous example was the value: `submit`.
+
+```php
+if( isset( $_POST['submit'] ) ) {
+
+    /* Do stuff with data */
+}
+```
+
+## Exercises
+
+m4_exercise([[
+Create a webpage with a login form:
+
+* first name field
+* last name field
+* gender radio button
+* age field
+* email address
+* password field
+* _"I want to receive updates"_ checkbox
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a webpage that generates a triangle.
+
+* The base of the triangle should be dynamically defined via a from submission or specified in the URL
+* The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a parrot. Everything you submit must be echo-ed back to the screen.
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a login form with a
+
+* name field
+* age field
+
+When the form is submitted the tool should tell if a person is older than 21 an
+is allowed to enter the website.
+
+* if old enough, print: _access granted for: <$name>. Age (<$age>) is more than 21._
+* if if to you, print: _access denied for: <$name>. Age (<$age>) is less than 21._
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a tool that validates passwords.
+
+* Password should be entered twice and be the same.
+* should be more than 8 characters
+* have at least one number and letter.
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a tool that generates passwords.
+
+* The number of characters should be defined by a form submission or in the URL.
+* There should be the possibility (option) to include numbers in the generated password (via form or URL).
+* You should be able to specify the number of passwords generated (via form or URL).
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Make a web-page where you can paste and upload text and the tool should should:
+
+* calculate and report the number of lines uploaded
+* calculate and report the number of words uploaded
+* calculate and report the number of characters uploaded
+* Report the results in an table.
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+- header with links
+- verify password are the same
+- create array from plain text
+    col 1 | col 2 | col 3

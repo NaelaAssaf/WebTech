@@ -86,6 +86,8 @@
             <li><a href="html-intro.html#containers">Containers</a></li>
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
+            <li><a href="html-intro.html#forms">Forms</a></li>
+            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -95,14 +97,27 @@
             <li><a href="php-intro.html#conditionals">Conditionals</a></li>
             <li><a href="php-intro.html#loops">Loops</a></li>
             <li><a href="php-intro.html#exercises">Exercises</a></li>
-            <li><a href="php-intro.html#php-webserver">PHP Webserver</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="html-extended.html#html-and-css">HTML and CSS</a><ul>
-            <li><a href="html-extended.html#attributes">Attributes</a></li>
-            <li><a href="html-extended.html#styles">Styles</a></li>
-            <li><a href="html-extended.html#exercises">Exercises</a></li>
+            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a><ul>
+            <li><a href="php-and-html.html#php-webserver">PHP Webserver</a></li>
+            <li><a href="php-and-html.html#include-require">Include / Require</a></li>
+            <li><a href="php-and-html.html#forms">Forms</a></li>
+            <li><a href="php-and-html.html#php-special-data-arrays">PHP special data arrays</a></li>
+            <li><a href="php-and-html.html#exercises-1">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#html-and-css">HTML and CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#colours">Colours</a></li>
+            <li><a href="css.html#background">Background</a></li>
+            <li><a href="css.html#font-and-text.">Font and text.</a></li>
+            <li><a href="css.html#border">Border</a></li>
+            <li><a href="css.html#margin">Margin</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -1718,53 +1733,6 @@ Order by character:
 <strong>Info:</strong> See: <a href="http://php.net/manual-lookup.php?pattern=sort" class="w3c-ref"><code>sort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=asort" class="w3c-ref"><code>asort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=ksort" class="w3c-ref"><code>ksort</code></a>,... for different sort functions
 </div>
 <p></small></p>
-</div>
-<h2 id="php-webserver">PHP Webserver</h2>
-<p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
-<h3 id="starting-a-server">Starting a server</h3>
-<p>The server is started with one command on the command line:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:<span class="kw">&lt;</span>port<span class="kw">&gt;</span> [-t /path/to/folder]</code></pre></div>
-<p>Example:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:8080</code></pre></div>
-<p>This previous command will start a web-server in the current working directory and will be accessible at the URL: <code>http://localhost:8080</code>.</p>
-<p>You can pick any port, as long as it is between 1024 and 65535. By convention <code>8000</code> or <code>8080</code> are picked because of he resemblance with the official HTTP-port: <code>80</code>.</p>
-<p>As mentioned before, by default the server will start in the current working directory. I you wish the root of the site to be another directory, specify it via the <code>-t</code> option.</p>
-<div class="alert alert-info">
-<strong>Info:</strong> More info about this command can be found by executing the <code>man php</code> command on the command line.
-</div>
-<p>By default the web-server will search and execute serve the <code>index.html</code> or <code>index.php</code> file in the servers root directory. (root directory = the directory where the server was started)</p>
-<h3 id="making-a-simple-page">Making a simple page</h3>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> my-website
-<span class="kw">cd</span> my-website
-<span class="kw">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="kw">&gt;</span> index.html
-<span class="kw">php</span> -S localhost:8080
-<span class="kw">firefox</span> localhost:8080</code></pre></div>
-<p>You should be greeted with <code>Hello world</code>...</p>
-<p>Because the web-pages are served via a <abbr title="Hypertext Preprocessor">PHP</abbr> server, all <abbr title="Hypertext Preprocessor">PHP</abbr> files (ending in <code>.php</code>) will be interpreted by the webserver. This allows us to generate the <abbr title="HyperText Markup Language">HTML</abbr> content dynamically.</p>
-<h3 id="exercises-1">Exercises</h3>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that prints <code>hello world</code> when served by a web-server</p>
-</div>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that resembles your CV.</p>
-</div>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Create three web-pages that interlink to one another.</p>
-</div>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Create a web-page that prints an ordered list (array) of hobby's (dynamically)...</p>
 </div>
          <div class="row">
             <footer class="col-md-24">

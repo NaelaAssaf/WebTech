@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-10-03" />
+        <meta name="date" content="2016-10-09" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -84,6 +84,8 @@
             <li><a href="#containers">Containers</a></li>
             <li><a href="#inline-tags">Inline tags</a></li>
             <li><a href="#multi-element-markup">Multi element markup</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#attributes-1">Attributes</a></li>
             </ul></li>
             <li><a href="#php-basics">PHP Basics</a><ul>
             <li><a href="#what-makes-a-php-script">What makes a PHP-script</a></li>
@@ -91,12 +93,23 @@
             <li><a href="#conditionals">Conditionals</a></li>
             <li><a href="#loops">Loops</a></li>
             <li><a href="#exercises">Exercises</a></li>
+            </ul></li>
+            <li><a href="#php-and-html">PHP and HTML</a><ul>
             <li><a href="#php-webserver">PHP Webserver</a></li>
+            <li><a href="#include-require">Include / Require</a></li>
+            <li><a href="#forms-1">Forms</a></li>
+            <li><a href="#php-special-data-arrays">PHP special data arrays</a></li>
+            <li><a href="#exercises-2">Exercises</a></li>
             </ul></li>
             <li><a href="#html-and-css">HTML and CSS</a><ul>
-            <li><a href="#attributes-1">Attributes</a></li>
-            <li><a href="#styles">Styles</a></li>
-            <li><a href="#exercises-2">Exercises</a></li>
+            <li><a href="#include-style-information">Include style information</a></li>
+            <li><a href="#css-selectors">CSS selectors</a></li>
+            <li><a href="#colours">Colours</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#font-and-text.">Font and text.</a></li>
+            <li><a href="#border">Border</a></li>
+            <li><a href="#margin">Margin</a></li>
+            <li><a href="#exercises-3">Exercises</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -686,12 +699,40 @@ Exercise:
 <ul>
 <li>Jan -&gt; 12</li>
 <li>Piet -&gt; 15</li>
-<li>Joris -&gt; 7</li>
+<li>Boris -&gt; 7</li>
 </ul></li>
 <li>Make the names also headers</li>
 <li>Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.</li>
 </ul>
 </div>
+<h2 id="forms">Forms</h2>
+<h2 id="attributes-1">Attributes</h2>
+<p>As already seen with the <code>a</code>-tag, attributes can modify the behaviour of an <abbr title="HyperText Markup Language">HTML</abbr>-element.</p>
+<p>The <code>a</code>-tag requires the <code>href</code>-attribute to be set. Otherwise the browser has no clue where to take the user on a click.</p>
+<p>The attributes are also often used to modify the appearance of an element.</p>
+<p>Commonly used attributes:</p>
+<h3 id="class">Class</h3>
+<p>The class attribute holds a space separated list class-names. The element is member of all the classes specified in the attribute. These classes can be used to style a group of elements the same way.</p>
+<p>For example all the elements which are member of the same class (have the same class-name in the class attribute) should have the text colour set to red...</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<h3 id="id">Id</h3>
+<p>The <code>id</code>-attribute lets you assign a unique identifier to an element.</p>
+<p>This identifier should be unique for the whole page and thus occur only once.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;unique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<p><small> If the id is specified in the URL prefixed by a pound symbol (<code>#</code>), the element will be automatically scrolled into view.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="co">&lt;!-- http://WWW.example.com/script.php#chapter --&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;chapter1&quot;</span><span class="kw">&gt;</span>
+Scroll into view...
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<p></small></p>
+<h3 id="style-1">Style</h3>
+<p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to a single element.</p>
+<p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<h2 id="see-html-and-css-for-more-info-about-styling-an-element.">See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</h2>
+<h2 id="title-php-basics">title: <abbr title="Hypertext Preprocessor">PHP</abbr> basics</h2>
 <h1 id="php-basics">PHP Basics</h1>
 <blockquote>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into <abbr title="HyperText Markup Language">HTML</abbr>.</p>
@@ -2290,6 +2331,7 @@ Order by character:
 </div>
 <p></small></p>
 </div>
+<h1 id="php-and-html">PHP and HTML</h1>
 <h2 id="php-webserver">PHP Webserver</h2>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
 <h3 id="starting-a-server">Starting a server</h3>
@@ -2329,39 +2371,1072 @@ Exercise:
 <h4>
 Exercise:
 </h4>
-<p>Create three web-pages that interlink to one another.</p>
+<p>Create a web-page that prints</p>
+<ul>
+<li>an ordered list of three your three favourite dishes (dynamically)</li>
+<li>a list of (three) hobby's</li>
+</ul>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
-<p>Create a web-page that prints an ordered list (array) of hobby's (dynamically)...</p>
+<p>Create three web-pages that interlink to one another.</p>
+<ul>
+<li>Home
+<ul>
+<li>Title</li>
+<li>Name</li>
+<li>Age</li>
+</ul></li>
+<li>Hobby's
+<ul>
+<li>Title</li>
+<li>list</li>
+</ul></li>
+<li>Favourite dishes
+<ul>
+<li>Title</li>
+<li>list</li>
+</ul></li>
+</ul>
 </div>
-<h1 id="html-and-css">HTML and CSS</h1>
-<h2 id="attributes-1">Attributes</h2>
-<p>Attributes can modify the behaviour of an <abbr title="HyperText Markup Language">HTML</abbr>-element.</p>
-<p>We have used attributes already on the <code>a</code>-tags. The <code>a</code>-tag requires the <code>href</code>-attribute to be set. Otherwise the browser has no clue where to take the user on a click.</p>
-<p>Commonly used attributes:</p>
-<h3 id="class">Class</h3>
-<p>You can add an element to a certain class by specifying the classname in the class-attribute. Multiple classnames can be defined delimeited by a space.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
-<p>Classes are mostly used for styling a group of elements the same way.</p>
-<h3 id="id">Id</h3>
-<p>The <code>id</code>-attribute lets you assign a unique identifier to an element.</p>
-<p>This identifier should be unique for the whole page and thus occur only once.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;inique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
-<h2 id="styles">Styles</h2>
-<p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to the element.</p>
-<p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external stylesheet are better, more scalable, options. I can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<h2 id="include-require">Include / Require</h2>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> allows us to include one file into another. This is done via the <a href="http://php.net/manual-lookup.php?pattern=include" class="w3c-ref"><code>include</code></a> or <a href="http://php.net/manual-lookup.php?pattern=require" class="w3c-ref"><code>require</code></a>;</p>
+<p>The difference between the two is that <code>require</code> will fail if the specified file can't be included where <code>include</code> will merely warn about the failed inclusion.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">include</span><span class="ot">(</span><span class="st">&#39;path/to/file.php&#39;</span><span class="ot">);</span>
+
+<span class="kw">require</span><span class="ot">(</span><span class="st">&#39;path/to/another-file.php&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page who includes another file.</p>
+</div>
+<h2 id="forms-1">Forms</h2>
+<p>Forms can be used to send data from the web-page to the server. This data can be read an processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
+<p>A from is composed out of a form-tag and data tags.</p>
+<h3 id="form-tag">Form tag</h3>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">action&gt;&quot;</span><span class="ot"> method=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">method&gt;&quot;</span><span class="kw">&gt;</span>
+    <span class="co">&lt;!-- content --&gt;</span>
+<span class="kw">&lt;/form&gt;</span></code></pre></div>
+<p>The form tag has two required attributes:</p>
+<ul>
+<li>action</li>
+<li>method</li>
+</ul>
+<h4 id="action">Action</h4>
+<p>This attribute specifies the page the data should be sent to.</p>
+<p>The send the data back to the same page, specify: <code>#</code> or the URL of the current page.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;&lt;/form&gt;</span>
+<span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;http://server.com/script-handle-data,php&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></code></pre></div>
+<h4 id="method">Method</h4>
+<p>The method defines how the data should be send to the server.</p>
+<p>There are two main methods:</p>
+<ul>
+<li>GET:</li>
+<li>POST</li>
+</ul>
+<h5 id="get-1">GET</h5>
+<p><code>GET</code> mains appending the data as URL parameters.</p>
+<p>Say we want to send the username and the age of a user back to the server, the URL could look like this:</p>
+<pre><code>http://server.com/script-to-handle-data.php?username=johnd&amp;age=21</code></pre>
+<p>This method has two gotchas:</p>
+<ol style="list-style-type: decimal">
+<li>The data is sent visible to the server. <strong>Never use this method to send sensitive data</strong> back to the server.</li>
+<li>The number of characters allowed in an URL is limited. So large amounts of data can not be sent this way...</li>
+</ol>
+<p>An advantage of this method is that the URL with the data attached can be bookmarked or shared.</p>
+<h5 id="post-1">POST</h5>
+<p><code>POST</code> The post method comes is where <code>GET</code> falls short.</p>
+<p>The data is sent in the body of the HTTP request and is this invisible and not limited by size.</p>
+<p>This method is most often used to send data from forms back to the server</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;get&quot;</span><span class="kw">&gt;&lt;/form&gt;</span>
+<span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></code></pre></div>
+<h3 id="data-tags">Data tags</h3>
+<p>Other special tags are used to present or request data from the user.</p>
+<p>In order to send the data, contained in the elements, back to the server, the name attribute must be set on the elements. This name can than be used on the backend to retrieve the values entered by the user.</p>
+<h4 id="input">Input</h4>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;&quot;</span><span class="ot"> name=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span></code></pre></div>
+<p>The input tag encompasses a lot of <em>&quot;data types&quot;</em>. The <code>type</code>-attribute can be used to modify the behaviour of this tag.</p>
+<p>Types:</p>
+<ul>
+<li>checkbox</li>
+<li>email</li>
+<li>file</li>
+<li>number</li>
+<li>password</li>
+<li>radio</li>
+<li>text</li>
+</ul>
+<p>The value attributes holds the default value of the element. If not defined, the element will be empty.</p>
+<p>There the <code>radio</code> and <code>checkbox</code> type don't take a value (only) a state, the <code>checked</code> can be replaces the value attribute.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-and-html/input.html">php-and-html/input</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/input.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;ul&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-file&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;email&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello.world@mail.com&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-email&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;42&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-number&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;password&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-password&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-text&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-submit&quot;</span><span class="kw">&gt;&lt;/li&gt;</span>
+<span class="kw">&lt;/ul&gt;</span>
+
+
+</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of php-and-html/input</span></p>
+<iframe src="embeds/php-and-html/input.html" class="embed--output" height="330px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> In order to send files to the server, the form attribute: <code>enctype</code> must be set to <code>multipart/form-data</code></p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></code></pre></div>
+<p>See later for more details on how to upload files...</p>
+</div>
+<h4 id="select">Select</h4>
+<p>The select tag allows the user to choose options out of a predefined set:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span>
+<span class="kw">&lt;/select&gt;</span></code></pre></div>
+<p>As can be seen in the example, a select is composed out of multiple options.</p>
+<p>The default behaviour is that only one option can be selected at once.</p>
+<p>This can be altered via the <code>multiple</code>-attribute.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-and-html/select.html">php-and-html/select</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span>
+<span class="kw">&lt;/select&gt;</span>
+
+<span class="kw">&lt;br&gt;</span>
+
+<span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span>
+    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span>
+<span class="kw">&lt;/select&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of php-and-html/select</span></p>
+<iframe src="embeds/php-and-html/select.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>Sub-group can be created via <code>optgroup</code></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-and-html/select-groups.html">php-and-html/select-groups</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select-groups.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span>
+   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span>
+   <span class="kw">&lt;/optgroup&gt;</span>
+   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span>
+   <span class="kw">&lt;/optgroup&gt;</span>
+<span class="kw">&lt;/select&gt;</span>
+
+<span class="kw">&lt;br&gt;</span>
+
+<span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span>
+   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span>
+   <span class="kw">&lt;/optgroup&gt;</span>
+   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span>
+   <span class="kw">&lt;/optgroup&gt;</span>
+<span class="kw">&lt;/select&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of php-and-html/select-groups</span></p>
+<iframe src="embeds/php-and-html/select-groups.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h4 id="textarea">Textarea</h4>
+<p>To send a block of text back to the server, use a <code>textarea</code>.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-and-html/textarea.html">php-and-html/textarea</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/textarea.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;textarea</span><span class="ot"> name=</span><span class="st">&quot;name-sent-to-server&quot;</span><span class="kw">&gt;</span>
+Write
+
+Multiline content
+
+Here
+<span class="kw">&lt;/textarea&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of php-and-html/textarea</span></p>
+<iframe src="embeds/php-and-html/textarea.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h4 id="label">Label</h4>
+<p>The label is not an input/data tag, but a meta-data tag.</p>
+<p>This tag is used to add information about a data-tag. For example: label a password field as a password field.</p>
+<p>A side benefit of using lables is that clicking a label, will automatically focus it's corresponding data element.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-and-html/label.html">php-and-html/label</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/label.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;label&gt;</span>
+   Name:
+   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;jonh Doe&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/label&gt;</span>
+
+<span class="kw">&lt;br&gt;</span>
+
+<span class="kw">&lt;label&gt;</span>
+   Age:
+   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;21&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/label&gt;</span>
+
+<span class="kw">&lt;br&gt;</span>
+
+<span class="kw">&lt;label&gt;</span>
+   Loves ice-cream:
+   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;loves-ice-cream&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/label&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of php-and-html/label</span></p>
+<iframe src="embeds/php-and-html/label.html" class="embed--output" height="150px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h2 id="php-special-data-arrays">PHP special data arrays</h2>
+<p>When data is sent to a <abbr title="Hypertext Preprocessor">PHP</abbr> server, <abbr title="Hypertext Preprocessor">PHP</abbr> will automatically populate the corresponding special array according/</p>
+<p>Special arrays:</p>
+<ul>
+<li><code>$_GET</code>: Holds al the data sent via the GET method.</li>
+<li><code>$_POST</code>: Holds al the data sent via the POST method.</li>
+<li><code>$_REQUEST</code>: Holds al the data sent via GET and POST combined.</li>
+<li><code>$_FILES</code>: Holds all the info about the uploaded files.</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;21 World&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;Submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/form&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$_POST</span> <span class="ot">);</span>
+
+<span class="co">/*</span>
+<span class="co">Array(</span>
+<span class="co">    [name] =&gt; &quot;Hello World&quot;,</span>
+<span class="co">    [age] =&gt; 21</span>
+<span class="co">)</span>
+<span class="co">*/</span></code></pre></div>
+<p>This data can no be processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
+<p>To test if data was submitted, the value of the <em>submit button</em> can be used.</p>
+<p>In the previous example was the value: <code>submit</code>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> <span class="fu">isset</span><span class="ot">(</span> <span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;submit&#39;</span><span class="ot">]</span> <span class="ot">)</span> <span class="ot">)</span> {
+
+    <span class="co">/* Do stuff with data */</span>
+}</code></pre></div>
 <h2 id="exercises-2">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a webpage with a login form:</p>
+<ul>
+<li>first name field</li>
+<li>last name field</li>
+<li>gender radio button</li>
+<li>age field</li>
+<li>email address</li>
+<li>password field</li>
+<li><em>&quot;I want to receive updates&quot;</em> checkbox</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a webpage that generates a triangle.</p>
+<ul>
+<li>The base of the triangle should be dynamically defined via a from submission or specified in the URL</li>
+<li>The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a parrot. Everything you submit must be echo-ed back to the screen.</p>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a login form with a</p>
+<ul>
+<li>name field</li>
+<li>age field</li>
+</ul>
+<p>When the form is submitted the tool should tell if a person is older than 21 an is allowed to enter the website.</p>
+<ul>
+<li>if old enough, print: <em>access granted for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is more than 21.</em></li>
+<li>if if to you, print: <em>access denied for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is less than 21.</em></li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a tool that validates passwords.</p>
+<ul>
+<li>Password should be entered twice and be the same.</li>
+<li>should be more than 8 characters</li>
+<li>have at least one number and letter.</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a tool that generates passwords.</p>
+<ul>
+<li>The number of characters should be defined by a form submission or in the URL.</li>
+<li>There should be the possibility (option) to include numbers in the generated password (via form or URL).</li>
+<li>You should be able to specify the number of passwords generated (via form or URL).</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Make a web-page where you can paste and upload text and the tool should should:</p>
+<ul>
+<li>calculate and report the number of lines uploaded</li>
+<li>calculate and report the number of words uploaded</li>
+<li>calculate and report the number of characters uploaded</li>
+<li>Report the results in an table.</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<ul>
+<li>header with links</li>
+<li>verify password are the same</li>
+<li>create array from plain text col 1 | col 2 | col 3 --- title: <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> ---</li>
+</ul>
+<h1 id="html-and-css">HTML and CSS</h1>
+<p><abbr title="HyperText Markup Language">HTML</abbr> can be styled via <abbr title="Cascading Style Sheets">CSS</abbr>. An <abbr title="HyperText Markup Language">HTML</abbr>-element is selected via <a href="#css-selectors"><abbr title="Cascading Style Sheets">CSS</abbr> selectors</a>. Styles/rules are defined per selector block. Each definition is terminated by a <code>;</code>. A rules block is enclosed by <code>{</code>, <code>}</code>.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">&lt;selector&gt; <span class="kw">{</span>
+    <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;;</span>
+    <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;</span> <span class="er">&lt;value&gt;;</span>
+<span class="kw">}</span></code></pre></div>
+<h2 id="include-style-information">Include style information</h2>
+<p>Elements can be styled via three methods:</p>
+<ul>
+<li>style-attribute <small>(discouraged)</small></li>
+<li>a style tag in the head <small>(less discouraged)</small></li>
+<li>an external stylesheet <small>(encouraged)</small></li>
+</ul>
+<h3 id="style-attribute">Style attribute</h3>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;element</span><span class="ot"> style=</span><span class="st">&quot;/* my styles */&quot;</span><span class="kw">&gt;&lt;/element&gt;</span></code></pre></div>
+<p>Use this method to quickly test some rule. Not as a permanent style. <strong>This way of managing styles is discouraged</strong> because it is a less maintainable way of styling web-pages. For example: styles can not be shared by elements...</p>
+<h3 id="style-tag">Style tag</h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_style.asp" class="w3c-ref"><code>style</code></a>-tag that should be defined in the head of the document. The styles defined in this tag apply to the complete page.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;title&gt;</span>My pae title<span class="kw">&lt;/title&gt;</span>
+
+    <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+        <span class="fl">.selector</span> <span class="kw">{</span>
+
+            <span class="kw">property:</span> value<span class="kw">;</span>
+        <span class="kw">}</span>
+    <span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+    <span class="co">&lt;!-- the body --&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre></div>
+<p>Even though the styles are defined only once, elements can share them via selectors ( tag-name, classes, ...)</p>
+<h3 id="external-style-sheet">External style sheet</h3>
+<p>The <abbr title="Cascading Style Sheets">CSS</abbr>-rules can also be defined in a dedicated <abbr title="Cascading Style Sheets">CSS</abbr>-file. This file can be included in a web-page via the <a href="http://www.w3schools.com/tags/tag_link.asp" class="w3c-ref"><code>link</code></a>-tag</p>
+<p>The rules defined in the file can be included in as many <abbr title="HyperText Markup Language">HTML</abbr>-pages as you want. This makes it the most scalable method of defining and including <abbr title="Cascading Style Sheets">CSS</abbr>-rules.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;title&gt;</span>My pae title<span class="kw">&lt;/title&gt;</span>
+
+    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+    <span class="co">&lt;!-- the body --&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre></div>
+<h2 id="css-selectors">CSS selectors</h2>
+<p>In order to apply rules to a certain element, the element must be targeted, selected.</p>
+<p><abbr title="Cascading Style Sheets">CSS</abbr> has the notion of selectors to target elements.</p>
+<h3 id="tag-name">Tag-name</h3>
+<p>The tag-name can be used to style all the same tags the same way.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/tag-selector.html">html-and-css/tag-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/tag-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+    p <span class="kw">{</span>
+
+        <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span> <span class="co">/* make text red */</span>
+    <span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;p&gt;</span>
+    P2: Hello world
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/tag-selector</span></p>
+<iframe src="embeds/html-and-css/tag-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="id-1">ID</h3>
+<p>The id attribute can be used to give an element an unique identifier. This id can be selected via <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+<p>A pound symbol <code>#</code> indicates the following string is an id-name:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/id-selector.html">html-and-css/id-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/id-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+    <span class="fl">#idname</span> <span class="kw">{</span>
+
+        <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span> <span class="co">/* make text red */</span>
+    <span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;idname&quot;</span><span class="kw">&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;p&gt;</span>
+    P2: Hello world
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/id-selector</span></p>
+<iframe src="embeds/html-and-css/id-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="class-1">Class</h3>
+<p>Multiple elements can have the same class-name set. Elements with a certain class can be targeted/selected via this class-name.</p>
+<p>Strings prefixed with a dot <code>.</code> are considered class-names in <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/class-selector.html">html-and-css/class-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/class-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+    <span class="fl">.classname</span> <span class="kw">{</span>
+
+        <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span> <span class="co">/* make text red */</span>
+    <span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;classname&quot;</span><span class="kw">&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;some-other-class&quot;</span><span class="kw">&gt;</span>
+    P2: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;classname&quot;</span><span class="kw">&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/div&gt;</span>
+</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/class-selector</span></p>
+<iframe src="embeds/html-and-css/class-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> The elements sharing a class-name can be different tags.
+</div>
+<p></small></p>
+<h3 id="combining-selectors">Combining selectors</h3>
+<p>If multiple selectors are provided, separated by a comma, <code>,</code>, the defined rules will apply for all the elements matching any of the selectors:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/multi-selectors.html">html-and-css/multi-selectors</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/multi-selectors.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+h1, h3, h5 <span class="kw">{</span>
+   <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;h1&gt;</span>H1<span class="kw">&lt;/h1&gt;</span>
+<span class="kw">&lt;h2&gt;</span>H2<span class="kw">&lt;/h2&gt;</span>
+<span class="kw">&lt;h3&gt;</span>H3<span class="kw">&lt;/h3&gt;</span>
+<span class="kw">&lt;h4&gt;</span>H4<span class="kw">&lt;/h4&gt;</span>
+<span class="kw">&lt;h5&gt;</span>H5<span class="kw">&lt;/h5&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/multi-selectors</span></p>
+<iframe src="embeds/html-and-css/multi-selectors.html" class="embed--output" height="250px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p><abbr title="Cascading Style Sheets">CSS</abbr> selector rules can also be composed out of multiple selectors. This allows for a more detailed/specific selection.</p>
+<h4 id="elements-matching-multiple-rules">Elements matching multiple rules</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector1<span class="fl">.selector2</span> <span class="kw">{}</span></code></pre></div>
+<p>Selectors can be chained concatenated into a longer selection to make the selection more specific.</p>
+<p>For example select only the <code>p</code>-tags with a certain class:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/selector-chaining.html">html-and-css/selector-chaining</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/selector-chaining.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+    p<span class="fl">.classname</span> <span class="kw">{</span>
+
+        <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span> <span class="co">/* make text red */</span>
+    <span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;classname&quot;</span><span class="kw">&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;some-other-class&quot;</span><span class="kw">&gt;</span>
+    P2: Hello world
+<span class="kw">&lt;/p&gt;</span>
+
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;classname&quot;</span><span class="kw">&gt;</span>
+    P1: Hello world
+<span class="kw">&lt;/div&gt;</span>
+</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/selector-chaining</span></p>
+<iframe src="embeds/html-and-css/selector-chaining.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>In this case <code>p.classname</code> means:</p>
+<ul>
+<li>Select all elements with class <code>classname</code></li>
+<li>From all the elements with class <code>classname</code>, select all <code>p</code>-tags.</li>
+</ul>
+<p>You can make these selectors as long and as complex as you want:</p>
+<p><code>div.class1.class2.class3</code>...</p>
+<h4 id="elements-inside-another-element">Elements inside another element</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector1 selector2 <span class="kw">{}</span></code></pre></div>
+<p>Multiple selectors separated by spaces indicate nesting. The last selector should be found inside the previous, inside the previous, ...</p>
+<small>
+<div class="alert alert-info">
+<p><strong>Info:</strong> Inside in this context means, the element must be wrapped by the other element:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;elem1&gt;</span>
+    <span class="kw">&lt;elem2&gt;</span>
+    <span class="kw">&lt;/elem2&gt;</span>
+<span class="kw">&lt;/elem2&gt;</span></code></pre></div>
+<p>Is doesn't matter how many other tags are in-between the parent and the nested element:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;elem1&gt;</span>
+    <span class="kw">&lt;antoher-elem&gt;</span>
+        <span class="kw">&lt;elem2&gt;</span>
+        <span class="kw">&lt;/elem2&gt;</span>
+    <span class="kw">&lt;/antoher-elem&gt;</span>
+<span class="kw">&lt;/elem2&gt;</span></code></pre></div>
+</div>
+<p></small></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/selector-nesting.html">html-and-css/selector-nesting</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/selector-nesting.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   div h3 <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+   <span class="fl">.green</span> h3 <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">green</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;h3&gt;</span>H3 outside div<span class="kw">&lt;/h3&gt;</span>
+
+<span class="kw">&lt;div&gt;</span>
+   <span class="kw">&lt;h3&gt;</span>H3 inside div<span class="kw">&lt;/h3&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;green&quot;</span><span class="kw">&gt;</span>
+   <span class="kw">&lt;blockquote</span><span class="ot"> class=</span><span class="st">&quot;sub-level&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;h3&gt;</span>H3 inside div<span class="kw">&lt;/h3&gt;</span>
+   <span class="kw">&lt;/blockquote&gt;</span>
+
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/selector-nesting</span></p>
+<iframe src="embeds/html-and-css/selector-nesting.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="alert alert-info">
+<strong>Info:</strong> If two selectors target the same element and the same property, the last one encountered takes precedence
+</div>
+<h4 id="direct-children-of-an-element">Direct children of an element</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector1 &gt; selector2 <span class="kw">{}</span></code></pre></div>
+<p>The <code>&gt;</code> symbol between two selectors indicates an direct parent -&gt; child relationship. By this we mean the second element must be an immediate child of the first selector. No other tags may warp the child element.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;parent&gt;</span>
+    <span class="kw">&lt;child&gt;</span>
+    <span class="kw">&lt;/child&gt;</span>
+<span class="kw">&lt;/parent&gt;</span></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/direct-child-selector.html">html-and-css/direct-child-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/direct-child-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   div &gt; h3 <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;h3&gt;</span>H3 outside div<span class="kw">&lt;/h3&gt;</span>
+
+<span class="kw">&lt;div&gt;</span>
+   <span class="kw">&lt;h3&gt;</span>H3 direct child of div<span class="kw">&lt;/h3&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+
+<span class="kw">&lt;div</span> <span class="kw">&gt;</span>
+   <span class="kw">&lt;blockquote</span><span class="ot"> class=</span><span class="st">&quot;sub-level&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;h3&gt;</span>H3 not a direct child of div<span class="kw">&lt;/h3&gt;</span>
+   <span class="kw">&lt;/blockquote&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/direct-child-selector</span></p>
+<iframe src="embeds/html-and-css/direct-child-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h4 id="siblings">Siblings</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector1 ~ selector2 <span class="kw">{}</span></code></pre></div>
+<p>The <code>~</code> symbol between two selectors, selects all the elements that match the second selector who exist after the first selector and have the same parent.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/all-siblings-selector.html">html-and-css/all-siblings-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/all-siblings-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   <span class="fl">.selector1</span> ~ <span class="fl">.selector2</span> <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector1&quot;</span><span class="kw">&gt;</span>
+        Content of div 1
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 2
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;another-class&quot;</span><span class="kw">&gt;</span>
+        Content of div 3
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 4
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/all-siblings-selector</span></p>
+<iframe src="embeds/html-and-css/all-siblings-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h4 id="direct-siblings">Direct siblings</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector1 + selector2 <span class="kw">{}</span></code></pre></div>
+<p>The <code>+</code> symbol between two selectors, selects the first element that matches the second selector, is located directly after the first selector and have the same parent.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/direct-siblings-selector.html">html-and-css/direct-siblings-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/direct-siblings-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   <span class="fl">.selector1</span> + <span class="fl">.selector2</span> <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector1&quot;</span><span class="kw">&gt;</span>
+        Content of div 1
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 2
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;another-class&quot;</span><span class="kw">&gt;</span>
+        Content of div 3
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 4
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/direct-siblings-selector</span></p>
+<iframe src="embeds/html-and-css/direct-siblings-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="special-selectors">Special selectors</h3>
+<h4 id="last-child">last-child</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector<span class="dv">:last-child</span> <span class="kw">{}</span></code></pre></div>
+<p>This selection modifier targets the last element matching the given selector:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/last-child-selector.html">html-and-css/last-child-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/last-child-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   <span class="fl">.parent</span> div<span class="dv">:last-child</span> <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector1&quot;</span><span class="kw">&gt;</span>
+        Content of div 1
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 2
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;another-class&quot;</span><span class="kw">&gt;</span>
+        Content of div 3
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 4
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/last-child-selector</span></p>
+<iframe src="embeds/html-and-css/last-child-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>In the example is the div coloured red, the last div in the <code>.parent</code> tag.</p>
+<h4 id="nth-child">nth-child</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">select<span class="dv">:nth-child</span>( n <span class="fl">...</span> ) <span class="kw">{}</span></code></pre></div>
+<p>The <code>nth-child</code> modifier targets the elements matching a simple equation where n is the position of the element in the list.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/nth-child-selector.html">html-and-css/nth-child-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/nth-child-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+
+   <span class="fl">.parent</span> div<span class="dv">:nth-child</span>( 2n + 1) <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+   <span class="fl">.parent</span> div<span class="dv">:nth-child</span>( 2n ) <span class="kw">{</span>
+
+      <span class="kw">color:</span> <span class="dt">green</span><span class="kw">;</span>
+   <span class="kw">}</span>
+
+   <span class="fl">.parent</span> div<span class="dv">:nth-child</span>( 3 ) <span class="kw">{</span>
+
+      <span class="kw">background:</span> lightyellow<span class="kw">;</span>
+   <span class="kw">}</span>
+
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector1&quot;</span><span class="kw">&gt;</span>
+        Content of div 1
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 2
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;another-class&quot;</span><span class="kw">&gt;</span>
+        Content of div 3
+    <span class="kw">&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;selector2&quot;</span><span class="kw">&gt;</span>
+        Content of div 4
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/nth-child-selector</span></p>
+<iframe src="embeds/html-and-css/nth-child-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<ul>
+<li><code>2n + 1</code>: all odd elements (the <code>odd</code> keyword can also be used: <code>:nth-child(odd)</code>)</li>
+<li><code>2n</code>: all even elements (the <code>even</code> keyword can also be used: <code>:nth-child(even)</code>)</li>
+<li><code>3</code>: the third element</li>
+</ul>
+<h2 id="colours">Colours</h2>
+<p>The appearance of text can be modified heavily via <abbr title="Cascading Style Sheets">CSS</abbr></p>
+<p>Colours can be defined in multiple ways:</p>
+<ul>
+<li>Colour name: the most common colours like red, blue, green, yellow,... can be specified via their names.</li>
+<li>RGB notation: <code>rgb( red-value, green-value, blue-value)</code>.</li>
+<li>HEX notation: <code>#RRGGBB</code> where <code>RR</code> is the hexa-deciaml notation of the red value, <code>GG</code> for green and <code>BB</code> for blue...</li>
+</ul>
+<p>See <a href="#background">background</a> for an example.</p>
+<h2 id="background">Background</h2>
+<p>See <a href="http://www.w3schools.com/css/css_background.asp" class="w3c-ref"><code>background</code></a> for detailed information about the background.</p>
+<p>Set the background of an element.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">background:</span> steelblue<span class="kw">;</span> <span class="co">/* named colour */</span>
+    <span class="kw">background:</span> <span class="dt">rgb(</span> <span class="dt">70</span>, <span class="dt">130</span>, <span class="dt">180</span> <span class="dt">)</span><span class="kw">;</span> <span class="co">/* Red green and blue value */</span>
+    <span class="kw">background:</span> <span class="dt">#4682B4</span><span class="kw">;</span> <span class="co">/* hexa decimal notation */</span>
+<span class="kw">}</span></code></pre></div>
+<h2 id="font-and-text.">Font and text.</h2>
+<p>In depth info about fonts can be found <a href="http://www.w3schools.com/css/css_font.asp">here</a> and about text <a href="http://www.w3schools.com/css/css_text.asp">here</a>.</p>
+<p>The appearance of text can be heavily modified:</p>
+<h3 id="colour">Colour</h3>
+<p>Set the <a href="http://www.w3schools.com/css/css_color.asp" class="w3c-ref"><code>color</code></a> of the text.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">color:</span> steelblue<span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="font-family">Font-family</h3>
+<p>Set a font.</p>
+<p>Specify the most fonts from most desired font first to least desired (and more generic) font last.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+    <span class="kw">font-family:</span> <span class="st">&quot;Times New Roman&quot;</span>, Times, <span class="dt">serif</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="font-size">Font-size</h3>
+<p>This property determines the <a href="http://www.w3schools.com/css/css_font.asp" class="w3c-ref"><code>font</code></a>-size of the text.</p>
+<pre><code>font-size: ( xx-small | x-small | small | medium | large | x-large | xx-large )
+font-size: ( smaller | larger )
+font-size: &lt;value&gt;</code></pre>
+<p>The size can be defined as a predefined word/value or as an action.</p>
+<p><code>smaller</code> goes a step down in the rank, for example: <code>small</code> -&gt; <code>x-small</code>. <code>larger</code> goes a step down in the rank, for example: <code>large</code> -&gt; <code>x-large</code>.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">font-size:</span> <span class="dt">25px</span><span class="kw">;</span>
+    <span class="kw">font-size:</span> <span class="dt">1.2em</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<ul>
+<li><code>px</code>: set the height of the font to this amount o pixels;</li>
+<li><code>em</code>: Set the size of the font relative the its parent: For example:
+<ul>
+<li><code>1em</code>: no changes = 100%</li>
+<li><code>1.5em</code>: 150% the size of the parent</li>
+<li><code>0.9em</code>: 90% the size of the parent</li>
+</ul></li>
+</ul>
+<h3 id="font-style">Font-style</h3>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">font-style<span class="dv">:</span> ( normal | italic | oblique | inherit )</code></pre></div>
+<ul>
+<li><code>normal</code>: normal text.</li>
+<li><code>italic</code>: slanted text (a custom designed slanted font set.)</li>
+<li><code>oblique</code>: slanted text (the normal font slanted by software)</li>
+<li><code>inherit</code>: inherit the value from the parent element</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">font-style:</span> <span class="dt">italic</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="font-variant">Font-variant</h3>
+<p>Visualise the font in all caps. Real capitals are still a bit larger than the normal letters.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">font-variant:</span> <span class="dt">small-caps</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="font-weight">Font-weight</h3>
+<p>Make the font bold or reset the boldness.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">font-weight<span class="dv">:</span> ( normal | bold | inherit )</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">font-weight:</span> <span class="dt">bold</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="text-decoration">Text-decoration</h3>
+<p>This property determines if text is:</p>
+<ul>
+<li>underlined</li>
+<li>line-through</li>
+<li>overlined</li>
+</ul>
+<h3 id="text-align">Text-align</h3>
+<p>Define how the text should be aligned inside an element:</p>
+<h4 id="example">Example</h4>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/font-and-text.html">html-and-css/font-and-text</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/font-and-text.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:red;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-family: &#39;Times New Roman&#39;, Times, serif;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:large;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:small;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:1.2em;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-style:italic;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-variant:small-caps;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-weight:bold;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:underline;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:line-through&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:overline;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/font-and-text</span></p>
+<iframe src="embeds/html-and-css/font-and-text.html" class="embed--output" height="250px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h2 id="border">Border</h2>
+<p>Draw a border around an element.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">border<span class="dv">:</span> &lt;style&gt; &lt;color&gt; &lt;width&gt;;</code></pre></div>
+<p>Types:</p>
+<ul>
+<li>dotted</li>
+<li>dashed</li>
+<li>solid</li>
+<li>double</li>
+<li>groove</li>
+<li>ridge</li>
+<li>inset</li>
+<li>outset</li>
+<li>none</li>
+<li>hidden</li>
+</ul>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/border.html">html-and-css/border</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/border.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: solid red 1px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: dashed green 2px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: dotted blue 3px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/border</span></p>
+<iframe src="embeds/html-and-css/border.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>In depth info about borders can be found <a href="http://www.w3schools.com/css/css_border.asp">here</a></p>
+<h2 id="margin">Margin</h2>
+<p>Sometimes elements stick to close to each other. The margin specifies how far other elements should stay away from an element</p>
+<p>The margin property accepts one, two or four values.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">margin<span class="dv">:</span> 1px; <span class="co">/* set a margin of 1px for all four sides */</span>
+margin<span class="dv">:</span> 1px 2px; <span class="co">/* set a margin of 1px for the top and bottom and 2px for the left and right side */</span>
+margin<span class="dv">:</span> 1px 2px 3px 4px ; <span class="co">/* top: 1px, right side: 2px, bottom: 3px, left side: 4px */</span></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/margin.html">html-and-css/margin</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/margin.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+   div <span class="kw">{</span> <span class="kw">border:</span> <span class="dt">solid</span> <span class="dt">blue</span> <span class="dt">1px</span><span class="kw">;}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px 10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px 10px 15px 20px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/margin</span></p>
+<iframe src="embeds/html-and-css/margin.html" class="embed--output" height="230px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>All sides can also be specified separately:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">margin-top<span class="dv">:</span> 5px;
+margin-right<span class="dv">:</span> 5px;
+margin-bottom<span class="dv">:</span> 5px;
+margin-left<span class="dv">:</span> 5px;</code></pre></div>
+<p>In depth info about margins can be found <a href="http://www.w3schools.com/css/css_margin.asp">here</a></p>
+<h4 id="padding">Padding</h4>
+<p>The padding defines the distance the content inside the element shoud stay away from its border.</p>
+<p>The padding property accepts one, two or four values.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">padding<span class="dv">:</span> 1px; <span class="co">/* set a padding of 1px for all four sides */</span>
+padding<span class="dv">:</span> 1px 2px; <span class="co">/* set a padding of 1px for the top and bottom and 2px for the left and right side */</span>
+padding<span class="dv">:</span> 1px 2px 3px 4px ; <span class="co">/* top: 1px, right side: 2px, bottom: 3px, left side: 4px */</span></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/padding.html">html-and-css/padding</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/padding.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+   div <span class="kw">{</span> <span class="kw">border:</span> <span class="dt">solid</span> <span class="dt">blue</span> <span class="dt">1px</span><span class="kw">;}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px 10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px 10px 15px 20px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/padding</span></p>
+<iframe src="embeds/html-and-css/padding.html" class="embed--output" height="230px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>All sides can also be specified separately:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">padding-top<span class="dv">:</span> 5px;
+padding-right<span class="dv">:</span> 5px;
+padding-bottom<span class="dv">:</span> 5px;
+padding-left<span class="dv">:</span> 5px;</code></pre></div>
+<p>In depth info about paddings can be found <a href="http://www.w3schools.com/css/css_padding.asp">here</a></p>
+<h4 id="box-model">Box-model</h4>
+<h2 id="exercises-3">Exercises</h2>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-10-03
+                  at 2016-10-09
                </p>
             </footer>
          </div>

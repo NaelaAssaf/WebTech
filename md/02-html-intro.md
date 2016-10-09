@@ -386,7 +386,71 @@ m4_exercise([[
 * Add 3 rows
     * Jan -> 12
     * Piet -> 15
-    * Joris -> 7
+    * Boris -> 7
 * Make the names also headers
 * Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.
 ]])
+
+## Forms
+
+## Attributes
+
+As already seen with the `a`-tag, attributes can modify the behaviour of an
+HTML-element.
+
+The `a`-tag requires the `href`-attribute to be set. Otherwise the browser has
+no clue where to take the user on a click.
+
+The attributes are also often used to modify the appearance of an element.
+
+Commonly used attributes:
+
+### Class
+
+The class attribute holds a space separated list class-names. The element is member of all the classes specified in the attribute. These classes can be used to style a group of elements the same way.
+
+For example all the elements which are member of the same class (have the same
+class-name in the class attribute) should have the text colour set to red...
+
+```html
+<p class="class1" >...</p>
+<p class="class1 class-two" >...</p>
+```
+
+### Id
+
+The `id`-attribute lets you assign a unique identifier to an element.
+
+This identifier should be unique for the whole page and thus occur only once.
+
+```html
+<p id="unique-identifier" >...</p>
+```
+
+<small>
+If the id is specified in the URL prefixed by a pound symbol (`#`), the element will be automatically scrolled into view.
+
+```html
+<!-- http://WWW.example.com/script.php#chapter -->
+
+<p id="chapter1">
+Scroll into view...
+</p>
+```
+
+</small>
+
+### Style
+
+The style attribute can be used to apply CSS-rules to a single element.
+
+Generally speaking you should not set the styles via this tag. A dedicated
+style block in the `head` of page or an external style sheet are better, more
+scalable, options. It can however come in handy in this introduction to HTML and
+CSS.
+
+```html
+<p style="background: red; color: green;">...</p>
+```
+
+See [HTML and CSS](html-and-css.html) for more info about styling an element.

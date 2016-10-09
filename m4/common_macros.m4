@@ -30,7 +30,9 @@ m4_define(m4_danger,[[<div class="alert alert-danger"><strong>Danger:</strong> $
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
+m4_define(m4_cssprop,[`$1`](http://www.w3schools.com/css/css_$1.asp){.w3c-ref})
 m4_define(m4_phpfunc,[`$1`](http://php.net/manual-lookup.php?pattern=$1){.w3c-ref})
+
 
 m4_dnl -----------------------------------------------------------------------
 

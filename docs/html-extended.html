@@ -102,6 +102,7 @@
             <li><a href="html-extended.html#html-and-css">HTML and CSS</a><ul>
             <li><a href="html-extended.html#attributes">Attributes</a></li>
             <li><a href="html-extended.html#styles">Styles</a></li>
+            <li><a href="html-extended.html#styles-1">Styles</a></li>
             <li><a href="html-extended.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
@@ -139,6 +140,16 @@
 <p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to the element.</p>
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external stylesheet are better, more scalable, options. I can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<h2 id="styles-1">Styles</h2>
+<p>Elements can be styled via three methods:</p>
+<ul>
+<li>style-attribute <small>(discouraged)</small></li>
+<li>a style tag in the head <small>(less discouraged)</small></li>
+<li>an external stylesheet <small>(encouraged)</small></li>
+</ul>
+<h3 id="style-attribute">Style attribute</h3>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;element</span><span class="ot"> style=</span><span class="st">&quot;/* my styles */&quot;</span><span class="kw">&gt;&lt;/element&gt;</span></code></pre></div>
+<p>Use this method to quickly test some rule. Not as a permanent style. <strong>This way of managing styles is discouraged</strong> because it is a less maintainable way of styling web-pages. For example: styles can not be shared by elements...</p>
 <h2 id="exercises">Exercises</h2>
          <div class="row">
             <footer class="col-md-24">
