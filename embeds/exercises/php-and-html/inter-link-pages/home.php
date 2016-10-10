@@ -17,7 +17,7 @@
             <a href="home.html">Home</a>
          </li>
          <li>
-            <a href="hobbies.html">Hobby's</a>
+            <a href="hobbies.html">Hobbies</a>
          </li>
          <li>
             <a href="dishes.html">Favourite dishes</a>
