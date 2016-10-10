@@ -74,7 +74,7 @@ m4_exercise([[
 Create a web-page that prints 
 
 * an ordered list of three your three favourite dishes (dynamically)
-* a list of (three) hobby's
+* a list of (three) hobbies
 
 m4_embed(php-and-html/list-hobbys-and-dishes,180px)
 ]])
@@ -88,13 +88,14 @@ Create three web-pages that interlink to one another.
     * Title
     * Name
     * Age
-* Hobby's
+* hobbies
     * Title
     * list
 * Favourite dishes
     * Title
     * list
 
+m4_embed(php-and-html/inter-link-pages/home,250px)
 ]])
 
 
