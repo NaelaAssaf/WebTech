@@ -26,7 +26,7 @@ foreach( $chars as $nt ) {
 }
 
 echo "\n\n";
-echo "Invaid NT characters:\n";
+echo "Invalid NT characters:\n";
 
 foreach( $invalid as $char => $nr ) {
 

@@ -56,12 +56,16 @@ This allows us to generate the HTML content dynamically.
 
 m4_exercise([[
 Create a PHP page that prints `hello world` when served by a web-server
+
+m4_embed(php-and-html/hello-world,70px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
 Create a PHP page that resembles your CV.
+
+m4_embed(php-and-html/cv,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -71,6 +75,8 @@ Create a web-page that prints
 
 * an ordered list of three your three favourite dishes (dynamically)
 * a list of (three) hobby's
+
+m4_embed(php-and-html/list-hobbys-and-dishes,180px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------

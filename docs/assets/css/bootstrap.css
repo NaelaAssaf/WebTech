@@ -3146,8 +3146,7 @@ pre.embed--output {
   padding: 2em 8px; }
 
 iframe {
-  width: 100%;
-  overflow-y: hidden; }
+  width: 100%; }
 
 a.w3c-ref {
   border-width: 1px;

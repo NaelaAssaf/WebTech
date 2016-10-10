@@ -97,3 +97,9 @@ m4_define(m4_run,[[
 m4_esyscmd([[ cd exercises/$1 && $2]])
 ```
 ]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_define(m4_embed,[[
+<iframe src="embeds/exercises/$1.html" class="embed--output" height="$2" frameborder="0"></iframe>
+]])
