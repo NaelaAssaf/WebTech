@@ -2,15 +2,6 @@
 <html lang="en">
 <head>
    <title>My CV</title>
-   <style type="text/css">
-      table {
-         border-collapse: collapse;
-      }
-      td{
-         padding: 5px 15px;
-         border: solid lightgray 1px;
-      }
-   </style>
 </head>
 <body>
    <h1>CV</h1>
