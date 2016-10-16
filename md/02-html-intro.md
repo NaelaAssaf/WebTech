@@ -232,6 +232,13 @@ It has no special styles by default
 
 m4_embed_php_as_html(html-intro/div-tag,150px,.html)
 
+### Pre-formatted text: `pre`
+
+The m4_tag(pre) Keeps al white-space in the element (in contrast to all the
+other elements). The text is also displayed in a monospaced font.
+
+m4_embed_php_as_html(html-intro/pre-tag,180px,.html)
+
 ### Blockquote `blockquote`
 
 The m4_tag(blockquote)-tag is used to denote some block of text as a quote from another source.
@@ -390,8 +397,6 @@ m4_exercise([[
 * Make the names also headers
 * Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.
 ]])
-
-## Forms
 
 ## Attributes
 

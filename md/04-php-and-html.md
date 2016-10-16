@@ -341,31 +341,41 @@ Create a webpage with a login form:
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
-Create a webpage that generates a triangle.
+Create a login form with a
 
-* The base of the triangle should be dynamically defined via a from submission or specified in the URL
-* The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL
+* name field
+* age field
+
+Please validate if a user is older than 21.
+
+Print an _access granted_ or _denied_ accordingly.
+
+(extra: print how many years the user should wait before resubmitting the form...)
+
+m4_page(php-and-html/access-control, 200px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
 Create a parrot. Everything you submit must be echo-ed back to the screen.
+
+Extra: append words to previous input...
+
+m4_page(php-and-html/parrot)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
-Create a login form with a
+Create a webpage that generates a triangle.
 
-* name field
-* age field
+* The base of the triangle should be dynamically defined via a from submission or specified in the URL
+* The character the triangle is composed of should be dynamically defined via a
+  from submission or specified in the URL
+* Extra: re-fill fields with previously entered values
 
-When the form is submitted the tool should tell if a person is older than 21 an
-is allowed to enter the website.
-
-* if old enough, print: _access granted for: <$name>. Age (<$age>) is more than 21._
-* if if to you, print: _access denied for: <$name>. Age (<$age>) is less than 21._
+m4_page(php-and-html/dynamic-triangles,300px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -374,8 +384,10 @@ m4_exercise([[
 Create a tool that validates passwords.
 
 * Password should be entered twice and be the same.
-* should be more than 8 characters
-* have at least one number and letter.
+* Password should be more than 8 characters
+* (extra) Password should have at least one number and letter.
+
+m4_page(php-and-html/validate-passwords,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -402,6 +414,38 @@ Make a web-page where you can paste and upload text and the tool should should:
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
+Make a webpage where you can upload comma separated data and convert it into a
+table.
+
+```
+firt name, last name, gender, age
+john, doe, male, 21
+jane, doe, female, 18
+jake, smith, male 20
+joan, d'arc, female, 33
+```
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a _post comment_ form with fields:
+
+* name
+* email
+* gender buttons
+* comment box
+* post anonymous checkbox.
+
+Validate:
+
+* Name and/or email are not empty
+* Comment has max 500 characters
+
+* Print error messages if a validation failed + indicate which field failed
+  validation, in red.
+* If an error occurred pre-fill the elements with the valid data
+* If no errors occurred, print _message posted_ in green.
 ]])
 
 m4_dnl -----------------------------------------------------------------------

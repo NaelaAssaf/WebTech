@@ -86,7 +86,6 @@
             <li><a href="html-intro.html#containers">Containers</a></li>
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
-            <li><a href="html-intro.html#forms">Forms</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
             </ul></li>
             </ul>
@@ -112,11 +111,7 @@
             <li><a href="css.html#html-and-css">HTML and CSS</a><ul>
             <li><a href="css.html#include-style-information">Include style information</a></li>
             <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#colours">Colours</a></li>
-            <li><a href="css.html#background">Background</a></li>
-            <li><a href="css.html#font-and-text.">Font and text.</a></li>
-            <li><a href="css.html#border">Border</a></li>
-            <li><a href="css.html#margin">Margin</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
             <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
@@ -486,32 +481,38 @@ Exercise:
 <h4>
 Exercise:
 </h4>
-<p>Create a webpage that generates a triangle.</p>
+<p>Create a login form with a</p>
 <ul>
-<li>The base of the triangle should be dynamically defined via a from submission or specified in the URL</li>
-<li>The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL</li>
+<li>name field</li>
+<li>age field</li>
 </ul>
+<p>Please validate if a user is older than 21.</p>
+<p>Print an <em>access granted</em> or <em>denied</em> accordingly.</p>
+<p>(extra: print how many years the user should wait before resubmitting the form...)</p>
+<iframe src="embeds/exercises/php-and-html/access-control.php" class="embed--output" height="200px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
 <p>Create a parrot. Everything you submit must be echo-ed back to the screen.</p>
+<p>Extra: append words to previous input...</p>
+<iframe src="embeds/exercises/php-and-html/parrot.php" class="embed--output" height frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
-<p>Create a login form with a</p>
+<p>Create a webpage that generates a triangle.</p>
 <ul>
-<li>name field</li>
-<li>age field</li>
+<li>The base of the triangle should be dynamically defined via a from submission or specified in the URL</li>
+<li>The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL</li>
+<li>Extra: re-fill fields with previously entered values</li>
 </ul>
-<p>When the form is submitted the tool should tell if a person is older than 21 an is allowed to enter the website.</p>
-<ul>
-<li>if old enough, print: <em>access granted for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is more than 21.</em></li>
-<li>if if to you, print: <em>access denied for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is less than 21.</em></li>
-</ul>
+<iframe src="embeds/exercises/php-and-html/dynamic-triangles.php" class="embed--output" height="300px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
@@ -520,9 +521,11 @@ Exercise:
 <p>Create a tool that validates passwords.</p>
 <ul>
 <li>Password should be entered twice and be the same.</li>
-<li>should be more than 8 characters</li>
-<li>have at least one number and letter.</li>
+<li>Password should be more than 8 characters</li>
+<li>(extra) Password should have at least one number and letter.</li>
 </ul>
+<iframe src="embeds/exercises/php-and-html/validate-passwords.php" class="embed--output" height="250px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
@@ -551,6 +554,33 @@ Exercise:
 <h4>
 Exercise:
 </h4>
+<p>Make a webpage where you can upload comma separated data and convert it into a table.</p>
+<pre><code>firt name, last name, gender, age
+john, doe, male, 21
+jane, doe, female, 18
+jake, smith, male 20
+joan, d&#39;arc, female, 33</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a <em>post comment</em> form with fields:</p>
+<ul>
+<li>name</li>
+<li>email</li>
+<li>gender buttons</li>
+<li>comment box</li>
+<li>post anonymous checkbox.</li>
+</ul>
+<p>Validate:</p>
+<ul>
+<li>Name and/or email are not empty</li>
+<li><p>Comment has max 500 characters</p></li>
+<li>Print error messages if a validation failed + indicate which field failed validation, in red.</li>
+<li>If an error occurred pre-fill the elements with the valid data</li>
+<li><p>If no errors occurred, print <em>message posted</em> in green.</p></li>
+</ul>
 </div>
 <ul>
 <li>header with links</li>

@@ -260,234 +260,396 @@ m4_embed_php_as_html(html-and-css/nth-child-selector,,.html)
 * `2n`: all even elements (the `even` keyword can also be used: `:nth-child(even)`)
 * `3`: the third element
 
-## Colours
+## CSS properties
 
-The appearance of text can be modified heavily via CSS
+<http://www.w3schools.com> has a very good explanation of most of the CSS
+properties. The properties listed here are links to the corresponding
+<http://www.w3schools.com>-website and are considered part of the course
+material!
 
-Colours can be defined in multiple ways:
+m4_cssproptitle(Colors,colors)
 
-* Colour name: the most common colours like red, blue, green, yellow,... can be specified via their names.
-* RGB notation: `rgb( red-value, green-value, blue-value)`.
-* HEX notation: `#RRGGBB` where `RR` is the hexa-deciaml notation of the red value, `GG` for green and `BB` for blue...
+>Colors in CSS are most often specified by:
+>
+>* a valid color name - like "red"
+>* an RGB value - like "rgb(255, 0, 0)"
+>* a HEX value - like "#ff0000"
 
-See [background](#background) for an example.
+m4_dnl ------------------------------------------------------------------------
 
-## Background
+m4_cssproptitle(Background,background)
 
-See m4_cssprop(background) for detailed information about the background.
-
-Set the background of an element.
-
-```css
-div {
-
-    background: steelblue; /* named colour */
-    background: rgb( 70, 130, 180 ); /* Red green and blue value */
-    background: #4682B4; /* hexa decimal notation */
-}
-```
-
-## Font and text.
-
-In depth info about fonts can be found
-[here](http://www.w3schools.com/css/css_font.asp) and about text
-[here](http://www.w3schools.com/css/css_text.asp).
-
-The appearance of text can be heavily modified:
-
-### Colour
-
-Set the m4_cssprop(color) of the text.
+An element can be given a background:
 
 ```css
 div {
 
-    color: steelblue;
+    background: red;
 }
 ```
 
-### Font-family
+m4_dnl ------------------------------------------------------------------------
 
-Set a font.
+m4_cssproptitle(Border,border)
 
-Specify the most fonts from most desired font first to least desired (and more
-generic) font last.
-
-```css
-div {
-    font-family: "Times New Roman", Times, serif;
-}
-```
-
-### Font-size
-
-This property determines the m4_cssprop(font)-size of the text.
-
-```
-font-size: ( xx-small | x-small | small | medium | large | x-large | xx-large )
-font-size: ( smaller | larger )
-font-size: <value>
-```
-
-The size can be defined as a predefined word/value or as an action.
-
-`smaller` goes a step down in the rank, for example: `small` -> `x-small`.
-`larger` goes a step down in the rank, for example: `large` -> `x-large`.
+An element can be given a border:
 
 ```css
 div {
 
-    font-size: 25px;
-    font-size: 1.2em;
+    background: solid red 1px;
+    background: dashed #bbb 1px;
 }
 ```
 
-* `px`: set the height of the font to this amount o pixels;
-* `em`: Set the size of the font relative the its parent:
-  For example:
-    * `1em`: no changes = 100%
-    * `1.5em`: 150% the size of the parent
-    * `0.9em`: 90% the size of the parent
+m4_dnl ------------------------------------------------------------------------
 
-### Font-style
+m4_cssproptitle(Margin,margin)
 
-```css
-font-style: ( normal | italic | oblique | inherit )
-```
-
-* `normal`: normal text.
-* `italic`: slanted text (a custom designed slanted font set.)
-* `oblique`: slanted text (the normal font slanted by software)
-* `inherit`: inherit the value from the parent element
+The margin defines how far away other, external, elements are pushed away from
+the border of the styled element.
 
 ```css
 div {
 
-    font-style: italic;
+    margin: 15px; /* All sides the same margin */
+    margin: 15px 30px; /* Top and bottom: 15 px, left and right side: 30px*/
+    margin: 15px 30px 45px 60px; /* top: 15px, right:30px, bottom:45px, left: 60px */
 }
 ```
 
-### Font-variant
+m4_dnl ------------------------------------------------------------------------
 
-Visualise the font in all caps. Real capitals are still a bit larger than the
-normal letters.
+m4_cssproptitle(Padding,padding)
+
+The padding defines how far away text, and other child, elements should stay away
+from the border of the element.
 
 ```css
 div {
 
-    font-variant: small-caps;
+    padding: 15px; /* All sides: 15px */
+    padding: 15px 30px; /* Top and bottom: 15 px, left and right side: 30px*/
+    padding: 15px 30px 45px 60px; /* top: 15px, right:30px, bottom:45px, left: 60px */
 }
 ```
 
-### Font-weight
+m4_dnl ------------------------------------------------------------------------
 
-Make the font bold or reset the boldness.
+m4_cssproptitle(Height and width,dimension)
 
-```css
-font-weight: ( normal | bold | inherit )
-```
+The width and the height of an element can be set via css.
 
 ```css
 div {
 
-    font-weight: bold;
+    height: 500px;
+    width: 150px;
 }
 ```
 
-### Text-decoration
+m4_dnl ------------------------------------------------------------------------
 
-This property determines if text is:
+m4_cssproptitle(Box model,boxmodel)
 
-* underlined
-* line-through
-* overlined
+An element is composed out of multiple components which all influence the size
+of the element:
 
-### Text-align
+> * Content - The content of the box, where text and images appear
+> * Padding - Clears an area around the content. The padding is transparent
+> * Border - A border that goes around the padding and content
+> * Margin - Clears an area outside the border. The margin is transparent
 
-Define how the text should be aligned inside an element:
+The
+[box-sizing](http://www.w3schools.com/cssref/css3_pr_box-sizing.asp){.w3c-ref}-property
+inlfuences how all these components add up to the total size of the element.
 
-#### Example
+m4_dnl ------------------------------------------------------------------------
 
-m4_embed_php_as_html(html-and-css/font-and-text,250px,.html)
+m4_cssproptitle(Outline,outline)
 
-## Border
-
-Draw a border around an element.
-
-```css
-border: <style> <color> <width>;
-```
-
-Types:
-
-* dotted
-* dashed
-* solid
-* double
-* groove
-* ridge
-* inset
-* outset
-* none
-* hidden
-
-
-m4_embed_php_as_html(html-and-css/border,,.html)
-
-In depth info about borders can be found [here](http://www.w3schools.com/css/css_border.asp)
-
-## Margin
-
-Sometimes elements stick to close to each other. The margin specifies how far
-other elements should stay away from an element
-
-The margin property accepts one, two or four values.
+Outline draws a border around the boxmodel.
 
 ```css
-margin: 1px; /* set a margin of 1px for all four sides */
-margin: 1px 2px; /* set a margin of 1px for the top and bottom and 2px for the left and right side */
-margin: 1px 2px 3px 4px ; /* top: 1px, right side: 2px, bottom: 3px, left side: 4px */
+div {
+
+    outline: solid green 1px;
+}
 ```
 
-m4_embed_php_as_html(html-and-css/margin,230px,.html)
+m4_dnl ------------------------------------------------------------------------
 
-All sides can also be specified separately:
+m4_cssproptitle(Font,font)
+
+Customize the appearance of a font:
+
+* font-color
+* font-size
+* font-weight ( how bold is the font)
+* font-style (italic or not)
+* font-family (Arial, serif or sans-serif, etc)
+* font-variant (small-caps or not)
+
+m4_cssproptitle(Text,text)
+
+We can style more than the appearance of the font, we can also define:
+
+* text-align: left, right, centered of justified
+* text-decoration: overline, underline or line-through
+* word-spacing
+* letter-spacing
+* ...
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_cssproptitle(Link,link)
+
+A link can be in one of four states:
+
+> * `a:link`    - a normal, unvisited link
+> * `a:visited` - a link the user has visited
+> * `a:hover`   - a link when the user mouses over it
+> * `a:active`  - a link the moment it is clicked
+
+All these states can be styles independently.
 
 ```css
-margin-top: 5px;
-margin-right: 5px;
-margin-bottom: 5px;
-margin-left: 5px;
+a:hover {
+
+    color: pink;
+}
 ```
 
-In depth info about margins can be found [here](http://www.w3schools.com/css/css_margin.asp)
+m4_dnl ------------------------------------------------------------------------
 
-#### Padding
+m4_cssproptitle(List,list)
 
-The padding defines the distance the content inside the element shoud stay away
-from its border.
-
-The padding property accepts one, two or four values.
+The _bullet_ of a list (`ul` or `ol`) can also styles:
 
 ```css
-padding: 1px; /* set a padding of 1px for all four sides */
-padding: 1px 2px; /* set a padding of 1px for the top and bottom and 2px for the left and right side */
-padding: 1px 2px 3px 4px ; /* top: 1px, right side: 2px, bottom: 3px, left side: 4px */
+div {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url("custom-bullet.gif");
+}
 ```
 
-m4_embed_php_as_html(html-and-css/padding,230px,.html)
+m4_dnl ------------------------------------------------------------------------
 
-All sides can also be specified separately:
+m4_cssproptitle(Table,table)
+
+HTML tables can be styled heavily:
+
+* border: style the borders of the table.
+* border-collapse: merge table cell borders.
+
+Margins, paddings, nth-child selectors, etc. can also be applied.
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_cssproptitle(Display and visibility,display_visibility)
+
+The m4_cssprop(display)-property defines how an elements behaves:
+
+* block: like a div, p, pre, ...
+* inline: like span, small, strong, ...
+* m4_cssprop(inline-block): inline, but can be given a width/height, etc
+* hidden: hide the element.
+
+The m4_cssprop(visibility)-property allows one to hide an element from view,
+but is still occupies space and interacts with the other DOM-elements.
 
 ```css
-padding-top: 5px;
-padding-right: 5px;
-padding-bottom: 5px;
-padding-left: 5px;
+div {
+
+    display: hidden;
+    visibility: none;
+}
 ```
 
-In depth info about paddings can be found [here](http://www.w3schools.com/css/css_padding.asp)
+m4_dnl ------------------------------------------------------------------------
 
-#### Box-model
+m4_cssproptitle(Position,position)
+
+This property defines how an element behaves in the page flow. There are four
+possible values:
+
+* `static`: default -> go with the flow
+* `relative`: position relative to default position.
+* `fixed`: postion relative to viewport (eg.: browser window)
+* `absolute`: relative to the nearest positioned (= not `static`) ancestor
+
+```css
+div {
+
+    position: absolute;
+}
+```
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_cssproptitle(Overflow,overflow)
+
+The m4_cssprop(overflow)-property defines what should happen if the contents of
+an element is larger than the defined dimensions.
+
+* visible: just show the content, don't take the boundries into considiration.
+* hidden: hide the overflowing content
+* scroll: show scollbars
+* auto: create scrollbars if needed.
+
+<small> m4_info([[The X and Y axis scrollbars can be controlled via
+m4_cssprop(overflow-x) and m4_cssprop(overflow-y)]]) </small>
+
+```css
+div {
+
+    overflow: hidden;
+}
+```
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_cssproptitle(Float,float)
+
+Defining float to `left` or `right` will extract an element out of the normal
+page flow and _float_ all the page content around this element.
+
+```css
+div {
+
+    float: right;
+}
+```
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_cssproptitle(Align,align)
+
+Elements can be aligned in their parent via three methods. These methods don't always work in all circumstances, so sometimes one must be choosen over the other.
+
+* `text-align`: left, right or centered -> child elements are aligned
+* `margin`: `0 auto` -> no margin top and bottom, the sides is evenly devided ==
+  element is centered...
+* `top`, `right`, `bottom`, `left`: specify distance of the side of an element
+  to its parent. Works only on absolute or fixed positions
 
 ## Exercises
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[Make a web-page with:
+
+* Yellow background
+* Red header: `Hello World`
+]])
+
+m4_embed([[css/hello-world]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[Make a table with three columns: `first name`, `last name`, `age`
+where:
+
+* first column text is red
+* second column text is green
+* third column text is blue
+* table caption is underline and overlined
+* Extra: add total sum column
+]])
+
+m4_embed(css/classmates-colors,270px)
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[Make a table with three columns: `first name`, `last name`, `age`
+where:
+
+* only columns have borders
+* all even rows have a gray background
+]])
+m4_embed(css/classmates-nth-row,350px)
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[Print a rainbow piramid, each column shoud have it's own color, with base 10]])
+
+m4_embed(css/rainbow-piramid)
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[]])
+
+m4_embed([[css/]])

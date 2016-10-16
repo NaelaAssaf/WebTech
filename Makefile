@@ -27,6 +27,10 @@ update:
 serve:
 	php -S localhost:8000 -t $(pubdir) & firefox -new-tab localhost:8000 & wait
 
+.PHONY: watch
+watch:
+	onmod md templates m4 assets-src embeds make
+
 # ============================================================================ #
 # Include all *.mk files in ./make
 # * Each of the .mk-files should have a clean-<filename> target

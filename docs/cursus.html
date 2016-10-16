@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-10-10" />
+        <meta name="date" content="2016-10-16" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -84,7 +84,6 @@
             <li><a href="#containers">Containers</a></li>
             <li><a href="#inline-tags">Inline tags</a></li>
             <li><a href="#multi-element-markup">Multi element markup</a></li>
-            <li><a href="#forms">Forms</a></li>
             <li><a href="#attributes-1">Attributes</a></li>
             </ul></li>
             <li><a href="#php-basics">PHP Basics</a><ul>
@@ -97,18 +96,14 @@
             <li><a href="#php-and-html">PHP and HTML</a><ul>
             <li><a href="#php-webserver">PHP Webserver</a></li>
             <li><a href="#include-require">Include / Require</a></li>
-            <li><a href="#forms-1">Forms</a></li>
+            <li><a href="#forms">Forms</a></li>
             <li><a href="#php-special-data-arrays">PHP special data arrays</a></li>
             <li><a href="#exercises-2">Exercises</a></li>
             </ul></li>
             <li><a href="#html-and-css">HTML and CSS</a><ul>
             <li><a href="#include-style-information">Include style information</a></li>
             <li><a href="#css-selectors">CSS selectors</a></li>
-            <li><a href="#colours">Colours</a></li>
-            <li><a href="#background">Background</a></li>
-            <li><a href="#font-and-text.">Font and text.</a></li>
-            <li><a href="#border">Border</a></li>
-            <li><a href="#margin">Margin</a></li>
+            <li><a href="#css-properties">CSS properties</a></li>
             <li><a href="#exercises-3">Exercises</a></li>
             </ul></li>
             </ul>
@@ -411,6 +406,28 @@ Content after...</code></pre></div>
 </iframe>
 </div>
 </div>
+<h3 id="pre-formatted-text-pre">Pre-formatted text: <code>pre</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_pre.asp" class="w3c-ref"><code>pre</code></a> Keeps al white-space in the element (in contrast to all the other elements). The text is also displayed in a monospaced font.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/pre-tag.html">html-intro/pre-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/pre-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html">Content before...
+<span class="kw">&lt;pre&gt;</span>
+   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+   voluptua.
+
+   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<span class="kw">&lt;/pre&gt;</span>
+Content after...</code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/pre-tag</span></p>
+<iframe src="embeds/html-intro/pre-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
 <h3 id="blockquote-blockquote">Blockquote <code>blockquote</code></h3>
 <p>The <a href="http://www.w3schools.com/tags/tag_blockquote.asp" class="w3c-ref"><code>blockquote</code></a>-tag is used to denote some block of text as a quote from another source.</p>
 <div class="row">
@@ -705,7 +722,6 @@ Exercise:
 <li>Add a column 'passes' and add a V if the number is larger than 10 and an X otherwise.</li>
 </ul>
 </div>
-<h2 id="forms">Forms</h2>
 <h2 id="attributes-1">Attributes</h2>
 <p>As already seen with the <code>a</code>-tag, attributes can modify the behaviour of an <abbr title="HyperText Markup Language">HTML</abbr>-element.</p>
 <p>The <code>a</code>-tag requires the <code>href</code>-attribute to be set. Otherwise the browser has no clue where to take the user on a click.</p>
@@ -2421,7 +2437,7 @@ Exercise:
 </h4>
 <p>Create a web-page who includes another file.</p>
 </div>
-<h2 id="forms-1">Forms</h2>
+<h2 id="forms">Forms</h2>
 <p>Forms can be used to send data from the web-page to the server. This data can be read an processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <p>A from is composed out of a form-tag and data tags.</p>
 <h3 id="form-tag">Form tag</h3>
@@ -2681,32 +2697,38 @@ Exercise:
 <h4>
 Exercise:
 </h4>
-<p>Create a webpage that generates a triangle.</p>
+<p>Create a login form with a</p>
 <ul>
-<li>The base of the triangle should be dynamically defined via a from submission or specified in the URL</li>
-<li>The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL</li>
+<li>name field</li>
+<li>age field</li>
 </ul>
+<p>Please validate if a user is older than 21.</p>
+<p>Print an <em>access granted</em> or <em>denied</em> accordingly.</p>
+<p>(extra: print how many years the user should wait before resubmitting the form...)</p>
+<iframe src="embeds/exercises/php-and-html/access-control.php" class="embed--output" height="200px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
 <p>Create a parrot. Everything you submit must be echo-ed back to the screen.</p>
+<p>Extra: append words to previous input...</p>
+<iframe src="embeds/exercises/php-and-html/parrot.php" class="embed--output" height frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
-<p>Create a login form with a</p>
+<p>Create a webpage that generates a triangle.</p>
 <ul>
-<li>name field</li>
-<li>age field</li>
+<li>The base of the triangle should be dynamically defined via a from submission or specified in the URL</li>
+<li>The character the triangle is composed of should be dynamically defined via a from submission or specified in the URL</li>
+<li>Extra: re-fill fields with previously entered values</li>
 </ul>
-<p>When the form is submitted the tool should tell if a person is older than 21 an is allowed to enter the website.</p>
-<ul>
-<li>if old enough, print: <em>access granted for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is more than 21.</em></li>
-<li>if if to you, print: <em>access denied for: &lt;<span class="math inline"><em>n</em><em>a</em><em>m</em><em>e</em> &gt; .<em>A</em><em>g</em><em>e</em>(&lt;</span>age&gt;) is less than 21.</em></li>
-</ul>
+<iframe src="embeds/exercises/php-and-html/dynamic-triangles.php" class="embed--output" height="300px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
@@ -2715,9 +2737,11 @@ Exercise:
 <p>Create a tool that validates passwords.</p>
 <ul>
 <li>Password should be entered twice and be the same.</li>
-<li>should be more than 8 characters</li>
-<li>have at least one number and letter.</li>
+<li>Password should be more than 8 characters</li>
+<li>(extra) Password should have at least one number and letter.</li>
 </ul>
+<iframe src="embeds/exercises/php-and-html/validate-passwords.php" class="embed--output" height="250px" frameborder="0">
+</iframe>
 </div>
 <div class="exercise">
 <h4>
@@ -2746,6 +2770,33 @@ Exercise:
 <h4>
 Exercise:
 </h4>
+<p>Make a webpage where you can upload comma separated data and convert it into a table.</p>
+<pre><code>firt name, last name, gender, age
+john, doe, male, 21
+jane, doe, female, 18
+jake, smith, male 20
+joan, d&#39;arc, female, 33</code></pre>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a <em>post comment</em> form with fields:</p>
+<ul>
+<li>name</li>
+<li>email</li>
+<li>gender buttons</li>
+<li>comment box</li>
+<li>post anonymous checkbox.</li>
+</ul>
+<p>Validate:</p>
+<ul>
+<li>Name and/or email are not empty</li>
+<li><p>Comment has max 500 characters</p></li>
+<li>Print error messages if a validation failed + indicate which field failed validation, in red.</li>
+<li>If an error occurred pre-fill the elements with the valid data</li>
+<li><p>If no errors occurred, print <em>message posted</em> in green.</p></li>
+</ul>
 </div>
 <ul>
 <li>header with links</li>
@@ -3230,221 +3281,319 @@ h1, h3, h5 <span class="kw">{</span>
 <li><code>2n</code>: all even elements (the <code>even</code> keyword can also be used: <code>:nth-child(even)</code>)</li>
 <li><code>3</code>: the third element</li>
 </ul>
-<h2 id="colours">Colours</h2>
-<p>The appearance of text can be modified heavily via <abbr title="Cascading Style Sheets">CSS</abbr></p>
-<p>Colours can be defined in multiple ways:</p>
+<h2 id="css-properties">CSS properties</h2>
+<p><a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a> has a very good explanation of most of the <abbr title="Cascading Style Sheets">CSS</abbr> properties. The properties listed here are links to the corresponding <a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a>-website and are considered part of the course material!</p>
+<h3 id="colors"><a href="http://www.w3schools.com/css/css_colors.asp" class="w3c-ref">Colors</a></h3>
+<blockquote>
+<p>Colors in <abbr title="Cascading Style Sheets">CSS</abbr> are most often specified by:</p>
 <ul>
-<li>Colour name: the most common colours like red, blue, green, yellow,... can be specified via their names.</li>
-<li>RGB notation: <code>rgb( red-value, green-value, blue-value)</code>.</li>
-<li>HEX notation: <code>#RRGGBB</code> where <code>RR</code> is the hexa-deciaml notation of the red value, <code>GG</code> for green and <code>BB</code> for blue...</li>
+<li>a valid color name - like &quot;red&quot;</li>
+<li>an RGB value - like &quot;rgb(255, 0, 0)&quot;</li>
+<li>a HEX value - like &quot;#ff0000&quot;</li>
 </ul>
-<p>See <a href="#background">background</a> for an example.</p>
-<h2 id="background">Background</h2>
-<p>See <a href="http://www.w3schools.com/css/css_background.asp" class="w3c-ref"><code>background</code></a> for detailed information about the background.</p>
-<p>Set the background of an element.</p>
+</blockquote>
+<h3 id="background"><a href="http://www.w3schools.com/css/css_background.asp" class="w3c-ref">Background</a></h3>
+<p>An element can be given a background:</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">background:</span> steelblue<span class="kw">;</span> <span class="co">/* named colour */</span>
-    <span class="kw">background:</span> <span class="dt">rgb(</span> <span class="dt">70</span>, <span class="dt">130</span>, <span class="dt">180</span> <span class="dt">)</span><span class="kw">;</span> <span class="co">/* Red green and blue value */</span>
-    <span class="kw">background:</span> <span class="dt">#4682B4</span><span class="kw">;</span> <span class="co">/* hexa decimal notation */</span>
+    <span class="kw">background:</span> <span class="dt">red</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<h2 id="font-and-text.">Font and text.</h2>
-<p>In depth info about fonts can be found <a href="http://www.w3schools.com/css/css_font.asp">here</a> and about text <a href="http://www.w3schools.com/css/css_text.asp">here</a>.</p>
-<p>The appearance of text can be heavily modified:</p>
-<h3 id="colour">Colour</h3>
-<p>Set the <a href="http://www.w3schools.com/css/css_color.asp" class="w3c-ref"><code>color</code></a> of the text.</p>
+<h3 id="border"><a href="http://www.w3schools.com/css/css_border.asp" class="w3c-ref">Border</a></h3>
+<p>An element can be given a border:</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">color:</span> steelblue<span class="kw">;</span>
+    <span class="kw">background:</span> <span class="dt">solid</span> <span class="dt">red</span> <span class="dt">1px</span><span class="kw">;</span>
+    <span class="kw">background:</span> <span class="dt">dashed</span> <span class="dt">#bbb</span> <span class="dt">1px</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<h3 id="font-family">Font-family</h3>
-<p>Set a font.</p>
-<p>Specify the most fonts from most desired font first to least desired (and more generic) font last.</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
-    <span class="kw">font-family:</span> <span class="st">&quot;Times New Roman&quot;</span>, Times, <span class="dt">serif</span><span class="kw">;</span>
-<span class="kw">}</span></code></pre></div>
-<h3 id="font-size">Font-size</h3>
-<p>This property determines the <a href="http://www.w3schools.com/css/css_font.asp" class="w3c-ref"><code>font</code></a>-size of the text.</p>
-<pre><code>font-size: ( xx-small | x-small | small | medium | large | x-large | xx-large )
-font-size: ( smaller | larger )
-font-size: &lt;value&gt;</code></pre>
-<p>The size can be defined as a predefined word/value or as an action.</p>
-<p><code>smaller</code> goes a step down in the rank, for example: <code>small</code> -&gt; <code>x-small</code>. <code>larger</code> goes a step down in the rank, for example: <code>large</code> -&gt; <code>x-large</code>.</p>
+<h3 id="margin"><a href="http://www.w3schools.com/css/css_margin.asp" class="w3c-ref">Margin</a></h3>
+<p>The margin defines how far away other, external, elements are pushed away from the border of the styled element.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">font-size:</span> <span class="dt">25px</span><span class="kw">;</span>
-    <span class="kw">font-size:</span> <span class="dt">1.2em</span><span class="kw">;</span>
+    <span class="kw">margin:</span> <span class="dt">15px</span><span class="kw">;</span> <span class="co">/* All sides the same margin */</span>
+    <span class="kw">margin:</span> <span class="dt">15px</span> <span class="dt">30px</span><span class="kw">;</span> <span class="co">/* Top and bottom: 15 px, left and right side: 30px*/</span>
+    <span class="kw">margin:</span> <span class="dt">15px</span> <span class="dt">30px</span> <span class="dt">45px</span> <span class="dt">60px</span><span class="kw">;</span> <span class="co">/* top: 15px, right:30px, bottom:45px, left: 60px */</span>
 <span class="kw">}</span></code></pre></div>
+<h3 id="padding"><a href="http://www.w3schools.com/css/css_padding.asp" class="w3c-ref">Padding</a></h3>
+<p>The padding defines how far away text, and other child, elements should stay away from the border of the element.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">padding:</span> <span class="dt">15px</span><span class="kw">;</span> <span class="co">/* All sides: 15px */</span>
+    <span class="kw">padding:</span> <span class="dt">15px</span> <span class="dt">30px</span><span class="kw">;</span> <span class="co">/* Top and bottom: 15 px, left and right side: 30px*/</span>
+    <span class="kw">padding:</span> <span class="dt">15px</span> <span class="dt">30px</span> <span class="dt">45px</span> <span class="dt">60px</span><span class="kw">;</span> <span class="co">/* top: 15px, right:30px, bottom:45px, left: 60px */</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="height-and-width"><a href="http://www.w3schools.com/css/css_dimension.asp" class="w3c-ref">Height and width</a></h3>
+<p>The width and the height of an element can be set via css.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">height:</span> <span class="dt">500px</span><span class="kw">;</span>
+    <span class="kw">width:</span> <span class="dt">150px</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="box-model"><a href="http://www.w3schools.com/css/css_boxmodel.asp" class="w3c-ref">Box model</a></h3>
+<p>An element is composed out of multiple components which all influence the size of the element:</p>
+<blockquote>
 <ul>
-<li><code>px</code>: set the height of the font to this amount o pixels;</li>
-<li><code>em</code>: Set the size of the font relative the its parent: For example:
-<ul>
-<li><code>1em</code>: no changes = 100%</li>
-<li><code>1.5em</code>: 150% the size of the parent</li>
-<li><code>0.9em</code>: 90% the size of the parent</li>
-</ul></li>
+<li>Content - The content of the box, where text and images appear</li>
+<li>Padding - Clears an area around the content. The padding is transparent</li>
+<li>Border - A border that goes around the padding and content</li>
+<li>Margin - Clears an area outside the border. The margin is transparent</li>
 </ul>
-<h3 id="font-style">Font-style</h3>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">font-style<span class="dv">:</span> ( normal | italic | oblique | inherit )</code></pre></div>
+</blockquote>
+<p>The <a href="http://www.w3schools.com/cssref/css3_pr_box-sizing.asp" class="w3c-ref">box-sizing</a>-property inlfuences how all these components add up to the total size of the element.</p>
+<h3 id="outline"><a href="http://www.w3schools.com/css/css_outline.asp" class="w3c-ref">Outline</a></h3>
+<p>Outline draws a border around the boxmodel.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">outline:</span> <span class="dt">solid</span> <span class="dt">green</span> <span class="dt">1px</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="font"><a href="http://www.w3schools.com/css/css_font.asp" class="w3c-ref">Font</a></h3>
+<p>Customize the appearance of a font:</p>
 <ul>
-<li><code>normal</code>: normal text.</li>
-<li><code>italic</code>: slanted text (a custom designed slanted font set.)</li>
-<li><code>oblique</code>: slanted text (the normal font slanted by software)</li>
-<li><code>inherit</code>: inherit the value from the parent element</li>
+<li>font-color</li>
+<li>font-size</li>
+<li>font-weight ( how bold is the font)</li>
+<li>font-style (italic or not)</li>
+<li>font-family (Arial, serif or sans-serif, etc)</li>
+<li>font-variant (small-caps or not)</li>
+</ul>
+<h3 id="text"><a href="http://www.w3schools.com/css/css_text.asp" class="w3c-ref">Text</a></h3>
+<p>We can style more than the appearance of the font, we can also define:</p>
+<ul>
+<li>text-align: left, right, centered of justified</li>
+<li>text-decoration: overline, underline or line-through</li>
+<li>word-spacing</li>
+<li>letter-spacing</li>
+<li>...</li>
+</ul>
+<h3 id="link"><a href="http://www.w3schools.com/css/css_link.asp" class="w3c-ref">Link</a></h3>
+<p>A link can be in one of four states:</p>
+<blockquote>
+<ul>
+<li><code>a:link</code> - a normal, unvisited link</li>
+<li><code>a:visited</code> - a link the user has visited</li>
+<li><code>a:hover</code> - a link when the user mouses over it</li>
+<li><code>a:active</code> - a link the moment it is clicked</li>
+</ul>
+</blockquote>
+<p>All these states can be styles independently.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">a<span class="dv">:hover</span> <span class="kw">{</span>
+
+    <span class="kw">color:</span> pink<span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="list"><a href="http://www.w3schools.com/css/css_list.asp" class="w3c-ref">List</a></h3>
+<p>The <em>bullet</em> of a list (<code>ul</code> or <code>ol</code>) can also styles:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+    <span class="kw">list-style-type:</span> <span class="dt">square</span><span class="kw">;</span>
+    <span class="kw">list-style-position:</span> <span class="dt">inside</span><span class="kw">;</span>
+    <span class="kw">list-style-image:</span> <span class="dt">url(</span><span class="st">&quot;custom-bullet.gif&quot;</span><span class="dt">)</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="table"><a href="http://www.w3schools.com/css/css_table.asp" class="w3c-ref">Table</a></h3>
+<p><abbr title="HyperText Markup Language">HTML</abbr> tables can be styled heavily:</p>
+<ul>
+<li>border: style the borders of the table.</li>
+<li>border-collapse: merge table cell borders.</li>
+</ul>
+<p>Margins, paddings, nth-child selectors, etc. can also be applied.</p>
+<h3 id="display-and-visibility"><a href="http://www.w3schools.com/css/css_display_visibility.asp" class="w3c-ref">Display and visibility</a></h3>
+<p>The <a href="http://www.w3schools.com/css/css_display.asp" class="w3c-ref"><code>display</code></a>-property defines how an elements behaves:</p>
+<ul>
+<li>block: like a div, p, pre, ...</li>
+<li>inline: like span, small, strong, ...</li>
+<li><a href="http://www.w3schools.com/css/css_inline-block.asp" class="w3c-ref"><code>inline-block</code></a>: inline, but can be given a width/height, etc</li>
+<li>hidden: hide the element.</li>
+</ul>
+<p>The <a href="http://www.w3schools.com/css/css_visibility.asp" class="w3c-ref"><code>visibility</code></a>-property allows one to hide an element from view, but is still occupies space and interacts with the other DOM-elements.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+
+    <span class="kw">display:</span> <span class="dt">hidden</span><span class="kw">;</span>
+    <span class="kw">visibility:</span> <span class="dt">none</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<h3 id="position"><a href="http://www.w3schools.com/css/css_position.asp" class="w3c-ref">Position</a></h3>
+<p>This property defines how an element behaves in the page flow. There are four possible values:</p>
+<ul>
+<li><code>static</code>: default -&gt; go with the flow</li>
+<li><code>relative</code>: position relative to default position.</li>
+<li><code>fixed</code>: postion relative to viewport (eg.: browser window)</li>
+<li><code>absolute</code>: relative to the nearest positioned (= not <code>static</code>) ancestor</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">font-style:</span> <span class="dt">italic</span><span class="kw">;</span>
+    <span class="kw">position:</span> <span class="dt">absolute</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<h3 id="font-variant">Font-variant</h3>
-<p>Visualise the font in all caps. Real capitals are still a bit larger than the normal letters.</p>
+<h3 id="overflow"><a href="http://www.w3schools.com/css/css_overflow.asp" class="w3c-ref">Overflow</a></h3>
+<p>The <a href="http://www.w3schools.com/css/css_overflow.asp" class="w3c-ref"><code>overflow</code></a>-property defines what should happen if the contents of an element is larger than the defined dimensions.</p>
+<ul>
+<li>visible: just show the content, don't take the boundries into considiration.</li>
+<li>hidden: hide the overflowing content</li>
+<li>scroll: show scollbars</li>
+<li>auto: create scrollbars if needed.</li>
+</ul>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> The X and Y axis scrollbars can be controlled via <a href="http://www.w3schools.com/css/css_overflow-x.asp" class="w3c-ref"><code>overflow-x</code></a> and <a href="http://www.w3schools.com/css/css_overflow-y.asp" class="w3c-ref"><code>overflow-y</code></a>
+</div>
+<p></small></p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">font-variant:</span> <span class="dt">small-caps</span><span class="kw">;</span>
+    <span class="kw">overflow:</span> <span class="dt">hidden</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<h3 id="font-weight">Font-weight</h3>
-<p>Make the font bold or reset the boldness.</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">font-weight<span class="dv">:</span> ( normal | bold | inherit )</code></pre></div>
+<h3 id="float"><a href="http://www.w3schools.com/css/css_float.asp" class="w3c-ref">Float</a></h3>
+<p>Defining float to <code>left</code> or <code>right</code> will extract an element out of the normal page flow and <em>float</em> all the page content around this element.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
 
-    <span class="kw">font-weight:</span> <span class="dt">bold</span><span class="kw">;</span>
+    <span class="kw">float:</span> <span class="dt">right</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<h3 id="text-decoration">Text-decoration</h3>
-<p>This property determines if text is:</p>
+<h3 id="align"><a href="http://www.w3schools.com/css/css_align.asp" class="w3c-ref">Align</a></h3>
+<p>Elements can be aligned in their parent via three methods. These methods don't always work in all circumstances, so sometimes one must be choosen over the other.</p>
 <ul>
-<li>underlined</li>
-<li>line-through</li>
-<li>overlined</li>
+<li><code>text-align</code>: left, right or centered -&gt; child elements are aligned</li>
+<li><code>margin</code>: <code>0 auto</code> -&gt; no margin top and bottom, the sides is evenly devided == element is centered...</li>
+<li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>: specify distance of the side of an element to its parent. Works only on absolute or fixed positions</li>
 </ul>
-<h3 id="text-align">Text-align</h3>
-<p>Define how the text should be aligned inside an element:</p>
-<h4 id="example">Example</h4>
-<div class="row">
-<div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-and-css/font-and-text.html">html-and-css/font-and-text</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/font-and-text.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:red;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-family: &#39;Times New Roman&#39;, Times, serif;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:large;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:small;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-size:1.2em;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-style:italic;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-variant:small-caps;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;font-weight:bold;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:underline;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:line-through&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;text-decoration:overline;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
-</div>
-<div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-and-css/font-and-text</span></p>
-<iframe src="embeds/html-and-css/font-and-text.html" class="embed--output" height="250px" frameborder="0" scrolling="no">
-</iframe>
-</div>
-</div>
-<h2 id="border">Border</h2>
-<p>Draw a border around an element.</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">border<span class="dv">:</span> &lt;style&gt; &lt;color&gt; &lt;width&gt;;</code></pre></div>
-<p>Types:</p>
-<ul>
-<li>dotted</li>
-<li>dashed</li>
-<li>solid</li>
-<li>double</li>
-<li>groove</li>
-<li>ridge</li>
-<li>inset</li>
-<li>outset</li>
-<li>none</li>
-<li>hidden</li>
-</ul>
-<div class="row">
-<div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-and-css/border.html">html-and-css/border</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/border.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: solid red 1px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: dashed green 2px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;border: dotted blue 3px&quot;</span><span class="kw">&gt;</span> Hello World <span class="kw">&lt;/p&gt;</span></code></pre></div>
-</div>
-<div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-and-css/border</span></p>
-<iframe src="embeds/html-and-css/border.html" class="embed--output" height frameborder="0" scrolling="no">
-</iframe>
-</div>
-</div>
-<p>In depth info about borders can be found <a href="http://www.w3schools.com/css/css_border.asp">here</a></p>
-<h2 id="margin">Margin</h2>
-<p>Sometimes elements stick to close to each other. The margin specifies how far other elements should stay away from an element</p>
-<p>The margin property accepts one, two or four values.</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">margin<span class="dv">:</span> 1px; <span class="co">/* set a margin of 1px for all four sides */</span>
-margin<span class="dv">:</span> 1px 2px; <span class="co">/* set a margin of 1px for the top and bottom and 2px for the left and right side */</span>
-margin<span class="dv">:</span> 1px 2px 3px 4px ; <span class="co">/* top: 1px, right side: 2px, bottom: 3px, left side: 4px */</span></code></pre></div>
-<div class="row">
-<div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-and-css/margin.html">html-and-css/margin</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/margin.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
-   div <span class="kw">{</span> <span class="kw">border:</span> <span class="dt">solid</span> <span class="dt">blue</span> <span class="dt">1px</span><span class="kw">;}</span>
-<span class="kw">&lt;/style&gt;</span>
-
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px 10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;margin: 5px 10px 15px 20px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
-</div>
-<div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-and-css/margin</span></p>
-<iframe src="embeds/html-and-css/margin.html" class="embed--output" height="230px" frameborder="0" scrolling="no">
-</iframe>
-</div>
-</div>
-<p>All sides can also be specified separately:</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">margin-top<span class="dv">:</span> 5px;
-margin-right<span class="dv">:</span> 5px;
-margin-bottom<span class="dv">:</span> 5px;
-margin-left<span class="dv">:</span> 5px;</code></pre></div>
-<p>In depth info about margins can be found <a href="http://www.w3schools.com/css/css_margin.asp">here</a></p>
-<h4 id="padding">Padding</h4>
-<p>The padding defines the distance the content inside the element shoud stay away from its border.</p>
-<p>The padding property accepts one, two or four values.</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">padding<span class="dv">:</span> 1px; <span class="co">/* set a padding of 1px for all four sides */</span>
-padding<span class="dv">:</span> 1px 2px; <span class="co">/* set a padding of 1px for the top and bottom and 2px for the left and right side */</span>
-padding<span class="dv">:</span> 1px 2px 3px 4px ; <span class="co">/* top: 1px, right side: 2px, bottom: 3px, left side: 4px */</span></code></pre></div>
-<div class="row">
-<div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-and-css/padding.html">html-and-css/padding</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/padding.php" taret="_blank">src</a></span></p>
-<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
-   div <span class="kw">{</span> <span class="kw">border:</span> <span class="dt">solid</span> <span class="dt">blue</span> <span class="dt">1px</span><span class="kw">;}</span>
-<span class="kw">&lt;/style&gt;</span>
-
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px 10px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;padding: 5px 10px 15px 20px;&quot;</span><span class="kw">&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div&gt;</span>Hello World<span class="kw">&lt;/div&gt;</span></code></pre></div>
-</div>
-<div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-and-css/padding</span></p>
-<iframe src="embeds/html-and-css/padding.html" class="embed--output" height="230px" frameborder="0" scrolling="no">
-</iframe>
-</div>
-</div>
-<p>All sides can also be specified separately:</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">padding-top<span class="dv">:</span> 5px;
-padding-right<span class="dv">:</span> 5px;
-padding-bottom<span class="dv">:</span> 5px;
-padding-left<span class="dv">:</span> 5px;</code></pre></div>
-<p>In depth info about paddings can be found <a href="http://www.w3schools.com/css/css_padding.asp">here</a></p>
-<h4 id="box-model">Box-model</h4>
 <h2 id="exercises-3">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Make a web-page with:</p>
+<ul>
+<li>Yellow background</li>
+<li>Red header: <code>Hello World</code></li>
+</ul>
+</div>
+<iframe src="embeds/exercises/css/hello-world.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Make a table with three columns: <code>first name</code>, <code>last name</code>, <code>age</code> where:</p>
+<ul>
+<li>first column text is red</li>
+<li>second column text is green</li>
+<li>third column text is blue</li>
+<li>table caption is underline and overlined</li>
+<li>Extra: add total sum column</li>
+</ul>
+</div>
+<iframe src="embeds/exercises/css/classmates-colors.html" class="embed--output" height="270px" frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Make a table with three columns: <code>first name</code>, <code>last name</code>, <code>age</code> where:</p>
+<ul>
+<li>only columns have borders</li>
+<li>all even rows have a gray background</li>
+</ul>
+</div>
+<iframe src="embeds/exercises/css/classmates-nth-row.html" class="embed--output" height="350px" frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Print a rainbow piramid, each column shoud have it's own color, with base 10</p>
+</div>
+<iframe src="embeds/exercises/css/rainbow-piramid.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+</div>
+<iframe src="embeds/exercises/css/.html" class="embed--output" height frameborder="0">
+</iframe>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-10-10
+                  at 2016-10-16
                </p>
             </footer>
          </div>
