@@ -419,13 +419,18 @@ m4_exercise([[
 Make a webpage where you can upload comma separated data and convert it into a
 table.
 
+* Extra: add option: make the first row headers
+* Extra: throw error if number of fields is incorrect
+
 ```
 firt name, last name, gender, age
 john, doe, male, 21
 jane, doe, female, 18
-jake, smith, male 20
+jake, smith, male, 20
 joan, d'arc, female, 33
 ```
+
+m4_page(php-and-html/csv,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
