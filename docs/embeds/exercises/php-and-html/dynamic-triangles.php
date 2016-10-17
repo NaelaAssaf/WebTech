@@ -33,7 +33,7 @@ else {
    <form action="#" method="get">
 
       Enter base size:
-      <input type="text" value="<?= $base_value ?>" name="base">
+      <input type="number" value="<?= $base_value ?>" name="base">
 
       <br>
 
