@@ -52,7 +52,7 @@ if( isset($_GET['submit']) ) {
    echo "<br>";
    echo "<hr>";
 
-   for( $j=0; $j < $_GET['base']; $j++ ) {
+   for( $j=1; $j <= $_GET['base']; $j++ ) {
 
       for( $i=0; $i < $j; $i++ ) {
 

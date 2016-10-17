@@ -409,6 +409,8 @@ Make a web-page where you can paste and upload text and the tool should should:
 * calculate and report the number of words uploaded
 * calculate and report the number of characters uploaded
 * Report the results in an table.
+
+m4_page(php-and-html/wc,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
