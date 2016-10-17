@@ -433,31 +433,3 @@ joan, d'arc, female, 33
 m4_page(php-and-html/csv,250px)
 ]])
 
-m4_dnl -----------------------------------------------------------------------
-
-m4_exercise([[
-Create a _post comment_ form with fields:
-
-* name
-* email
-* gender buttons
-* comment box
-* post anonymous checkbox.
-
-Validate:
-
-* Name and/or email are not empty
-* Comment has max 500 characters
-
-* Print error messages if a validation failed + indicate which field failed
-  validation, in red.
-* If an error occurred pre-fill the elements with the valid data
-* If no errors occurred, print _message posted_ in green.
-]])
-
-m4_dnl -----------------------------------------------------------------------
-
-- header with links
-- verify password are the same
-- create array from plain text
-    col 1 | col 2 | col 3

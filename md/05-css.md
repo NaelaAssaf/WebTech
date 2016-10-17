@@ -542,9 +542,9 @@ m4_exercise([[Make a web-page with:
 
 * Yellow background
 * Red header: `Hello World`
-]])
 
 m4_embed([[css/hello-world]])
+]])
 
 m4_dnl ------------------------------------------------------------------------
 
@@ -556,9 +556,9 @@ where:
 * third column text is blue
 * table caption is underline and overlined
 * Extra: add total sum column
-]])
 
 m4_embed(css/classmates-colors,270px)
+]])
 
 m4_dnl ------------------------------------------------------------------------
 
@@ -567,89 +567,43 @@ where:
 
 * only columns have borders
 * all even rows have a gray background
-]])
+
 m4_embed(css/classmates-nth-row,350px)
+]])
 
 m4_dnl ------------------------------------------------------------------------
 
-m4_exercise([[Print a rainbow piramid, each column shoud have it's own color, with base 10]])
+m4_exercise([[Print a rainbow piramid, each column should have it's own color
+
+* red
+* orange
+* yellow
+* green
+* blue
+* indigo
+* violet
 
 m4_embed(css/rainbow-piramid)
+]])
 
-m4_dnl ------------------------------------------------------------------------
+m4_dnl -----------------------------------------------------------------------
 
-m4_exercise([[]])
+m4_exercise([[
+Create a _post comment_ form with fields:
 
-m4_embed([[css/]])
+* name
+* email
+* gender buttons
+* comment box
+* post anonymous checkbox.
 
-m4_dnl ------------------------------------------------------------------------
+Validate:
 
-m4_exercise([[]])
+* Name and/or email are not empty
+* Comment has max 500 characters
 
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
-
-m4_dnl ------------------------------------------------------------------------
-
-m4_exercise([[]])
-
-m4_embed([[css/]])
+* Print error messages if a validation failed + indicate which field failed
+  validation, in red.
+* If an error occurred pre-fill the elements with the valid data
+* If no errors occurred, print _message posted_ in green.
+]])

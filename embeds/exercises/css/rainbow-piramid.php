@@ -3,7 +3,7 @@
 $colors = [
    'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'
 ];
-$nr_colors = count( $color );
+$nr_colors = count( $colors );
 
 for( $j= 0; $j < $nr_colors; $j++ ) {
 
