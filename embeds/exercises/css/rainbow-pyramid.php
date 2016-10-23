@@ -5,7 +5,7 @@ $colors = [
 ];
 $nr_colors = count( $colors );
 
-for( $j= 0; $j < $nr_colors; $j++ ) {
+for( $j= 1; $j <= $nr_colors; $j++ ) {
 
    for( $i= 0; $i < $j; $i++ ) {
 

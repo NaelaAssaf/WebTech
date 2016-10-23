@@ -249,7 +249,7 @@ In the example is the div coloured red, the last div in the `.parent` tag.
 #### nth-child
 
 ```css
-select:nth-child( n ... ) {}
+selector:nth-child( n ... ) {}
 ```
 
 The `nth-child` modifier targets the elements matching a simple equation where n is the position of the element in the list.
@@ -260,12 +260,27 @@ m4_embed_php_as_html(html-and-css/nth-child-selector,,.html)
 * `2n`: all even elements (the `even` keyword can also be used: `:nth-child(even)`)
 * `3`: the third element
 
+#### Hover
+
+```css
+selector:hover {
+
+    text-decoration: underline;
+}
+```
+
+Via the (hover selector)[http://www.w3schools.com/cssref/sel_hover.asp]{.csstag} allows us to apply styles to an element only when the mouse hovers over the element.
+
+For example: overline a link when the mouse passes over the element:
+
+m4_embed_php_as_html(html-and-css/hover-selector,,.html)
+
 ## CSS properties
 
 <http://www.w3schools.com> has a very good explanation of most of the CSS
-properties. The properties listed here are links to the corresponding
-<http://www.w3schools.com>-website and are considered part of the course
-material!
+properties. The headers of the listed properties are links to the corresponding
+<http://www.w3schools.com>-website. These linked web-pages are considered part
+of the course material!
 
 m4_cssproptitle(Colors,colors)
 
@@ -355,6 +370,8 @@ m4_cssproptitle(Box model,boxmodel)
 An element is composed out of multiple components which all influence the size
 of the element:
 
+![Box model image](assets/img/box-model.png);
+
 > * Content - The content of the box, where text and images appear
 > * Padding - Clears an area around the content. The padding is transparent
 > * Border - A border that goes around the padding and content
@@ -362,7 +379,13 @@ of the element:
 
 The
 [box-sizing](http://www.w3schools.com/cssref/css3_pr_box-sizing.asp){.w3c-ref}-property
-inlfuences how all these components add up to the total size of the element.
+influences how all these components add up to the total size of the element.
+
+> * `content-box`:  Default. The width and height properties (and min/max
+>   properties) includes only the content. Border, padding, or margin are not
+>   included
+> * `border-box`:  The width and height properties (and min/max properties)
+>   includes content, padding and border, but not the margin
 
 m4_dnl ------------------------------------------------------------------------
 
@@ -390,6 +413,17 @@ Customize the appearance of a font:
 * font-family (Arial, serif or sans-serif, etc)
 * font-variant (small-caps or not)
 
+```css
+div{
+    font-size: 1.1em;
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+    font-family: serif;
+    font-variant: small-caps;
+}
+```
+
 m4_cssproptitle(Text,text)
 
 We can style more than the appearance of the font, we can also define:
@@ -399,6 +433,14 @@ We can style more than the appearance of the font, we can also define:
 * word-spacing
 * letter-spacing
 * ...
+
+```css
+div {
+    text-align: center;
+    text-decoration: underline;
+    word-spacing: 5px;
+    letter-spacing: 5px
+```
 
 m4_dnl ------------------------------------------------------------------------
 
@@ -567,13 +609,14 @@ where:
 
 * only columns have borders
 * all even rows have a gray background
+* extra: row where mouse is passing over: darker background
 
 m4_embed(css/classmates-nth-row,350px)
 ]])
 
 m4_dnl ------------------------------------------------------------------------
 
-m4_exercise([[Print a rainbow piramid, each column should have it's own color
+m4_exercise([[Print a rainbow pyramid, each column should have it's own color
 
 * red
 * orange
@@ -583,7 +626,46 @@ m4_exercise([[Print a rainbow piramid, each column should have it's own color
 * indigo
 * violet
 
-m4_embed(css/rainbow-piramid)
+m4_embed(css/rainbow-pyramid)
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
+Create an web-page with:
+
+* A header: `My webpage`
+* An image
+* Text flowing around the image.
+* A copyright footer
+
+m4_embed(css/image-float,275px)
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
+Create a horizontal bar-plot with four bars:
+
+* Bar 1: 75%
+* Bar 2: 25%
+* Bar 3: 50%
+* Bar 4: 100%
+
+m4_embed(css/hor-bar-plot,280px)
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
+Create a vertical bar-plot with four bars:
+
+* Bar 1: 75%
+* Bar 2: 25%
+* Bar 3: 50%
+* Bar 4: 100%
+
+m4_embed(css/vert-bar-plot,400px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -593,17 +675,21 @@ Create a _post comment_ form with fields:
 
 * name
 * email
-* gender buttons
+* title options: (Dr, Mr, Ms, Ir)
 * comment box
 * post anonymous checkbox.
 
 Validate:
 
-* Name and/or email are not empty
+* Name and/or email are not empty (unless _post anonymous_ was checked)
 * Comment has max 500 characters
 
-* Print error messages if a validation failed + indicate which field failed
+* Print a red error messages if a validation failed + indicate which field failed
   validation, in red.
 * If an error occurred pre-fill the elements with the valid data
-* If no errors occurred, print _message posted_ in green.
+* If no errors occurred,
+    * ( Mr. or Ms. ) (name or _anonymous_) posted:
+    * print _message posted_ in gray.
+
+m4_page(css/post-comment,400px)
 ]])

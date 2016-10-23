@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-10-17" />
+        <meta name="date" content="2016-10-23" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -105,6 +105,15 @@
             <li><a href="#css-selectors">CSS selectors</a></li>
             <li><a href="#css-properties">CSS properties</a></li>
             <li><a href="#exercises-3">Exercises</a></li>
+            </ul></li>
+            <li><a href="#io">IO</a><ul>
+            <li><a href="#read-a-file">Read a file</a></li>
+            <li><a href="#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="#remove-a-file">Remove a file</a></li>
+            <li><a href="#rename-a-file">Rename a file</a></li>
+            <li><a href="#directories">Directories</a></li>
+            <li><a href="#upload-files">Upload files</a></li>
+            <li><a href="#exercixes">Exercixes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -3210,7 +3219,7 @@ h1, h3, h5 <span class="kw">{</span>
 </div>
 <p>In the example is the div coloured red, the last div in the <code>.parent</code> tag.</p>
 <h4 id="nth-child">nth-child</h4>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">select<span class="dv">:nth-child</span>( n <span class="fl">...</span> ) <span class="kw">{}</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector<span class="dv">:nth-child</span>( n <span class="fl">...</span> ) <span class="kw">{}</span></code></pre></div>
 <p>The <code>nth-child</code> modifier targets the elements matching a simple equation where n is the position of the element in the list.</p>
 <div class="row">
 <div class="col-md-6">
@@ -3263,8 +3272,36 @@ h1, h3, h5 <span class="kw">{</span>
 <li><code>2n</code>: all even elements (the <code>even</code> keyword can also be used: <code>:nth-child(even)</code>)</li>
 <li><code>3</code>: the third element</li>
 </ul>
+<h4 id="hover">Hover</h4>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector<span class="dv">:hover</span> <span class="kw">{</span>
+
+    <span class="kw">text-decoration:</span> <span class="dt">underline</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<p>Via the (hover selector)[http://www.w3schools.com/cssref/sel_hover.asp]{.csstag} allows us to apply styles to an element only when the mouse hovers over the element.</p>
+<p>For example: overline a link when the mouse passes over the element:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-and-css/hover-selector.html">html-and-css/hover-selector</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-and-css/hover-selector.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+   a<span class="dv">:hover</span> <span class="kw">{</span>
+
+       <span class="kw">text-decoration:</span> <span class="dt">overline</span><span class="kw">;</span>
+       <span class="kw">color:</span> <span class="dt">#888</span><span class="kw">;</span>
+   <span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span>
+
+<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span> Google <span class="kw">&lt;/a&gt;</span>
+<span class="kw">&lt;br&gt;</span>
+<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://http://www.w3schools.com&quot;</span><span class="kw">&gt;</span>http://www.w3schools.com <span class="kw">&lt;/a&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-and-css/hover-selector</span></p>
+<iframe src="embeds/html-and-css/hover-selector.html" class="embed--output" height frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
 <h2 id="css-properties">CSS properties</h2>
-<p><a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a> has a very good explanation of most of the <abbr title="Cascading Style Sheets">CSS</abbr> properties. The properties listed here are links to the corresponding <a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a>-website and are considered part of the course material!</p>
+<p><a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a> has a very good explanation of most of the <abbr title="Cascading Style Sheets">CSS</abbr> properties. The headers of the listed properties are links to the corresponding <a href="http://www.w3schools.com" class="uri">http://www.w3schools.com</a>-website. These linked web-pages are considered part of the course material!</p>
 <h3 id="colors"><a href="http://www.w3schools.com/css/css_colors.asp" class="w3c-ref">Colors</a></h3>
 <blockquote>
 <p>Colors in <abbr title="Cascading Style Sheets">CSS</abbr> are most often specified by:</p>
@@ -3312,6 +3349,7 @@ h1, h3, h5 <span class="kw">{</span>
 <span class="kw">}</span></code></pre></div>
 <h3 id="box-model"><a href="http://www.w3schools.com/css/css_boxmodel.asp" class="w3c-ref">Box model</a></h3>
 <p>An element is composed out of multiple components which all influence the size of the element:</p>
+<p><img src="assets/img/box-model.png" alt="Box model image" />;</p>
 <blockquote>
 <ul>
 <li>Content - The content of the box, where text and images appear</li>
@@ -3320,7 +3358,13 @@ h1, h3, h5 <span class="kw">{</span>
 <li>Margin - Clears an area outside the border. The margin is transparent</li>
 </ul>
 </blockquote>
-<p>The <a href="http://www.w3schools.com/cssref/css3_pr_box-sizing.asp" class="w3c-ref">box-sizing</a>-property inlfuences how all these components add up to the total size of the element.</p>
+<p>The <a href="http://www.w3schools.com/cssref/css3_pr_box-sizing.asp" class="w3c-ref">box-sizing</a>-property influences how all these components add up to the total size of the element.</p>
+<blockquote>
+<ul>
+<li><code>content-box</code>: Default. The width and height properties (and min/max properties) includes only the content. Border, padding, or margin are not included</li>
+<li><code>border-box</code>: The width and height properties (and min/max properties) includes content, padding and border, but not the margin</li>
+</ul>
+</blockquote>
 <h3 id="outline"><a href="http://www.w3schools.com/css/css_outline.asp" class="w3c-ref">Outline</a></h3>
 <p>Outline draws a border around the boxmodel.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
@@ -3337,6 +3381,14 @@ h1, h3, h5 <span class="kw">{</span>
 <li>font-family (Arial, serif or sans-serif, etc)</li>
 <li>font-variant (small-caps or not)</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div<span class="kw">{</span>
+    <span class="kw">font-size:</span> <span class="dt">1.1em</span><span class="kw">;</span>
+    <span class="kw">color:</span> <span class="dt">blue</span><span class="kw">;</span>
+    <span class="kw">font-weight:</span> <span class="dt">bold</span><span class="kw">;</span>
+    <span class="kw">font-style:</span> <span class="dt">italic</span><span class="kw">;</span>
+    <span class="kw">font-family:</span> <span class="dt">serif</span><span class="kw">;</span>
+    <span class="kw">font-variant:</span> <span class="dt">small-caps</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
 <h3 id="text"><a href="http://www.w3schools.com/css/css_text.asp" class="w3c-ref">Text</a></h3>
 <p>We can style more than the appearance of the font, we can also define:</p>
 <ul>
@@ -3346,6 +3398,11 @@ h1, h3, h5 <span class="kw">{</span>
 <li>letter-spacing</li>
 <li>...</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">div <span class="kw">{</span>
+    <span class="kw">text-align:</span> <span class="dt">center</span><span class="kw">;</span>
+    <span class="kw">text-decoration:</span> <span class="dt">underline</span><span class="kw">;</span>
+    <span class="kw">word-spacing:</span> <span class="dt">5px</span><span class="kw">;</span>
+    <span class="kw">letter-spacing:</span> <span class="dt">5px</span></code></pre></div>
 <h3 id="link"><a href="http://www.w3schools.com/css/css_link.asp" class="w3c-ref">Link</a></h3>
 <p>A link can be in one of four states:</p>
 <blockquote>
@@ -3467,6 +3524,7 @@ Exercise:
 <ul>
 <li>only columns have borders</li>
 <li>all even rows have a gray background</li>
+<li>extra: row where mouse is passing over: darker background</li>
 </ul>
 <iframe src="embeds/exercises/css/classmates-nth-row.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
@@ -3475,7 +3533,7 @@ Exercise:
 <h4>
 Exercise:
 </h4>
-<p>Print a rainbow piramid, each column should have it's own color</p>
+<p>Print a rainbow pyramid, each column should have it's own color</p>
 <ul>
 <li>red</li>
 <li>orange</li>
@@ -3485,7 +3543,49 @@ Exercise:
 <li>indigo</li>
 <li>violet</li>
 </ul>
-<iframe src="embeds/exercises/css/rainbow-piramid.html" class="embed--output" height frameborder="0">
+<iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height frameborder="0">
+</iframe>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create an web-page with:</p>
+<ul>
+<li>A header: <code>My webpage</code></li>
+<li>An image</li>
+<li>Text flowing around the image.</li>
+<li>A copyright footer</li>
+</ul>
+<iframe src="embeds/exercises/css/image-float.html" class="embed--output" height="275px" frameborder="0">
+</iframe>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a horizontal bar-plot with four bars:</p>
+<ul>
+<li>Bar 1: 75%</li>
+<li>Bar 2: 25%</li>
+<li>Bar 3: 50%</li>
+<li>Bar 4: 100%</li>
+</ul>
+<iframe src="embeds/exercises/css/hor-bar-plot.html" class="embed--output" height="280px" frameborder="0">
+</iframe>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a vertical bar-plot with four bars:</p>
+<ul>
+<li>Bar 1: 75%</li>
+<li>Bar 2: 25%</li>
+<li>Bar 3: 50%</li>
+<li>Bar 4: 100%</li>
+</ul>
+<iframe src="embeds/exercises/css/vert-bar-plot.html" class="embed--output" height="400px" frameborder="0">
 </iframe>
 </div>
 <div class="exercise">
@@ -3496,25 +3596,209 @@ Exercise:
 <ul>
 <li>name</li>
 <li>email</li>
-<li>gender buttons</li>
+<li>title options: (Dr, Mr, Ms, Ir)</li>
 <li>comment box</li>
 <li>post anonymous checkbox.</li>
 </ul>
 <p>Validate:</p>
 <ul>
-<li>Name and/or email are not empty</li>
+<li>Name and/or email are not empty (unless <em>post anonymous</em> was checked)</li>
 <li><p>Comment has max 500 characters</p></li>
-<li>Print error messages if a validation failed + indicate which field failed validation, in red.</li>
+<li>Print a red error messages if a validation failed + indicate which field failed validation, in red.</li>
 <li>If an error occurred pre-fill the elements with the valid data</li>
-<li><p>If no errors occurred, print <em>message posted</em> in green.</p></li>
+<li>If no errors occurred,
+<ul>
+<li>( Mr. or Ms. ) (name or <em>anonymous</em>) posted:</li>
+<li>print <em>message posted</em> in gray.</li>
+</ul></li>
 </ul>
+<iframe src="embeds/exercises/css/post-comment.php" class="embed--output" height="400px" frameborder="0">
+</iframe>
+</div>
+<h1 id="io">IO</h1>
+<p>By IO we mean working with files...</p>
+<h2 id="read-a-file">Read a file</h2>
+<p>There are multiple way to read a file:</p>
+<ul>
+<li><a href="http://php.net/manual-lookup.php?pattern=file" class="w3c-ref"><code>file</code></a></li>
+<li><a href="http://php.net/manual-lookup.php?pattern=file_get_contents" class="w3c-ref"><code>file_get_contents</code></a></li>
+</ul>
+<p>are most important ones.</p>
+<h3 id="file-1">File</h3>
+<p>The <a href="http://php.net/manual-lookup.php?pattern=file" class="w3c-ref"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<h3 id="file_get_contents">File_get_contents</h3>
+<p>This function takes filename as argument and returns a string containing the complete file contents (hence the name).</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<h2 id="createwrite-a-file">Create/Write a file</h2>
+<h3 id="touch">Touch</h3>
+<p><a href="http://php.net/manual-lookup.php?pattern=touch" class="w3c-ref"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn't exist yet, it will be created.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span>
+<span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></code></pre></div>
+<h3 id="write">Write</h3>
+<p><a href="http://php.net/manual-lookup.php?pattern=fwrite" class="w3c-ref"><code>fwrite</code></a> can be used to write contents to a file handle.</p>
+<p>A handle can be created via <a href="http://php.net/manual-lookup.php?pattern=fopen" class="w3c-ref"><code>fopen</code></a>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span>
+<span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span>
+<span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></code></pre></div>
+<p>This sequence of opening, writing and closing a file is quiet cumbersome, therefor a shorthand is also available: <a href="http://php.net/manual-lookup.php?pattern=file_put_contents" class="w3c-ref"><code>file_put_contents</code></a>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></code></pre></div>
+<h2 id="remove-a-file">Remove a file</h2>
+<p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<h2 id="rename-a-file">Rename a file</h2>
+<p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<h2 id="directories">Directories</h2>
+<p>Similar functions exist for directories:</p>
+<ul>
+<li><p><a href="http://php.net/manual-lookup.php?pattern=mkdir" class="w3c-ref"><code>mkdir</code></a>: Create directory</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></code></pre></div></li>
+<li><p><a href="http://php.net/manual-lookup.php?pattern=rmdir" class="w3c-ref"><code>rmdir</code></a>: Delete directory</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></code></pre></div></li>
+<li><p><a href="http://php.net/manual-lookup.php?pattern=rename" class="w3c-ref"><code>rename</code></a>: Rename directory</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></code></pre></div></li>
+</ul>
+<h3 id="list-all-files-in-a-directory">List all files in a directory:</h3>
+<ul>
+<li><p><a href="http://php.net/manual-lookup.php?pattern=readdir" class="w3c-ref"><code>readdir</code></a>: Iterate over the files in a directory-handle</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span>
+
+<span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {
+
+    <span class="fu">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}</code></pre></div></li>
+<li><p><a href="http://php.net/manual-lookup.php?pattern=glob" class="w3c-ref"><code>glob</code></a>: List all files in a directory (as array) matching a certain pattern.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></code></pre></div></li>
+</ul>
+<h2 id="upload-files">Upload files</h2>
+<p>File can be uploaded via a form-submission. The tag used to specify files is:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></code></pre></div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> In order to use the <code>input[type=file]</code>, the form <strong>must</strong> specify the <code>enctype</code>-attribute:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span>
+
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span>
+
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/form&gt;</span></code></pre></div>
+</div>
+<p>When a form containing files is submitted the <code>$_FILES</code> special <abbr title="Hypertext Preprocessor">PHP</abbr>-variable is populated with the file(s) currently uploading:</p>
+<pre><code>$_FILES = Array
+(
+    [uploaded-file] =&gt; Array
+        (
+            [name] =&gt; MyFile.txt             // name of the file
+            [type] =&gt; text/plain             // filetype
+            [tmp_name] =&gt; /tmp/php/php1h4j1o // php stores the file in a randomized tmp location
+            [error] =&gt; 0                     // 0 = UPLOAD_ERR_OK --&gt; no errors
+            [size] =&gt; 123                    // the size in bytes
+        )
+
+    [file2] =&gt; Array
+        (
+            [name] =&gt; MyFile.jpg
+            [type] =&gt; image/jpeg
+            [tmp_name] =&gt; /tmp/php/php6hst32
+            [error] =&gt; UPLOAD_ERR_OK
+            [size] =&gt; 98174
+        )
+)</code></pre>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> stores the uploaded file in a temporary location. We must use the files contents or move the file to a different location. At the next request this <code>tmp_name</code> will be something else. So keep this in mind.</p>
+<p>If we opt not to read the file and process it, but move the file instead, the <a href="http://php.net/manual-lookup.php?pattern=move_uploaded_file" class="w3c-ref"><code>move_uploaded_file</code></a> should be used to move a file to a new destination.</p>
+<p>This function has some additional checks builtin and is thus the recommended way to move uploaded files:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<h2 id="exercixes">Exercixes</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page which allows to upload a file, and print the contents of the file.</p>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page which allows to upload a file, and:</p>
+<ul>
+<li>report line-, word-a and character-count in a table</li>
+<li>list the top 10 most frequent words.</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page which allows to upload or paste multi-fasta data and:</p>
+<ul>
+<li>report number of sequences</li>
+<li>print the sequences:
+<ul>
+<li>fasta header is bold</li>
+<li>nucleotides are monospaced, 80 characters wide</li>
+</ul></li>
+<li>report GC-content per sequence</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page which allows to upload or paste multi-fasta data and:</p>
+<ul>
+<li>print the sequences:
+<ul>
+<li>fasta header is header</li>
+<li>(inter)link to fasta blocks</li>
+<li>nucleotides are monospaced, 80 characters wide</li>
+<li>each nucleotide should have its own color:
+<ul>
+<li>A: red</li>
+<li>T: yellow</li>
+<li>G: green</li>
+<li>C: blue</li>
+</ul></li>
+</ul></li>
+<li>Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, ...)</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a web-page which allows to upload a file or paste some text, and specify a list of terms.</p>
+<ul>
+<li>Print the uploaded/pasted text</li>
+<li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
+<li>Extra: allow the user to specify the color per term.</li>
+</ul>
+<iframe src="embeds/exercises/.php" class="embed--output" height frameborder="0">
+</iframe>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link...</p>
+<p>This app is composed out of three pages:</p>
+<ol style="list-style-type: decimal">
+<li>index: list all the uploaded snippets</li>
+<li>upload: a form:
+<ul>
+<li>snippet name</li>
+<li>contents Allow the user to specify a new snippet to store. Make sure:</li>
+<li>no empty snippets or snippets with no name can be uploaded.</li>
+<li>snippet name doesn't already exists.</li>
+</ul></li>
+<li>snippet contents: show the contents of a snippet</li>
+</ol>
 </div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-10-17
+                  at 2016-10-23
                </p>
             </footer>
          </div>

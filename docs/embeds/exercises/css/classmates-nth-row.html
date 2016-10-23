@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width">
       <title>My Classmates</title>
       <style type="text/css">
-      
+
       table {
 
          border-collapse: collapse;
@@ -15,11 +15,17 @@
 
          background: #eee;
       }
-      td, th { 
+
+      tr:hover {
+
+         background: #ddd;
+      }
+
+      td, th {
          padding: 15px;
          border-left: groove 1px #aaa;
       }
-      td:first-child, th:first-child { 
+      td:first-child, th:first-child {
          border: none;
       }
       </style>
