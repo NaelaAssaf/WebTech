@@ -3,6 +3,11 @@
 <head>
    <meta charset="UTF-8">
    <title>Cat</title>
+
+   <style type="text/css">
+
+   em { text-decoration: underline; }
+   </style>
 </head>
 <body>
 
@@ -16,14 +21,17 @@
    if( empty($_FILES['file']['error']) ) {
 
       echo "<h1>";
-         echo "File: ". $_FILES['file']['name'] ." has content:";
+         echo "File: <em>". $_FILES['file']['name'] ."</em> has content:";
       echo "</h1>";
 
       echo "<pre>";
          echo file_get_contents( $_FILES['file']['tmp_name']);
       echo "</pre>";
    }
-   print_r( $_FILES );
+   else {
+
+      echo "Error occurred during file upload. Errorcode: " . $_FILES['file']['error'];
+   }
 }
 
 ?>
