@@ -594,8 +594,8 @@ m4_exercise([[Make a table with three columns: `first name`, `last name`, `age`
 where:
 
 * first column text is red
-* second column text is green
-* third column text is blue
+* second column text is blue
+* third column text is green
 * table caption is underline and overlined
 * Extra: add total sum column
 
