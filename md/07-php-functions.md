@@ -129,6 +129,35 @@ m4_run(php-functions,chat.php)
 m4_dnl ------------------------------------------------------------------------
 
 m4_exercise([[
+Create a function which checks if a number is:
+
+* positive
+* even
+* and smaller then 100
+
+```php
+if( check_number( $nr ) ) { echo "number ($nr) passed tests"; }
+else { echo "number ($nr) failed tests"; }
+```
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
+Create a barplot: 25%, 80%, 15%.
+
+Abstract the bars away in a function.
+
+```php
+print_bar('25%');
+print_bar('80%');
+print_bar('15%');
+```
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
 Create a function for each arithmetic operator: `+`, `-`, `x`, `/`.
 The function should accept an array of values and apply the operations in sequence:
 
@@ -151,13 +180,21 @@ m4_run(php-functions,arithmetic-operators.php)
 m4_dnl ------------------------------------------------------------------------
 
 m4_exercise([[
-Create a barplot: 25%, 80%, 15%.
+Create a function which can retrieve and validate data from an array (ex.: $_POST)
 
-Abstract the bars away in a function.
+* retrieve key from array
+* check if value is not empty (otherwise show error)
+* check if value is not longer than 50 characters (otherwise show error)
+* modify the function so a default value can be passed to the function, if the
+  key is not found in the array, retrun this value.
+]])
 
-```php
-print_bar('25%');
-print_bar('80%');
-print_bar('15%');
-```
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[
+**Extra:** Create a function that can calculate the factorial of a number.
+
+Try not to use loops but recursion...
+
+m4_run(php-functions,factorial.php,5)
 ]])

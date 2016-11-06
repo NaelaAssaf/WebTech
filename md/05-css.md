@@ -15,6 +15,10 @@ terminated by a `;`. A rules block is enclosed by `{`, `}`.
 }
 ```
 
+<small>
+[More info in the CSS syntax](http://www.w3schools.com/css/css_syntax.asp)
+</small>
+
 ## Include style information
 
 Elements can be styled via three methods:
@@ -87,6 +91,10 @@ CSS-rules.
 </html>
 ```
 
+<small>
+[More info on style inclusion](http://www.w3schools.com/css/css_howto.asp)
+</small>
+
 ## CSS selectors
 
 In order to apply rules to a certain element, the element must be targeted, selected.
@@ -119,6 +127,8 @@ m4_embed_php_as_html(html-and-css/class-selector,,.html)
 
 <small>
 m4_note([[The elements sharing a class-name can be different tags.]])
+
+[More info on basic selectors](http://www.w3schools.com/css/css_syntax.asp)
 </small>
 
 ### Combining selectors
@@ -231,6 +241,9 @@ the second selector, is located directly after the first selector and have the
 same parent.
 
 m4_embed_php_as_html(html-and-css/direct-siblings-selector,,.html)
+
+
+<small>[More info on selector combinators](http://www.w3schools.com/css/css_combinators.asp)</small>
 
 ### Special selectors
 

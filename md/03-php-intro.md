@@ -423,7 +423,7 @@ PHP has some special, reserved, arrays. These arrays are created and filled by P
 
 This array holds al the arguments passed to a PHP-script from the command line.
 
-m4_run(php-basics,[[php print_r-argv.php 'arg1' 'arg2' 123 --options]])
+m4_run(php-basics,print_r-argv.php,[['arg1' 'arg2' 123 --options]])
 
 <small>
 m4_info([[Notice that the first argument in this array is always the name of
@@ -462,7 +462,7 @@ You can store inter-page data in the `$_SESSION` reserved array.
 This inter-page data is typically:
 
 * user info
-* preferences 
+* preferences
 
 #### $_FILE
 
@@ -757,7 +757,7 @@ Create a script that:
 * counts back from this number to zero
 * counts from zero to the number in steps of three
 
-m4_run(php-basics,[[php count-to-number.php 9]])
+m4_run(php-basics,count-to-number.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -766,7 +766,7 @@ m4_exercise([[
 Create a script that prints a line of a asterisks `*` defined by a command line
 parameter.
 
-m4_run(php-basics,[[php print-asterisks.php 9]])
+m4_run(php-basics,print-asterisks.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -777,8 +777,8 @@ Create a script that
 * prints a square of a asterisks `*` if one parameter is defined
 * Prints a block with width and height if both parameters are defined.
 
-m4_run(php-basics,[[php print-square-of-asterisks.php 9]])
-m4_run(php-basics,[[php print-square-of-asterisks.php 15 5]])
+m4_run(php-basics,print-square-of-asterisks.php,9)
+m4_run(php-basics,print-square-of-asterisks.php,[[15 5]])
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -787,7 +787,7 @@ m4_exercise([[
 Create a script that prints a left + bottom balanced triangle of asterisks with
 base defined by parameter.
 
-m4_run(php-basics,[[php print-left-bottom-balanced-triangle.php 9]])
+m4_run(php-basics,print-left-bottom-balanced-triangle.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -796,7 +796,7 @@ m4_exercise([[
 Create a script that prints a right + bottom balanced triangle of asterisks with
 base defined by parameter.
 
-m4_run(php-basics,[[php print-right-bottom-balanced-triangle.php 9]])
+m4_run(php-basics,print-right-bottom-balanced-triangle.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -805,7 +805,7 @@ m4_exercise([[
 Create a script that prints a center + bottom balanced triangle of asterisks with
 base defined by parameter.
 
-m4_run(php-basics,[[php print-center-bottom-balanced-triangle.php 9]])
+m4_run(php-basics,print-center-bottom-balanced-triangle.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -814,9 +814,9 @@ m4_exercise([[
 Create al the triangles again but the base (maximum number of asterisks) should
 be on top instead of at the bottom...
 
-m4_run(php-basics,[[php print-left-top-balanced-triangle.php 9]])
-m4_run(php-basics,[[php print-right-top-balanced-triangle.php 9]])
-m4_run(php-basics,[[php print-center-top-balanced-triangle.php 9]])
+m4_run(php-basics,print-left-top-balanced-triangle.php,9)
+m4_run(php-basics,print-right-top-balanced-triangle.php,9)
+m4_run(php-basics,print-center-top-balanced-triangle.php,9)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -831,7 +831,7 @@ Create a script that:
 * prints the list backwards (bonus)
 * prints the list sorted (bonus)
 
-m4_run(php-basics,[[php number-statistics.php 9 12 3 5 4 1 8 5]])
+m4_run(php-basics,number-statistics.php,[[9 12 3 5 4 1 8 5]])
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -839,13 +839,13 @@ m4_dnl -----------------------------------------------------------------------
 m4_exercise([[
 Create a script that generates the reverse complement of DNA string:
 
-m4_run(php-basics,[[php dna-reverse-complement.php 'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC']])
+m4_run(php-basics,dna-reverse-complement.php,'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC')
 
 Bonus:
 
 Print bonds:
 
-m4_run(php-basics,[[php dna-reverse-complement-with-bonds.php 'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC']])
+m4_run(php-basics,dna-reverse-complement-with-bonds.php,'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC')
 
 <small>
 m4_info([[The PHP functions: m4_phpfunc(str_split) amd m4_phpfunc(strlen) can be of use.]])
@@ -861,7 +861,7 @@ Create a script that generates the reverse complement of DNA string and can cope
 * white space
 * unvalid nucleotides (and report these)
 
-m4_run(php-basics,[[php dna-reverse-complement-robust.php 'ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC']])
+m4_run(php-basics,dna-reverse-complement-robust.php,[['ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC']])
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -869,7 +869,7 @@ m4_dnl -----------------------------------------------------------------------
 m4_exercise([[
 Create a script that prints the nucleotide frequency of a DNA strand.
 
-m4_run(php-basics,[[php dna-frequency.php 'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC']])
+m4_run(php-basics,dna-frequency.php,'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC')
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -881,7 +881,7 @@ Create a script that prints the frequency of the characters in a string.
 * sort by character (and reverse)
 * case-insensitive (bonus)
 
-m4_run(php-basics,[[php character-frequency.php 'Hello world, this is a random 123#$ string.']])
+m4_run(php-basics,character-frequency.php,[['Hello world, this is a random 123#$ string.']])
 
 <small>
 m4_info([[See: m4_phpfunc(sort), m4_phpfunc(asort), m4_phpfunc(ksort),... for

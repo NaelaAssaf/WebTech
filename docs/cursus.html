@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-10-24" />
+        <meta name="date" content="2016-11-07" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -115,6 +115,17 @@
             <li><a href="#upload-files">Upload files</a></li>
             <li><a href="#exercises-4">Exercises</a></li>
             </ul></li>
+            <li><a href="#php-functions">PHP functions</a><ul>
+            <li><a href="#return-a-value">Return a value</a></li>
+            <li><a href="#exercises-5">Exercises</a></li>
+            </ul></li>
+            <li><a href="#git-basics">Git basics</a><ul>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#track-files">Track files</a></li>
+            <li><a href="#branching-and-merging">Branching and merging</a></li>
+            <li><a href="#remotes">Remotes</a></li>
+            </ul></li>
+            <li><a href="#additional-exercise">Additional exercise</a></li>
             </ul>
                   <hr>
          <p class="text-center">
@@ -1510,8 +1521,18 @@ Array
 <h4 id="argv">$argv</h4>
 <p>This array holds al the arguments passed to a <abbr title="Hypertext Preprocessor">PHP</abbr>-script from the command line.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print_r-argv.php <span class="st">&#39;arg1&#39;</span> <span class="st">&#39;arg2&#39;</span> 123 --options</code></pre></div>
-<pre class="run--output"><code>Could not open input file: print_r-argv.php
+<pre class="run--output"><code>Array
+(
+    [0] =&gt; print_r-argv.php
+    [1] =&gt; arg1
+    [2] =&gt; arg2
+    [3] =&gt; 123
+    [4] =&gt; --options
+)
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print_r-argv.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <small>
 <div class="alert alert-info">
 <strong>Info:</strong> Notice that the first argument in this array is always the name of the script!
@@ -2028,6 +2049,9 @@ Count up from 0 to 9 in steps of 3:
 6
 9
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/count-to-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2037,6 +2061,9 @@ Exercise:
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-asterisks.php 9</code></pre></div>
 <pre class="run--output"><code>*********
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-asterisks.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2059,6 +2086,9 @@ Exercise:
 *********
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-square-of-asterisks.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-square-of-asterisks.php 15 5</code></pre></div>
 <pre class="run--output"><code>***************
 ***************
@@ -2067,6 +2097,9 @@ Exercise:
 ***************
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-square-of-asterisks.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2084,6 +2117,9 @@ Exercise:
 ********
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-left-bottom-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2102,6 +2138,9 @@ Exercise:
  
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-right-bottom-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2116,6 +2155,9 @@ Exercise:
  ********
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-center-bottom-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2135,6 +2177,9 @@ Exercise:
 
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-left-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-right-top-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*********
  ********
@@ -2147,6 +2192,9 @@ Exercise:
         *
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-right-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-center-top-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*********
  *******
@@ -2155,6 +2203,9 @@ Exercise:
     *
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-center-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2205,6 +2256,9 @@ Numbers from smallest to largest:
 9
 12
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/number-statistics.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2214,12 +2268,18 @@ Exercise:
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/dna-reverse-complement.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <p>Bonus:</p>
 <p>Print bonds:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/dna-reverse-complement-with-bonds.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <small>
 <div class="alert alert-info">
 <strong>Info:</strong> The <abbr title="Hypertext Preprocessor">PHP</abbr> functions: <a href="http://php.net/manual-lookup.php?pattern=str_split" class="w3c-ref"><code>str_split</code></a> amd <a href="http://php.net/manual-lookup.php?pattern=strlen" class="w3c-ref"><code>strlen</code></a> can be of use.
@@ -2244,6 +2304,9 @@ Invalid NT characters:
 X: 4 occurrences
 i: 1 occurrences
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/dna-reverse-complement-robust.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2260,6 +2323,9 @@ Exercise:
       C: 13 nts -&gt; 17.808219178082 %
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/dna-frequency.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2350,6 +2416,9 @@ Order by character:
 &#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
 
 </code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/character-frequency.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 <small>
 <div class="alert alert-info">
 <strong>Info:</strong> See: <a href="http://php.net/manual-lookup.php?pattern=sort" class="w3c-ref"><code>sort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=asort" class="w3c-ref"><code>asort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=ksort" class="w3c-ref"><code>ksort</code></a>,... for different sort functions
@@ -2387,6 +2456,9 @@ Exercise:
 <p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that prints <code>hello world</code> when served by a web-server</p>
 <iframe src="embeds/exercises/php-and-html/hello-world.html" class="embed--output" height="70px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/hello-world.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2395,6 +2467,9 @@ Exercise:
 <p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that resembles your CV.</p>
 <iframe src="embeds/exercises/php-and-html/cv.html" class="embed--output" height="250px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/cv.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2407,6 +2482,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" class="embed--output" height="180px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2433,6 +2511,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/php-and-html/inter-link-pages/home.html" class="embed--output" height="250px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <h2 id="include-require">Include / Require</h2>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> allows us to include one file into another. This is done via the <a href="http://php.net/manual-lookup.php?pattern=include" class="w3c-ref"><code>include</code></a> or <a href="http://php.net/manual-lookup.php?pattern=require" class="w3c-ref"><code>require</code></a>;</p>
@@ -2716,6 +2797,10 @@ Exercise:
 <p>(extra: print how many years the user should wait before resubmitting the form...)</p>
 <iframe src="embeds/exercises/php-and-html/access-control.php" class="embed--output" height="200px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/access-control.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/access-control.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2725,6 +2810,10 @@ Exercise:
 <p>Extra: append words to previous input...</p>
 <iframe src="embeds/exercises/php-and-html/parrot.php" class="embed--output" height frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/parrot.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/parrot.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2738,6 +2827,10 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/php-and-html/dynamic-triangles.php" class="embed--output" height="300px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/dynamic-triangles.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/dynamic-triangles.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2751,6 +2844,10 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/php-and-html/validate-passwords.php" class="embed--output" height="250px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/validate-passwords.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/validate-passwords.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2776,6 +2873,10 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/php-and-html/wc.php" class="embed--output" height="250px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/wc.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/wc.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -2793,6 +2894,10 @@ jake, smith, male, 20
 joan, d&#39;arc, female, 33</code></pre>
 <iframe src="embeds/exercises/php-and-html/csv.php" class="embed--output" height="250px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/php-and-html/csv.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/csv.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <h1 id="html-and-css">HTML and CSS</h1>
 <p><abbr title="HyperText Markup Language">HTML</abbr> can be styled via <abbr title="Cascading Style Sheets">CSS</abbr>. An <abbr title="HyperText Markup Language">HTML</abbr>-element is selected via <a href="#css-selectors"><abbr title="Cascading Style Sheets">CSS</abbr> selectors</a>. Styles/rules are defined per selector block. Each definition is terminated by a <code>;</code>. A rules block is enclosed by <code>{</code>, <code>}</code>.</p>
@@ -2800,6 +2905,7 @@ joan, d&#39;arc, female, 33</code></pre>
     <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;;</span>
     <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;</span> <span class="er">&lt;value&gt;;</span>
 <span class="kw">}</span></code></pre></div>
+<p><small> <a href="http://www.w3schools.com/css/css_syntax.asp">More info in the <abbr title="Cascading Style Sheets">CSS</abbr> syntax</a> </small></p>
 <h2 id="include-style-information">Include style information</h2>
 <p>Elements can be styled via three methods:</p>
 <ul>
@@ -2847,6 +2953,7 @@ joan, d&#39;arc, female, 33</code></pre>
     <span class="co">&lt;!-- the body --&gt;</span>
 <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
+<p><small> <a href="http://www.w3schools.com/css/css_howto.asp">More info on style inclusion</a> </small></p>
 <h2 id="css-selectors">CSS selectors</h2>
 <p>In order to apply rules to a certain element, the element must be targeted, selected.</p>
 <p><abbr title="Cascading Style Sheets">CSS</abbr> has the notion of selectors to target elements.</p>
@@ -2939,7 +3046,7 @@ joan, d&#39;arc, female, 33</code></pre>
 <div class="alert alert-info">
 <strong>Info:</strong> The elements sharing a class-name can be different tags.
 </div>
-<p></small></p>
+<p><a href="http://www.w3schools.com/css/css_syntax.asp">More info on basic selectors</a> </small></p>
 <h3 id="combining-selectors">Combining selectors</h3>
 <p>If multiple selectors are provided, separated by a comma, <code>,</code>, the defined rules will apply for all the elements matching any of the selectors:</p>
 <div class="row">
@@ -3177,6 +3284,7 @@ h1, h3, h5 <span class="kw">{</span>
 </iframe>
 </div>
 </div>
+<p><small><a href="http://www.w3schools.com/css/css_combinators.asp">More info on selector combinators</a></small></p>
 <h3 id="special-selectors">Special selectors</h3>
 <h4 id="last-child">last-child</h4>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">selector<span class="dv">:last-child</span> <span class="kw">{}</span></code></pre></div>
@@ -3500,6 +3608,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/hello-world.html" class="embed--output" height frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hello-world.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3515,6 +3626,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/classmates-colors.html" class="embed--output" height="270px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-colors.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3528,6 +3642,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/classmates-nth-row.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-nth-row.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3545,6 +3662,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/rainbow-pyramid.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3559,6 +3679,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/image-float.html" class="embed--output" height="275px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/image-float.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3573,6 +3696,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/hor-bar-plot.html" class="embed--output" height="280px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hor-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3587,6 +3713,9 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/vert-bar-plot.html" class="embed--output" height="400px" frameborder="0">
 </iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/vert-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3614,6 +3743,10 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/css/post-comment.php" class="embed--output" height="400px" frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/css/post-comment.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/post-comment.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <h1 id="io">IO</h1>
 <p>By IO we mean working with files...</p>
@@ -3716,6 +3849,10 @@ Exercise:
 <p>Create a web-page which allows to upload a file, and print the contents of the file.</p>
 <iframe src="embeds/exercises/io/cat.php" class="embed--output" height frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/io/cat.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/io/cat.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3735,6 +3872,10 @@ Exercise:
 </ul>
 <iframe src="embeds/exercises/io/wc.php" class="embed--output" height frameborder="0">
 </iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/io/wc.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/io/wc.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3784,6 +3925,674 @@ Exercise:
 <li>Extra: allow the user to specify the color per term.</li>
 </ul>
 </div>
+<h1 id="php-functions">PHP functions</h1>
+<p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
+<p>A function is a block of code with a given name and can be called (executed) by this name and optionally passed arguments to change the behaviour/output of the function.</p>
+<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a>, <a href="http://php.net/manual-lookup.php?pattern=isset" class="w3c-ref"><code>isset</code></a>, <a href="http://php.net/manual-lookup.php?pattern=empty" class="w3c-ref"><code>empty</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>, ...</p>
+<p>As mentioned we can define our own functions.</p>
+<p>Syntax:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {
+
+    <span class="co">/* function code here */</span>
+}</code></pre></div>
+<p>Example: function without arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">()</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">();</span> <span class="co">// Hello!</span>
+greet<span class="ot">();</span> <span class="co">// Hello!</span></code></pre></div>
+<p>Example: function with arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span>
+greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span>
+greet<span class="ot">();</span> <span class="co">// - ERROR -</span></code></pre></div>
+<p>If arguments are present in the function definition, these arguments must be passed when the function is invoked. Otherwise an error is thrown...</p>
+<p>Arguments can however be defined with a default value, if the argument is not passed at invocation (or the argument value is <code>NULL</code>) the default value will be used instead.</p>
+<p>Example: function with arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span>
+greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span>
+greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></code></pre></div>
+<p>Multiple arguments can be passed, separated by comma's <code>,</code>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {
+
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span>
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span>
+<span class="co">// Hello john</span>
+<span class="co">// Hello jane</span>
+
+greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span>
+<span class="co">// Hello sam</span>
+<span class="co">// Hello</span></code></pre></div>
+<h2 id="return-a-value">Return a value</h2>
+<p>The <a href="http://php.net/manual-lookup.php?pattern=return" class="w3c-ref"><code>return</code></a> keyword must be used to return a value from an array:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> fn<span class="ot">()</span> {
+    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span>
+}
+
+<span class="kw">$string</span> = fn<span class="ot">();</span></code></pre></div>
+<p>Whenever a return statement is encountered, the function will stop and return the specified value. Any code defined after the return statement will not be executed...</p>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> fn<span class="ot">()</span> {
+
+    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {
+
+        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span>
+    }
+
+    <span class="fu">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span>
+}</code></pre></div>
+<h2 id="exercises-5">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which accepts two arguments:</p>
+<ul>
+<li>name</li>
+<li>sentence</li>
+</ul>
+<p>Output: <code>&lt;name&gt; -&gt; &lt;sentence&gt;</code></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> chat.php </code></pre></div>
+<pre class="run--output"><code>john -&gt; @jane: Hello
+jane -&gt; Hello john
+john -&gt; Nice weather...
+jane -&gt; Yep is is
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/chat.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which checks if a number is:</p>
+<ul>
+<li>positive</li>
+<li>even</li>
+<li>and smaller then 100</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }
+<span class="kw">else</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</code></pre></div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a barplot: 25%, 80%, 15%.</p>
+<p>Abstract the bars away in a function.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span>
+print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span>
+print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></code></pre></div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function for each arithmetic operator: <code>+</code>, <code>-</code>, <code>x</code>, <code>/</code>. The function should accept an array of values and apply the operations in sequence:</p>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span>
+subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span>
+divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span>
+multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></code></pre></div>
+<ul>
+<li>Extra: accept two values: <code>plus( 1, 2 )</code> or array: <code>plus([1,2])</code> <small>
+<div class="alert alert-info">
+<strong>Info:</strong> Use <a href="http://php.net/manual-lookup.php?pattern=is_array" class="w3c-ref"><code>is_array</code></a> to check if a variable is an array...
+</div>
+</small></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> arithmetic-operators.php </code></pre></div>
+<pre class="run--output"><code>10
+4
+2
+2016
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/arithmetic-operators.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which can retrieve and validate data from an array (ex.: $_POST)</p>
+<ul>
+<li>retrieve key from array</li>
+<li>check if value is not empty (otherwise show error)</li>
+<li>check if value is not longer than 50 characters (otherwise show error)</li>
+<li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p><strong>Extra:</strong> Create a function that can calculate the factorial of a number.</p>
+<p>Try not to use loops but recursion...</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> factorial.php 5</code></pre></div>
+<pre class="run--output"><code>120</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/factorial.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<h1 id="git-basics">Git basics</h1>
+<p>Git is a version control system. It is designed to track and store revisions/versions of files.</p>
+<p>This way a developer can save snapshots of the project and revert back to them if needed. Git also enables branching of some work, this means saving the changes in a separate store allowing the developer to test some feature and discard or merge the changes back into the main code depending on whether the experiment worked.</p>
+<h2 id="setup">Setup</h2>
+<p>To start tracking the contents of a directory, git must be initialised in this directory. This is done via the <a href="https://git-scm.com/docs/git-init" class="w3c-ref"><code>git-init</code></a> command</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Setup directory:</span>
+<span class="co"># mkdir /tmp/git-playground</span>
+<span class="co"># cd /tmp/git-playground</span>
+
+<span class="kw">git</span> init
+<span class="co"># Initialized empty Git repository in /tmp/git-playground/.git/</span></code></pre></div>
+<p>Git tells you is initialised the git data store in a hidden <code>.git</code> folder in the root of our project directory.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">.git/</span>
+├── <span class="kw">branches</span>
+├── <span class="kw">config</span>
+├── <span class="kw">description</span>
+├── <span class="kw">HEAD</span>
+├── <span class="kw">hooks</span>
+│   ├── <span class="kw">applypatch-msg.sample</span>
+│   ├── <span class="kw">commit-msg.sample</span>
+│   ├── <span class="kw">post-update.sample</span>
+│   ├── <span class="kw">pre-applypatch.sample</span>
+│   ├── <span class="kw">pre-commit.sample</span>
+│   ├── <span class="kw">prepare-commit-msg.sample</span>
+│   ├── <span class="kw">pre-push.sample</span>
+│   ├── <span class="kw">pre-rebase.sample</span>
+│   └── <span class="kw">update.sample</span>
+├── <span class="kw">info</span>
+│   └── <span class="kw">exclude</span>
+├── <span class="kw">objects</span>
+│   ├── <span class="kw">info</span>
+│   └── <span class="kw">pack</span>
+└── <span class="kw">refs</span>
+    ├── <span class="kw">heads</span>
+        └── <span class="kw">tags</span></code></pre></div>
+<p>For the moment this is just a skeleton without any data e.g. we are not tracking any files. The status of our repository can always be obtained bu running the <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a>-command:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co">#</span>
+<span class="co"># Initial commit</span>
+<span class="co">#</span>
+<span class="co"># nothing to commit (create/copy files and use &quot;git add&quot; to track)</span></code></pre></div>
+<p>So we should start adding files to our git repository...</p>
+<h2 id="track-files">Track files</h2>
+<p>Let us first create a file we want to track and run <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a> again.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Let&#39;s track this file...&quot;</span> <span class="kw">&gt;</span> file.txt
+
+<span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co">#</span>
+<span class="co"># Initial commit</span>
+<span class="co">#</span>
+<span class="co"># Untracked files:</span>
+<span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+<span class="co">#</span>
+<span class="co">#     file.txt</span>
+<span class="co">#</span>
+<span class="co"># nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span></code></pre></div>
+<p>So git is telling us we are not tracking any files, but that an untracked file is present in our project.</p>
+<p>To start tracking a file two actions must be performed:</p>
+<ul>
+<li><a href="https://git-scm.com/docs/git-add" class="w3c-ref"><code>git-add</code></a></li>
+<li><a href="https://git-scm.com/docs/git-commit" class="w3c-ref"><code>git-commit</code></a></li>
+</ul>
+<p><a href="https://git-scm.com/docs/git-add" class="w3c-ref"><code>git-add</code></a> will add the file to the staging area. This means group/tag the files so future commands can operate on them.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add file.txt
+<span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co">#</span>
+<span class="co"># Initial commit</span>
+<span class="co">#</span>
+<span class="co"># Changes to be committed:</span>
+<span class="co">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+<span class="co">#</span>
+<span class="co">#   new file:   file.txt</span></code></pre></div>
+<p>The status command tells us the file is added to the staging area and is ready for the next step: committing.</p>
+<p><a href="https://git-scm.com/docs/git-commit" class="w3c-ref"><code>git-commit</code></a> will take the files in the staging area and create a new snapshot of their current contents. This commit takes a commit message: a description of the changes to the project via the modifications of those staged files.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> commit <span class="co"># a text editor will open, type your message and save + quit the file</span>
+
+<span class="kw">git</span> commit -m <span class="st">&quot;start tracking file.txt&quot;</span> <span class="co"># the -m options allows us to specify the commit message on the command line</span>
+
+<span class="co"># [master (root-commit) 13ce453] start tracking file.txt</span>
+<span class="co">#  1 file changed, 1 insertion(+)</span>
+<span class="co">#  create mode 100644 file.txt</span></code></pre></div>
+<p>If we run <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a> again, we see that all our changes are saved in a snapshot. This is what git calls a <em>clean working directory</em>.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># nothing to commit, working directory clean</span></code></pre></div>
+<h3 id="git-internals">Git internals</h3>
+<p>So what actually happened when we added a file?</p>
+<p>First of all lets have a look at the git store:</p>
+<pre><code>tree .git
+.git
+├── branches
+├── COMMIT_EDITMSG
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   └── update.sample
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       └── heads
+│           └── master
+├── objects
+│   ├── 13
+│   │   └── ce45372a70dba8b87d4612952d0f4c1775960b
+│   ├── 3e
+│   │   └── 20527aac2a95acab281585e2ec2015b7e8a77c
+│   ├── 77
+│   │   └── 25275230928119f8acf11ee297e559f7e4ce56
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    │   └── master
+    └── tags</code></pre>
+<p>The most important thing is the <code>objects</code> directory. In git everything is an object.</p>
+<p>If we add a file git will create a checksum of this file. Git uses <code>sha-1</code> to create the checksum. <code>sha-1</code> will reduce the complete contents of the file to a 40-character unique key. A slight modification to the file will result in a completely different key.</p>
+<p>For example:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Hello World&quot;</span>  <span class="kw">|</span> <span class="kw">sha1sum</span> <span class="co"># 648a6a6ffffdaa0badb23b8baf90b6168dd16b3a</span>
+<span class="kw">echo</span> <span class="st">&quot;Hello World.&quot;</span> <span class="kw">|</span> <span class="kw">sha1sum</span> <span class="co"># b924c2f360b572e17c971f1b1b667e0732944df7</span></code></pre></div>
+<p>By adding a dot to our sentence, the hash has a completely different value...</p>
+<p>Git stores the contents of each file committed file under the checksum name.</p>
+<p>For example our file.txt is stored as <code>.git/objects/77/25275230928119f8acf11ee297e559f7e4ce56</code> where <code>7725275230928119f8acf11ee297e559f7e4ce56</code> is the checksum of this file...</p>
+<p>The other two files are the commit message and a list of all the tracked files...</p>
+<p>Via this checksumming, git knows which files are modified and which are not because each change results in another checksum...</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Modify the file&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
+<span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># Changes not staged for commit:</span>
+<span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+<span class="co">#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span>
+<span class="co">#</span>
+<span class="co">#   modified:   file.txt</span>
+<span class="co">#</span>
+<span class="co"># no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span></code></pre></div>
+<p>Let's commit (save) this change:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># add the file to the staging area:</span>
+<span class="kw">git</span> add file.txt
+
+<span class="co"># save all staged files</span>
+<span class="kw">git</span> commit -m <span class="st">&quot;modify file.txt&quot;</span>
+<span class="co"># [master 1de3a69] modify file.txt</span>
+<span class="co">#  1 file changed, 1 insertion(+)</span>
+
+<span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># nothing to commit, working directory clean</span></code></pre></div>
+<h3 id="git-log">Git log</h3>
+<p>To get a list of all commits (snapshots/return points) use the <a href="https://git-scm.com/docs/git-log" class="w3c-ref"><code>git-log</code></a>-command:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> log
+<span class="co"># commit 1de3a699080e8df52f3f12af988152208c632b00</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 18:50:29 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     modify file.txt</span>
+<span class="co">#</span>
+<span class="co"># commit 13ce45372a70dba8b87d4612952d0f4c1775960b</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 18:28:06 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     start tracking file.txt</span></code></pre></div>
+<h3 id="checkout-a-commit">Checkout a commit</h3>
+<p>Via <a href="https://git-scm.com/docs/git-checkout" class="w3c-ref"><code>git-checkout</code></a> we can jump back in time to another snapshot:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout 1de3a</code></pre></div>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> Note that instead of typing the complete checksum, only a fraction of the key was specified. Git is smart enough to find out which commit we meant en checked this revision out. We just have to ensure that the provided part is unique in the project...
+</div>
+<p></small></p>
+<h3 id="git-diff">Git diff</h3>
+<p><a href="https://git-scm.com/docs/git-diff" class="w3c-ref"><code>git-diff</code></a> allows to show the differences between two revisions.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff 13ce4 1de3a
+<span class="co"># diff --git a/file.txt b/file.txt</span>
+<span class="co"># index 7725275..817f387 100644</span>
+<span class="co"># --- a/file.txt</span>
+<span class="co"># +++ b/file.txt</span>
+<span class="co"># @@ -1 +1,2 @@</span>
+<span class="co">#  Let&#39;s track this file...</span>
+<span class="co"># +Modify the file</span></code></pre></div>
+<p>We see that between the two commits the line <code>Modify the file</code> was added (indicated by the <code>+</code> sign).</p>
+<p>Is is however cumbersome to look up the hashes for a certain commit. Fortunately git has the notion of <em>refs</em>. Refs are named commits e.q. a commit can be addressed by a name.</p>
+<p>For example <code>HEAD</code> always points to the last commit on the current branch. <code>HEAD^</code> points to the second to last commit. <code>HEAD^^</code> the one before that etc...</p>
+<p>Thus the previous diff can be written as:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff HEAD^
+<span class="co"># diff --git a/file.txt b/file.txt</span>
+<span class="co"># index 7725275..817f387 100644</span>
+<span class="co"># --- a/file.txt</span>
+<span class="co"># +++ b/file.txt</span>
+<span class="co"># @@ -1 +1,2 @@</span>
+<span class="co">#  Let&#39;s track this file...</span>
+<span class="co"># +Modify the file</span></code></pre></div>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> If only one commit is provided, the other commit is assumed HEAD
+</div>
+<p></small></p>
+<h2 id="branching-and-merging">Branching and merging</h2>
+<h3 id="branch">Branch</h3>
+<p>As mentioned before, git allows us to branch of you code, test some things an merge this new code back in to the main branch or discard the changes.</p>
+<p>By default all code lives in the <em>master</em>-branch. A new branch can be created via <a href="https://git-scm.com/docs/git-branch" class="w3c-ref"><code>git-branch</code></a>.</p>
+<p>When no arguments are passed to <a href="https://git-scm.com/docs/git-branch" class="w3c-ref"><code>git-branch</code></a>, the command will list all the available (local) branches.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch
+<span class="co"># * master</span></code></pre></div>
+<p>The asterisks indicates which branch you are currently on.</p>
+<p>If we pass git branch a name, a new branch with this name will be created:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch <span class="st">&#39;my-new-branch&#39;</span>
+
+<span class="kw">git</span> branch
+<span class="co"># * master</span>
+<span class="co">#   my-new-branch</span></code></pre></div>
+<p><a href="https://git-scm.com/docs/git-checkout" class="w3c-ref"><code>git-checkout</code></a> is used to switch branches:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout <span class="st">&#39;my-new-branch&#39;</span>
+<span class="co"># Switched to branch &#39;my-new-branch&#39;</span>
+
+<span class="kw">git</span> branch
+<span class="co">#   master</span>
+<span class="co"># * my-new-branch</span></code></pre></div>
+<p>Lets add a change in this branch:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Add line from &#39;my-new-branch!&#39;&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
+
+<span class="kw">git</span> add file.txt
+
+<span class="kw">git</span> commit -m <span class="st">&quot;add change from my-new-branch&quot;</span>
+<span class="co"># [my-new-branch d5136c8] add change from my-new-branch</span>
+<span class="co">#  1 file changed, 1 insertion(+), 2 deletions(-)</span></code></pre></div>
+<p>Similar to <code>HEAD</code> before, <code>master</code> and <code>my-new-branch</code> these names are <em>refs</em> pointing to a certain commit.</p>
+<p>So we can also take a <em>diff</em> between two branches:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff master my-new-branch
+<span class="co"># diff --git a/file.txt b/file.txt</span>
+<span class="co"># index 817f387..082bfe1 100644</span>
+<span class="co"># --- a/file.txt</span>
+<span class="co"># +++ b/file.txt</span>
+<span class="co"># @@ -1,2 +1,3 @@</span>
+<span class="co">#  Let&#39;s track this file...</span>
+<span class="co">#  Modify the file</span>
+<span class="co"># +Add line from &#39;my-new-branch&#39;</span>
+
+<span class="kw">git</span> diff master
+<span class="co"># diff --git a/file.txt b/file.txt</span>
+<span class="co"># index 817f387..082bfe1 100644</span>
+<span class="co"># --- a/file.txt</span>
+<span class="co"># +++ b/file.txt</span>
+<span class="co"># @@ -1,2 +1,3 @@</span>
+<span class="co">#  Let&#39;s track this file...</span>
+<span class="co">#  Modify the file</span>
+<span class="co"># +Add line from &#39;my-new-branch&#39;</span></code></pre></div>
+<small>
+<div class="alert alert-info">
+<strong>Info:</strong> If a second argument is omitted, HEAD is used (and HEAD in this case is last commit on my-new-branch)
+</div>
+<p></small></p>
+<h3 id="merge">Merge</h3>
+<p>If we want to include the changes we introduced in the <em>my-new-branch</em>-branch into another branch, say <em>master</em>, we have to merge in these changes via <a href="https://git-scm.com/docs/git-merge" class="w3c-ref"><code>git-merge</code></a>.</p>
+<p>First we have to position ourselves at the <em>master</em>-branch:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout master
+<span class="co"># Switched to branch &#39;master&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff my-new-branch
+<span class="co"># diff --git a/file.txt b/file.txt</span>
+<span class="co"># index 082bfe1..817f387 100644</span>
+<span class="co"># --- a/file.txt</span>
+<span class="co"># +++ b/file.txt</span>
+<span class="co"># @@ -1,3 +1,2 @@</span>
+<span class="co">#  Let&#39;s track this file...</span>
+<span class="co">#  Modify the file</span>
+<span class="co"># -Add line from &#39;my-new-branch&#39;</span></code></pre></div>
+<p>Via the <em>diff</em> we notice we are missing the <code>Add line from my-new-branch</code> line.</p>
+<p>The include these changes:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> merge my-new-branch
+<span class="co"># Updating 1de3a69..e336094</span>
+<span class="co"># Fast-forward</span>
+<span class="co">#  file.txt | 1 +</span>
+<span class="co">#  1 file changed, 1 insertion(+)</span></code></pre></div>
+<p>Git tells us the merge was a success, no merge conflicts where encountered and git was able to auto-merge the branches...</p>
+<h3 id="merge-conflict">Merge conflict</h3>
+<p>Not all merges will go as smooth as the previous example. Lets create a merge conflict.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Create two branches</span>
+<span class="kw">git</span> checkout master
+<span class="kw">git</span> branch conflicting-branch
+
+<span class="co"># modify file on master</span>
+<span class="kw">echo</span> <span class="st">&quot;Add line line from master&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
+<span class="kw">git</span> add file.txt
+<span class="kw">git</span> commit -m <span class="st">&quot;add line from master&quot;</span>
+
+<span class="co"># modify file on other branch</span>
+<span class="kw">git</span> checkout conflicting-branch
+<span class="kw">echo</span> <span class="st">&quot;Add line line from conflicting-branch&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
+<span class="kw">git</span> add file.txt
+<span class="kw">git</span> commit -m <span class="st">&quot;add line from conflicting-branch&quot;</span></code></pre></div>
+<p>Now we have a merge conflict. The same file was modified on two separate branches en git has no way to tell which version of the file is the correct one, or how to combine the introduced modifications...</p>
+<p>The commit graph looks something like:</p>
+<blockquote>
+<pre><code>* 42a0cbc (conflicting-branch) add line from conflicting-branch
+| * eae4aa2 (HEAD -&gt; master) add line from master
+|/
+* e336094 add line form my-new-branch
+* 1de3a69 modify file.txt
+* 13ce453 start tracking file.txt</code></pre>
+</blockquote>
+<p>Lets run a merge and see what happens:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout master
+<span class="co"># Switched to branch &#39;master&#39;</span>
+
+<span class="kw">git</span> merge conflicting-branch
+<span class="co"># Auto-merging file.txt</span>
+<span class="co"># CONFLICT (content): Merge conflict in file.txt</span>
+<span class="co"># Automatic merge failed; fix conflicts and then commit the result.</span></code></pre></div>
+<p>To resolve a merge conflict via a third party application (GUI?) use <a href="https://git-scm.com/docs/git-mergetool" class="w3c-ref"><code>git-mergetool</code></a></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> mergetool
+<span class="co"># Merging:</span>
+<span class="co"># file.txt</span>
+<span class="co">#</span>
+<span class="co"># Normal merge conflict for &#39;file.txt&#39;:</span>
+<span class="co">#   {local}: modified file</span>
+<span class="co">#   {remote}: modified file</span>
+<span class="co"># file.txt seems unchanged.</span>
+<span class="co"># Was the merge successful? [y/n] y</span></code></pre></div>
+<p>In my case the default merge tool is meld:</p>
+<ul>
+<li>the left pane is a branch (master)</li>
+<li>the middle pane is the new (to combine) file</li>
+<li>the right pane is the other branch (conflicting-branch)</li>
+</ul>
+<div class="figure">
+<img src="assets/img/git-mergetool.png" alt="git-mergetool: meld" class="img-responsive" />
+<p class="caption">git-mergetool: meld</p>
+</div>
+<p>Once your merges are made, the files saved and the application quit, git will ask if the merge was a success.</p>
+<p>The merge can also be made manually by editing the file directly:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gedit</span> file.txt</code></pre></div>
+<blockquote>
+<pre><code>Let&#39;s track this file...
+Modify the file
+Add line from &#39;my-new-branch&#39;
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Add line line from master
+=======
+Add line line from conflicting-branch
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; conflicting-branch</code></pre>
+</blockquote>
+<p>Notice the added <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; conflicting-branch</code> lines.</p>
+<p>These indicators show the division between the two branches.</p>
+<p>We are currently at the master branch, so HEAD refers to the changes made at <em>master</em>, the second line holds the changes introduced in <em>conflicting-branch</em>.</p>
+<p>We can now modify the file, add it and commit the merge. This will resolve the merge conflict</p>
+<ul>
+<li><p>Modify file:</p>
+<blockquote>
+<pre><code>Let&#39;s track this file...
+Modify the file
+Add line from &#39;my-new-branch&#39;
+Add line line from master
+Add line line from conflicting-branch</code></pre>
+</blockquote></li>
+<li><p>Save changes</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add file.txt
+<span class="kw">git</span> commit -m <span class="st">&quot;merge: conflicting-branch into master&quot;</span></code></pre></div></li>
+</ul>
+<p>Our commit graph now looks like:</p>
+<blockquote>
+<pre><code>*   e5bbaef (HEAD -&gt; master) merge: conflicting-branch into master
+|\
+| * 42a0cbc (conflicting-branch) add line from conflicting-branch
+* | eae4aa2 add line from master
+|/
+* e336094 add line form my-new-branch
+* 1de3a69 modify file.txt
+* 13ce453 start tracking file.txt</code></pre>
+</blockquote>
+<div class="alert alert-info">
+<strong>Info:</strong> To create a similar graph, run: <code>git log --oneline --decorate --graph</code>
+</div>
+<h3 id="delete-branch">Delete branch</h3>
+<p>Once a branch is merged in we can delete the branch via:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch -d my-new-branch
+<span class="co"># Deleted branch my-new-branch (was e336094).</span></code></pre></div>
+<h2 id="remotes">Remotes</h2>
+<p>We are now able to create, merge and delete local branches, the same can be done with remote branches.</p>
+<p>Git is a distributed system this means we can clone, sync and push with other repositories. These repositories can live in the same machine but in another directory or on another computer (server).</p>
+<p>Remote repositories can be accessed via SSH or HTTP if the remote is configured correctly.</p>
+<p><a href="https://github.com">github.com</a> allows anyone to create remote repositories. These can be used to collaborate with classmates or colleagues or as a remote backup.</p>
+<p>The only downside is that github only offers free hosting for public repositories, so everyone can view your code...</p>
+<p>In the following examples we will use another directory as a remote, but the same principles apply to remoter servers.</p>
+<h3 id="clone">Clone</h3>
+<p><a href="https://git-scm.com/docs/git-clone" class="w3c-ref"><code>git-clone</code></a> allows us to fetch a local copy of a remote repository...</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone /tmp/git-playground /tmp/git-clone
+<span class="co"># Cloning into &#39;/tmp/git-clone&#39;...</span>
+<span class="co"># done.</span>
+
+<span class="kw">cd</span> /tmp/git-clone
+<span class="kw">ls</span>
+<span class="co"># file.txt</span>
+
+<span class="kw">git</span> log
+<span class="co"># commit e5bbaef29c5c6d3d874d0f92b9b4be72fe007dca</span>
+<span class="co"># Merge: eae4aa2 42a0cbc</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 21:51:53 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     merge: conflicting-branch into master</span>
+<span class="co">#</span>
+<span class="co"># commit 42a0cbce88d3724603c975005488b30dcdf67141</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 21:31:55 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     add line from conflicting-branch</span>
+<span class="co">#</span>
+<span class="co"># commit eae4aa2178acba0125d3c23adf77d9791a802ddf</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 21:31:31 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     add line from master</span>
+<span class="co">#</span>
+<span class="co"># commit e336094c2f404534ccf47e058cbce8ef53911c15</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 20:41:50 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     add line form my-new-branch</span>
+<span class="co">#</span>
+<span class="co"># commit 1de3a699080e8df52f3f12af988152208c632b00</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 18:50:29 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     modify file.txt</span>
+<span class="co">#</span>
+<span class="co"># commit 13ce45372a70dba8b87d4612952d0f4c1775960b</span>
+<span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
+<span class="co"># Date:   Sun Nov 6 18:28:06 2016 +0100</span>
+<span class="co">#</span>
+<span class="co">#     start tracking file.txt</span></code></pre></div>
+<p>A complete copy of the repository was fetched from the remote, we have all the history..</p>
+<h3 id="update">Update</h3>
+<p>To update a repository to the latest version we can use <a href="https://git-scm.com/docs/git-pull" class="w3c-ref"><code>git-pull</code></a>.</p>
+<p>By default <a href="https://git-scm.com/docs/git-pull" class="w3c-ref"><code>git-pull</code></a> needs two arguments:</p>
+<ul>
+<li>the name of the remote</li>
+<li>the name of the branch to fetch</li>
+</ul>
+<p>If a repository is cloned, by default the name of the remote is <code>origin</code>.</p>
+<p>A list of all the remotes can be obtained via <a href="https://git-scm.com/docs/git-remote" class="w3c-ref"><code>git-remote</code></a>:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> remote
+<span class="co"># origin</span>
+
+<span class="kw">git</span> remote -v <span class="co"># -v -&gt; get more info about the remote</span>
+<span class="co"># origin  /tmp/git-playground (fetch)</span>
+<span class="co"># origin  /tmp/git-playground (push)</span></code></pre></div>
+<p>Lets see a <a href="https://git-scm.com/docs/git-pull" class="w3c-ref"><code>git-pull</code></a> in action</p>
+<p>Make some changes to original repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> /tmp/git-playground
+<span class="kw">echo</span> <span class="st">&quot;add another file&quot;</span> <span class="kw">&gt;</span> file2.txt
+<span class="kw">git</span> add file2.txt
+<span class="kw">git</span> commit -m <span class="st">&quot;add a second file&quot;</span></code></pre></div>
+<p>Fetch the latest changes into clone:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> /tmp/git-clone
+<span class="kw">git</span> pull origin master
+<span class="co"># remote: Counting objects: 3, done.</span>
+<span class="co"># remote: Compressing objects: 100% (2/2), done.</span>
+<span class="co"># remote: Total 3 (delta 0), reused 0 (delta 0)</span>
+<span class="co"># Unpacking objects: 100% (3/3), done.</span>
+<span class="co"># From /tmp/git-playground</span>
+<span class="co">#  * branch            master     -&gt; FETCH_HEAD</span>
+<span class="co">#    e5bbaef..b7e2e69  master     -&gt; origin/master</span>
+<span class="co"># Updating e5bbaef..b7e2e69</span>
+<span class="co"># Fast-forward</span>
+<span class="co">#  file2.txt | 1 +</span>
+<span class="co">#  1 file changed, 1 insertion(+)</span>
+<span class="co">#  create mode 100644 file2.txt</span></code></pre></div>
+<p>A merge conflict can occur similar to <a href="https://git-scm.com/docs/git-merge" class="w3c-ref"><code>git-merge</code></a>. The methods apply to resolve the merge conflict.</p>
+<ol style="list-style-type: decimal">
+<li>Modify the conflicting files via <code>git mergetool</code> or manually via the editor</li>
+<li>Add en commit the changes</li>
+</ol>
+<h3 id="push">Push</h3>
+<p>To submit changes back to a remote, <a href="https://git-scm.com/docs/git-push" class="w3c-ref"><code>git-push</code></a> is used.</p>
+<p>Similar to <a href="https://git-scm.com/docs/git-pull" class="w3c-ref"><code>git-pull</code></a>, <a href="https://git-scm.com/docs/git-push" class="w3c-ref"><code>git-push</code></a> accepts two parameters:</p>
+<ol style="list-style-type: decimal">
+<li>the name of the remote</li>
+<li>the remote branch to push to</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push origin master
+<span class="co"># Counting objects: 3, done.</span>
+<span class="co"># Delta compression using up to 8 threads.</span>
+<span class="co"># Compressing objects: 100% (2/2), done.</span>
+<span class="co"># Writing objects: 100% (3/3), 318 bytes | 0 bytes/s, done.</span>
+<span class="co"># Total 3 (delta 0), reused 0 (delta 0)</span>
+<span class="co"># To /tmp/git-playground/</span>
+<span class="co">#    b7e2e69..2038622  master -&gt; master</span></code></pre></div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> You cannot pus to a normal <em>checked out</em> repository. Only to bare repositories. Create a bare repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone --bare /tmp/git-playground /tmp/git-bare</code></pre></div>
+<p>See <a href="https://git-scm.com/docs/git-clone" class="w3c-ref"><code>git-clone</code></a> for more info</p>
+</div>
+<h1 id="additional-exercise">Additional exercise</h1>
 <div class="exercise">
 <h4>
 Exercise:
@@ -3807,7 +4616,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-10-24
+                  at 2016-11-07
                </p>
             </footer>
          </div>

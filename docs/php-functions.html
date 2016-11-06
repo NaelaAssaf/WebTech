@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+   <link rel="icon" type="image/png" href="http://www.howest.be/favicon.ico">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="generator" content="pandoc" />
+
+   
+   
+   
+   <title> - BIT01 Webtechnology</title>
+
+         <style type="text/css">
+         div.sourceCode { overflow-x: auto; }
+         table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+           margin: 0; padding: 0; vertical-align: baseline; border: none; }
+         table.sourceCode { width: 100%; line-height: 100%; }
+         td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+         td.sourceCode { padding-left: 5px; }
+         code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+         code > span.dt { color: #902000; } /* DataType */
+         code > span.dv { color: #40a070; } /* DecVal */
+         code > span.bn { color: #40a070; } /* BaseN */
+         code > span.fl { color: #40a070; } /* Float */
+         code > span.ch { color: #4070a0; } /* Char */
+         code > span.st { color: #4070a0; } /* String */
+         code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+         code > span.ot { color: #007020; } /* Other */
+         code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+         code > span.fu { color: #06287e; } /* Function */
+         code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+         code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+         code > span.cn { color: #880000; } /* Constant */
+         code > span.sc { color: #4070a0; } /* SpecialChar */
+         code > span.vs { color: #4070a0; } /* VerbatimString */
+         code > span.ss { color: #bb6688; } /* SpecialString */
+         code > span.im { } /* Import */
+         code > span.va { color: #19177c; } /* Variable */
+         code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+         code > span.op { color: #666666; } /* Operator */
+         code > span.bu { } /* BuiltIn */
+         code > span.ex { } /* Extension */
+         code > span.pp { color: #bc7a00; } /* Preprocessor */
+         code > span.at { color: #7d9029; } /* Attribute */
+         code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+         code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+         code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+         code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+     </style>
+   
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+   
+   
+   </head>
+<body>
+
+   
+
+<div class="container-fluid">
+
+   <div class="row">
+
+      <!-- TOC -->
+
+      <div class="col-md-2 fixedsticky complete-toc">
+                     <h3>Table of contents</h3>
+            <ul>
+            <li><a href="introduction.html#introduction">Introduction</a><ul>
+            <li><a href="introduction.html#resources">Resources</a></li>
+            <li><a href="introduction.html#contact">Contact</a></li>
+            <li><a href="introduction.html#code-in-this-document">Code in this document</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="getting-started.html#getting-started">Getting started</a></li>
+            </ul>
+            <ul>
+            <li><a href="html-intro.html#html-basics">HTML Basics</a><ul>
+            <li><a href="html-intro.html#tags">Tags</a></li>
+            <li><a href="html-intro.html#attributes">Attributes</a></li>
+            <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
+            <li><a href="html-intro.html#the-document-head">The document head</a></li>
+            <li><a href="html-intro.html#the-document-body">The document body</a></li>
+            <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
+            <li><a href="html-intro.html#containers">Containers</a></li>
+            <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
+            <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
+            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-intro.html#php-basics">PHP Basics</a><ul>
+            <li><a href="php-intro.html#what-makes-a-php-script">What makes a PHP-script</a></li>
+            <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
+            <li><a href="php-intro.html#conditionals">Conditionals</a></li>
+            <li><a href="php-intro.html#loops">Loops</a></li>
+            <li><a href="php-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a><ul>
+            <li><a href="php-and-html.html#php-webserver">PHP Webserver</a></li>
+            <li><a href="php-and-html.html#include-require">Include / Require</a></li>
+            <li><a href="php-and-html.html#forms">Forms</a></li>
+            <li><a href="php-and-html.html#php-special-data-arrays">PHP special data arrays</a></li>
+            <li><a href="php-and-html.html#exercises-1">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#html-and-css">HTML and CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="io.html#io">IO</a><ul>
+            <li><a href="io.html#read-a-file">Read a file</a></li>
+            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="io.html#remove-a-file">Remove a file</a></li>
+            <li><a href="io.html#rename-a-file">Rename a file</a></li>
+            <li><a href="io.html#directories">Directories</a></li>
+            <li><a href="io.html#upload-files">Upload files</a></li>
+            <li><a href="io.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
+            <li><a href="php-functions.html#return-a-value">Return a value</a></li>
+            <li><a href="php-functions.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
+            <li><a href="git-basics.html#setup">Setup</a></li>
+            <li><a href="git-basics.html#track-files">Track files</a></li>
+            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
+            <li><a href="git-basics.html#remotes">Remotes</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="additional-exercises.html#additional-exercise">Additional exercise</a></li>
+            </ul>
+                  <hr>
+         <p class="text-center">
+            <small>
+               <a href="cursus.html">This document in one large webpage...</a>
+            </small>
+         </p>
+      </div>
+
+      <!-- MAIN CONTENT -->
+
+      <div class="col-md-10">
+
+         <div class="site-header">
+            BIT01 Webtechnology &mdash; 
+         </div>
+
+<h1 id="php-functions">PHP functions</h1>
+<p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
+<p>A function is a block of code with a given name and can be called (executed) by this name and optionally passed arguments to change the behaviour/output of the function.</p>
+<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a>, <a href="http://php.net/manual-lookup.php?pattern=isset" class="w3c-ref"><code>isset</code></a>, <a href="http://php.net/manual-lookup.php?pattern=empty" class="w3c-ref"><code>empty</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>, ...</p>
+<p>As mentioned we can define our own functions.</p>
+<p>Syntax:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {
+
+    <span class="co">/* function code here */</span>
+}</code></pre></div>
+<p>Example: function without arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">()</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">();</span> <span class="co">// Hello!</span>
+greet<span class="ot">();</span> <span class="co">// Hello!</span></code></pre></div>
+<p>Example: function with arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span>
+greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span>
+greet<span class="ot">();</span> <span class="co">// - ERROR -</span></code></pre></div>
+<p>If arguments are present in the function definition, these arguments must be passed when the function is invoked. Otherwise an error is thrown...</p>
+<p>Arguments can however be defined with a default value, if the argument is not passed at invocation (or the argument value is <code>NULL</code>) the default value will be used instead.</p>
+<p>Example: function with arguments</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span>
+greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span>
+greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></code></pre></div>
+<p>Multiple arguments can be passed, separated by comma's <code>,</code>.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {
+
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span>
+    <span class="fu">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span>
+<span class="co">// Hello john</span>
+<span class="co">// Hello jane</span>
+
+greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span>
+<span class="co">// Hello sam</span>
+<span class="co">// Hello</span></code></pre></div>
+<h2 id="return-a-value">Return a value</h2>
+<p>The <a href="http://php.net/manual-lookup.php?pattern=return" class="w3c-ref"><code>return</code></a> keyword must be used to return a value from an array:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> fn<span class="ot">()</span> {
+    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span>
+}
+
+<span class="kw">$string</span> = fn<span class="ot">();</span></code></pre></div>
+<p>Whenever a return statement is encountered, the function will stop and return the specified value. Any code defined after the return statement will not be executed...</p>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">function</span> fn<span class="ot">()</span> {
+
+    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {
+
+        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span>
+    }
+
+    <span class="fu">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span>
+}</code></pre></div>
+<h2 id="exercises">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which accepts two arguments:</p>
+<ul>
+<li>name</li>
+<li>sentence</li>
+</ul>
+<p>Output: <code>&lt;name&gt; -&gt; &lt;sentence&gt;</code></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> chat.php </code></pre></div>
+<pre class="run--output"><code>john -&gt; @jane: Hello
+jane -&gt; Hello john
+john -&gt; Nice weather...
+jane -&gt; Yep is is
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/chat.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which checks if a number is:</p>
+<ul>
+<li>positive</li>
+<li>even</li>
+<li>and smaller then 100</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }
+<span class="kw">else</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</code></pre></div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a barplot: 25%, 80%, 15%.</p>
+<p>Abstract the bars away in a function.</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span>
+print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span>
+print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></code></pre></div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function for each arithmetic operator: <code>+</code>, <code>-</code>, <code>x</code>, <code>/</code>. The function should accept an array of values and apply the operations in sequence:</p>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span>
+subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span>
+divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span>
+multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></code></pre></div>
+<ul>
+<li>Extra: accept two values: <code>plus( 1, 2 )</code> or array: <code>plus([1,2])</code> <small>
+<div class="alert alert-info">
+<strong>Info:</strong> Use <a href="http://php.net/manual-lookup.php?pattern=is_array" class="w3c-ref"><code>is_array</code></a> to check if a variable is an array...
+</div>
+</small></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> arithmetic-operators.php </code></pre></div>
+<pre class="run--output"><code>10
+4
+2
+2016
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/arithmetic-operators.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a function which can retrieve and validate data from an array (ex.: $_POST)</p>
+<ul>
+<li>retrieve key from array</li>
+<li>check if value is not empty (otherwise show error)</li>
+<li>check if value is not longer than 50 characters (otherwise show error)</li>
+<li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
+</ul>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p><strong>Extra:</strong> Create a function that can calculate the factorial of a number.</p>
+<p>Try not to use loops but recursion...</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> factorial.php 5</code></pre></div>
+<pre class="run--output"><code>120</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/factorial.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+         <div class="row">
+            <footer class="col-md-24">
+               <p class="text-center text-muted">
+                  Last modified by
+                  <a href="mailto:arne.soete@howest.be">Arne Soete</a>
+                  at 
+               </p>
+            </footer>
+         </div>
+      </div>
+   </div>
+
+   <!-- FOOTER -->
+
+</div>
+
+<script type="text/javascript">
+(function(){
+
+   var lis = document.querySelectorAll('.complete-toc > ul > li > a');
+
+   var currentPage = location.pathname.split('/').pop();
+
+   for(var i = 0; i < lis.length; ++i ) {
+
+      if( lis[i].pathname.split('/').pop() == currentPage ) {
+
+         console.log(lis[i].parentNode)
+         lis[i].parentNode.classList.add('active');
+      }
+   }
+})()
+</script>
+
+</body>
+</html>

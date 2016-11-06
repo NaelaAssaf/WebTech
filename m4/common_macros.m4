@@ -33,6 +33,7 @@ m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
 m4_define(m4_cssprop,[`$1`](http://www.w3schools.com/css/css_$1.asp){.w3c-ref})
 m4_define(m4_cssproptitle,[[### [$1](http://www.w3schools.com/css/css_$2.asp){.w3c-ref}]])
 m4_define(m4_phpfunc,[`$1`](http://php.net/manual-lookup.php?pattern=$1){.w3c-ref})
+m4_define(m4_gitcmd,[`$1`](https://git-scm.com/docs/$1){.w3c-ref})
 
 
 m4_dnl -----------------------------------------------------------------------
@@ -92,21 +93,38 @@ m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_run,[[
 ```bash
-[[$2]]
+php [[$2]] [[$3]]
 ```
 ```{.run--output}
-m4_esyscmd([[ cd exercises/$1 && $2]])
+m4_esyscmd([[ cd exercises/$1 && php $2 $3 ]])
 ```
+<div class="text-right">
+<small>
+<a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/$1/$2" target="_blank">Solution (github)</a>
+</small>
+</div>
 ]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_embed,[[
 <iframe src="embeds/exercises/$1.html" class="embed--output" height="$2" frameborder="0"></iframe>
+<div class="text-right">
+<small>
+<a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/$1.html" target="_blank">Solution (github)</a>
+</small>
+</div>
 ]])
 
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_page,[[
 <iframe src="embeds/exercises/$1.php" class="embed--output" height="$2" frameborder="0"></iframe>
+<small>
+<div class="text-right">
+   <a href="embeds/exercises/$1.php" target="_blank">Open in new tab</a>
+   |
+   <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/$1.php" target="_blank">Solution (github)</a>
+</small>
+</div>
 ]])
