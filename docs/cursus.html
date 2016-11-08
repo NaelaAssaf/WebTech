@@ -73,7 +73,10 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#code-in-this-document">Code in this document</a></li>
             </ul></li>
-            <li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#getting-started">Getting started</a><ul>
+            <li><a href="#get-local-copy-of-this-site.">Get local copy of this site.</a></li>
+            <li><a href="#get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</a></li>
+            </ul></li>
             <li><a href="#html-basics">HTML Basics</a><ul>
             <li><a href="#tags">Tags</a></li>
             <li><a href="#attributes">Attributes</a></li>
@@ -200,7 +203,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
 <p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
 <p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
-<p>If you choose not to use the command line and git. Snapshots of each lessons exercises and examples will be made available for download <a href="https://github.com/asoete/howest-webtechnology-examples/releases">here</a>.</p>
+<p>This website source can be found at <a href="https://github.com/asoete/howest-webtechnology" class="uri">https://github.com/asoete/howest-webtechnology</a> and the result viewed at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a></p>
+<p>All the code created during the lessons will be made available at <a href="https://github.com/asoete/howest-webtechnology-examples" class="uri">https://github.com/asoete/howest-webtechnology-examples</a>.</p>
 <h3 id="init-workspace">Init workspace</h3>
 <ul>
 <li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> ~/Documents/webtechnology
@@ -208,25 +212,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <li><p>Create your own exercises directory</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> exercises</code></pre></div></li>
 </ul>
-<h3 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h3>
-<ul>
-<li><p>Get an initial copy of the repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions</code></pre></div>
-This will create a <code>examples-solutions</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
-<li><p>To get the latest version/updates run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folder</span>
-<span class="kw">git</span> pull origin master</code></pre></div>
-<div class="alert alert-warning">
-<strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
-</div>
-<div class="alert alert-info">
-<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
-<span class="kw">git</span> reset --hard origin/master</code></pre></div>
-This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
-</div></li>
-</ul>
-<h3 id="get-local-copy-of-this-site.-optional">Get local copy of this site. <small>(Optional)</small></h3>
+<p>You can store all your scripts in this folder...</p>
+<h2 id="get-local-copy-of-this-site.">Get local copy of this site.</h2>
+<p>Although all documents are hosted online (<a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>) it is recommend to host the cursus-site locally.</p>
+<p>Github doesn't allow the execution of <abbr title="Hypertext Preprocessor">PHP</abbr> scripts, so the exercise solution may not work as they should because Github is preventing <abbr title="Hypertext Preprocessor">PHP</abbr>-code execution...</p>
+<p>The following steps must be taken to start/open the site locally:</p>
 <ul>
 <li><p>Get an initial copy of the repository:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git webtechnology-site</code></pre></div></li>
@@ -238,10 +228,28 @@ This will reset the repository to be identical to the one on GitHub. <strong>Be 
 <span class="kw">make</span> serve</code></pre></div>
 <p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p></li>
 </ul>
+<h2 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h2>
+<ul>
+<li><p>Get an initial copy of the repository:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples</code></pre></div>
+This will create a <code>examples</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
+<li><p>To get the latest version/updates run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folde</span>
+<span class="kw">git</span> pull origin master</code></pre></div>
+<div class="alert alert-warning">
+<strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
+</div>
+<div class="alert alert-info">
+<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
+<span class="kw">git</span> reset --hard origin/master</code></pre></div>
+This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
+</div></li>
+</ul>
 <h3 id="final-result">Final result</h3>
 <p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>
 <pre><code>~/Documents/webtechnology
-├── examples-solutions
+├── examples
 ├── exercises
 └── site</code></pre>
 <h1 id="html-basics">HTML Basics</h1>

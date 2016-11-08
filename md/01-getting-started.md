@@ -24,9 +24,12 @@ This document and all the exercises/examples are hosted on [GitHub](https.github
 This means a local copy of the source can be obtained easily **and kept in
 sync with the latest changes and updates**.
 
-If you choose not to use the command line and git. Snapshots of each lessons
-exercises and examples will be made available for download
-[here](https://github.com/asoete/howest-webtechnology-examples/releases).
+This website source can be found at
+<https://github.com/asoete/howest-webtechnology> and the result viewed at
+<https://asoete.github.io/howest-webtechnology>
+
+All the code created during the lessons will be made available at
+<https://github.com/asoete/howest-webtechnology-examples>.
 
 ### Init workspace
 
@@ -41,33 +44,18 @@ cd  ~/Documents/webtechnology
 mkdir exercises
 ```
 
-### Get local copy of the _exercises and examples_ solutions
+You can store all your scripts in this folder...
 
-* Get an initial copy of the repository:
-```bash
-git clone https://github.com/asoete/howest-webtechnology-examples.git examples-solutions
-```
-  This will create a `examples-solutions`-folder which will hold example
-  solutions for the exercises on a per lesson basis.
-* To get the latest version/updates run:
-```bash
-# in examples-solutions folder
-git pull origin master
-```
-  m4_warning([[If you made local modifications to any of the files in this
-  repository, this update command (`git pull`) will most likely fail. So don't
-  modify the contents in this folder...]])
-  m4_dnl
-  m4_info([[When you do encounter errors while pulling, run:
-```bash
-git fetch --all
-git reset --hard origin/master
-```
-  This will reset the repository to be identical to the one on GitHub. **Be
-  warned: local modifications will be lost...**
-  ]])
+## Get local copy of this site.
 
-### Get local copy of this site. <small>(Optional)</small>
+Although all documents are hosted online
+(<https://asoete.github.io/howest-webtechnology>) it is recommend to host the
+cursus-site locally.
+
+Github doesn't allow the execution of PHP scripts, so the exercise solution may
+not work as they should because Github is preventing PHP-code execution...
+
+The following steps must be taken to start/open the site locally:
 
 * Get an initial copy of the repository:
 ```bash
@@ -85,13 +73,39 @@ make serve
 ```
    And open <http://localhost:8000> in a web browser.
 
+## Get local copy of the _exercises and examples_ solutions
+
+* Get an initial copy of the repository:
+```bash
+git clone https://github.com/asoete/howest-webtechnology-examples.git examples
+```
+  This will create a `examples`-folder which will hold example
+  solutions for the exercises on a per lesson basis.
+* To get the latest version/updates run:
+```bash
+# in examples-solutions folde
+git pull origin master
+```
+  m4_warning([[If you made local modifications to any of the files in this
+  repository, this update command (`git pull`) will most likely fail. So don't
+  modify the contents in this folder...]])
+  m4_dnl
+  m4_info([[When you do encounter errors while pulling, run:
+```bash
+git fetch --all
+git reset --hard origin/master
+```
+  This will reset the repository to be identical to the one on GitHub. **Be
+  warned: local modifications will be lost...**
+  ]])
+
 ### Final result
 
 If you complete all of the steps above, you will end up with a workspace that looks like this:
 
 ```
 ~/Documents/webtechnology
-├── examples-solutions
+├── examples
 ├── exercises
 └── site
 ```
