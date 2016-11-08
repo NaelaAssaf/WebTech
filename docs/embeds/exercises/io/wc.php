@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Cat</title>
+   <title>WC</title>
 
    <style type="text/css">
 
@@ -66,7 +66,7 @@
             $nr_words++;
             $nr_chars += strlen( $word );
 
-            if( !isset( $words_store[$word ]) ) { $words_store[$words] = 0; }
+            if( !isset( $words_store[$word]) ) { $words_store[$word] = 0; }
             $words_store[$word]++;
          }
       }
