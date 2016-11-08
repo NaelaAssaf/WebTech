@@ -6,10 +6,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="generator" content="pandoc" />
 
+        <meta name="author" content="Arne Soete" />
+   
+        <meta name="date" content="2016-11-08" />
    
    
-   
-   <title> - BIT01 Webtechnology</title>
+   <title>IO - BIT01 Webtechnology</title>
 
          <style type="text/css">
          div.sourceCode { overflow-x: auto; }
@@ -108,7 +110,7 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#html-and-css">HTML and CSS</a><ul>
+            <li><a href="css.html#css">CSS</a><ul>
             <li><a href="css.html#include-style-information">Include style information</a></li>
             <li><a href="css.html#css-selectors">CSS selectors</a></li>
             <li><a href="css.html#css-properties">CSS properties</a></li>
@@ -140,9 +142,6 @@
             <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
-            <ul>
-            <li><a href="additional-exercises.html#additional-exercise">Additional exercise</a></li>
-            </ul>
                   <hr>
          <p class="text-center">
             <small>
@@ -156,7 +155,7 @@
       <div class="col-md-10">
 
          <div class="site-header">
-            BIT01 Webtechnology &mdash; 
+            BIT01 Webtechnology &mdash; IO
          </div>
 
 <h1 id="io">IO</h1>
@@ -341,13 +340,31 @@ Exercise:
 <li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
 <li>Extra: allow the user to specify the color per term.</li>
 </ul>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link...</p>
+<p>This app is composed out of three pages:</p>
+<ol style="list-style-type: decimal">
+<li>index: list all the uploaded snippets</li>
+<li>upload: a form:
+<ul>
+<li>snippet name</li>
+<li>contents Allow the user to specify a new snippet to store. Make sure:</li>
+<li>no empty snippets or snippets with no name can be uploaded.</li>
+<li>snippet name doesn't already exists.</li>
+</ul></li>
+<li>snippet contents: show the contents of a snippet</li>
+</ol>
+</div>
 </div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 
+                  at 2016-11-08
                </p>
             </footer>
          </div>

@@ -1,3 +1,9 @@
+---
+author: Arne Soete
+date: m4_timestamp
+title: PHP functions
+---
+
 # PHP functions
 
 Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.

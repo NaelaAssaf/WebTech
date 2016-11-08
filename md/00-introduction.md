@@ -27,6 +27,12 @@ exercises made during this course will be published
 
 Keep in mind that this course is a very practical one and that making exercises
 is the best way to learn, get familiar, with all the aspects featured in this
+:q
+
+
+
+
+:wq
 course.
 
 ### Additional resources

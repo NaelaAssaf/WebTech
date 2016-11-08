@@ -1,4 +1,6 @@
 ---
+author: Arne Soete
+date: m4_timestamp
 title: PHP basics
 ---
 

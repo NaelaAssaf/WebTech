@@ -1,3 +1,8 @@
+---
+author: Arne Soete
+date: m4_timestamp
+title: PHP and HTML
+---
 # PHP and HTML
 
 ## PHP Webserver
@@ -71,7 +76,7 @@ m4_embed(php-and-html/cv,250px)
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
-Create a web-page that prints 
+Create a web-page that prints
 
 * an ordered list of three your three favourite dishes (dynamically)
 * a list of (three) hobbies

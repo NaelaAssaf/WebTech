@@ -1,3 +1,9 @@
+---
+author: Arne Soete
+date: m4_timestamp
+title: Git
+---
+
 # Git basics
 
 Git is a version control system. It is designed to track and store revisions/versions of files.

@@ -100,7 +100,7 @@
             <li><a href="#php-special-data-arrays">PHP special data arrays</a></li>
             <li><a href="#exercises-2">Exercises</a></li>
             </ul></li>
-            <li><a href="#html-and-css">HTML and CSS</a><ul>
+            <li><a href="#css">CSS</a><ul>
             <li><a href="#include-style-information">Include style information</a></li>
             <li><a href="#css-selectors">CSS selectors</a></li>
             <li><a href="#css-properties">CSS properties</a></li>
@@ -125,7 +125,6 @@
             <li><a href="#branching-and-merging">Branching and merging</a></li>
             <li><a href="#remotes">Remotes</a></li>
             </ul></li>
-            <li><a href="#additional-exercise">Additional exercise</a></li>
             </ul>
                   <hr>
          <p class="text-center">
@@ -149,7 +148,8 @@
 <p>The main documentation for this course is a site an can be found at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>. The main advantage of a using a site as a textbook is that the included examples and snippets can be rendered/formatted by the browser on the fly.</p>
 <p>A <a href="pdfs/cursus.pdf">PDF version</a> of this document is also available. But keep in mind that some <abbr title="HyperText Markup Language">HTML</abbr> features can get lost in the conversion to a pdf.</p>
 <p>There are no slides available, all key aspects of this course will introduced via examples during the lessons. These examples and the solutions of the exercises made during this course will be published <a href="https://github.com/asoete/howest-webtechnology-code">here</a>.</p>
-<p>Keep in mind that this course is a very practical one and that making exercises is the best way to learn, get familiar, with all the aspects featured in this course.</p>
+<p>Keep in mind that this course is a very practical one and that making exercises is the best way to learn, get familiar, with all the aspects featured in this :q</p>
+<p>:wq course.</p>
 <h3 id="additional-resources">Additional resources</h3>
 <p>An in depth guide/reference/manual for <abbr title="Hypertext Preprocessor">PHP</abbr> can be found at <a href="http://php.net" class="uri">http://php.net</a></p>
 <p>For an <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> reference see <a href="http://www.w3schools.com/html" class="uri">http://www.w3schools.com/html</a> and <a href="http://www.w3schools.com/css" class="uri">http://www.w3schools.com/css</a></p>
@@ -262,8 +262,7 @@ This will reset the repository to be identical to the one on GitHub. <strong>Be 
 <p>Non self-enclosing tags exist out of two parts:</p>
 <ol style="list-style-type: decimal">
 <li>An opening part: <code>&lt;tag&gt;</code></li>
-<li>And a closing part: <code>&lt;/tag&gt;</code>.<br />
-The closing part is identified by the forward slash (<code>/</code>) before the tag-name.</li>
+<li>And a closing part: <code>&lt;/tag&gt;</code>. The closing part is identified by the forward slash (<code>/</code>) before the tag-name.</li>
 </ol>
 <p>These <em>parts</em> are used to contain/format certain content.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</code></pre></div>
@@ -768,6 +767,7 @@ Scroll into view...
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
 <h2 id="see-html-and-css-for-more-info-about-styling-an-element.">See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</h2>
+<p>author: Arne Soete date: 2016-11-08</p>
 <h2 id="title-php-basics">title: <abbr title="Hypertext Preprocessor">PHP</abbr> basics</h2>
 <h1 id="php-basics">PHP Basics</h1>
 <blockquote>
@@ -2899,7 +2899,7 @@ joan, d&#39;arc, female, 33</code></pre>
 <p><a href="embeds/exercises/php-and-html/csv.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/csv.php" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
-<h1 id="html-and-css">HTML and CSS</h1>
+<h1 id="css">CSS</h1>
 <p><abbr title="HyperText Markup Language">HTML</abbr> can be styled via <abbr title="Cascading Style Sheets">CSS</abbr>. An <abbr title="HyperText Markup Language">HTML</abbr>-element is selected via <a href="#css-selectors"><abbr title="Cascading Style Sheets">CSS</abbr> selectors</a>. Styles/rules are defined per selector block. Each definition is terminated by a <code>;</code>. A rules block is enclosed by <code>{</code>, <code>}</code>.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">&lt;selector&gt; <span class="kw">{</span>
     <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;;</span>
@@ -3930,6 +3930,24 @@ Exercise:
 <li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
 <li>Extra: allow the user to specify the color per term.</li>
 </ul>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link...</p>
+<p>This app is composed out of three pages:</p>
+<ol style="list-style-type: decimal">
+<li>index: list all the uploaded snippets</li>
+<li>upload: a form:
+<ul>
+<li>snippet name</li>
+<li>contents Allow the user to specify a new snippet to store. Make sure:</li>
+<li>no empty snippets or snippets with no name can be uploaded.</li>
+<li>snippet name doesn't already exists.</li>
+</ul></li>
+<li>snippet contents: show the contents of a snippet</li>
+</ol>
+</div>
 </div>
 <h1 id="php-functions">PHP functions</h1>
 <p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
@@ -4597,25 +4615,6 @@ Add line line from conflicting-branch</code></pre>
 <p><strong>Info:</strong> You cannot pus to a normal <em>checked out</em> repository. Only to bare repositories. Create a bare repository:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone --bare /tmp/git-playground /tmp/git-bare</code></pre></div>
 <p>See <a href="https://git-scm.com/docs/git-clone" class="w3c-ref"><code>git-clone</code></a> for more info</p>
-</div>
-<h1 id="additional-exercise">Additional exercise</h1>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link...</p>
-<p>This app is composed out of three pages:</p>
-<ol style="list-style-type: decimal">
-<li>index: list all the uploaded snippets</li>
-<li>upload: a form:
-<ul>
-<li>snippet name</li>
-<li>contents Allow the user to specify a new snippet to store. Make sure:</li>
-<li>no empty snippets or snippets with no name can be uploaded.</li>
-<li>snippet name doesn't already exists.</li>
-</ul></li>
-<li>snippet contents: show the contents of a snippet</li>
-</ol>
 </div>
          <div class="row">
             <footer class="col-md-24">

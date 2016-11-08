@@ -1,8 +1,10 @@
 ---
-title: HTML and CSS
+author: Arne Soete
+date: m4_timestamp
+title: CSS
 ---
 
-# HTML and CSS
+# CSS
 
 HTML can be styled via CSS. An HTML-element is selected via [CSS selectors](#css-selectors).
 Styles/rules are defined per selector block. Each definition is

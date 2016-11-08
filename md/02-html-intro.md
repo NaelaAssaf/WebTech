@@ -1,4 +1,6 @@
 ---
+author: Arne Soete
+date: m4_timestamp
 title: HTML basics
 ---
 
@@ -26,7 +28,7 @@ There are two types of HTML-tags:
 Non self-enclosing tags exist out of two parts:
 
 1. An opening part: `<tag>`
-1. And a closing part: `</tag>`.  
+1. And a closing part: `</tag>`.
    The closing part is identified by the forward slash (`/`) before the tag-name.
 
 These _parts_ are used to contain/format certain content.
