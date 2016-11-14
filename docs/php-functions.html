@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-12" />
+        <meta name="date" content="2016-11-14" />
    
    
    <title>PHP functions - BIT01 Webtechnology</title>
@@ -261,6 +261,30 @@ Exercise:
 </ul>
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }
 <span class="kw">else</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php -5</code></pre></div>
+<pre class="run--output"><code>number (-5) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 7</code></pre></div>
+<pre class="run--output"><code>number (7) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 22</code></pre></div>
+<pre class="run--output"><code>number (22) passed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 111</code></pre></div>
+<pre class="run--output"><code>number (111) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -271,6 +295,11 @@ Exercise:
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span>
 print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span>
 print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></code></pre></div>
+<iframe src="embeds/exercises/php-functions/barplot.html" class="embed--output" height="350px" frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-functions/barplot.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -310,6 +339,16 @@ Exercise:
 <li>check if value is not longer than 50 characters (otherwise show error)</li>
 <li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> retrieve-key.php </code></pre></div>
+<pre class="run--output"><code>value1
+default value
+default value
+value1
+`keyx` not found in array
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/retrieve-key.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -328,7 +367,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-12
+                  at 2016-11-14
                </p>
             </footer>
          </div>

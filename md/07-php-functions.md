@@ -145,6 +145,11 @@ Create a function which checks if a number is:
 if( check_number( $nr ) ) { echo "number ($nr) passed tests"; }
 else { echo "number ($nr) failed tests"; }
 ```
+
+m4_run(php-functions,validate-number.php,-5)
+m4_run(php-functions,validate-number.php,7)
+m4_run(php-functions,validate-number.php,22)
+m4_run(php-functions,validate-number.php,111)
 ]])
 
 m4_dnl ------------------------------------------------------------------------
@@ -159,6 +164,8 @@ print_bar('25%');
 print_bar('80%');
 print_bar('15%');
 ```
+
+m4_embed(php-functions/barplot,350px)
 ]])
 
 m4_dnl ------------------------------------------------------------------------
@@ -193,6 +200,8 @@ Create a function which can retrieve and validate data from an array (ex.: $_POS
 * check if value is not longer than 50 characters (otherwise show error)
 * modify the function so a default value can be passed to the function, if the
   key is not found in the array, retrun this value.
+
+m4_run(php-functions,retrieve-key.php)
 ]])
 
 m4_dnl ------------------------------------------------------------------------

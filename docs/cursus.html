@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-12" />
+        <meta name="date" content="2016-11-14" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -774,7 +774,7 @@ Scroll into view...
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
 <h2 id="see-html-and-css-for-more-info-about-styling-an-element.">See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</h2>
-<p>author: Arne Soete date: 2016-11-12</p>
+<p>author: Arne Soete date: 2016-11-14</p>
 <h2 id="title-php-basics">title: <abbr title="Hypertext Preprocessor">PHP</abbr> basics</h2>
 <h1 id="php-basics">PHP Basics</h1>
 <blockquote>
@@ -3941,8 +3941,17 @@ Exercise:
 <ul>
 <li>Print the uploaded/pasted text</li>
 <li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
-<li>Extra: allow the user to specify the color per term.</li>
+<li><p>Extra: allow the user to specify the color per term. For example:</p>
+<pre><code>the|red
+a|green
+an</code></pre></li>
 </ul>
+<iframe src="embeds/exercises/io/highlight-words.php" class="embed--output" height frameborder="0">
+</iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/io/highlight-words.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/io/highlight-words.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -3961,6 +3970,12 @@ Exercise:
 </ul></li>
 <li>snippet contents: show the contents of a snippet</li>
 </ol>
+<iframe src="embeds/exercises/io/snippets/index.php" class="embed--output" height="250px" frameborder="0">
+</iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/io/snippets/index.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/io/snippets/index.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <h1 id="php-functions">PHP functions</h1>
 <p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
@@ -4062,6 +4077,30 @@ Exercise:
 </ul>
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }
 <span class="kw">else</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php -5</code></pre></div>
+<pre class="run--output"><code>number (-5) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 7</code></pre></div>
+<pre class="run--output"><code>number (7) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 22</code></pre></div>
+<pre class="run--output"><code>number (22) passed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 111</code></pre></div>
+<pre class="run--output"><code>number (111) failed tests
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -4072,6 +4111,11 @@ Exercise:
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php">print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span>
 print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span>
 print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></code></pre></div>
+<iframe src="embeds/exercises/php-functions/barplot.html" class="embed--output" height="350px" frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-functions/barplot.html" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -4111,6 +4155,16 @@ Exercise:
 <li>check if value is not longer than 50 characters (otherwise show error)</li>
 <li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> retrieve-key.php </code></pre></div>
+<pre class="run--output"><code>value1
+default value
+default value
+value1
+`keyx` not found in array
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/retrieve-key.php" target="_blank">Solution (github)</a> </small></p>
+</div>
 </div>
 <div class="exercise">
 <h4>
@@ -4634,7 +4688,7 @@ Add line line from conflicting-branch</code></pre>
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-12
+                  at 2016-11-14
                </p>
             </footer>
          </div>
