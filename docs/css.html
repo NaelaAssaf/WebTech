@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-25" />
    
    
    <title>CSS - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,36 +122,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -167,7 +160,7 @@
     <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;;</span>
     <span class="er">&lt;property&gt;</span> <span class="er">:</span> <span class="er">&lt;value&gt;</span> <span class="er">&lt;value&gt;;</span>
 <span class="kw">}</span></code></pre></div>
-<p><small> <a href="http://www.w3schools.com/css/css_syntax.asp">More info in the <abbr title="Cascading Style Sheets">CSS</abbr> syntax</a> </small></p>
+<p><small> <a href="http://www.w3schools.com/css/css_syntax.asp" target="_blank">More info on the <abbr title="Cascading Style Sheets">CSS</abbr> syntax at w3schools</a> </small></p>
 <h2 id="include-style-information">Include style information</h2>
 <p>Elements can be styled via three methods:</p>
 <ul>
@@ -647,7 +640,7 @@ h1, h3, h5 <span class="kw">{</span>
 
     <span class="kw">text-decoration:</span> <span class="dt">underline</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<p>Via the (hover selector)[http://www.w3schools.com/cssref/sel_hover.asp]{.csstag} allows us to apply styles to an element only when the mouse hovers over the element.</p>
+<p>Via the (hover selector)<span class="csstag">http://www.w3schools.com/cssref/sel_hover.asp</span> allows us to apply styles to an element only when the mouse hovers over the element.</p>
 <p>For example: overline a link when the mouse passes over the element:</p>
 <div class="row">
 <div class="col-md-6">
@@ -772,7 +765,8 @@ h1, h3, h5 <span class="kw">{</span>
     <span class="kw">text-align:</span> <span class="dt">center</span><span class="kw">;</span>
     <span class="kw">text-decoration:</span> <span class="dt">underline</span><span class="kw">;</span>
     <span class="kw">word-spacing:</span> <span class="dt">5px</span><span class="kw">;</span>
-    <span class="kw">letter-spacing:</span> <span class="dt">5px</span></code></pre></div>
+    <span class="kw">letter-spacing:</span> <span class="dt">5px</span>
+  <span class="kw">}</span></code></pre></div>
 <h3 id="link"><a href="http://www.w3schools.com/css/css_link.asp" class="w3c-ref">Link</a></h3>
 <p>A link can be in one of four states:</p>
 <blockquote>
@@ -783,7 +777,7 @@ h1, h3, h5 <span class="kw">{</span>
 <li><code>a:active</code> - a link the moment it is clicked</li>
 </ul>
 </blockquote>
-<p>All these states can be styles independently.</p>
+<p>All these states can be styled independently.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">a<span class="dv">:hover</span> <span class="kw">{</span>
 
     <span class="kw">color:</span> pink<span class="kw">;</span>
@@ -871,7 +865,7 @@ Exercise:
 <iframe src="embeds/exercises/css/hello-world.html" class="embed--output" height frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hello-world.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/hello-world.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hello-world.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -889,7 +883,7 @@ Exercise:
 <iframe src="embeds/exercises/css/classmates-colors.html" class="embed--output" height="270px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-colors.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/classmates-colors.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-colors.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -905,27 +899,7 @@ Exercise:
 <iframe src="embeds/exercises/css/classmates-nth-row.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-nth-row.html" target="_blank">Solution (github)</a> </small></p>
-</div>
-</div>
-<div class="exercise">
-<h4>
-Exercise:
-</h4>
-<p>Print a rainbow pyramid, each column should have it's own color</p>
-<ul>
-<li>red</li>
-<li>orange</li>
-<li>yellow</li>
-<li>green</li>
-<li>blue</li>
-<li>indigo</li>
-<li>violet</li>
-</ul>
-<iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height frameborder="0">
-</iframe>
-<div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/rainbow-pyramid.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/classmates-nth-row.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/classmates-nth-row.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -942,7 +916,7 @@ Exercise:
 <iframe src="embeds/exercises/css/image-float.html" class="embed--output" height="275px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/image-float.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/image-float.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/image-float.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -959,7 +933,7 @@ Exercise:
 <iframe src="embeds/exercises/css/hor-bar-plot.html" class="embed--output" height="280px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hor-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/hor-bar-plot.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/hor-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -976,46 +950,51 @@ Exercise:
 <iframe src="embeds/exercises/css/vert-bar-plot.html" class="embed--output" height="400px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/vert-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/vert-bar-plot.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/vert-bar-plot.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
 <h4>
 Exercise:
 </h4>
-<p>Create a <em>post comment</em> form with fields:</p>
-<ul>
-<li>name</li>
-<li>email</li>
-<li>title options: (Dr, Mr, Ms, Ir)</li>
-<li>comment box</li>
-<li>post anonymous checkbox.</li>
-</ul>
-<p>Validate:</p>
-<ul>
-<li>Name and/or email are not empty (unless <em>post anonymous</em> was checked)</li>
-<li><p>Comment has max 500 characters</p></li>
-<li>Print a red error messages if a validation failed + indicate which field failed validation, in red.</li>
-<li>If an error occurred pre-fill the elements with the valid data</li>
-<li>If no errors occurred,
-<ul>
-<li>( Mr. or Ms. ) (name or <em>anonymous</em>) posted:</li>
-<li>print <em>message posted</em> in gray.</li>
-</ul></li>
-</ul>
-<iframe src="embeds/exercises/css/post-comment.php" class="embed--output" height="400px" frameborder="0">
+<p>Re-create the <abbr title="HyperText Markup Language">HTML</abbr> skeleton of a wiki page: <a href="https://en.wikipedia.org/wiki/FASTA_format" class="uri">https://en.wikipedia.org/wiki/FASTA_format</a></p>
+<p><small> <a href="/html-intro.html#exercises">Start from the HTML skeleton created during the <abbr title="HyperText Markup Language">HTML</abbr> exercises</a></small></p>
+<iframe src="embeds/exercises/css/wiki-fasta_format.html" class="embed--output" height="400px" frameborder="0">
 </iframe>
-<small>
 <div class="text-right">
-<p><a href="embeds/exercises/css/post-comment.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/post-comment.php" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/css/wiki-fasta_format.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/wiki-fasta_format.html" target="_blank">Solution (github)</a> </small></p>
 </div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a webpage with information about the four DNA nucleotides:</p>
+<ul>
+<li>A</li>
+<li>T</li>
+<li>C</li>
+<li>G</li>
+</ul>
+<p>Each of this pages should contain:</p>
+<ul>
+<li>a header</li>
+<li>an image of the molecule</li>
+<li>some info about the nucleotide</li>
+</ul>
+<p><small> All of this can be fetched from wikipedia...</small></p>
+<ul>
+<li>The text should flow around the image.</li>
+</ul>
+<p>Create a landing page. This page will welcome the user and link to the other pages.</p>
+<p>Display a navigation bar on top of each page.</p>
 </div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-25
                </p>
             </footer>
          </div>

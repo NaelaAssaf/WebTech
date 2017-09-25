@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Horizontale Barplot</title>
+   <title>Horizontal Barplot</title>
    <style type="text/css">
       .plotwrap {
 
          border-left: solid gray 2px;
          border-bottom: solid gray 2px;
          padding: 15px;
-         margin: 50px;
+         margin: 15px 50px;
          display: inline-block;
          position: relative;
       }
@@ -26,7 +26,7 @@
          width: 500px;
          margin: 5px;
       }
-      
+
       .y-axis-label {
 
          position: absolute;
@@ -44,7 +44,7 @@
    </style>
 </head>
 <body>
-   
+
    <h2>Horizontale Barplot</h2>
 
    <div class="plotwrap">

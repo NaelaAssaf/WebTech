@@ -35,8 +35,8 @@ All the code created during the lessons will be made available at
 
 *
 ```bash
-mkdir ~/Documents/webtechnology
-cd  ~/Documents/webtechnology
+mkdir ~/webtechnology
+cd  ~/webtechnology
 ```
 
 * Create your own exercises directory
@@ -59,31 +59,35 @@ The following steps must be taken to start/open the site locally:
 
 * Get an initial copy of the repository:
 ```bash
-git clone https://github.com/asoete/howest-webtechnology.git webtechnology-site
+cd ~/webtechnology
+git clone https://github.com/asoete/howest-webtechnology.git cursus
 ```
 * To get the latest version/updates
 ```bash
-# in webtechnology-site folder
+cd ~/webtechnology/cursus
 git pull origin master
 ```
 * Start a local instance of the site:
 ```bash
-# in webtechnology-site folder
+cd ~/webtechnology/cursus
 make serve
 ```
-   And open <http://localhost:8000> in a web browser.
+And open <http://localhost:8000> in a web browser.
 
 ## Get local copy of the _exercises and examples_ solutions
 
 * Get an initial copy of the repository:
 ```bash
-git clone https://github.com/asoete/howest-webtechnology-examples.git examples
+cd ~/webtechnology
+git clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples
 ```
-  This will create a `examples`-folder which will hold example
-  solutions for the exercises on a per lesson basis.
-* To get the latest version/updates run:
+    This command will create a `solutions-and-examples`-folder which will contain all the code featured during the lessons:
+    * Example snippet
+    * Exercise solutions
+
+* To get the latest version (aka. update the repository) run:
 ```bash
-# in examples-solutions folde
+cd ~/webtechnology/solutions-and-examples
 git pull origin master
 ```
   m4_warning([[If you made local modifications to any of the files in this
@@ -104,8 +108,8 @@ git reset --hard origin/master
 If you complete all of the steps above, you will end up with a workspace that looks like this:
 
 ```
-~/Documents/webtechnology
-├── examples
+~/webtechnology
+├── cursus
 ├── exercises
-└── site
+└── solutions-and-examples
 ```

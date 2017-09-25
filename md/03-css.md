@@ -18,7 +18,7 @@ terminated by a `;`. A rules block is enclosed by `{`, `}`.
 ```
 
 <small>
-[More info in the CSS syntax](http://www.w3schools.com/css/css_syntax.asp)
+[More info on the CSS syntax at w3schools](http://www.w3schools.com/css/css_syntax.asp){target=_blank}
 </small>
 
 ## Include style information
@@ -455,6 +455,7 @@ div {
     text-decoration: underline;
     word-spacing: 5px;
     letter-spacing: 5px
+  }
 ```
 
 m4_dnl ------------------------------------------------------------------------
@@ -468,7 +469,7 @@ A link can be in one of four states:
 > * `a:hover`   - a link when the user mouses over it
 > * `a:active`  - a link the moment it is clicked
 
-All these states can be styles independently.
+All these states can be styled independently.
 
 ```css
 a:hover {
@@ -631,21 +632,6 @@ m4_embed(css/classmates-nth-row,350px)
 
 m4_dnl ------------------------------------------------------------------------
 
-m4_exercise([[Print a rainbow pyramid, each column should have it's own color
-
-* red
-* orange
-* yellow
-* green
-* blue
-* indigo
-* violet
-
-m4_embed(css/rainbow-pyramid)
-]])
-
-m4_dnl ------------------------------------------------------------------------
-
 m4_exercise([[
 Create an web-page with:
 
@@ -683,28 +669,39 @@ Create a vertical bar-plot with four bars:
 m4_embed(css/vert-bar-plot,400px)
 ]])
 
-m4_dnl -----------------------------------------------------------------------
+m4_dnl ------------------------------------------------------------------------
 
 m4_exercise([[
-Create a _post comment_ form with fields:
+Re-create the HTML skeleton of a wiki page: <https://en.wikipedia.org/wiki/FASTA_format>
 
-* name
-* email
-* title options: (Dr, Mr, Ms, Ir)
-* comment box
-* post anonymous checkbox.
+<small> <a href="/html-intro.html#exercises">Start from the HTML skeleton
+created during the HTML exercises</a></small>
 
-Validate:
+m4_embed(css/wiki-fasta_format,400px)
+]])
 
-* Name and/or email are not empty (unless _post anonymous_ was checked)
-* Comment has max 500 characters
+m4_dnl ------------------------------------------------------------------------
 
-* Print a red error messages if a validation failed + indicate which field failed
-  validation, in red.
-* If an error occurred pre-fill the elements with the valid data
-* If no errors occurred,
-    * ( Mr. or Ms. ) (name or _anonymous_) posted:
-    * print _message posted_ in gray.
+m4_exercise([[
+Create a webpage with information about the four DNA nucleotides:
 
-m4_page(css/post-comment,400px)
+* A
+* T
+* C
+* G
+
+Each of this pages should contain:
+
+- a header
+- an image of the molecule
+- some info about the nucleotide
+
+<small> All of this can be fetched from wikipedia...</small>
+
+- The text should flow around the image.
+
+Create a landing page. This page will welcome the user and link to the other pages.
+
+Display a navigation bar on top of each page.
+
 ]])

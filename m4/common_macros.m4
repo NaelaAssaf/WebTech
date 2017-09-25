@@ -111,6 +111,8 @@ m4_define(m4_embed,[[
 <iframe src="embeds/exercises/$1.html" class="embed--output" height="$2" frameborder="0"></iframe>
 <div class="text-right">
 <small>
+<a href="embeds/exercises/$1.html" target="_blank">Full Screen</a>
+|
 <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/$1.html" target="_blank">Solution (github)</a>
 </small>
 </div>

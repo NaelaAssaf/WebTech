@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-25" />
    
    
    <title>HTML basics - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,36 +122,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -167,9 +160,9 @@
 <strong>Info:</strong> This course is based on the <a href="https://www.w3.org/TR/html5/"><abbr title="HyperText Markup Language">HTML</abbr></a> specification and can differ from older specifications like XHTML and <abbr title="HyperText Markup Language">HTML</abbr>
 </div>
 <p></small></p>
-<p><abbr title="HyperText Markup Language">HTML</abbr> is an <abbr title="Extensible Markup Language">XML</abbr> subset. This means it is composed out of tags with, optionally, attributes.</p>
+<p><abbr title="HyperText Markup Language">HTML</abbr> is an <abbr title="Extensible Markup Language">XML</abbr> subset. This means it is composed out of tags which can contain attributes.</p>
 <h2 id="tags">Tags</h2>
-<p>A tag is delimited by <code>&lt;</code> and <code>&gt;</code>, for example: <code>&lt;body&gt;</code>.</p>
+<p>An <abbr title="HyperText Markup Language">HTML</abbr>-tag indicator starts with <code>&lt;</code> and end with <code>&gt;</code>, for example: <code>&lt;body&gt;</code>.</p>
 <p>There are two types of <abbr title="HyperText Markup Language">HTML</abbr>-tags:</p>
 <ul>
 <li>Non self-enclosing tags</li>
@@ -181,19 +174,20 @@
 <li>An opening part: <code>&lt;tag&gt;</code></li>
 <li>And a closing part: <code>&lt;/tag&gt;</code>. The closing part is identified by the forward slash (<code>/</code>) before the tag-name.</li>
 </ol>
-<p>These <em>parts</em> are used to contain/format certain content.</p>
+<p>These opening and closing tags can contain plain text and/or additional <abbr title="HyperText Markup Language">HTML</abbr> markup.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</code></pre></div>
 <p>Example: <code>&lt;strong&gt;Bold Font&lt;/strong&gt;</code> <small> (This tags formats its content in a bold font: <strong>Bold Font</strong>) </small></p>
+<p>The whole (start + content + end) is an <abbr title="HyperText Markup Language">HTML</abbr> element.</p>
 <h3 id="self-enclosing-tags">Self-enclosing tags</h3>
-<p>A self-enclosing tag has no content to format. So the closing part is left of:</p>
+<p>A self-enclosing tag has no content. So the closing part is left of:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;tag&gt;</span></code></pre></div>
 <p>Example: <code>&lt;br&gt;</code> <small>(this will insert a newline into your <abbr title="HyperText Markup Language">HTML</abbr>)</small></p>
 <p>Sometimes you may see self-closing tags used like <code>&lt;tag /&gt;</code>, this trailing tag is optional since HTML5 and can be left of.</p>
 <h2 id="attributes">Attributes</h2>
 <p>Attributes modify the behaviour of a tag.</p>
-<p>For example the <code>a</code>-tag converts a peace of text into a clickable link.</p>
+<p>For example the <code>a</code>-tag converts a piece of text into a clickable link.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;a&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></code></pre></div>
-<p>The <code>href</code>-attribute defines where the link should take you:</p>
+<p>The <code>href</code>-attribute defines where the link should point to:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></code></pre></div>
 <p>Attributes are also used to modify the appearance of a tag. Later in this course we'll see more detailed examples of this.</p>
 <h2 id="a-valid-html-document">A valid HTML document</h2>
@@ -207,13 +201,14 @@
     <span class="co">&lt;!-- your webpage specific content --&gt;</span>
 <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>This minimal markup tells the browser to treat the document as HTML5.</p>
+<p>This minimal markup tells the browser to treat the document as a HTML5 document.</p>
 <h2 id="the-document-head">The document head</h2>
 <p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag allows the developer to define meta-data about the webpage. It is a wrapper around multiple other tags.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
     <span class="co">&lt;!-- meta tags here --&gt;</span>
 <span class="kw">&lt;/head&gt;</span></code></pre></div>
 <p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag may only be defined once in the complete document.</p>
+<p>Everything defined within the <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a> element will not be visible in the <abbr title="HyperText Markup Language">HTML</abbr> document. The head content can have an effect on the appearance of the page but it's content will not be visualised.</p>
 <h3 id="title">Title</h3>
 <p>The title tag sets the web-page title. This title is displayed by the browser in the browser-tab.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;head&gt;</span>
@@ -246,14 +241,14 @@ Exercise:
 <ul>
 <li>Create a valid <abbr title="HyperText Markup Language">HTML</abbr>-document with
 <ul>
-<li>Title: Hello World</li>
+<li>Document title: Hello World</li>
 <li>Content: <code>Hello World from the my first web-page</code></li>
 </ul></li>
 </ul>
 </div>
 <h3 id="html-hello-world">HTML: Hello World</h3>
 <p>Create a text file name <code class="file">hello-world.html</code></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gedit</span> hello-world.html</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">gedit</span> hello-world.html</code></pre></div>
 <p>With contents:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
@@ -265,7 +260,7 @@ Exercise:
 <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
 <p>Open the local <abbr title="HyperText Markup Language">HTML</abbr> file in the browser.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">firefox</span> hello-world.html</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">firefox</span> hello-world.html</code></pre></div>
 <h2 id="headers-h">Headers: <code>H*</code></h2>
 <p>The purpose of a header is to indicate the start of a new block a add an appropriate heading.</p>
 <p>The <a href="http://www.w3schools.com/tags/tag_hn.asp" class="w3c-ref"><code>hn</code></a>-tags come in 6 variations. From to highest order header <code>h1</code> to the lowest <code>h6</code>.</p>
@@ -536,10 +531,10 @@ Exercise:
 </ul></li>
 <li><p>Print the following text so the sentences are broken up as below.</p>
 <blockquote>
-<p><abbr title="HyperText Markup Language">HTML</abbr> is a markup language browser understand to format documents.<br />
-<abbr title="Cascading Style Sheets">CSS</abbr> is a way to style this markup.<br />
-<abbr title="Hypertext Preprocessor">PHP</abbr> is a programming language.<br />
-It is used to dynamically generate <abbr title="HyperText Markup Language">HTML</abbr>-markup.</p>
+<div style="white-space: pre-line;"><abbr title="HyperText Markup Language">HTML</abbr> is a markup language browser understand to format documents.
+<abbr title="Cascading Style Sheets">CSS</abbr> is a way to style this markup.
+<abbr title="Hypertext Preprocessor">PHP</abbr> is a programming language.
+It is used to dynamically generate <abbr title="HyperText Markup Language">HTML</abbr>-markup.</div>
 </blockquote></li>
 <li><p>Print the following text so <code>hello world</code> is emphasised.</p>
 <blockquote>
@@ -684,12 +679,60 @@ Scroll into view...
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></code></pre></div>
 <p>See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</p>
+<h3 id="title-1">Title</h3>
+<p>The title attribute lets you assign a title to an element. This title will be displayed as a tooltip when hovering with the mouse over this element.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/title-attribute.html">html-intro/title-attribute</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/title-attribute.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;Some title for this element&quot;</span><span class="kw">&gt;</span>Hover over me...<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/title-attribute</span></p>
+<iframe src="embeds/html-intro/title-attribute.html" class="embed--output" height="40px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h2 id="exercises">Exercises</h2>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a <abbr title="HyperText Markup Language">HTML</abbr> page resembling your CV.</p>
+<iframe src="embeds/exercises/html/cv.html" class="embed--output" height="250px" frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="embeds/exercises/html/cv.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/cv.html" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Add a table of contents (TOC) to the previous page (cv.html).</p>
+<p>The TOC should contain all headers, clicking a header should take the user to this header/section</p>
+<iframe src="embeds/exercises/html/cv-with-toc.html" class="embed--output" height="250px" frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="embeds/exercises/html/cv-with-toc.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/cv-with-toc.html" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Re-create the <abbr title="HyperText Markup Language">HTML</abbr> skeleton of a wiki page: <a href="https://en.wikipedia.org/wiki/FASTA_format" class="uri">https://en.wikipedia.org/wiki/FASTA_format</a></p>
+<iframe src="embeds/exercises/html/wiki-fasta_format.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="embeds/exercises/html/wiki-fasta_format.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/wiki-fasta_format.html" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-25
                </p>
             </footer>
          </div>

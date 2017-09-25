@@ -90,6 +90,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -111,36 +120,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -168,17 +161,17 @@
 <li><a href="https://www.git-scm.com">GIT</a></li>
 </ul>
 <p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dnf install firefox gedit php git</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> dnf install firefox gedit php git</code></pre></div>
 <p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
 <p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
 <p>This website source can be found at <a href="https://github.com/asoete/howest-webtechnology" class="uri">https://github.com/asoete/howest-webtechnology</a> and the result viewed at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a></p>
 <p>All the code created during the lessons will be made available at <a href="https://github.com/asoete/howest-webtechnology-examples" class="uri">https://github.com/asoete/howest-webtechnology-examples</a>.</p>
 <h3 id="init-workspace">Init workspace</h3>
 <ul>
-<li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> ~/Documents/webtechnology
-<span class="kw">cd</span>  ~/Documents/webtechnology</code></pre></div></li>
+<li><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> ~/webtechnology
+<span class="bu">cd</span>  ~/webtechnology</code></pre></div></li>
 <li><p>Create your own exercises directory</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> exercises</code></pre></div></li>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> exercises</code></pre></div></li>
 </ul>
 <p>You can store all your scripts in this folder...</p>
 <h2 id="get-local-copy-of-this-site.">Get local copy of this site.</h2>
@@ -187,39 +180,45 @@
 <p>The following steps must be taken to start/open the site locally:</p>
 <ul>
 <li><p>Get an initial copy of the repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology.git webtechnology-site</code></pre></div></li>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~/webtechnology
+<span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology.git cursus</code></pre></div></li>
 <li><p>To get the latest version/updates</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
-<span class="kw">git</span> pull origin master</code></pre></div></li>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~/webtechnology/cursus
+<span class="fu">git</span> pull origin master</code></pre></div></li>
 <li><p>Start a local instance of the site:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in webtechnology-site folder</span>
-<span class="kw">make</span> serve</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~/webtechnology/cursus
+<span class="fu">make</span> serve</code></pre></div>
 <p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p></li>
 </ul>
 <h2 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h2>
 <ul>
 <li><p>Get an initial copy of the repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git examples</code></pre></div>
-This will create a <code>examples</code>-folder which will hold example solutions for the exercises on a per lesson basis.</li>
-<li><p>To get the latest version/updates run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># in examples-solutions folde</span>
-<span class="kw">git</span> pull origin master</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~/webtechnology
+<span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples</code></pre></div>
+This command will create a <code>solutions-and-examples</code>-folder which will contain all the code featured during the lessons:
+<ul>
+<li>Example snippet</li>
+<li>Exercise solutions</li>
+</ul></li>
+<li><p>To get the latest version (aka. update the repository) run:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~/webtechnology/solutions-and-examples
+<span class="fu">git</span> pull origin master</code></pre></div>
 <div class="alert alert-warning">
 <strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don't modify the contents in this folder...
 </div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> fetch --all
-<span class="kw">git</span> reset --hard origin/master</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> fetch --all
+<span class="fu">git</span> reset --hard origin/master</code></pre></div>
 This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost...</strong>
 </div></li>
 </ul>
 <h3 id="final-result">Final result</h3>
 <p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>
-<pre><code>~/Documents/webtechnology
-├── examples
+<pre><code>~/webtechnology
+├── cursus
 ├── exercises
-└── site</code></pre>
+└── solutions-and-examples</code></pre>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">

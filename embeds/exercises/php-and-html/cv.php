@@ -4,7 +4,7 @@
    <title>My CV</title>
 </head>
 <body>
-   <h1>CV</h1>
+   <h1>CV <small>Arne Soete</small></h1>
 
    <h2>Personalia</h2>
 
@@ -44,7 +44,7 @@
          Simon Stevin, Brugge (campus Rijselstraat)
       </li>
       <li>
-         <strong>2006-2008</strong>:
+         <strong>2006-2008:</strong>:
          <a href="howst.be">HOWEST</a><br>
          Provenciale Industriele Hogeschool, Kortrijk
       </li>

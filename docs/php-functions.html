@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-25" />
    
    
    <title>PHP functions - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,36 +122,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -239,7 +232,7 @@ Exercise:
 <li>sentence</li>
 </ul>
 <p>Output: <code>&lt;name&gt; -&gt; &lt;sentence&gt;</code></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> chat.php </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> chat.php </code></pre></div>
 <pre class="run--output"><code>john -&gt; @jane: Hello
 jane -&gt; Hello john
 john -&gt; Nice weather...
@@ -261,25 +254,25 @@ Exercise:
 </ul>
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }
 <span class="kw">else</span> { <span class="fu">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php -5</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> validate-number.php -5</code></pre></div>
 <pre class="run--output"><code>number (-5) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 7</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> validate-number.php 7</code></pre></div>
 <pre class="run--output"><code>number (7) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 22</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> validate-number.php 22</code></pre></div>
 <pre class="run--output"><code>number (22) passed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> validate-number.php 111</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> validate-number.php 111</code></pre></div>
 <pre class="run--output"><code>number (111) failed tests
 </code></pre>
 <div class="text-right">
@@ -298,7 +291,7 @@ print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span cla
 <iframe src="embeds/exercises/php-functions/barplot.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-functions/barplot.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/php-functions/barplot.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-functions/barplot.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -318,7 +311,7 @@ multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</s
 </div>
 </small></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> arithmetic-operators.php </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> arithmetic-operators.php </code></pre></div>
 <pre class="run--output"><code>10
 4
 2
@@ -339,7 +332,7 @@ Exercise:
 <li>check if value is not longer than 50 characters (otherwise show error)</li>
 <li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> retrieve-key.php </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> retrieve-key.php </code></pre></div>
 <pre class="run--output"><code>value1
 default value
 default value
@@ -356,7 +349,7 @@ Exercise:
 </h4>
 <p><strong>Extra:</strong> Create a function that can calculate the factorial of a number.</p>
 <p>Try not to use loops but recursion...</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> factorial.php 5</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> factorial.php 5</code></pre></div>
 <pre class="run--output"><code>120</code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/factorial.php" target="_blank">Solution (github)</a> </small></p>
@@ -367,7 +360,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-25
                </p>
             </footer>
          </div>

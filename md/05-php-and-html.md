@@ -345,6 +345,21 @@ Create a webpage with a login form:
 
 m4_dnl -----------------------------------------------------------------------
 
+m4_exercise([[Print a rainbow pyramid, each column should have it's own color
+
+* red
+* orange
+* yellow
+* green
+* blue
+* indigo
+* violet
+
+m4_embed(css/rainbow-pyramid)
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
 m4_exercise([[
 Create a login form with a
 
@@ -438,3 +453,28 @@ joan, d'arc, female, 33
 m4_page(php-and-html/csv,250px)
 ]])
 
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a _post comment_ form with fields:
+
+* name
+* email
+* title options: (Dr, Mr, Ms, Ir)
+* comment box
+* post anonymous checkbox.
+
+Validate:
+
+* Name and/or email are not empty (unless _post anonymous_ was checked)
+* Comment has max 500 characters
+
+* Print a red error messages if a validation failed + indicate which field failed
+  validation, in red.
+* If an error occurred pre-fill the elements with the valid data
+* If no errors occurred,
+    * ( Mr. or Ms. ) (name or _anonymous_) posted:
+    * print _message posted_ in gray.
+
+m4_page(css/post-comment,400px)
+]])

@@ -12,11 +12,11 @@ specification and can differ from older specifications like XHTML and HTML]])
 </small>
 
 HTML is an <abbr title="Extensible Markup Language">XML</abbr> subset. This
-means it is composed out of tags with, optionally, attributes.
+means it is composed out of tags which can contain attributes.
 
 ## Tags
 
-A tag is delimited by `<` and `>`, for example: `<body>`.
+An HTML-tag indicator starts with `<` and end with `>`, for example: `<body>`.
 
 There are two types of HTML-tags:
 
@@ -31,7 +31,7 @@ Non self-enclosing tags exist out of two parts:
 1. And a closing part: `</tag>`.
    The closing part is identified by the forward slash (`/`) before the tag-name.
 
-These _parts_ are used to contain/format certain content.
+These opening and closing tags can contain plain text and/or additional HTML markup.
 
 ```html
 <tag> {{content}} </tag>`
@@ -42,9 +42,11 @@ Example: `<strong>Bold Font</strong>`
 (This tags formats its content in a bold font: <strong>Bold Font</strong>)
 </small>
 
+The whole (start + content + end) is an HTML element.
+
 ### Self-enclosing tags
 
-A self-enclosing tag has no content to format. So the closing part is left of:
+A self-enclosing tag has no content. So the closing part is left of:
 
 ```html
 <tag>
@@ -60,13 +62,13 @@ is optional since HTML5 and can be left of.
 
 Attributes modify the behaviour of a tag.
 
-For example the `a`-tag converts a peace of text into a clickable link.
+For example the `a`-tag converts a piece of text into a clickable link.
 
 ```html
 <a>My text to click</a>
 ```
 
-The `href`-attribute defines where the link should take you:
+The `href`-attribute defines where the link should point to:
 
 ```html
 <a href="http://go-here-when-clicked.com">My text to click</a>
@@ -91,7 +93,7 @@ A valid HTML5 document requires a bit of boilerplate:
 </html>
 ```
 
-This minimal markup tells the browser to treat the document as HTML5.
+This minimal markup tells the browser to treat the document as a HTML5 document.
 
 ## The document head
 
@@ -105,6 +107,10 @@ It is a wrapper around multiple other tags.
 ```
 
 The m4_tag(head)-tag may only be defined once in the complete document.
+
+Everything defined within the m4_tag(head) element will not be visible in the
+HTML document. The head content can have an effect on the appearance of the
+page but it's content will not be visualised.
 
 ### Title
 
@@ -161,7 +167,7 @@ The m4_tag(body)-tag should wrap all the content to be displayed.
 
 m4_exercise([[
 * Create a valid HTML-document with
-    * Title: Hello World
+    * Document title: Hello World
     * Content: `Hello World from the my first web-page`
 ]])
 
@@ -461,3 +467,40 @@ CSS.
 ```
 
 See [HTML and CSS](html-and-css.html) for more info about styling an element.
+
+### Title
+
+The title attribute lets you assign a title to an element. This title will be
+displayed as a tooltip when hovering with the mouse over this element.
+
+m4_embed_php_as_html(html-intro/title-attribute,40px,.html)
+
+## Exercises
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a HTML page resembling your CV.
+
+m4_embed(html/cv,250px)
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Add a table of contents (TOC) to the previous page (cv.html).
+
+The TOC should contain all headers, clicking a header should take the user to
+this header/section
+
+m4_embed(html/cv-with-toc,250px)
+]])
+
+m4_dnl ------------------------------------------------------------------------
+
+m4_exercise([[Re-create the HTML skeleton of a wiki page: <https://en.wikipedia.org/wiki/FASTA_format>
+
+
+m4_embed([[html/wiki-fasta_format]])
+]])
+

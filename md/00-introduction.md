@@ -6,38 +6,44 @@ title: Introduction
 
 # Introduction
 
+The goal of this course is to provide an introduction to dynamic webpages (HTML,
+CSS) powered by PHP.
 
-The purpose of this course is to provide an intro to web technologies (HTML,
-CSS) and dynamic webpages via PHP.
+During this course the student will learn how to create a static HTML webpage
+styled by CSS.
+
+Finally the webpages should become dynamic powered by the PHP
+programming language.
 
 ## Resources
 
 The main documentation for this course is a site an can be found at
-<https://asoete.github.io/howest-webtechnology>.  The main advantage of a using
+<https://asoete.github.io/howest-webtechnology>. The main advantage of a using
 a site as a textbook is that the included examples and snippets can be
 rendered/formatted by the browser on the fly.
 
 A [PDF version](pdfs/cursus.pdf) of this document is also available. But keep
-in mind that some HTML features can get lost in the conversion to a pdf.
+in mind that some HTML features can will be lost in the conversion to a pdf.
 
-There are no slides available, all key aspects of this course will introduced
-via examples during the lessons. These examples and the solutions of the
-exercises made during this course will be published
-[here](https://github.com/asoete/howest-webtechnology-code).
+There are no slides available, all the key aspects of this course will
+introduced via examples during the lessons. These examples and example
+solutions to the exercises, made during this course, will be published in a git
+repository on github: <https://github.com/asoete/howest-webtechnology-code>.
 
-Keep in mind that this course is a very practical one and that making exercises
-is the best way to learn, get familiar, with all the aspects featured in this
-course.
+This course is a very practical course. Making exercises and exploring/fiddling
+with code is the best way to learn and get acquainted with all the aspects
+featured in this course.
 
 ### Additional resources
 
 An in depth guide/reference/manual for PHP can be found at <http://php.net>
 
-For an HTML and CSS reference see <http://www.w3schools.com/html> and <http://www.w3schools.com/css>
+For an HTML and CSS reference see <http://www.w3schools.com/html> and
+<http://www.w3schools.com/css>
 
 ## Contact
 
-If you have questions about this course and/or it's content please ask...
+If you have questions about this course, please ask...
 You can contact me via [arne.soete@howest.be](mailto:arne.soete@howest.be)
 
 ## Code in this document

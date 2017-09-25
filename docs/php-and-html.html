@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-25" />
    
    
    <title>PHP and HTML - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,36 +122,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -166,9 +159,9 @@
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
 <h3 id="starting-a-server">Starting a server</h3>
 <p>The server is started with one command on the command line:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:<span class="kw">&lt;</span>port<span class="kw">&gt;</span> [-t /path/to/folder]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> -S localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> [-t /path/to/folder]</code></pre></div>
 <p>Example:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> -S localhost:8080</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> -S localhost:8080</code></pre></div>
 <p>This previous command will start a web-server in the current working directory and will be accessible at the URL: <code>http://localhost:8080</code>.</p>
 <p>You can pick any port, as long as it is between 1024 and 65535. By convention <code>8000</code> or <code>8080</code> are picked because of he resemblance with the official HTTP-port: <code>80</code>.</p>
 <p>As mentioned before, by default the server will start in the current working directory. I you wish the root of the site to be another directory, specify it via the <code>-t</code> option.</p>
@@ -177,11 +170,11 @@
 </div>
 <p>By default the web-server will search and execute serve the <code>index.html</code> or <code>index.php</code> file in the servers root directory. (root directory = the directory where the server was started)</p>
 <h3 id="making-a-simple-page">Making a simple page</h3>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> my-website
-<span class="kw">cd</span> my-website
-<span class="kw">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="kw">&gt;</span> index.html
-<span class="kw">php</span> -S localhost:8080
-<span class="kw">firefox</span> localhost:8080</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> my-website
+<span class="bu">cd</span> my-website
+<span class="bu">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="op">&gt;</span> index.html
+<span class="ex">php</span> -S localhost:8080
+<span class="ex">firefox</span> localhost:8080</code></pre></div>
 <p>You should be greeted with <code>Hello world</code>...</p>
 <p>Because the web-pages are served via a <abbr title="Hypertext Preprocessor">PHP</abbr> server, all <abbr title="Hypertext Preprocessor">PHP</abbr> files (ending in <code>.php</code>) will be interpreted by the webserver. This allows us to generate the <abbr title="HyperText Markup Language">HTML</abbr> content dynamically.</p>
 <h3 id="exercises">Exercises</h3>
@@ -193,7 +186,7 @@ Exercise:
 <iframe src="embeds/exercises/php-and-html/hello-world.html" class="embed--output" height="70px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/hello-world.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/php-and-html/hello-world.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/hello-world.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -204,7 +197,7 @@ Exercise:
 <iframe src="embeds/exercises/php-and-html/cv.html" class="embed--output" height="250px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/cv.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/php-and-html/cv.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/cv.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -219,7 +212,7 @@ Exercise:
 <iframe src="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" class="embed--output" height="180px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <div class="exercise">
@@ -248,7 +241,7 @@ Exercise:
 <iframe src="embeds/exercises/php-and-html/inter-link-pages/home.html" class="embed--output" height="250px" frameborder="0">
 </iframe>
 <div class="text-right">
-<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Solution (github)</a> </small></p>
+<p><small> <a href="embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
 <h2 id="include-require">Include / Require</h2>
@@ -523,6 +516,26 @@ Exercise:
 <h4>
 Exercise:
 </h4>
+<p>Print a rainbow pyramid, each column should have it's own color</p>
+<ul>
+<li>red</li>
+<li>orange</li>
+<li>yellow</li>
+<li>green</li>
+<li>blue</li>
+<li>indigo</li>
+<li>violet</li>
+</ul>
+<iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="embeds/exercises/css/rainbow-pyramid.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/rainbow-pyramid.html" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
 <p>Create a login form with a</p>
 <ul>
 <li>name field</li>
@@ -635,12 +648,43 @@ joan, d&#39;arc, female, 33</code></pre>
 <p><a href="embeds/exercises/php-and-html/csv.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/csv.php" target="_blank">Solution (github)</a> </small></p>
 </div>
 </div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a <em>post comment</em> form with fields:</p>
+<ul>
+<li>name</li>
+<li>email</li>
+<li>title options: (Dr, Mr, Ms, Ir)</li>
+<li>comment box</li>
+<li>post anonymous checkbox.</li>
+</ul>
+<p>Validate:</p>
+<ul>
+<li>Name and/or email are not empty (unless <em>post anonymous</em> was checked)</li>
+<li><p>Comment has max 500 characters</p></li>
+<li>Print a red error messages if a validation failed + indicate which field failed validation, in red.</li>
+<li>If an error occurred pre-fill the elements with the valid data</li>
+<li>If no errors occurred,
+<ul>
+<li>( Mr. or Ms. ) (name or <em>anonymous</em>) posted:</li>
+<li>print <em>message posted</em> in gray.</li>
+</ul></li>
+</ul>
+<iframe src="embeds/exercises/css/post-comment.php" class="embed--output" height="400px" frameborder="0">
+</iframe>
+<small>
+<div class="text-right">
+<p><a href="embeds/exercises/css/post-comment.php" target="_blank">Open in new tab</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/post-comment.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-25
                </p>
             </footer>
          </div>

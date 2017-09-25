@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-24" />
    
    
    <title>Git - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,22 +122,14 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -170,34 +171,34 @@
 <span class="co"># mkdir /tmp/git-playground</span>
 <span class="co"># cd /tmp/git-playground</span>
 
-<span class="kw">git</span> init
+<span class="fu">git</span> init
 <span class="co"># Initialized empty Git repository in /tmp/git-playground/.git/</span></code></pre></div>
 <p>Git tells you is initialised the git data store in a hidden <code>.git</code> folder in the root of our project directory.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">.git/</span>
-├── <span class="kw">branches</span>
-├── <span class="kw">config</span>
-├── <span class="kw">description</span>
-├── <span class="kw">HEAD</span>
-├── <span class="kw">hooks</span>
-│   ├── <span class="kw">applypatch-msg.sample</span>
-│   ├── <span class="kw">commit-msg.sample</span>
-│   ├── <span class="kw">post-update.sample</span>
-│   ├── <span class="kw">pre-applypatch.sample</span>
-│   ├── <span class="kw">pre-commit.sample</span>
-│   ├── <span class="kw">prepare-commit-msg.sample</span>
-│   ├── <span class="kw">pre-push.sample</span>
-│   ├── <span class="kw">pre-rebase.sample</span>
-│   └── <span class="kw">update.sample</span>
-├── <span class="kw">info</span>
-│   └── <span class="kw">exclude</span>
-├── <span class="kw">objects</span>
-│   ├── <span class="kw">info</span>
-│   └── <span class="kw">pack</span>
-└── <span class="kw">refs</span>
-    ├── <span class="kw">heads</span>
-        └── <span class="kw">tags</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">.git/</span>
+├── <span class="ex">branches</span>
+├── <span class="ex">config</span>
+├── <span class="ex">description</span>
+├── <span class="ex">HEAD</span>
+├── <span class="ex">hooks</span>
+│   ├── <span class="ex">applypatch-msg.sample</span>
+│   ├── <span class="ex">commit-msg.sample</span>
+│   ├── <span class="ex">post-update.sample</span>
+│   ├── <span class="ex">pre-applypatch.sample</span>
+│   ├── <span class="ex">pre-commit.sample</span>
+│   ├── <span class="ex">prepare-commit-msg.sample</span>
+│   ├── <span class="ex">pre-push.sample</span>
+│   ├── <span class="ex">pre-rebase.sample</span>
+│   └── <span class="ex">update.sample</span>
+├── <span class="ex">info</span>
+│   └── <span class="ex">exclude</span>
+├── <span class="ex">objects</span>
+│   ├── <span class="ex">info</span>
+│   └── <span class="ex">pack</span>
+└── <span class="ex">refs</span>
+    ├── <span class="ex">heads</span>
+        └── <span class="ex">tags</span></code></pre></div>
 <p>For the moment this is just a skeleton without any data e.g. we are not tracking any files. The status of our repository can always be obtained bu running the <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a>-command:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co">#</span>
 <span class="co"># Initial commit</span>
@@ -206,9 +207,9 @@
 <p>So we should start adding files to our git repository...</p>
 <h2 id="track-files">Track files</h2>
 <p>Let us first create a file we want to track and run <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a> again.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Let&#39;s track this file...&quot;</span> <span class="kw">&gt;</span> file.txt
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">echo</span> <span class="st">&quot;Let&#39;s track this file...&quot;</span> <span class="op">&gt;</span> file.txt
 
-<span class="kw">git</span> status
+<span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co">#</span>
 <span class="co"># Initial commit</span>
@@ -226,8 +227,8 @@
 <li><a href="https://git-scm.com/docs/git-commit" class="w3c-ref"><code>git-commit</code></a></li>
 </ul>
 <p><a href="https://git-scm.com/docs/git-add" class="w3c-ref"><code>git-add</code></a> will add the file to the staging area. This means group/tag the files so future commands can operate on them.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add file.txt
-<span class="kw">git</span> status
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> add file.txt
+<span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co">#</span>
 <span class="co"># Initial commit</span>
@@ -238,15 +239,15 @@
 <span class="co">#   new file:   file.txt</span></code></pre></div>
 <p>The status command tells us the file is added to the staging area and is ready for the next step: committing.</p>
 <p><a href="https://git-scm.com/docs/git-commit" class="w3c-ref"><code>git-commit</code></a> will take the files in the staging area and create a new snapshot of their current contents. This commit takes a commit message: a description of the changes to the project via the modifications of those staged files.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> commit <span class="co"># a text editor will open, type your message and save + quit the file</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> commit <span class="co"># a text editor will open, type your message and save + quit the file</span>
 
-<span class="kw">git</span> commit -m <span class="st">&quot;start tracking file.txt&quot;</span> <span class="co"># the -m options allows us to specify the commit message on the command line</span>
+<span class="fu">git</span> commit -m <span class="st">&quot;start tracking file.txt&quot;</span> <span class="co"># the -m options allows us to specify the commit message on the command line</span>
 
 <span class="co"># [master (root-commit) 13ce453] start tracking file.txt</span>
 <span class="co">#  1 file changed, 1 insertion(+)</span>
 <span class="co">#  create mode 100644 file.txt</span></code></pre></div>
 <p>If we run <a href="https://git-scm.com/docs/git-status" class="w3c-ref"><code>git-status</code></a> again, we see that all our changes are saved in a snapshot. This is what git calls a <em>clean working directory</em>.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co"># nothing to commit, working directory clean</span></code></pre></div>
 <h3 id="git-internals">Git internals</h3>
@@ -293,15 +294,15 @@
 <p>The most important thing is the <code>objects</code> directory. In git everything is an object.</p>
 <p>If we add a file git will create a checksum of this file. Git uses <code>sha-1</code> to create the checksum. <code>sha-1</code> will reduce the complete contents of the file to a 40-character unique key. A slight modification to the file will result in a completely different key.</p>
 <p>For example:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Hello World&quot;</span>  <span class="kw">|</span> <span class="kw">sha1sum</span> <span class="co"># 648a6a6ffffdaa0badb23b8baf90b6168dd16b3a</span>
-<span class="kw">echo</span> <span class="st">&quot;Hello World.&quot;</span> <span class="kw">|</span> <span class="kw">sha1sum</span> <span class="co"># b924c2f360b572e17c971f1b1b667e0732944df7</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">echo</span> <span class="st">&quot;Hello World&quot;</span>  <span class="kw">|</span> <span class="ex">sha1sum</span> <span class="co"># 648a6a6ffffdaa0badb23b8baf90b6168dd16b3a</span>
+<span class="bu">echo</span> <span class="st">&quot;Hello World.&quot;</span> <span class="kw">|</span> <span class="ex">sha1sum</span> <span class="co"># b924c2f360b572e17c971f1b1b667e0732944df7</span></code></pre></div>
 <p>By adding a dot to our sentence, the hash has a completely different value...</p>
 <p>Git stores the contents of each file committed file under the checksum name.</p>
 <p>For example our file.txt is stored as <code>.git/objects/77/25275230928119f8acf11ee297e559f7e4ce56</code> where <code>7725275230928119f8acf11ee297e559f7e4ce56</code> is the checksum of this file...</p>
 <p>The other two files are the commit message and a list of all the tracked files...</p>
 <p>Via this checksumming, git knows which files are modified and which are not because each change results in another checksum...</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Modify the file&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
-<span class="kw">git</span> status
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">echo</span> <span class="st">&quot;Modify the file&quot;</span> <span class="op">&gt;&gt;</span> file.txt
+<span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co"># Changes not staged for commit:</span>
 <span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
@@ -312,19 +313,19 @@
 <span class="co"># no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span></code></pre></div>
 <p>Let's commit (save) this change:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># add the file to the staging area:</span>
-<span class="kw">git</span> add file.txt
+<span class="fu">git</span> add file.txt
 
 <span class="co"># save all staged files</span>
-<span class="kw">git</span> commit -m <span class="st">&quot;modify file.txt&quot;</span>
+<span class="fu">git</span> commit -m <span class="st">&quot;modify file.txt&quot;</span>
 <span class="co"># [master 1de3a69] modify file.txt</span>
 <span class="co">#  1 file changed, 1 insertion(+)</span>
 
-<span class="kw">git</span> status
+<span class="fu">git</span> status
 <span class="co"># On branch master</span>
 <span class="co"># nothing to commit, working directory clean</span></code></pre></div>
 <h3 id="git-log">Git log</h3>
 <p>To get a list of all commits (snapshots/return points) use the <a href="https://git-scm.com/docs/git-log" class="w3c-ref"><code>git-log</code></a>-command:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> log
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> log
 <span class="co"># commit 1de3a699080e8df52f3f12af988152208c632b00</span>
 <span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
 <span class="co"># Date:   Sun Nov 6 18:50:29 2016 +0100</span>
@@ -338,7 +339,7 @@
 <span class="co">#     start tracking file.txt</span></code></pre></div>
 <h3 id="checkout-a-commit">Checkout a commit</h3>
 <p>Via <a href="https://git-scm.com/docs/git-checkout" class="w3c-ref"><code>git-checkout</code></a> we can jump back in time to another snapshot:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout 1de3a</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> checkout 1de3a</code></pre></div>
 <small>
 <div class="alert alert-info">
 <strong>Info:</strong> Note that instead of typing the complete checksum, only a fraction of the key was specified. Git is smart enough to find out which commit we meant en checked this revision out. We just have to ensure that the provided part is unique in the project...
@@ -346,7 +347,7 @@
 <p></small></p>
 <h3 id="git-diff">Git diff</h3>
 <p><a href="https://git-scm.com/docs/git-diff" class="w3c-ref"><code>git-diff</code></a> allows to show the differences between two revisions.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff 13ce4 1de3a
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> diff 13ce4 1de3a
 <span class="co"># diff --git a/file.txt b/file.txt</span>
 <span class="co"># index 7725275..817f387 100644</span>
 <span class="co"># --- a/file.txt</span>
@@ -358,7 +359,7 @@
 <p>Is is however cumbersome to look up the hashes for a certain commit. Fortunately git has the notion of <em>refs</em>. Refs are named commits e.q. a commit can be addressed by a name.</p>
 <p>For example <code>HEAD</code> always points to the last commit on the current branch. <code>HEAD^</code> points to the second to last commit. <code>HEAD^^</code> the one before that etc...</p>
 <p>Thus the previous diff can be written as:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff HEAD^
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> diff HEAD^
 <span class="co"># diff --git a/file.txt b/file.txt</span>
 <span class="co"># index 7725275..817f387 100644</span>
 <span class="co"># --- a/file.txt</span>
@@ -376,33 +377,33 @@
 <p>As mentioned before, git allows us to branch of you code, test some things an merge this new code back in to the main branch or discard the changes.</p>
 <p>By default all code lives in the <em>master</em>-branch. A new branch can be created via <a href="https://git-scm.com/docs/git-branch" class="w3c-ref"><code>git-branch</code></a>.</p>
 <p>When no arguments are passed to <a href="https://git-scm.com/docs/git-branch" class="w3c-ref"><code>git-branch</code></a>, the command will list all the available (local) branches.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> branch
 <span class="co"># * master</span></code></pre></div>
 <p>The asterisks indicates which branch you are currently on.</p>
 <p>If we pass git branch a name, a new branch with this name will be created:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch <span class="st">&#39;my-new-branch&#39;</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> branch <span class="st">&#39;my-new-branch&#39;</span>
 
-<span class="kw">git</span> branch
+<span class="fu">git</span> branch
 <span class="co"># * master</span>
 <span class="co">#   my-new-branch</span></code></pre></div>
 <p><a href="https://git-scm.com/docs/git-checkout" class="w3c-ref"><code>git-checkout</code></a> is used to switch branches:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout <span class="st">&#39;my-new-branch&#39;</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> checkout <span class="st">&#39;my-new-branch&#39;</span>
 <span class="co"># Switched to branch &#39;my-new-branch&#39;</span>
 
-<span class="kw">git</span> branch
+<span class="fu">git</span> branch
 <span class="co">#   master</span>
 <span class="co"># * my-new-branch</span></code></pre></div>
 <p>Lets add a change in this branch:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;Add line from &#39;my-new-branch!&#39;&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">echo</span> <span class="st">&quot;Add line from &#39;my-new-branch!&#39;&quot;</span> <span class="op">&gt;&gt;</span> file.txt
 
-<span class="kw">git</span> add file.txt
+<span class="fu">git</span> add file.txt
 
-<span class="kw">git</span> commit -m <span class="st">&quot;add change from my-new-branch&quot;</span>
+<span class="fu">git</span> commit -m <span class="st">&quot;add change from my-new-branch&quot;</span>
 <span class="co"># [my-new-branch d5136c8] add change from my-new-branch</span>
 <span class="co">#  1 file changed, 1 insertion(+), 2 deletions(-)</span></code></pre></div>
 <p>Similar to <code>HEAD</code> before, <code>master</code> and <code>my-new-branch</code> these names are <em>refs</em> pointing to a certain commit.</p>
 <p>So we can also take a <em>diff</em> between two branches:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff master my-new-branch
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> diff master my-new-branch
 <span class="co"># diff --git a/file.txt b/file.txt</span>
 <span class="co"># index 817f387..082bfe1 100644</span>
 <span class="co"># --- a/file.txt</span>
@@ -412,7 +413,7 @@
 <span class="co">#  Modify the file</span>
 <span class="co"># +Add line from &#39;my-new-branch&#39;</span>
 
-<span class="kw">git</span> diff master
+<span class="fu">git</span> diff master
 <span class="co"># diff --git a/file.txt b/file.txt</span>
 <span class="co"># index 817f387..082bfe1 100644</span>
 <span class="co"># --- a/file.txt</span>
@@ -429,9 +430,9 @@
 <h3 id="merge">Merge</h3>
 <p>If we want to include the changes we introduced in the <em>my-new-branch</em>-branch into another branch, say <em>master</em>, we have to merge in these changes via <a href="https://git-scm.com/docs/git-merge" class="w3c-ref"><code>git-merge</code></a>.</p>
 <p>First we have to position ourselves at the <em>master</em>-branch:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout master
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> checkout master
 <span class="co"># Switched to branch &#39;master&#39;</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> diff my-new-branch
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> diff my-new-branch
 <span class="co"># diff --git a/file.txt b/file.txt</span>
 <span class="co"># index 082bfe1..817f387 100644</span>
 <span class="co"># --- a/file.txt</span>
@@ -442,7 +443,7 @@
 <span class="co"># -Add line from &#39;my-new-branch&#39;</span></code></pre></div>
 <p>Via the <em>diff</em> we notice we are missing the <code>Add line from my-new-branch</code> line.</p>
 <p>The include these changes:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> merge my-new-branch
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> merge my-new-branch
 <span class="co"># Updating 1de3a69..e336094</span>
 <span class="co"># Fast-forward</span>
 <span class="co">#  file.txt | 1 +</span>
@@ -451,19 +452,19 @@
 <h3 id="merge-conflict">Merge conflict</h3>
 <p>Not all merges will go as smooth as the previous example. Lets create a merge conflict.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Create two branches</span>
-<span class="kw">git</span> checkout master
-<span class="kw">git</span> branch conflicting-branch
+<span class="fu">git</span> checkout master
+<span class="fu">git</span> branch conflicting-branch
 
 <span class="co"># modify file on master</span>
-<span class="kw">echo</span> <span class="st">&quot;Add line line from master&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
-<span class="kw">git</span> add file.txt
-<span class="kw">git</span> commit -m <span class="st">&quot;add line from master&quot;</span>
+<span class="bu">echo</span> <span class="st">&quot;Add line line from master&quot;</span> <span class="op">&gt;&gt;</span> file.txt
+<span class="fu">git</span> add file.txt
+<span class="fu">git</span> commit -m <span class="st">&quot;add line from master&quot;</span>
 
 <span class="co"># modify file on other branch</span>
-<span class="kw">git</span> checkout conflicting-branch
-<span class="kw">echo</span> <span class="st">&quot;Add line line from conflicting-branch&quot;</span> <span class="kw">&gt;&gt;</span> file.txt
-<span class="kw">git</span> add file.txt
-<span class="kw">git</span> commit -m <span class="st">&quot;add line from conflicting-branch&quot;</span></code></pre></div>
+<span class="fu">git</span> checkout conflicting-branch
+<span class="bu">echo</span> <span class="st">&quot;Add line line from conflicting-branch&quot;</span> <span class="op">&gt;&gt;</span> file.txt
+<span class="fu">git</span> add file.txt
+<span class="fu">git</span> commit -m <span class="st">&quot;add line from conflicting-branch&quot;</span></code></pre></div>
 <p>Now we have a merge conflict. The same file was modified on two separate branches en git has no way to tell which version of the file is the correct one, or how to combine the introduced modifications...</p>
 <p>The commit graph looks something like:</p>
 <blockquote>
@@ -475,15 +476,15 @@
 * 13ce453 start tracking file.txt</code></pre>
 </blockquote>
 <p>Lets run a merge and see what happens:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout master
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> checkout master
 <span class="co"># Switched to branch &#39;master&#39;</span>
 
-<span class="kw">git</span> merge conflicting-branch
+<span class="fu">git</span> merge conflicting-branch
 <span class="co"># Auto-merging file.txt</span>
 <span class="co"># CONFLICT (content): Merge conflict in file.txt</span>
 <span class="co"># Automatic merge failed; fix conflicts and then commit the result.</span></code></pre></div>
 <p>To resolve a merge conflict via a third party application (GUI?) use <a href="https://git-scm.com/docs/git-mergetool" class="w3c-ref"><code>git-mergetool</code></a></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> mergetool
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> mergetool
 <span class="co"># Merging:</span>
 <span class="co"># file.txt</span>
 <span class="co">#</span>
@@ -504,7 +505,7 @@
 </div>
 <p>Once your merges are made, the files saved and the application quit, git will ask if the merge was a success.</p>
 <p>The merge can also be made manually by editing the file directly:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gedit</span> file.txt</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">gedit</span> file.txt</code></pre></div>
 <blockquote>
 <pre><code>Let&#39;s track this file...
 Modify the file
@@ -529,8 +530,8 @@ Add line line from master
 Add line line from conflicting-branch</code></pre>
 </blockquote></li>
 <li><p>Save changes</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add file.txt
-<span class="kw">git</span> commit -m <span class="st">&quot;merge: conflicting-branch into master&quot;</span></code></pre></div></li>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> add file.txt
+<span class="fu">git</span> commit -m <span class="st">&quot;merge: conflicting-branch into master&quot;</span></code></pre></div></li>
 </ul>
 <p>Our commit graph now looks like:</p>
 <blockquote>
@@ -548,7 +549,7 @@ Add line line from conflicting-branch</code></pre>
 </div>
 <h3 id="delete-branch">Delete branch</h3>
 <p>Once a branch is merged in we can delete the branch via:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch -d my-new-branch
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> branch -d my-new-branch
 <span class="co"># Deleted branch my-new-branch (was e336094).</span></code></pre></div>
 <h2 id="remotes">Remotes</h2>
 <p>We are now able to create, merge and delete local branches, the same can be done with remote branches.</p>
@@ -559,15 +560,15 @@ Add line line from conflicting-branch</code></pre>
 <p>In the following examples we will use another directory as a remote, but the same principles apply to remoter servers.</p>
 <h3 id="clone">Clone</h3>
 <p><a href="https://git-scm.com/docs/git-clone" class="w3c-ref"><code>git-clone</code></a> allows us to fetch a local copy of a remote repository...</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone /tmp/git-playground /tmp/git-clone
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone /tmp/git-playground /tmp/git-clone
 <span class="co"># Cloning into &#39;/tmp/git-clone&#39;...</span>
 <span class="co"># done.</span>
 
-<span class="kw">cd</span> /tmp/git-clone
-<span class="kw">ls</span>
+<span class="bu">cd</span> /tmp/git-clone
+<span class="fu">ls</span>
 <span class="co"># file.txt</span>
 
-<span class="kw">git</span> log
+<span class="fu">git</span> log
 <span class="co"># commit e5bbaef29c5c6d3d874d0f92b9b4be72fe007dca</span>
 <span class="co"># Merge: eae4aa2 42a0cbc</span>
 <span class="co"># Author: Arne Soete &lt;arne.soete@irc.vib-ugent.be&gt;</span>
@@ -614,21 +615,21 @@ Add line line from conflicting-branch</code></pre>
 </ul>
 <p>If a repository is cloned, by default the name of the remote is <code>origin</code>.</p>
 <p>A list of all the remotes can be obtained via <a href="https://git-scm.com/docs/git-remote" class="w3c-ref"><code>git-remote</code></a>:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> remote
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> remote
 <span class="co"># origin</span>
 
-<span class="kw">git</span> remote -v <span class="co"># -v -&gt; get more info about the remote</span>
+<span class="fu">git</span> remote -v <span class="co"># -v -&gt; get more info about the remote</span>
 <span class="co"># origin  /tmp/git-playground (fetch)</span>
 <span class="co"># origin  /tmp/git-playground (push)</span></code></pre></div>
 <p>Lets see a <a href="https://git-scm.com/docs/git-pull" class="w3c-ref"><code>git-pull</code></a> in action</p>
 <p>Make some changes to original repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> /tmp/git-playground
-<span class="kw">echo</span> <span class="st">&quot;add another file&quot;</span> <span class="kw">&gt;</span> file2.txt
-<span class="kw">git</span> add file2.txt
-<span class="kw">git</span> commit -m <span class="st">&quot;add a second file&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> /tmp/git-playground
+<span class="bu">echo</span> <span class="st">&quot;add another file&quot;</span> <span class="op">&gt;</span> file2.txt
+<span class="fu">git</span> add file2.txt
+<span class="fu">git</span> commit -m <span class="st">&quot;add a second file&quot;</span></code></pre></div>
 <p>Fetch the latest changes into clone:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> /tmp/git-clone
-<span class="kw">git</span> pull origin master
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> /tmp/git-clone
+<span class="fu">git</span> pull origin master
 <span class="co"># remote: Counting objects: 3, done.</span>
 <span class="co"># remote: Compressing objects: 100% (2/2), done.</span>
 <span class="co"># remote: Total 3 (delta 0), reused 0 (delta 0)</span>
@@ -653,7 +654,7 @@ Add line line from conflicting-branch</code></pre>
 <li>the name of the remote</li>
 <li>the remote branch to push to</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push origin master
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> push origin master
 <span class="co"># Counting objects: 3, done.</span>
 <span class="co"># Delta compression using up to 8 threads.</span>
 <span class="co"># Compressing objects: 100% (2/2), done.</span>
@@ -663,7 +664,7 @@ Add line line from conflicting-branch</code></pre>
 <span class="co">#    b7e2e69..2038622  master -&gt; master</span></code></pre></div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> You cannot pus to a normal <em>checked out</em> repository. Only to bare repositories. Create a bare repository:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone --bare /tmp/git-playground /tmp/git-bare</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone --bare /tmp/git-playground /tmp/git-bare</code></pre></div>
 <p>See <a href="https://git-scm.com/docs/git-clone" class="w3c-ref"><code>git-clone</code></a> for more info</p>
 </div>
          <div class="row">
@@ -671,7 +672,7 @@ Add line line from conflicting-branch</code></pre>
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-24
                </p>
             </footer>
          </div>

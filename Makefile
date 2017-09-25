@@ -7,7 +7,7 @@ mddir         := md
 mdfiles       := $(sort $(wildcard $(mddir)/*md))
 embedssrcdir  := embeds
 embedsdestdir := $(pubdir)/embeds
-embeds.php    := $(addprefix $(pubdir)/,$(shell find $(embedssrcdir) -type f -not -name "*.swp" ))
+embeds.php    := $(addprefix $(pubdir)/,$(shell find $(embedssrcdir) -type f -not -name "*.swp" -not -name "*.inc" ))
 embeds.html   := $(embeds.php:.php=.html)
 
 # ============================================================================ #

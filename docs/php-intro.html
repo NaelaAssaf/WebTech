@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2016-11-14" />
+        <meta name="date" content="2017-09-25" />
    
    
    <title>PHP basics - BIT01 Webtechnology</title>
@@ -92,6 +92,15 @@
             <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
             <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
             <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -113,36 +122,20 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
-            <li><a href="css.html#include-style-information">Include style information</a></li>
-            <li><a href="css.html#css-selectors">CSS selectors</a></li>
-            <li><a href="css.html#css-properties">CSS properties</a></li>
-            <li><a href="css.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="io.html#io">IO</a><ul>
-            <li><a href="io.html#read-a-file">Read a file</a></li>
-            <li><a href="io.html#createwrite-a-file">Create/Write a file</a></li>
-            <li><a href="io.html#remove-a-file">Remove a file</a></li>
-            <li><a href="io.html#rename-a-file">Rename a file</a></li>
-            <li><a href="io.html#directories">Directories</a></li>
-            <li><a href="io.html#upload-files">Upload files</a></li>
-            <li><a href="io.html#exercises">Exercises</a></li>
+            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
             <ul>
             <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
-            </ul></li>
-            </ul>
-            <ul>
-            <li><a href="git-basics.html#git-basics">Git basics</a><ul>
-            <li><a href="git-basics.html#setup">Setup</a></li>
-            <li><a href="git-basics.html#track-files">Track files</a></li>
-            <li><a href="git-basics.html#branching-and-merging">Branching and merging</a></li>
-            <li><a href="git-basics.html#remotes">Remotes</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -228,7 +221,7 @@ echo &quot;After php-tags&quot;;
 <p>To get acquainted with php we will start of on the command line and work our way up to <abbr title="Hypertext Preprocessor">PHP</abbr> as a web server.</p>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> at its core is a program which reads a source file, interprets the directives an prints out the result.</p>
 <p>Basic invocation:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> <span class="kw">&lt;</span>script-to-execute<span class="kw">&gt;</span>.php</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> <span class="op">&lt;</span>script-to-execute<span class="op">&gt;</span>.php</code></pre></div>
 <p>The above command will print the output to the <code>STDOUT</code>.</p>
 <h3 id="hello-world">Hello World</h3>
 <p>The obligatory <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">hello world</a>.</p>
@@ -258,7 +251,7 @@ echo &quot;After php-tags&quot;;
 </div>
 <p></small></p>
 <p>Run it via:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> hello-world.php</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> hello-world.php</code></pre></div>
 <p>on the command line.</p>
 <h2 id="types-and-variables">Types and variables</h2>
 <p>Variables are a way to store some information and give the storage space a name. Via this name, the content that was stored can be retrieved.</p>
@@ -302,31 +295,31 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Type</th>
-<th align="left">Example</th>
-<th align="left">Description</th>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Integers</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="dv">42</span></code></p></td>
-<td align="left"><p>Real numbers</p></td>
+<td><p>Integers</p></td>
+<td><p><code class="sourceCode php"><span class="dv">42</span></code></p></td>
+<td><p>Whole numbers</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Floats</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="fl">3.1415</span></code></p></td>
-<td align="left"><p>Real numbers</p></td>
+<td><p>Floats</p></td>
+<td><p><code class="sourceCode php"><span class="fl">3.1415</span></code></p></td>
+<td><p>Real numbers</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Strings</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="st">&#39;Hello world&#39;</span></code></p></td>
-<td align="left"><p>Strings can be any number or letter in a sequence (enclosed by single <code>'</code> or double <code>&quot;</code> quotes, otherwise php may interpret it as a directive...)</p></td>
+<td><p>Strings</p></td>
+<td><p><code class="sourceCode php"><span class="st">&#39;Hello world&#39;</span></code></p></td>
+<td><p>Strings can be any number or letter in a sequence (enclosed by single <code>'</code> or double <code>&quot;</code> quotes, otherwise php may interpret it as a directive...)</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Boolean</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> or <code class="sourceCode php"><span class="kw">false</span></code></p></td>
-<td align="left"><p>binary true or false</p></td>
+<td><p>Boolean</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> or <code class="sourceCode php"><span class="kw">false</span></code></p></td>
+<td><p>binary true or false</p></td>
 </tr>
 </tbody>
 </table>
@@ -422,30 +415,30 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Sequence</th>
-<th align="left">Result</th>
+<th>Sequence</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><code>\n</code></p></td>
-<td align="left"><p>New line</p></td>
+<td><p><code>\n</code></p></td>
+<td><p>New line</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code>\r</code></p></td>
-<td align="left"><p>New line (Windows)</p></td>
+<td><p><code>\r</code></p></td>
+<td><p>New line (Windows)</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code>\t</code></p></td>
-<td align="left"><p>The literal <TAB>-character</p></td>
+<td><p><code>\t</code></p></td>
+<td><p>The literal <TAB>-character</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code>\$</code></p></td>
-<td align="left"><p>Literal <code>$</code> (escaping prevents variable interpreation)</p></td>
+<td><p><code>\$</code></p></td>
+<td><p>Literal <code>$</code> (escaping prevents variable interpreation)</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code>\&quot;</code></p></td>
-<td align="left"><p>Literal <code>&quot;</code> (escaping prevents string termination).</p></td>
+<td><p><code>\&quot;</code></p></td>
+<td><p>Literal <code>&quot;</code> (escaping prevents string termination).</p></td>
 </tr>
 </tbody>
 </table>
@@ -482,46 +475,46 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Example</th>
-<th align="left">Name</th>
-<th align="left">Result</th>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php">-<span class="kw">$a</span></code></p></td>
-<td align="left"><p>Negation</p></td>
-<td align="left"><p>Opposite of $a.</p></td>
+<td><p><code class="sourceCode php">-<span class="kw">$a</span></code></p></td>
+<td><p>Negation</p></td>
+<td><p>Opposite of $a.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> + <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Addition</p></td>
-<td align="left"><p>Sum of $a and $b.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> + <span class="kw">$b</span></code></p></td>
+<td><p>Addition</p></td>
+<td><p>Sum of $a and $b.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> - <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Subtraction</p></td>
-<td align="left"><p>Difference of $a and $b.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> - <span class="kw">$b</span></code></p></td>
+<td><p>Subtraction</p></td>
+<td><p>Difference of $a and $b.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> * <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Multiplication</p></td>
-<td align="left"><p>Product of $a and $b.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> * <span class="kw">$b</span></code></p></td>
+<td><p>Multiplication</p></td>
+<td><p>Product of $a and $b.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> / <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Division</p></td>
-<td align="left"><p>Quotient of $a and $b.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> / <span class="kw">$b</span></code></p></td>
+<td><p>Division</p></td>
+<td><p>Quotient of $a and $b.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> % <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Modulus</p></td>
-<td align="left"><p>Remainder of $a divided by $b.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> % <span class="kw">$b</span></code></p></td>
+<td><p>Modulus</p></td>
+<td><p>Remainder of $a divided by $b.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> ** <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Exponentiation</p></td>
-<td align="left"><p>Result of raising $a to the $b 'th power. <small>Introduced in <abbr title="Hypertext Preprocessor">PHP</abbr> 5.6.</small></p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> ** <span class="kw">$b</span></code></p></td>
+<td><p>Exponentiation</p></td>
+<td><p>Result of raising $a to the $b 'th power. <small>Introduced in <abbr title="Hypertext Preprocessor">PHP</abbr> 5.6.</small></p></td>
 </tr>
 </tbody>
 </table>
@@ -912,7 +905,7 @@ Array
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has some special, reserved, arrays. These arrays are created and filled by <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <h4 id="argv">$argv</h4>
 <p>This array holds al the arguments passed to a <abbr title="Hypertext Preprocessor">PHP</abbr>-script from the command line.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print_r-argv.php <span class="st">&#39;arg1&#39;</span> <span class="st">&#39;arg2&#39;</span> 123 --options</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print_r-argv.php <span class="st">&#39;arg1&#39;</span> <span class="st">&#39;arg2&#39;</span> 123 --options</code></pre></div>
 <pre class="run--output"><code>Array
 (
     [0] =&gt; print_r-argv.php
@@ -933,7 +926,7 @@ Array
 <h4 id="get">$_GET</h4>
 <p>The <code>$_GET</code>-array holds data sent to a webpage via a HTTP-get method.</p>
 <p>This corresponds with URL parameters.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">http</span>://example.com/page.php?arg1=hello<span class="kw">&amp;</span><span class="ot">arg2=</span>world<span class="kw">&amp;</span><span class="ot">end=</span>!</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">http</span>://example.com/page.php?arg1=hello<span class="kw">&amp;</span><span class="va">arg2=</span>world<span class="kw">&amp;</span><span class="va">end=</span>!</code></pre></div>
 <pre class="embed--output"><code>Array
 (
     [arg1] =&gt; hello
@@ -1022,56 +1015,56 @@ Array
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Example</th>
-<th align="left">Name</th>
-<th align="left">Result</th>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> == <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Equal</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is equal to <code>$b</code> after type juggling.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> == <span class="kw">$b</span></code></p></td>
+<td><p>Equal</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is equal to <code>$b</code> after type juggling.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> === <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Identical</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is equal to <code>$b</code>, and they are of the same type.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> === <span class="kw">$b</span></code></p></td>
+<td><p>Identical</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is equal to <code>$b</code>, and they are of the same type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> != <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Not equal</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code> after type juggling.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> != <span class="kw">$b</span></code></p></td>
+<td><p>Not equal</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code> after type juggling.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &lt;&gt; <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Not equal</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code> after type juggling.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &lt;&gt; <span class="kw">$b</span></code></p></td>
+<td><p>Not equal</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code> after type juggling.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> !== <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Not identical</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code>, or they are not of the same type.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> !== <span class="kw">$b</span></code></p></td>
+<td><p>Not identical</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not equal to <code>$b</code>, or they are not of the same type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &lt; <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Less than</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is strictly less than <code>$b</code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &lt; <span class="kw">$b</span></code></p></td>
+<td><p>Less than</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is strictly less than <code>$b</code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &gt; <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Greater than</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is strictly greater than <code>$b</code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &gt; <span class="kw">$b</span></code></p></td>
+<td><p>Greater than</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is strictly greater than <code>$b</code>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &lt;= <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Less than or equal to</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is less than or equal to <code>$b</code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &lt;= <span class="kw">$b</span></code></p></td>
+<td><p>Less than or equal to</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is less than or equal to <code>$b</code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &gt;= <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Greater than or equal to</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is greater than or equal to <code>$b</code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &gt;= <span class="kw">$b</span></code></p></td>
+<td><p>Greater than or equal to</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is greater than or equal to <code>$b</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1122,41 +1115,41 @@ bool(false)
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Example</th>
-<th align="left">Name</th>
-<th align="left">Result</th>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">and</span> <span class="kw">$b</span></code></p></td>
-<td align="left"><p>And</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if both <code>$a</code> and <code>$b</code> are <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">and</span> <span class="kw">$b</span></code></p></td>
+<td><p>And</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if both <code>$a</code> and <code>$b</code> are <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">or</span> <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Or</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">or</span> <span class="kw">$b</span></code></p></td>
+<td><p>Or</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">xor</span> <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Xor</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>, but not both.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> <span class="kw">xor</span> <span class="kw">$b</span></code></p></td>
+<td><p>Xor</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>, but not both.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php">! <span class="kw">$a</span></code></p></td>
-<td align="left"><p>Not</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
+<td><p><code class="sourceCode php">! <span class="kw">$a</span></code></p></td>
+<td><p>Not</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if <code>$a</code> is not <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> &amp;&amp; <span class="kw">$b</span></code></p></td>
-<td align="left"><p>And</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if both <code>$a</code> and <code>$b</code> are <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> &amp;&amp; <span class="kw">$b</span></code></p></td>
+<td><p>And</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if both <code>$a</code> and <code>$b</code> are <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><code class="sourceCode php"><span class="kw">$a</span> || <span class="kw">$b</span></code></p></td>
-<td align="left"><p>Or</p></td>
-<td align="left"><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
+<td><p><code class="sourceCode php"><span class="kw">$a</span> || <span class="kw">$b</span></code></p></td>
+<td><p>Or</p></td>
+<td><p><code class="sourceCode php"><span class="kw">true</span></code> if either <code>$a</code> or <code>$b</code> is <code class="sourceCode php"><span class="kw">true</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1412,7 +1405,7 @@ Exercise:
 <li>counts back from this number to zero</li>
 <li>counts from zero to the number in steps of three</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> count-to-number.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> count-to-number.php 9</code></pre></div>
 <pre class="run--output"><code>Count up from 0 to 9: 
 0
 1
@@ -1450,7 +1443,7 @@ Count up from 0 to 9 in steps of 3:
 Exercise:
 </h4>
 <p>Create a script that prints a line of a asterisks <code>*</code> defined by a command line parameter.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-asterisks.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-asterisks.php 9</code></pre></div>
 <pre class="run--output"><code>*********
 </code></pre>
 <div class="text-right">
@@ -1466,7 +1459,7 @@ Exercise:
 <li>prints a square of a asterisks <code>*</code> if one parameter is defined</li>
 <li>Prints a block with width and height if both parameters are defined.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-square-of-asterisks.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-square-of-asterisks.php 9</code></pre></div>
 <pre class="run--output"><code>*********
 *********
 *********
@@ -1481,7 +1474,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-square-of-asterisks.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-square-of-asterisks.php 15 5</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-square-of-asterisks.php 15 5</code></pre></div>
 <pre class="run--output"><code>***************
 ***************
 ***************
@@ -1498,7 +1491,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a left + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-left-bottom-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-left-bottom-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*
 **
 ***
@@ -1518,7 +1511,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a right + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-right-bottom-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-right-bottom-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>        *
        **
       ***
@@ -1539,7 +1532,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a center + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-center-bottom-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-center-bottom-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>     
     **
    ****
@@ -1556,7 +1549,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create al the triangles again but the base (maximum number of asterisks) should be on top instead of at the bottom...</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-left-top-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-left-top-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*********
 ********
 *******
@@ -1572,7 +1565,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-left-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-right-top-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-right-top-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*********
  ********
   *******
@@ -1587,7 +1580,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-right-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> print-center-top-balanced-triangle.php 9</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> print-center-top-balanced-triangle.php 9</code></pre></div>
 <pre class="run--output"><code>*********
  *******
   *****
@@ -1612,7 +1605,7 @@ Exercise:
 <li>prints the list backwards (bonus)</li>
 <li>prints the list sorted (bonus)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> number-statistics.php 9 12 3 5 4 1 8 5</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> number-statistics.php 9 12 3 5 4 1 8 5</code></pre></div>
 <pre class="run--output"><code>The numbers received:
 number 0: 9
 number 1: 12
@@ -1657,7 +1650,7 @@ Numbers from smallest to largest:
 Exercise:
 </h4>
 <p>Create a script that generates the reverse complement of DNA string:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
 <div class="text-right">
@@ -1665,7 +1658,7 @@ comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 </div>
 <p>Bonus:</p>
 <p>Print bonds:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
@@ -1688,7 +1681,7 @@ Exercise:
 <li>white space</li>
 <li>unvalid nucleotides (and report these)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></code></pre></div>
 <pre class="run--output"><code>orig.: ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 
@@ -1705,7 +1698,7 @@ i: 1 occurrences
 Exercise:
 </h4>
 <p>Create a script that prints the nucleotide frequency of a DNA strand.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>input: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 
    STATS:
@@ -1729,7 +1722,7 @@ Exercise:
 <li>sort by character (and reverse)</li>
 <li>case-insensitive (bonus)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></code></pre></div>
 <pre class="run--output"><code>input: Hello world, this is a random 123#$ string.
 
 STATS:
@@ -1759,27 +1752,27 @@ STATS:
 
 Order by frequentie:
 &#39;H&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;h&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;m&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;1&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;2&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;,&#39;: 1 occurences -&gt; 2.3255813953488 %
-&#39;.&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;e&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;g&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;$&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;#&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;3&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;2&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;1&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;m&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;.&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;h&#39;: 1 occurences -&gt; 2.3255813953488 %
+&#39;,&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;w&#39;: 1 occurences -&gt; 2.3255813953488 %
 &#39;t&#39;: 2 occurences -&gt; 4.6511627906977 %
 &#39;a&#39;: 2 occurences -&gt; 4.6511627906977 %
-&#39;d&#39;: 2 occurences -&gt; 4.6511627906977 %
 &#39;n&#39;: 2 occurences -&gt; 4.6511627906977 %
-&#39;i&#39;: 3 occurences -&gt; 6.9767441860465 %
-&#39;o&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;d&#39;: 2 occurences -&gt; 4.6511627906977 %
 &#39;s&#39;: 3 occurences -&gt; 6.9767441860465 %
 &#39;r&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;o&#39;: 3 occurences -&gt; 6.9767441860465 %
 &#39;l&#39;: 3 occurences -&gt; 6.9767441860465 %
+&#39;i&#39;: 3 occurences -&gt; 6.9767441860465 %
 &#39; &#39;: 7 occurences -&gt; 16.279069767442 %
 
 Order by character:
@@ -1822,7 +1815,7 @@ Order by character:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2016-11-14
+                  at 2017-09-25
                </p>
             </footer>
          </div>
