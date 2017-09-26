@@ -6,8 +6,6 @@
 <body>
    <h1>CV <small>Arne Soete</small></h1>
 
-   <h2 id="personal-info">Personal Information</h2>
-
    <?php include('cv.php.inc') ?>
 
 </body>
