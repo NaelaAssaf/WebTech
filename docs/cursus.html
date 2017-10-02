@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2017-09-26" />
+        <meta name="date" content="2017-10-01" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -562,7 +562,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="inline-wrap-text-span">Inline wrap text: <code>span</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_span.asp" class="w3c-ref"><code>span</code></a>-tag is a generic wrapper. It has no special semantic meaning. The <a href="http://www.w3schools.com/tags/tag_span.asp" class="w3c-ref"><code>span</code></a>-tag is mostly used to style/target some text.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/span-tag.html">html-intro/span-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/span-tag.php" taret="_blank">src</a></span></p>
@@ -575,7 +575,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="strike-text-strike">Strike text: <code>strike</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_strike.asp" class="w3c-ref"><code>strike</code></a>-tag is used to strike through some text.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/strike-tag.html">html-intro/strike-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strike-tag.php" taret="_blank">src</a></span></p>
@@ -588,7 +588,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="bold-text-strong">Bold text: <code>strong</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_strong.asp" class="w3c-ref"><code>strong</code></a>-tag can be used to make text bold.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/strong-tag.html">html-intro/strong-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strong-tag.php" taret="_blank">src</a></span></p>
@@ -601,7 +601,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="inline-quote-text-q">Inline quote text: <code>q</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_q.asp" class="w3c-ref"><code>q</code></a>-tag is used to indicate certain inline text was quoted from an external source.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/quote-tag.html">html-intro/quote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/quote-tag.php" taret="_blank">src</a></span></p>
@@ -610,6 +610,24 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/quote-tag</span></p>
 <iframe src="embeds/html-intro/quote-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="image-img">Image <code>img</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_img.asp" class="w3c-ref"><code>img</code></a>-tag can be used to inert images into the markup. The <code>src</code>-attribute is required and specifies the location of the image. The location can be a local path, this means a path form the current script directory to the image location or a full (absolute) URL path.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/img-tag.html">html-intro/img-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/img-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;/assets/img/php-elephant.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A local location&quot;</span><span class="ot"> height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;img</span>
+<span class="ot">   src=</span><span class="st">&quot;https://raw.githubusercontent.com/asoete/howest-webtechnology/master/docs/assets/img/php-elephant.png&quot;</span>
+<span class="ot">   alt=</span><span class="st">&quot;A complete URL to an image&quot;</span>
+<span class="ot">   height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/img-tag</span></p>
+<iframe src="embeds/html-intro/img-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
@@ -1650,12 +1668,20 @@ Exercise:
 <li>an image of the molecule</li>
 <li>some info about the nucleotide</li>
 </ul>
-<p><small> All of this can be fetched from wikipedia...</small></p>
+<p><small> All of this can be fetched from wikipedia... <a href="https://en.wikipedia.org/wiki/Adenosine" class="uri">https://en.wikipedia.org/wiki/Adenosine</a>, <a href="https://en.wikipedia.org/wiki/Thymidine" class="uri">https://en.wikipedia.org/wiki/Thymidine</a>, <a href="https://en.wikipedia.org/wiki/Cytosine" class="uri">https://en.wikipedia.org/wiki/Cytosine</a>, <a href="https://en.wikipedia.org/wiki/Guanine" class="uri">https://en.wikipedia.org/wiki/Guanine</a>. </small></p>
 <ul>
-<li>The text should flow around the image.</li>
+<li><p>The text should flow around the image.</p></li>
+<li><p>Create a landing page. This page will welcome the user and link to the other pages.</p></li>
+<li><p>Display a navigation bar on top of each page.</p></li>
 </ul>
-<p>Create a landing page. This page will welcome the user and link to the other pages.</p>
-<p>Display a navigation bar on top of each page.</p>
+<iframe src="embeds/exercises/css/site1/index.html" class="embed--output" height="400px" frameborder="0">
+</iframe>
+<div class="text-right">
+<p><small> <a href="embeds/exercises/css/site1/index.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/site1/index.html" target="_blank">Solution (github)</a> </small></p>
+</div>
+<div class="alert alert-info">
+<strong>Info:</strong> In the next chapter we will see how to prevent code duplication. So don't duplicate code if there is another way (<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Keep it DRY</a>)
+</div>
 </div>
 <h1 id="php-basics">PHP Basics</h1>
 <blockquote>
@@ -1864,7 +1890,7 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <span class="fu">print</span><span class="ot">(</span> <span class="st">&#39;Hello World&#39;</span> <span class="ot">);</span>
 <span class="fu">print</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">);</span>
 <span class="fu">print</span><span class="ot">(</span> <span class="kw">false</span> <span class="ot">);</span></code></pre></div>
-<h4 id="string-concatenation-and-interpolation">String concatenation and interpolation</h4>
+<h4 id="string-concatenation-and-interpolation-or-single-vs.-double-quotes">String concatenation and interpolation <small>Or single vs. double quotes</small></h4>
 <p>Scalars can be combined, concatenated into larger strings.</p>
 <p>The concatenation symbol is a dot: <code>.</code>.</p>
 <div class="row">
@@ -1968,7 +1994,7 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 </code></pre>
 </div>
 </div>
-<h5 id="basic-arithmetic">Basic arithmetic</h5>
+<h4 id="basic-arithmetic">Basic arithmetic</h4>
 <p>Floats an Integers can be used in arithmetic.</p>
 <table>
 <colgroup>
@@ -4266,7 +4292,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2017-09-26
+                  at 2017-10-01
                </p>
             </footer>
          </div>

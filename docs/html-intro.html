@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2017-09-26" />
+        <meta name="date" content="2017-10-01" />
    
    
    <title>HTML basics - BIT01 Webtechnology</title>
@@ -467,7 +467,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="inline-wrap-text-span">Inline wrap text: <code>span</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_span.asp" class="w3c-ref"><code>span</code></a>-tag is a generic wrapper. It has no special semantic meaning. The <a href="http://www.w3schools.com/tags/tag_span.asp" class="w3c-ref"><code>span</code></a>-tag is mostly used to style/target some text.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/span-tag.html">html-intro/span-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/span-tag.php" taret="_blank">src</a></span></p>
@@ -480,7 +480,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="strike-text-strike">Strike text: <code>strike</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_strike.asp" class="w3c-ref"><code>strike</code></a>-tag is used to strike through some text.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/strike-tag.html">html-intro/strike-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strike-tag.php" taret="_blank">src</a></span></p>
@@ -493,7 +493,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="bold-text-strong">Bold text: <code>strong</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_strong.asp" class="w3c-ref"><code>strong</code></a>-tag can be used to make text bold.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/strong-tag.html">html-intro/strong-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/strong-tag.php" taret="_blank">src</a></span></p>
@@ -506,7 +506,7 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 </div>
 </div>
 <h3 id="inline-quote-text-q">Inline quote text: <code>q</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a></p>
+<p>The <a href="http://www.w3schools.com/tags/tag_q.asp" class="w3c-ref"><code>q</code></a>-tag is used to indicate certain inline text was quoted from an external source.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/quote-tag.html">html-intro/quote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/quote-tag.php" taret="_blank">src</a></span></p>
@@ -515,6 +515,24 @@ line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</code></pre></div
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/quote-tag</span></p>
 <iframe src="embeds/html-intro/quote-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<h3 id="image-img">Image <code>img</code></h3>
+<p>The <a href="http://www.w3schools.com/tags/tag_img.asp" class="w3c-ref"><code>img</code></a>-tag can be used to inert images into the markup. The <code>src</code>-attribute is required and specifies the location of the image. The location can be a local path, this means a path form the current script directory to the image location or a full (absolute) URL path.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/html-intro/img-tag.html">html-intro/img-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/img-tag.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;/assets/img/php-elephant.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A local location&quot;</span><span class="ot"> height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;img</span>
+<span class="ot">   src=</span><span class="st">&quot;https://raw.githubusercontent.com/asoete/howest-webtechnology/master/docs/assets/img/php-elephant.png&quot;</span>
+<span class="ot">   alt=</span><span class="st">&quot;A complete URL to an image&quot;</span>
+<span class="ot">   height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<p><span class="embed--srcfile">output of html-intro/img-tag</span></p>
+<iframe src="embeds/html-intro/img-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no">
 </iframe>
 </div>
 </div>
@@ -732,7 +750,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2017-09-26
+                  at 2017-10-01
                </p>
             </footer>
          </div>

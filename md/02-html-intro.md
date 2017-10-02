@@ -307,27 +307,38 @@ m4_embed_php_as_html(html-intro/small-tag,50px,.html)
 
 ### Inline wrap text: `span`
 
-The m4_tag(a)
+The m4_tag(span)-tag is a generic wrapper. It has no special semantic meaning.
+The m4_tag(span)-tag is mostly used to style/target some text.
 
 m4_embed_php_as_html(html-intro/span-tag,50px,.html)
 
 ### Strike text: `strike`
 
-The m4_tag(a)
+The m4_tag(strike)-tag is used to strike through some text.
 
 m4_embed_php_as_html(html-intro/strike-tag,50px,.html)
 
 ### Bold text: `strong`
 
-The m4_tag(a)
+The m4_tag(strong)-tag can be used to make text bold.
 
 m4_embed_php_as_html(html-intro/strong-tag,50px,.html)
 
 ### Inline quote text: `q`
 
-The m4_tag(a)
+The m4_tag(q)-tag is used to indicate certain inline text was quoted from an
+external source.
 
 m4_embed_php_as_html(html-intro/quote-tag,50px,.html)
+
+### Image `img`
+
+The m4_tag(img)-tag can be used to inert images into the markup.  The
+`src`-attribute is required and specifies the location of the image.  The
+location can be a local path, this means a path form the current script
+directory to the image location or a full (absolute) URL path.
+
+m4_embed_php_as_html(html-intro/img-tag,125px,.html)
 
 m4_exercise([[
 * Make a web-page with links to:

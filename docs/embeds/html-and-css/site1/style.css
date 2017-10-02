@@ -1,0 +1,19 @@
+img {
+
+   width: 75px;
+   float: left;
+   padding: 1em;
+}
+
+.nav {
+
+   margin: 0 auto;
+   text-align: center;
+   border-bottom: solid grey 1px;
+}
+
+.nav li {
+
+   display: inline-block;
+   padding: 0.5em 2em;
+}

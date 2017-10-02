@@ -696,12 +696,22 @@ Each of this pages should contain:
 - an image of the molecule
 - some info about the nucleotide
 
-<small> All of this can be fetched from wikipedia...</small>
+<small>
+All of this can be fetched from wikipedia...
+<https://en.wikipedia.org/wiki/Adenosine>,
+<https://en.wikipedia.org/wiki/Thymidine>,
+<https://en.wikipedia.org/wiki/Cytosine>,
+<https://en.wikipedia.org/wiki/Guanine>.
+</small>
 
 - The text should flow around the image.
 
-Create a landing page. This page will welcome the user and link to the other pages.
+- Create a landing page. This page will welcome the user and link to the other pages.
 
-Display a navigation bar on top of each page.
+- Display a navigation bar on top of each page.
 
+m4_embed(css/site1/index,400px)
+m4_note([[In the next chapter we will see how to prevent code duplication. So
+don't duplicate code if there is another way ([Keep it
+DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)) ]])
 ]])

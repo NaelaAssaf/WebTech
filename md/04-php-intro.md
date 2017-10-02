@@ -239,7 +239,7 @@ print( true );
 print( false );
 ```
 
-#### String concatenation and interpolation
+#### String concatenation and interpolation <small>Or single vs. double quotes</small>
 
 Scalars can be combined, concatenated into larger strings.
 
@@ -279,7 +279,7 @@ Example:
 
 m4_embed_php(php-basics/escape-sequences)
 
-##### Basic arithmetic
+#### Basic arithmetic
 
 Floats an Integers can be used in arithmetic.
 
