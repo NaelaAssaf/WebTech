@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2017-10-01" />
+        <meta name="date" content="2017-10-08" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -2683,9 +2683,81 @@ bool(false)
 </tbody>
 </table>
 <p>Example:</p>
-<p>Ma_embed_php(php-basics/logical-operators)</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/logical-operators.html">php-basics/logical-operators</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/logical-operators.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
+
+<span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="kw">or</span> <span class="kw">false</span> <span class="ot">)</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`true or false` evaluated to TRUE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+<span class="kw">else</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`true or false` evaluated to FALSE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+<span class="fu">echo</span> <span class="st">&quot;----------------------------------------------------------------------</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+
+<span class="kw">if</span><span class="ot">(</span> !<span class="kw">true</span> <span class="ot">)</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`!true` evaluated to TRUE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+<span class="kw">else</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`!true` evaluated to FALSE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+<span class="fu">echo</span> <span class="st">&quot;----------------------------------------------------------------------</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+
+<span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="kw">and</span> <span class="kw">false</span> <span class="ot">)</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`true and false` evaluated to TRUE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+<span class="kw">else</span> {
+
+   <span class="fu">echo</span> <span class="st">&quot;`true and false` evaluated to FALSE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+<span class="kw">?&gt;</span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/logical-operators</span></p>
+<pre class="embed--output" style="height:;"><code>`true or false` evaluated to TRUE
+----------------------------------------------------------------------
+`!true` evaluated to FALSE
+----------------------------------------------------------------------
+`true and false` evaluated to FALSE
+</code></pre>
+</div>
+</div>
 <p>These logical operators can be combined at will. Brackets <code>()</code> can be used to enforce precedence.</p>
-<p>Ma_embed_php(php-basics/logical-precedence)</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/logical-precedence.html">php-basics/logical-precedence</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/logical-precedence.php" taret="_blank">src</a></span></p>
+<div class="sourceCode"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span class="kw">&lt;?php</span>
+
+<span class="kw">if</span><span class="ot">(</span> <span class="ot">(</span> <span class="dv">1</span> <span class="kw">and</span> <span class="dv">0</span> <span class="ot">)</span> <span class="kw">and</span> <span class="kw">true</span> <span class="ot">)</span> {
+   <span class="fu">echo</span> <span class="st">&quot;`( 1 and 0 ) and true` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+<span class="kw">else</span> {
+   <span class="fu">echo</span> <span class="st">&quot;`( 1 and 0 ) and true` --&gt; false</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+
+<span class="kw">if</span><span class="ot">(</span> <span class="dv">1</span> <span class="kw">and</span> <span class="ot">(</span> <span class="dv">0</span>  <span class="kw">and</span> <span class="kw">true</span> <span class="ot">)</span> <span class="ot">)</span> {
+   <span class="fu">echo</span> <span class="st">&quot;`1 and ( 0  and true )` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}
+<span class="kw">else</span> {
+   <span class="fu">echo</span> <span class="st">&quot;`1 and ( 0  and true )` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span>
+}</code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/logical-precedence</span></p>
+<pre class="embed--output" style="height:;"><code>`( 1 and 0 ) and true` --&gt; false
+`1 and ( 0  and true )` --&gt; true
+</code></pre>
+</div>
+</div>
 <h2 id="loops">Loops</h2>
 <p>Loops enable you to repeat a block of code until a condition is met.</p>
 <h3 id="while">While</h3>
@@ -3227,6 +3299,7 @@ i: 1 occurrences
 Exercise:
 </h4>
 <p>Create a script that prints the nucleotide frequency of a DNA strand.</p>
+<p>Additional: Create a simple bar plot to visualise the percentages.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></code></pre></div>
 <pre class="run--output"><code>input: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 
@@ -3235,6 +3308,12 @@ Exercise:
       T: 18 nts -&gt; 24.657534246575 %
       G: 18 nts -&gt; 24.657534246575 %
       C: 13 nts -&gt; 17.808219178082 %
+
+   GRAPH:
+      A: =================================
+      T: =========================
+      G: =========================
+      C: ==================
 
 </code></pre>
 <div class="text-right">
@@ -4292,7 +4371,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2017-10-01
+                  at 2017-10-08
                </p>
             </footer>
          </div>

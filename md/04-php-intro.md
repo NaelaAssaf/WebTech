@@ -616,12 +616,12 @@ combined via the logical operators:
 
 Example:
 
-Ma_embed_php(php-basics/logical-operators)
+m4_embed_php(php-basics/logical-operators)
 
 These logical operators can be combined at will. Brackets `()` can be used to
 enforce precedence.
 
-Ma_embed_php(php-basics/logical-precedence)
+m4_embed_php(php-basics/logical-precedence)
 
 
 ## Loops
@@ -870,6 +870,8 @@ m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
 Create a script that prints the nucleotide frequency of a DNA strand.
+
+Additional: Create a simple bar plot to visualise the percentages.
 
 m4_run(php-basics,dna-frequency.php,'ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC')
 ]])

@@ -34,5 +34,19 @@ echo"
       C: $stats[C] nts -> ". ($stats['C']/$nr_of_nt)*100 . " %
 ";
 
+echo"
+   GRAPH:
+";
+
+foreach( $stats as $nt => $count ) {
+
+   echo "      $nt: ";
+   for( $i=0; $i < ($count/$nr_of_nt)*100; $i++) {
+
+      echo '=';
+   }
+   echo "\n";
+}
+
 ?>
 
