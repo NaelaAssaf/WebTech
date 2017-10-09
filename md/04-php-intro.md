@@ -824,6 +824,49 @@ m4_run(php-basics,print-center-top-balanced-triangle.php,9)
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
+Create a script that counts the number of parameters provided
+
+m4_run(php-basics,count-argv.php,[[9 12 3 5 4 1 8 5]])
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a script which stores the keys of an array as values of another array.
+(Extract the keys from an array)
+
+```php
+$array = array(
+    'position 1' => 'hello',
+    'position 2' => 'world',
+    3            => 'three',
+    'four'       => 4
+);
+```
+m4_run(php-basics,array-keys.php)
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+* Create a script which reverses and array.
+* Create a script which reverses and array and preserves the keys
+
+```php
+$array = array(
+    'position 1' => 'hello',
+    'position 2' => 'world',
+    3            => 'three',
+    'four'       => 4
+);
+```
+
+m4_run(php-basics,array-reverse.php)
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
 Create a script that:
 
 * reads a list of numbers from the command line

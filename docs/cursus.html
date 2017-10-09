@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2017-10-08" />
+        <meta name="date" content="2017-10-09" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -3197,6 +3197,76 @@ Exercise:
 <h4>
 Exercise:
 </h4>
+<p>Create a script that counts the number of parameters provided</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> count-argv.php 9 12 3 5 4 1 8 5</code></pre></div>
+<pre class="run--output"><code>8 arguments where provided
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/count-argv.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<p>Create a script which stores the keys of an array as values of another array. (Extract the keys from an array)</p>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$array</span> = <span class="fu">array</span><span class="ot">(</span>
+    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span>
+    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span>
+    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span>
+    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span>
+<span class="ot">);</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> array-keys.php </code></pre></div>
+<pre class="run--output"><code>Array
+(
+    [0] =&gt; position 1
+    [1] =&gt; position 2
+    [2] =&gt; 3
+    [3] =&gt; four
+)
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/array-keys.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
+<ul>
+<li>Create a script which reverses and array.</li>
+<li>Create a script which reverses and array and preserves the keys</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$array</span> = <span class="fu">array</span><span class="ot">(</span>
+    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span>
+    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span>
+    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span>
+    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span>
+<span class="ot">);</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">php</span> array-reverse.php </code></pre></div>
+<pre class="run--output"><code>Array
+(
+    [0] =&gt; 4
+    [1] =&gt; three
+    [2] =&gt; world
+    [3] =&gt; hello
+)
+Array
+(
+    [four] =&gt; 4
+    [3] =&gt; three
+    [position 2] =&gt; world
+    [position 1] =&gt; hello
+)
+</code></pre>
+<div class="text-right">
+<p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/array-reverse.php" target="_blank">Solution (github)</a> </small></p>
+</div>
+</div>
+<div class="exercise">
+<h4>
+Exercise:
+</h4>
 <p>Create a script that:</p>
 <ul>
 <li>reads a list of numbers from the command line</li>
@@ -4371,7 +4441,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2017-10-08
+                  at 2017-10-09
                </p>
             </footer>
          </div>
