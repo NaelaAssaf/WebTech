@@ -864,8 +864,8 @@ m4_run(php-basics,array-keys.php)
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
-* Create a script which reverses and array.
-* Create a script which reverses and array and preserves the keys
+* Create a script which reverses an array.
+* Create a script which reverses an array and preserves the keys
 
 ```php
 $array = array(
