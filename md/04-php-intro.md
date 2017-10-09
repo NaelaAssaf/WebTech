@@ -832,6 +832,21 @@ m4_run(php-basics,count-argv.php,[[9 12 3 5 4 1 8 5]])
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
+Create a script that:
+
+* reads a list of numbers from the command line
+* prints the list
+* prints the number of numbers (count)
+* calculates/prints the min, max and average of the numbers
+* (prints the list backwards (bonus))
+* (prints the list sorted (bonus))
+
+m4_run(php-basics,number-statistics.php,[[9 12 3 5 4 1 8 5]])
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
 Create a script which stores the keys of an array as values of another array.
 (Extract the keys from an array)
 
@@ -862,21 +877,6 @@ $array = array(
 ```
 
 m4_run(php-basics,array-reverse.php)
-]])
-
-m4_dnl -----------------------------------------------------------------------
-
-m4_exercise([[
-Create a script that:
-
-* reads a list of numbers from the command line
-* prints the list
-* prints the number of numbers (count)
-* calculates/prints the min, max and average of the numbers
-* prints the list backwards (bonus)
-* prints the list sorted (bonus)
-
-m4_run(php-basics,number-statistics.php,[[9 12 3 5 4 1 8 5]])
 ]])
 
 m4_dnl -----------------------------------------------------------------------
