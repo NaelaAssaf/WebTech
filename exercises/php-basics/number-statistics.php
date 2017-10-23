@@ -6,6 +6,7 @@ $count = 0;
 $smallest = $numbers[0];
 $largest = $numbers[0];
 $sum = 0;
+$occurence = [];
 $reverse ='';
 
 # ============================================================================ #
@@ -22,6 +23,11 @@ foreach( $numbers as $index => $number ) {
    if( $number < $smallest ) $smallest = $number;
    $count++;
    $sum += $number;
+   if( !isset($occurence[$number])) {
+
+      $occurence[$number] = 0;
+   }
+      $occurence[$number]++;
 }
 
 echo "\n";
@@ -29,6 +35,11 @@ echo "Smallest number: $smallest\n";
 echo "Avg: ". $sum / $count ."\n";
 echo "Largest number: $largest\n";
 echo "Number of numbers: $count\n";
+echo "Number occurences\n";
+foreach( $occurence as $number => $times ) {
+
+   echo "\t$number\t->\t$times\n";
+}
 echo "\n";
 
 

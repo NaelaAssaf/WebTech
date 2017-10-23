@@ -838,6 +838,7 @@ Create a script that:
 * prints the list
 * prints the number of numbers (count)
 * calculates/prints the min, max and average of the numbers
+* Print how many times a number occurs in the list
 * (prints the list backwards (bonus))
 * (prints the list sorted (bonus))
 
