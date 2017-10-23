@@ -384,14 +384,14 @@ m4_embed_php(php-basics/array-update-value)
 
 ##### Add an item to the end of an array:
 
-Adding an element in front of an array can be accomplished by the function
-m4_phpfunc(array_push).
+Adding an element at the end of an array can be accomplished by the function
+m4_phpfunc(array_push) or by the square brackets notation (`$array[] = $value;`).
 
 m4_embed_php(php-basics/array-append)
 
 ##### Add an item in front of an array:
 
-Adding an element at the end of an array can be accomplished by the function
+Adding an element in front of an array can be accomplished by the function
 m4_phpfunc(array_unshift).
 
 m4_embed_php(php-basics/array-prepend)
