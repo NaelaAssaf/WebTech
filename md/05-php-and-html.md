@@ -341,6 +341,8 @@ Create a webpage with a login form:
 * email address
 * password field
 * _"I want to receive updates"_ checkbox
+
+m4_page(php-and-html/form,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -370,7 +372,9 @@ Please validate if a user is older than 21.
 
 Print an _access granted_ or _denied_ accordingly.
 
-(extra: print how many years the user should wait before resubmitting the form...)
+(Extra: Show error when a field is not filled...)
+
+(Extra II: print how many years the user should wait before resubmitting the form...)
 
 m4_page(php-and-html/access-control, 200px)
 ]])
@@ -451,6 +455,24 @@ joan, d'arc, female, 33
 ```
 
 m4_page(php-and-html/csv,250px)
+]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a webtool which generates random sequences sequences. The specifics of the sequence should be configurable:
+
+Allow the user tot specify:
+
+* Sequence header (if not defined use: `Random sequence #1`)
+* The alfabet the sequence should be composed of (if not defined use `ATGC`)
+* The total number of nucleotides (default: `250`)
+* The number of nucleotides per line (default: `50`)
+* (Extra: Add the option (specify the number of sequences to generate) to
+  generate multi-fasta e.g. generate multiple sequences: `Random sequence #1`,
+  `Random sequence #2`, ...)
+
+m4_page(php-and-html/fasta-generator,300px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------

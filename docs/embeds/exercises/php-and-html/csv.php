@@ -33,7 +33,7 @@ if( isset( $_POST['submit'] ) ) {
       $fields = explode( ',', $line );
       $count++;
 
-      if( $count == 1 and $_POST['has_headers'] == 1 ) {
+      if( $count == 1 and isset( $_POST['has_headers'] ) ) {
 
          $tag = 'th';
       }

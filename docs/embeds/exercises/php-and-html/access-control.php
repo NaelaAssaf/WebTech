@@ -3,6 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <title>Access Control</title>
+   <style type="text/css">
+      .error {color: darkred;}
+   </style>
 </head>
 <body>
    <form action="#" method="get">
@@ -18,6 +21,18 @@
 <?php
 
 if( isset( $_GET['submit'] ) ) {
+
+   if( !isset($_GET['name']) or empty($_GET['name']) ) {
+
+      echo '<p class="error">No name provided</p>';
+      exit;
+   }
+
+   if( !isset($_GET['age'])  or empty($_GET['age']) ) {
+
+      echo '<p class="error">No age provided</p>';
+      exit;
+   }
 
    echo "<hr>";
    echo "<br>";
