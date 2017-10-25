@@ -184,7 +184,7 @@ bookmarked or shared.
 
 ##### POST
 
-`POST` The post method comes is where `GET` falls short.
+`POST` The post method comes in where `GET` falls short.
 
 The data is sent in the body of the HTTP request and is this invisible and not
 limited by size.
