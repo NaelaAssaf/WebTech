@@ -59,7 +59,7 @@
 
          $nr_lines++;
 
-         $words = split( ' ', $line );
+         $words = explode( ' ', $line );
 
          foreach ($words as $word ) {
 
