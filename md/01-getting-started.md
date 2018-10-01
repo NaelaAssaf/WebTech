@@ -76,7 +76,8 @@ And open <http://localhost:8000> in a web browser.
 
 ## Get local copy of the _exercises and examples_ solutions
 
-* Get an initial copy of the repository:
+* Get an initial copy of the repository located at <https://github.com/asoete/howest-webtechnology-examples>:
+
 ```bash
 cd ~/webtechnology
 git clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples
