@@ -242,10 +242,11 @@
 <div class="alert alert-warning">
 <strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don’t modify the contents in this folder…
 </div>
-<pre><code>&lt;div class=&quot;alert alert-info&quot;&gt;&lt;strong&gt;Info:&lt;/strong&gt; When you do encounter errors while pulling, run:</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="fu">git</span> fetch --all</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="fu">git</span> reset --hard origin/master</a></code></pre></div>
-This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost…</strong>
+<div class="alert alert-info">
+<p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">git</span> fetch --all</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="fu">git</span> reset --hard origin/master</a></code></pre></div>
+<p>This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost…</strong></p>
 </div>
 <h3 id="final-result">Final result</h3>
 <p>If you complete all of the steps above, you will end up with a workspace that looks like this:</p>

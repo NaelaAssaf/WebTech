@@ -91,18 +91,18 @@ git clone https://github.com/asoete/howest-webtechnology-examples.git solutions-
 cd ~/webtechnology/solutions-and-examples
 git pull origin master
 ```
-  m4_warning([[If you made local modifications to any of the files in this
-  repository, this update command (`git pull`) will most likely fail. So don't
-  modify the contents in this folder...]])
-  m4_dnl
-  m4_info([[When you do encounter errors while pulling, run:
+m4_warning([[If you made local modifications to any of the files in this
+repository, this update command (`git pull`) will most likely fail. So don't
+modify the contents in this folder...]])
+m4_dnl
+m4_info([[When you do encounter errors while pulling, run:
 ```bash
 git fetch --all
 git reset --hard origin/master
 ```
-  This will reset the repository to be identical to the one on GitHub. **Be
-  warned: local modifications will be lost...**
-  ]])
+This will reset the repository to be identical to the one on GitHub. **Be
+warned: local modifications will be lost...**
+]])
 
 ### Final result
 
