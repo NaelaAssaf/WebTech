@@ -8,47 +8,75 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2017-11-06" />
+        <meta name="date" content="2018-10-01" />
    
    
    <title>IO - BIT01 Webtechnology</title>
 
          <style type="text/css">
-         div.sourceCode { overflow-x: auto; }
-         table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-           margin: 0; padding: 0; vertical-align: baseline; border: none; }
-         table.sourceCode { width: 100%; line-height: 100%; }
-         td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-         td.sourceCode { padding-left: 5px; }
-         code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-         code > span.dt { color: #902000; } /* DataType */
-         code > span.dv { color: #40a070; } /* DecVal */
-         code > span.bn { color: #40a070; } /* BaseN */
-         code > span.fl { color: #40a070; } /* Float */
-         code > span.ch { color: #4070a0; } /* Char */
-         code > span.st { color: #4070a0; } /* String */
-         code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-         code > span.ot { color: #007020; } /* Other */
-         code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-         code > span.fu { color: #06287e; } /* Function */
-         code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-         code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-         code > span.cn { color: #880000; } /* Constant */
-         code > span.sc { color: #4070a0; } /* SpecialChar */
-         code > span.vs { color: #4070a0; } /* VerbatimString */
-         code > span.ss { color: #bb6688; } /* SpecialString */
-         code > span.im { } /* Import */
-         code > span.va { color: #19177c; } /* Variable */
-         code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-         code > span.op { color: #666666; } /* Operator */
-         code > span.bu { } /* BuiltIn */
-         code > span.ex { } /* Extension */
-         code > span.pp { color: #bc7a00; } /* Preprocessor */
-         code > span.at { color: #7d9029; } /* Attribute */
-         code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-         code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-         code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-         code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+         a.sourceLine { display: inline-block; line-height: 1.25; }
+         a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+         a.sourceLine:empty { height: 1.2em; position: absolute; }
+         .sourceCode { overflow: visible; }
+         code.sourceCode { white-space: pre; position: relative; }
+         div.sourceCode { margin: 1em 0; }
+         pre.sourceCode { margin: 0; }
+         @media screen {
+         div.sourceCode { overflow: auto; }
+         }
+         @media print {
+         code.sourceCode { white-space: pre-wrap; }
+         a.sourceLine { text-indent: -1em; padding-left: 1em; }
+         }
+         pre.numberSource a.sourceLine
+           { position: relative; }
+         pre.numberSource a.sourceLine:empty
+           { position: absolute; }
+         pre.numberSource a.sourceLine::before
+           { content: attr(data-line-number);
+             position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+             border: none; pointer-events: all;
+             -webkit-touch-callout: none; -webkit-user-select: none;
+             -khtml-user-select: none; -moz-user-select: none;
+             -ms-user-select: none; user-select: none;
+             padding: 0 4px; width: 4em;
+             color: #aaaaaa;
+           }
+         pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+         div.sourceCode
+           {  }
+         @media screen {
+         a.sourceLine::before { text-decoration: underline; }
+         }
+         code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+         code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+         code span.at { color: #7d9029; } /* Attribute */
+         code span.bn { color: #40a070; } /* BaseN */
+         code span.bu { } /* BuiltIn */
+         code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+         code span.ch { color: #4070a0; } /* Char */
+         code span.cn { color: #880000; } /* Constant */
+         code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+         code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+         code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+         code span.dt { color: #902000; } /* DataType */
+         code span.dv { color: #40a070; } /* DecVal */
+         code span.er { color: #ff0000; font-weight: bold; } /* Error */
+         code span.ex { } /* Extension */
+         code span.fl { color: #40a070; } /* Float */
+         code span.fu { color: #06287e; } /* Function */
+         code span.im { } /* Import */
+         code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+         code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+         code span.op { color: #666666; } /* Operator */
+         code span.ot { color: #007020; } /* Other */
+         code span.pp { color: #bc7a00; } /* Preprocessor */
+         code span.sc { color: #4070a0; } /* SpecialChar */
+         code span.ss { color: #bb6688; } /* SpecialString */
+         code span.st { color: #4070a0; } /* String */
+         code span.va { color: #19177c; } /* Variable */
+         code span.vs { color: #4070a0; } /* VerbatimString */
+         code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
      </style>
    
         <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
@@ -155,7 +183,7 @@
          </div>
 
 <h1 id="io">IO</h1>
-<p>By IO we mean working with files...</p>
+<p>By IO we mean working with files…</p>
 <h2 id="read-a-file">Read a file</h2>
 <p>There are multiple way to read a file:</p>
 <ul>
@@ -165,62 +193,62 @@
 <p>are most important ones.</p>
 <h3 id="file">File</h3>
 <p>The <a href="http://php.net/manual-lookup.php?pattern=file" class="w3c-ref"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></a></code></pre></div>
 <h3 id="file_get_contents">File_get_contents</h3>
 <p>This function takes filename as argument and returns a string containing the complete file contents (hence the name).</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></a></code></pre></div>
 <h2 id="createwrite-a-file">Create/Write a file</h2>
 <h3 id="touch">Touch</h3>
-<p><a href="http://php.net/manual-lookup.php?pattern=touch" class="w3c-ref"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn't exist yet, it will be created.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span>
-<span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></code></pre></div>
+<p><a href="http://php.net/manual-lookup.php?pattern=touch" class="w3c-ref"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn’t exist yet, it will be created.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></a></code></pre></div>
 <h3 id="write">Write</h3>
 <p><a href="http://php.net/manual-lookup.php?pattern=fwrite" class="w3c-ref"><code>fwrite</code></a> can be used to write contents to a file handle.</p>
 <p>A handle can be created via <a href="http://php.net/manual-lookup.php?pattern=fopen" class="w3c-ref"><code>fopen</code></a>.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span>
-<span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span>
-<span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></a></code></pre></div>
 <p>This sequence of opening, writing and closing a file is quiet cumbersome, therefor a shorthand is also available: <a href="http://php.net/manual-lookup.php?pattern=file_put_contents" class="w3c-ref"><code>file_put_contents</code></a>.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></a></code></pre></div>
 <h2 id="remove-a-file">Remove a file</h2>
 <p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></a></code></pre></div>
 <h2 id="rename-a-file">Rename a file</h2>
 <p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></a></code></pre></div>
 <h2 id="directories">Directories</h2>
 <p>Similar functions exist for directories:</p>
 <ul>
 <li><p><a href="http://php.net/manual-lookup.php?pattern=mkdir" class="w3c-ref"><code>mkdir</code></a>: Create directory</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></code></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></a></code></pre></div></li>
 <li><p><a href="http://php.net/manual-lookup.php?pattern=rmdir" class="w3c-ref"><code>rmdir</code></a>: Delete directory</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></code></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></a></code></pre></div></li>
 <li><p><a href="http://php.net/manual-lookup.php?pattern=rename" class="w3c-ref"><code>rename</code></a>: Rename directory</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></code></pre></div></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></a></code></pre></div></li>
 </ul>
 <h3 id="list-all-files-in-a-directory">List all files in a directory:</h3>
 <ul>
 <li><p><a href="http://php.net/manual-lookup.php?pattern=readdir" class="w3c-ref"><code>readdir</code></a>: Iterate over the files in a directory-handle</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span>
-
-<span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {
-
-    <span class="fu">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span>
-}</code></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">    <span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6">}</a></code></pre></div></li>
 <li><p><a href="http://php.net/manual-lookup.php?pattern=glob" class="w3c-ref"><code>glob</code></a>: List all files in a directory (as array) matching a certain pattern.</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></code></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></a></code></pre></div></li>
 </ul>
 <h2 id="upload-files">Upload files</h2>
 <p>File can be uploaded via a form-submission. The tag used to specify files is:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></a></code></pre></div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> In order to use the <code>input[type=file]</code>, the form <strong>must</strong> specify the <code>enctype</code>-attribute:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span>
-
-    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span>
-
-    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;/form&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="kw">&lt;/form&gt;</span></a></code></pre></div>
 </div>
 <p>When a form containing files is submitted the <code>$_FILES</code> special <abbr title="Hypertext Preprocessor">PHP</abbr>-variable is populated with the file(s) currently uploading:</p>
 <pre><code>$_FILES = Array
@@ -246,7 +274,7 @@
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> stores the uploaded file in a temporary location. We must use the files contents or move the file to a different location. At the next request this <code>tmp_name</code> will be something else. So keep this in mind.</p>
 <p>If we opt not to read the file and process it, but move the file instead, the <a href="http://php.net/manual-lookup.php?pattern=move_uploaded_file" class="w3c-ref"><code>move_uploaded_file</code></a> should be used to move a file to a new destination.</p>
 <p>This function has some additional checks builtin and is thus the recommended way to move uploaded files:</p>
-<div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></a></code></pre></div>
 <h2 id="exercises">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -323,7 +351,7 @@ Exercise:
 <li>C: blue</li>
 </ul></li>
 </ul></li>
-<li>Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, ...)</li>
+<li>Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, …)</li>
 </ul>
 <iframe src="embeds/exercises/io/color-fasta.php" class="embed--output" height frameborder="0">
 </iframe>
@@ -340,10 +368,7 @@ Exercise:
 <ul>
 <li>Print the uploaded/pasted text</li>
 <li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
-<li><p>Extra: allow the user to specify the color per term. For example:</p>
-<pre><code>the|red
-a|green
-an</code></pre></li>
+<li>Extra: allow the user to specify the color per term. For example: <code>the|red   a|green   an</code></li>
 </ul>
 <iframe src="embeds/exercises/io/highlight-words.php" class="embed--output" height frameborder="0">
 </iframe>
@@ -356,16 +381,16 @@ an</code></pre></li>
 <h4>
 Exercise:
 </h4>
-<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link...</p>
+<p>Create a paste-bin web-app. The app allows the user to create a new snippet and save it (eq. write to file) via a webpage. The user can browse all snippets and view them by clicking a link…</p>
 <p>This app is composed out of three pages:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>index: list all the uploaded snippets</li>
 <li>upload: a form:
 <ul>
 <li>snippet name</li>
 <li>contents Allow the user to specify a new snippet to store. Make sure:</li>
 <li>no empty snippets or snippets with no name can be uploaded.</li>
-<li>snippet name doesn't already exists.</li>
+<li>snippet name doesn’t already exists.</li>
 </ul></li>
 <li>snippet contents: show the contents of a snippet</li>
 </ol>
@@ -381,7 +406,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2017-11-06
+                  at 2018-10-01
                </p>
             </footer>
          </div>

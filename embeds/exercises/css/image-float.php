@@ -18,7 +18,7 @@
    <h1>My web-page</h1>
 
    <div id="wrap">
-      <img src="/assets/img/php-elephant.png" alt="The image">
+      <img src="../../../assets/img/php-elephant.png" alt="The image">
       <p>
          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
