@@ -71,7 +71,7 @@
          }
       }
 
-      krsort( $words_store );
+      arsort( $words_store );
 
       echo "<table>";
          echo "<tr>";
