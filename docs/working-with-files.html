@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2018-10-01" />
+        <meta name="date" content="2018-11-05" />
    
    
    <title>IO - BIT01 Webtechnology</title>
@@ -208,7 +208,7 @@
 <div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></a></code></pre></div>
-<p>This sequence of opening, writing and closing a file is quiet cumbersome, therefor a shorthand is also available: <a href="http://php.net/manual-lookup.php?pattern=file_put_contents" class="w3c-ref"><code>file_put_contents</code></a>.</p>
+<p>This sequence of opening, writing and closing a file is quite cumbersome, therefor a shorthand is also available: <a href="http://php.net/manual-lookup.php?pattern=file_put_contents" class="w3c-ref"><code>file_put_contents</code></a>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></a></code></pre></div>
 <h2 id="remove-a-file">Remove a file</h2>
 <p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
@@ -406,7 +406,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2018-10-01
+                  at 2018-11-05
                </p>
             </footer>
          </div>

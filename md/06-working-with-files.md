@@ -59,7 +59,7 @@ fwrite($handle, 'Hello world'); // Write hello world to opened file
 fclose($handle); // close file
 ```
 
-This sequence of opening, writing and closing a file is quiet cumbersome,
+This sequence of opening, writing and closing a file is quite cumbersome,
 therefor a shorthand is also available: m4_phpfunc(file_put_contents).
 
 ```php
