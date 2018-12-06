@@ -247,6 +247,13 @@ other elements). The text is also displayed in a monospaced font.
 
 m4_embed_php_as_html(html-intro/pre-tag,180px,.html)
 
+### Pre-formatted text: `hr`
+
+The m4_tag(hr) tag inserts a line into the document. This can be used to split
+sections.
+
+m4_embed_php_as_html(html-intro/hr-tag,100px,.html)
+
 ### Blockquote `blockquote`
 
 The m4_tag(blockquote)-tag is used to denote some block of text as a quote from another source.
@@ -291,6 +298,13 @@ m4_exercise([[
 The m4_tag(br) insert a newline into the document.
 
 m4_embed_php_as_html(html-intro/br-tag,125px,.html)
+
+### Inline preformat: `code`
+
+The m4_tag(code)-tag is to inline elements what `pre` is to block elements.
+It will preserve white space and add a monospaced font in an inline way.
+
+m4_embed_php_as_html(html-intro/code-tag,50px,.html)
 
 ### Emphasise text: `em`
 
