@@ -8,34 +8,33 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2018-12-06" />
+        <meta name="date" content="2020-09-23" />
    
    
    <title>PHP functions - BIT01 Webtechnology</title>
 
          <style type="text/css">
-         a.sourceLine { display: inline-block; line-height: 1.25; }
-         a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-         a.sourceLine:empty { height: 1.2em; position: absolute; }
-         .sourceCode { overflow: visible; }
-         code.sourceCode { white-space: pre; position: relative; }
+         pre > code.sourceCode { white-space: pre; position: relative; }
+         pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+         pre > code.sourceCode > span:empty { height: 1.2em; }
+         code.sourceCode > span { color: inherit; text-decoration: inherit; }
          div.sourceCode { margin: 1em 0; }
          pre.sourceCode { margin: 0; }
          @media screen {
          div.sourceCode { overflow: auto; }
          }
          @media print {
-         code.sourceCode { white-space: pre-wrap; }
-         a.sourceLine { text-indent: -1em; padding-left: 1em; }
+         pre > code.sourceCode { white-space: pre-wrap; }
+         pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
          }
-         pre.numberSource a.sourceLine
-           { position: relative; }
-         pre.numberSource a.sourceLine:empty
-           { position: absolute; }
-         pre.numberSource a.sourceLine::before
-           { content: attr(data-line-number);
-             position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-             border: none; pointer-events: all;
+         pre.numberSource code
+           { counter-reset: source-line 0; }
+         pre.numberSource code > span
+           { position: relative; left: -4em; counter-increment: source-line; }
+         pre.numberSource code > span > a:first-child::before
+           { content: counter(source-line);
+             position: relative; left: -1em; text-align: right; vertical-align: baseline;
+             border: none; display: inline-block;
              -webkit-touch-callout: none; -webkit-user-select: none;
              -khtml-user-select: none; -moz-user-select: none;
              -ms-user-select: none; user-select: none;
@@ -44,9 +43,9 @@
            }
          pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
          div.sourceCode
-           {  }
+           {   }
          @media screen {
-         a.sourceLine::before { text-decoration: underline; }
+         pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
          }
          code span.al { color: #ff0000; font-weight: bold; } /* Alert */
          code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -188,67 +187,67 @@
 <p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a>, <a href="http://php.net/manual-lookup.php?pattern=isset" class="w3c-ref"><code>isset</code></a>, <a href="http://php.net/manual-lookup.php?pattern=empty" class="w3c-ref"><code>empty</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>, …</p>
 <p>As mentioned we can define our own functions.</p>
 <p>Syntax:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="co">/* function code here */</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="co">/* function code here */</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span></code></pre></div>
 <p>Example: function without arguments</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">function</span> greet<span class="ot">()</span> {</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">    <span class="kw">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">greet<span class="ot">();</span> <span class="co">// Hello!</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">greet<span class="ot">();</span> <span class="co">// Hello!</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">function</span> greet<span class="ot">()</span> {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span></code></pre></div>
 <p>Example: function with arguments</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">greet<span class="ot">();</span> <span class="co">// - ERROR -</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>}</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>greet<span class="ot">();</span> <span class="co">// - ERROR -</span></span></code></pre></div>
 <p>If arguments are present in the function definition, these arguments must be passed when the function is invoked. Otherwise an error is thrown…</p>
 <p>Arguments can however be defined with a default value, if the argument is not passed at invocation (or the argument value is <code>NULL</code>) the default value will be used instead.</p>
 <p>Example: function with arguments</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>}</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></span></code></pre></div>
 <p>Multiple arguments can be passed, separated by comma’s <code>,</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">// Hello john</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">// Hello jane</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11">greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">// Hello sam</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">// Hello</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">// Hello john</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">// Hello jane</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a>greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co">// Hello sam</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co">// Hello</span></span></code></pre></div>
 <h2 id="return-a-value">Return a value</h2>
 <p>The <a href="http://php.net/manual-lookup.php?pattern=return" class="w3c-ref"><code>return</code></a> keyword must be used to return a value from an array:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">function</span> fn<span class="ot">()</span> {</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw">$string</span> = fn<span class="ot">();</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>}</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="kw">$string</span> = fn<span class="ot">();</span></span></code></pre></div>
 <p>Whenever a return statement is encountered, the function will stop and return the specified value. Any code defined after the return statement will not be executed…</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">function</span> fn<span class="ot">()</span> {</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3">    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6">    }</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8">    <span class="kw">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9">}</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    }</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="kw">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>}</span></code></pre></div>
 <h2 id="exercises">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -260,7 +259,7 @@ Exercise:
 <li>sentence</li>
 </ul>
 <p>Output: <code>&lt;name&gt; -&gt; &lt;sentence&gt;</code></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="ex">php</span> chat.php </a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">php</span> chat.php </span></code></pre></div>
 <pre class="run--output"><code>john -&gt; @jane: Hello
 jane -&gt; Hello john
 john -&gt; Nice weather...
@@ -280,27 +279,27 @@ Exercise:
 <li>even</li>
 <li>and smaller then 100</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">else</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</a></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="ex">php</span> validate-number.php -5</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="kw">else</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">php</span> validate-number.php -5</span></code></pre></div>
 <pre class="run--output"><code>number (-5) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="ex">php</span> validate-number.php 7</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">php</span> validate-number.php 7</span></code></pre></div>
 <pre class="run--output"><code>number (7) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="ex">php</span> validate-number.php 22</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">php</span> validate-number.php 22</span></code></pre></div>
 <pre class="run--output"><code>number (22) passed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="ex">php</span> validate-number.php 111</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">php</span> validate-number.php 111</span></code></pre></div>
 <pre class="run--output"><code>number (111) failed tests
 </code></pre>
 <div class="text-right">
@@ -313,9 +312,9 @@ Exercise:
 </h4>
 <p>Create a barplot: 25%, 80%, 15%.</p>
 <p>Abstract the bars away in a function.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb19-1" data-line-number="1">print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span></a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span></a>
-<a class="sourceLine" id="cb19-3" data-line-number="3">print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb19-1"><a href="#cb19-1"></a>print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></span></code></pre></div>
 <iframe src="embeds/exercises/php-functions/barplot.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
 <div class="text-right">
@@ -328,10 +327,10 @@ Exercise:
 </h4>
 <p>Create a function for each arithmetic operator: <code>+</code>, <code>-</code>, <code>x</code>, <code>/</code>. The function should accept an array of values and apply the operations in sequence:</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb20-1" data-line-number="1">plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span></a>
-<a class="sourceLine" id="cb20-2" data-line-number="2">subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span></a>
-<a class="sourceLine" id="cb20-3" data-line-number="3">divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span></a>
-<a class="sourceLine" id="cb20-4" data-line-number="4">multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb20-1"><a href="#cb20-1"></a>plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></span></code></pre></div>
 <ul>
 <li>Extra: accept two values: <code>plus( 1, 2 )</code> or array: <code>plus([1,2])</code> <small>
 <div class="alert alert-info">
@@ -339,7 +338,7 @@ Exercise:
 </div>
 </small></li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="ex">php</span> arithmetic-operators.php </a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="ex">php</span> arithmetic-operators.php </span></code></pre></div>
 <pre class="run--output"><code>10
 4
 2
@@ -360,7 +359,7 @@ Exercise:
 <li>check if value is not longer than 50 characters (otherwise show error)</li>
 <li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="ex">php</span> retrieve-key.php </a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1"></a><span class="ex">php</span> retrieve-key.php </span></code></pre></div>
 <pre class="run--output"><code>value1
 default value
 default value
@@ -377,7 +376,7 @@ Exercise:
 </h4>
 <p><strong>Extra:</strong> Create a function that can calculate the factorial of a number.</p>
 <p>Try not to use loops but recursion…</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="ex">php</span> factorial.php 5</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1"></a><span class="ex">php</span> factorial.php 5</span></code></pre></div>
 <pre class="run--output"><code>120</code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/factorial.php" target="_blank">Solution (github)</a> </small></p>
@@ -388,7 +387,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2018-12-06
+                  at 2020-09-23
                </p>
             </footer>
          </div>

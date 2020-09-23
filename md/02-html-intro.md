@@ -390,6 +390,13 @@ m4_exercise([[
 Some elements don't make any sense on their own. They should be part of a
 larger elements-group.
 
+### Fieldset
+
+m4_tag(fieldset) is a container with an (optional) header (m4_tag(legend).
+
+m4_embed_php_as_html(html-intro/fieldset,100px,.html)
+
+
 ### Lists
 
 A HTML-list is composed of m4_tag(li)-tags enclosed by an m4_tag(ul) or
