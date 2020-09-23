@@ -396,6 +396,7 @@ m4_tag(fieldset) is a container with an (optional) header (m4_tag(legend).
 
 m4_embed_php_as_html(html-intro/fieldset,100px,.html)
 
+This container is often used to group related from items togheter.
 
 ### Lists
 
