@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2018-12-06" />
+        <meta name="date" content="2019-09-23" />
    
    
    <title>Introduction - BIT01 Webtechnology</title>
@@ -16,7 +16,7 @@
          <style type="text/css">
          a.sourceLine { display: inline-block; line-height: 1.25; }
          a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-         a.sourceLine:empty { height: 1.2em; position: absolute; }
+         a.sourceLine:empty { height: 1.2em; }
          .sourceCode { overflow: visible; }
          code.sourceCode { white-space: pre; position: relative; }
          div.sourceCode { margin: 1em 0; }
@@ -29,13 +29,11 @@
          a.sourceLine { text-indent: -1em; padding-left: 1em; }
          }
          pre.numberSource a.sourceLine
-           { position: relative; }
-         pre.numberSource a.sourceLine:empty
-           { position: absolute; }
+           { position: relative; left: -4em; }
          pre.numberSource a.sourceLine::before
-           { content: attr(data-line-number);
-             position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-             border: none; pointer-events: all;
+           { content: attr(title);
+             position: relative; left: -1em; text-align: right; vertical-align: baseline;
+             border: none; pointer-events: all; display: inline-block;
              -webkit-touch-callout: none; -webkit-user-select: none;
              -khtml-user-select: none; -moz-user-select: none;
              -ms-user-select: none; user-select: none;
@@ -203,20 +201,20 @@
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/introduction/embed_example.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode php embed--src"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">&lt;?php</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">if</span><span class="ot">(</span> <span class="fu">array_key_exists</span><span class="ot">(</span> <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="kw">$_POST</span> <span class="ot">)</span> <span class="ot">)</span> {</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="kw">unset</span><span class="ot">(</span><span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;KEY&#39;</span><span class="ot">]);</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">}</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="kw">?&gt;</span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">&lt;p&gt;</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13">   Markup is interpreted by the browser <span class="kw">and</span> formatted accordingly..</a>
-<a class="sourceLine" id="cb1-14" data-line-number="14">&lt;/p&gt;</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php embed--src"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">&lt;?php</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span></a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="kw">if</span><span class="ot">(</span> <span class="fu">array_key_exists</span><span class="ot">(</span> <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="kw">$_POST</span> <span class="ot">)</span> <span class="ot">)</span> {</a>
+<a class="sourceLine" id="cb1-6" title="6"></a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="kw">unset</span><span class="ot">(</span><span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;KEY&#39;</span><span class="ot">]);</span></a>
+<a class="sourceLine" id="cb1-8" title="8">}</a>
+<a class="sourceLine" id="cb1-9" title="9"></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12">&lt;p&gt;</a>
+<a class="sourceLine" id="cb1-13" title="13">   Markup is interpreted by the browser <span class="kw">and</span> formatted accordingly..</a>
+<a class="sourceLine" id="cb1-14" title="14">&lt;/p&gt;</a></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of introduction/embed_example</span></p>
@@ -229,7 +227,7 @@
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2018-12-06
+                  at 2019-09-23
                </p>
             </footer>
          </div>

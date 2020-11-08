@@ -247,18 +247,21 @@ other elements). The text is also displayed in a monospaced font.
 
 m4_embed_php_as_html(html-intro/pre-tag,180px,.html)
 
-### Pre-formatted text: `hr`
-
-The m4_tag(hr) tag inserts a line into the document. This can be used to split
-sections.
-
-m4_embed_php_as_html(html-intro/hr-tag,100px,.html)
-
 ### Blockquote `blockquote`
 
 The m4_tag(blockquote)-tag is used to denote some block of text as a quote from another source.
 
 m4_embed_php_as_html(html-intro/blockquote-tag,200px,.html)
+
+### Horizontal line: `hr`
+
+The m4_tag(hr) isn't really a container, it can't contain other elements, but
+it is a block element. The tag inserts a line into the document. This can be
+used to split / separate sections.
+
+m4_embed_php_as_html(html-intro/hr-tag,100px,.html)
+
+----
 
 m4_exercise([[
 * Create a block of text an wrap it in.
