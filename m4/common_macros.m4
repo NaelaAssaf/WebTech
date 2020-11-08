@@ -32,7 +32,7 @@ m4_dnl -----------------------------------------------------------------------
 m4_define(m4_tag,[`$1`](http://www.w3schools.com/tags/tag_$1.asp){.w3c-ref})
 m4_define(m4_cssprop,[`$1`](http://www.w3schools.com/css/css_$1.asp){.w3c-ref})
 m4_define(m4_cssproptitle,[[### [$1](http://www.w3schools.com/css/css_$2.asp){.w3c-ref}]])
-m4_define(m4_phpfunc,[`$1`](http://php.net/manual-lookup.php?pattern=$1){.w3c-ref})
+m4_define(m4_phpfunc,<a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=$1" target="_blank">`$1`</a>)
 m4_define(m4_gitcmd,[`$1`](https://git-scm.com/docs/$1){.w3c-ref})
 
 

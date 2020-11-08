@@ -749,6 +749,60 @@ block but are only interested in the values...
 
 m4_embed_php(php-basics/loops-foreach)
 
+## Commonly used (builtin) functions
+
+[[###]] m4_phpfunc(isset)
+
+The m4_phpfunc(isset) function checks whether a PHP variable was created / assigned.
+
+This function return false is the tested variable isn't declared before or is equal to `null`
+
+m4_embed_php(php-basics/isset)
+
+[[###]] m4_phpfunc(empty)
+
+The m4_phpfunc(empty) function checks whether a PHP variable has an empty value.
+
+Examples of empty values: `null`, `""`, `0`, ...
+
+m4_embed_php(php-basics/isset)
+
+[[###]] m4_phpfunc(strlen)
+
+The m4_phpfunc(strlen) function returns the length (number of characters) in a string.
+
+m4_embed_php(php-basics/strlen)
+
+[[###]] m4_phpfunc(str_split)
+
+The m4_phpfunc(str_split) function parses a string into individual characters and returns an array where each item in the array corresponds to one character in the original string.
+
+m4_embed_php(php-basics/str_split)
+
+[[###]] m4_phpfunc(explode)
+
+The m4_phpfunc(explode) function parses a string into individual pieces based on an delimiter and returns an array where each item in the array corresponds to a section in the original string separated by the delimiter.
+
+m4_embed_php(php-basics/explode)
+
+This function can be used to convert the lines in a file (retrieved via m4_phpfunc(file_get_contents)) into an array of lines.
+
+m4_embed_php(php-basics/explode-newline)
+
+[[###]] m4_phpfunc(implode)
+
+The m4_phpfunc(implode) function takes an array and _glue_ as input. The items in the array will be _glued_ together into en new string. Each of the sections in the new output string will be separated by the _glue_
+
+m4_embed_php(php-basics/explode)
+
+[[###]] m4_phpfunc(preg_match)
+
+_Regular expressions_ are a very powerful way of detecting patterns in a string.
+
+The complete depth and power of _regular expressions_ are out of the scope of this course but we will use them to detect header lines in multifasta sequences.
+
+m4_embed_php(php-basics/preg_match)
+
 ## Exercises
 
 m4_exercise([[

@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2020-09-23" />
+        <meta name="date" content="2020-11-08" />
    
    
    <title>PHP functions - BIT01 Webtechnology</title>
@@ -136,6 +136,7 @@
             <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
             <li><a href="php-intro.html#conditionals">Conditionals</a></li>
             <li><a href="php-intro.html#loops">Loops</a></li>
+            <li><a href="php-intro.html#commonly-used-builtin-functions">Commonly used (builtin) functions</a></li>
             <li><a href="php-intro.html#exercises">Exercises</a></li>
             </ul></li>
             </ul>
@@ -184,7 +185,7 @@
 <h1 id="php-functions">PHP functions</h1>
 <p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
 <p>A function is a block of code with a given name and can be called (executed) by this name and optionally passed arguments to change the behaviour/output of the function.</p>
-<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a>, <a href="http://php.net/manual-lookup.php?pattern=isset" class="w3c-ref"><code>isset</code></a>, <a href="http://php.net/manual-lookup.php?pattern=empty" class="w3c-ref"><code>empty</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>, …</p>
+<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=print" target="_blank"><code>print</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=empty" target="_blank"><code>empty</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_pop" target="_blank"><code>array_pop</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_push" target="_blank"><code>array_push</code></a>, …</p>
 <p>As mentioned we can define our own functions.</p>
 <p>Syntax:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {</span>
@@ -231,7 +232,7 @@
 <span id="cb5-12"><a href="#cb5-12"></a><span class="co">// Hello sam</span></span>
 <span id="cb5-13"><a href="#cb5-13"></a><span class="co">// Hello</span></span></code></pre></div>
 <h2 id="return-a-value">Return a value</h2>
-<p>The <a href="http://php.net/manual-lookup.php?pattern=return" class="w3c-ref"><code>return</code></a> keyword must be used to return a value from an array:</p>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=return" target="_blank"><code>return</code></a> keyword must be used to return a value from an array:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
 <span id="cb6-2"><a href="#cb6-2"></a>    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>}</span>
@@ -334,7 +335,7 @@ Exercise:
 <ul>
 <li>Extra: accept two values: <code>plus( 1, 2 )</code> or array: <code>plus([1,2])</code> <small>
 <div class="alert alert-info">
-<strong>Info:</strong> Use <a href="http://php.net/manual-lookup.php?pattern=is_array" class="w3c-ref"><code>is_array</code></a> to check if a variable is an array…
+<strong>Info:</strong> Use <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=is_array" target="_blank"><code>is_array</code></a> to check if a variable is an array…
 </div>
 </small></li>
 </ul>
@@ -387,7 +388,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2020-09-23
+                  at 2020-11-08
                </p>
             </footer>
          </div>

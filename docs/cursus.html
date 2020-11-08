@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2020-09-23" />
+        <meta name="date" content="2020-11-08" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -128,6 +128,7 @@
             <li><a href="#types-and-variables">Types and variables</a></li>
             <li><a href="#conditionals">Conditionals</a></li>
             <li><a href="#loops">Loops</a></li>
+            <li><a href="#commonly-used-builtin-functions">Commonly used (builtin) functions</a></li>
             <li><a href="#exercises-2">Exercises</a></li>
             </ul></li>
             <li><a href="#php-and-html">PHP and HTML</a><ul>
@@ -492,10 +493,15 @@ Exercise:
 <p>The <a href="http://www.w3schools.com/tags/tag_blockquote.asp" class="w3c-ref"><code>blockquote</code></a>-tag is used to denote some block of text as a quote from another source.</p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-intro/hr-tag.html">html-intro/hr-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/hr-tag.php" taret="_blank">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/html-intro/blockquote-tag.html">html-intro/blockquote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/blockquote-tag.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb30-1"><a href="#cb30-1"></a>Content before...</span>
-<span id="cb30-2"><a href="#cb30-2"></a><span class="kw">&lt;hr&gt;</span></span>
-<span id="cb30-3"><a href="#cb30-3"></a>Content after...</span></code></pre></div>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="kw">&lt;blockquote&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</span>
+<span id="cb30-4"><a href="#cb30-4"></a>   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</span>
+<span id="cb30-5"><a href="#cb30-5"></a>   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita</span>
+<span id="cb30-6"><a href="#cb30-6"></a>   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
+<span id="cb30-7"><a href="#cb30-7"></a><span class="kw">&lt;/blockquote&gt;</span></span>
+<span id="cb30-8"><a href="#cb30-8"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/blockquote-tag</span></p>
@@ -507,15 +513,10 @@ Exercise:
 <p>The <a href="http://www.w3schools.com/tags/tag_hr.asp" class="w3c-ref"><code>hr</code></a> isn’t really a container, it can’t contain other elements, but it is a block element. The tag inserts a line into the document. This can be used to split / separate sections.</p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/html-intro/blockquote-tag.html">html-intro/blockquote-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/blockquote-tag.php" taret="_blank">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/html-intro/hr-tag.html">html-intro/hr-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/hr-tag.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb31-1"><a href="#cb31-1"></a>Content before...</span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="kw">&lt;blockquote&gt;</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a>   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</span>
-<span id="cb31-4"><a href="#cb31-4"></a>   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</span>
-<span id="cb31-5"><a href="#cb31-5"></a>   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita</span>
-<span id="cb31-6"><a href="#cb31-6"></a>   kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
-<span id="cb31-7"><a href="#cb31-7"></a><span class="kw">&lt;/blockquote&gt;</span></span>
-<span id="cb31-8"><a href="#cb31-8"></a>Content after...</span></code></pre></div>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="kw">&lt;hr&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/hr-tag</span></p>
@@ -1945,8 +1946,8 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <h4 id="printingdisplaying-scalars">Printing/Displaying scalars</h4>
 <p>A scalar can be printed via two methods:</p>
 <ul>
-<li><a href="http://php.net/manual-lookup.php?pattern=echo" class="w3c-ref"><code>echo</code></a></li>
-<li><a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a></li>
+<li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=echo" target="_blank"><code>echo</code></a></li>
+<li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=print" target="_blank"><code>print</code></a></li>
 </ul>
 <h5 id="echo">Echo</h5>
 <p><em>Generic syntax:</em></p>
@@ -2223,7 +2224,7 @@ Array
 </div>
 </div>
 <h4 id="printdisplay-arrays">Print/Display arrays</h4>
-<p>The function <a href="http://php.net/manual-lookup.php?pattern=print_r" class="w3c-ref"><code>print_r</code></a> can be used to print an array.</p>
+<p>The function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=print_r" target="_blank"><code>print_r</code></a> can be used to print an array.</p>
 <p><em>Generic syntax:</em></p>
 <div class="sourceCode" id="cb123"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb123-1"><a href="#cb123-1"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array</span> <span class="ot">);</span></span></code></pre></div>
 <div class="row">
@@ -2339,7 +2340,7 @@ Array
 </div>
 <h4 id="manipulating-arrays">Manipulating arrays</h4>
 <h5 id="add-an-item-to-the-end-of-an-array">Add an item to the end of an array:</h5>
-<p>Adding an element at the end of an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a> or by the square brackets notation (<code>$array[] = $value;</code>).</p>
+<p>Adding an element at the end of an array can be accomplished by the function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_push" target="_blank"><code>array_push</code></a> or by the square brackets notation (<code>$array[] = $value;</code>).</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-append.html">php-basics/array-append</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-append.php" taret="_blank">src</a></span></p>
@@ -2386,7 +2387,7 @@ Array
 </div>
 </div>
 <h5 id="add-an-item-in-front-of-an-array">Add an item in front of an array:</h5>
-<p>Adding an element in front of an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_unshift" class="w3c-ref"><code>array_unshift</code></a>.</p>
+<p>Adding an element in front of an array can be accomplished by the function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_unshift" target="_blank"><code>array_unshift</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-prepend.html">php-basics/array-prepend</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-prepend.php" taret="_blank">src</a></span></p>
@@ -2419,7 +2420,7 @@ Array
 </div>
 </div>
 <h5 id="extract-the-first-element-from-an-array">Extract the first element from an array</h5>
-<p>Extracting the first element from an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_shift" class="w3c-ref"><code>array_shift</code></a>.</p>
+<p>Extracting the first element from an array can be accomplished by the function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_shift" target="_blank"><code>array_shift</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-shift.html">php-basics/array-shift</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-shift.php" taret="_blank">src</a></span></p>
@@ -2451,7 +2452,7 @@ Array
 </div>
 </div>
 <h5 id="extract-the-last-element-from-an-array">Extract the last element from an array</h5>
-<p>Extracting the last element from an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>.</p>
+<p>Extracting the last element from an array can be accomplished by the function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_pop" target="_blank"><code>array_pop</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-pop.html">php-basics/array-pop</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-pop.php" taret="_blank">src</a></span></p>
@@ -2483,7 +2484,7 @@ Array
 </div>
 </div>
 <h5 id="count-the-elements-in-an-array">Count the elements in an array</h5>
-<p>Counting the elements in an array can be accomplished by the function <a href="http://php.net/manual-lookup.php?pattern=count" class="w3c-ref"><code>count</code></a>.</p>
+<p>Counting the elements in an array can be accomplished by the function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=count" target="_blank"><code>count</code></a>.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/array-count.html">php-basics/array-count</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/array-count.php" taret="_blank">src</a></span></p>
@@ -2711,7 +2712,7 @@ bool(false)
 </div>
 <small>
 <div class="alert alert-info">
-<strong>Info:</strong> <a href="http://php.net/manual-lookup.php?pattern=var_dump" class="w3c-ref"><code>var_dump</code></a> prints a variable with type information
+<strong>Info:</strong> <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=var_dump" target="_blank"><code>var_dump</code></a> prints a variable with type information
 </div>
 <p></small></p>
 <h3 id="logical-operators">Logical operators</h3>
@@ -3074,6 +3075,231 @@ Key: `100` has value: `hello`
 </code></pre>
 </div>
 </div>
+<h2 id="commonly-used-builtin-functions">Commonly used (builtin) functions</h2>
+<h3 id="isset"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a> function checks whether a <abbr title="Hypertext Preprocessor">PHP</abbr> variable was created / assigned.</p>
+<p>This function return false is the tested variable isn’t declared before or is equal to <code>null</code></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/isset.html">php-basics/isset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/isset.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb171"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb171-1"><a href="#cb171-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb171-2"><a href="#cb171-2"></a></span>
+<span id="cb171-3"><a href="#cb171-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb171-4"><a href="#cb171-4"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb171-5"><a href="#cb171-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb171-6"><a href="#cb171-6"></a></span>
+<span id="cb171-7"><a href="#cb171-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb171-8"><a href="#cb171-8"></a><span class="kw">$some_variable</span> = <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
+<span id="cb171-9"><a href="#cb171-9"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb171-10"><a href="#cb171-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb171-11"><a href="#cb171-11"></a></span>
+<span id="cb171-12"><a href="#cb171-12"></a><span class="kw">echo</span> <span class="st">&quot;test null variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb171-13"><a href="#cb171-13"></a><span class="kw">$some_variable</span> = <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb171-14"><a href="#cb171-14"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/isset</span></p>
+<pre class="embed--output" style="height:;"><code>test undeclared variable
+bool(false)
+
+test declared variable
+bool(true)
+
+test null variable
+bool(false)
+</code></pre>
+</div>
+</div>
+<h3 id="empty"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=empty" target="_blank"><code>empty</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=empty" target="_blank"><code>empty</code></a> function checks whether a <abbr title="Hypertext Preprocessor">PHP</abbr> variable has an empty value.</p>
+<p>Examples of empty values: <code>null</code>, <code>""</code>, <code>0</code>, …</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/isset.html">php-basics/isset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/isset.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb173-1"><a href="#cb173-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb173-2"><a href="#cb173-2"></a></span>
+<span id="cb173-3"><a href="#cb173-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb173-4"><a href="#cb173-4"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb173-5"><a href="#cb173-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb173-6"><a href="#cb173-6"></a></span>
+<span id="cb173-7"><a href="#cb173-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb173-8"><a href="#cb173-8"></a><span class="kw">$some_variable</span> = <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
+<span id="cb173-9"><a href="#cb173-9"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb173-10"><a href="#cb173-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb173-11"><a href="#cb173-11"></a></span>
+<span id="cb173-12"><a href="#cb173-12"></a><span class="kw">echo</span> <span class="st">&quot;test null variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb173-13"><a href="#cb173-13"></a><span class="kw">$some_variable</span> = <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb173-14"><a href="#cb173-14"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/isset</span></p>
+<pre class="embed--output" style="height:;"><code>test undeclared variable
+bool(false)
+
+test declared variable
+bool(true)
+
+test null variable
+bool(false)
+</code></pre>
+</div>
+</div>
+<h3 id="strlen"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=strlen" target="_blank"><code>strlen</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=strlen" target="_blank"><code>strlen</code></a> function returns the length (number of characters) in a string.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/strlen.html">php-basics/strlen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/strlen.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb175-1"><a href="#cb175-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb175-2"><a href="#cb175-2"></a></span>
+<span id="cb175-3"><a href="#cb175-3"></a><span class="kw">$string</span> =  <span class="st">&quot;The length of this string is: &quot;</span><span class="ot">;</span></span>
+<span id="cb175-4"><a href="#cb175-4"></a><span class="kw">echo</span> <span class="kw">$string</span><span class="ot">;</span></span>
+<span id="cb175-5"><a href="#cb175-5"></a><span class="kw">echo</span> <span class="fu">strlen</span><span class="ot">(</span> <span class="kw">$string</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/strlen</span></p>
+<pre class="embed--output" style="height:;"><code>The length of this string is: 30</code></pre>
+</div>
+</div>
+<h3 id="str_split"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=str_split" target="_blank"><code>str_split</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=str_split" target="_blank"><code>str_split</code></a> function parses a string into individual characters and returns an array where each item in the array corresponds to one character in the original string.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/str_split.html">php-basics/str_split</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/str_split.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb177-1"><a href="#cb177-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb177-2"><a href="#cb177-2"></a></span>
+<span id="cb177-3"><a href="#cb177-3"></a><span class="kw">$string</span> = <span class="st">&quot;split into chars&quot;</span><span class="ot">;</span></span>
+<span id="cb177-4"><a href="#cb177-4"></a></span>
+<span id="cb177-5"><a href="#cb177-5"></a><span class="kw">$array_of_chars</span> = <span class="fu">str_split</span><span class="ot">(</span> <span class="kw">$string</span> <span class="ot">);</span></span>
+<span id="cb177-6"><a href="#cb177-6"></a></span>
+<span id="cb177-7"><a href="#cb177-7"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array_of_chars</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/str_split</span></p>
+<pre class="embed--output" style="height:;"><code>Array
+(
+    [0] =&gt; s
+    [1] =&gt; p
+    [2] =&gt; l
+    [3] =&gt; i
+    [4] =&gt; t
+    [5] =&gt;  
+    [6] =&gt; i
+    [7] =&gt; n
+    [8] =&gt; t
+    [9] =&gt; o
+    [10] =&gt;  
+    [11] =&gt; c
+    [12] =&gt; h
+    [13] =&gt; a
+    [14] =&gt; r
+    [15] =&gt; s
+)
+</code></pre>
+</div>
+</div>
+<h3 id="explode"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=explode" target="_blank"><code>explode</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=explode" target="_blank"><code>explode</code></a> function parses a string into individual pieces based on an delimiter and returns an array where each item in the array corresponds to a section in the original string separated by the delimiter.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/explode.html">php-basics/explode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb179-1"><a href="#cb179-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb179-2"><a href="#cb179-2"></a></span>
+<span id="cb179-3"><a href="#cb179-3"></a><span class="kw">$string</span> = <span class="st">&quot;This is the first section of a semicolon separated string;This is the second section;And this the third!&quot;</span><span class="ot">;</span></span>
+<span id="cb179-4"><a href="#cb179-4"></a></span>
+<span id="cb179-5"><a href="#cb179-5"></a><span class="kw">$array_of_sections</span> = <span class="fu">explode</span><span class="ot">(</span><span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="kw">$string</span><span class="ot">);</span></span>
+<span id="cb179-6"><a href="#cb179-6"></a></span>
+<span id="cb179-7"><a href="#cb179-7"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array_of_sections</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/explode</span></p>
+<pre class="embed--output" style="height:;"><code>Array
+(
+    [0] =&gt; This is the first section of a semicolon separated string
+    [1] =&gt; This is the second section
+    [2] =&gt; And this the third!
+)
+</code></pre>
+</div>
+</div>
+<p>This function can be used to convert the lines in a file (retrieved via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file_get_contents" target="_blank"><code>file_get_contents</code></a>) into an array of lines.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/explode-newline.html">php-basics/explode-newline</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode-newline.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb181"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb181-1"><a href="#cb181-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb181-2"><a href="#cb181-2"></a></span>
+<span id="cb181-3"><a href="#cb181-3"></a><span class="kw">$string</span> = <span class="st">&quot;&gt;Random Sequence (250 nts sampled from ATGC)</span></span>
+<span id="cb181-4"><a href="#cb181-4"></a><span class="st">GCCAATGGTATGTCAACTCAGTCTCCCCAACTCTCGTAACTGGTAGAAGG</span></span>
+<span id="cb181-5"><a href="#cb181-5"></a><span class="st">GTGGAGCATGAATCATGCCATCCATCTCGTATTCGAATCCGTGCGCGCGG</span></span>
+<span id="cb181-6"><a href="#cb181-6"></a><span class="st">AGCCGAATATTTAAGTATACACACCCGCAGCACGAGCATCGTACTTTGCC</span></span>
+<span id="cb181-7"><a href="#cb181-7"></a><span class="st">TTTCCAGCATAATTATGCATGAGGTGATAGCGAGATGATTCGGGGTAATG</span></span>
+<span id="cb181-8"><a href="#cb181-8"></a><span class="st">CCGTTGTACCCGGCCTCGGTCTTTCCGACGACGTCCCAACGCCGACACCA&quot;</span><span class="ot">;</span></span>
+<span id="cb181-9"><a href="#cb181-9"></a></span>
+<span id="cb181-10"><a href="#cb181-10"></a><span class="kw">$lines</span> = <span class="fu">explode</span><span class="ot">(</span><span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="kw">$string</span><span class="ot">);</span></span>
+<span id="cb181-11"><a href="#cb181-11"></a></span>
+<span id="cb181-12"><a href="#cb181-12"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$lines</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/explode-newline</span></p>
+<pre class="embed--output" style="height:;"><code>Array
+(
+    [0] =&gt; &gt;Random Sequence (250 nts sampled from ATGC)
+    [1] =&gt; GCCAATGGTATGTCAACTCAGTCTCCCCAACTCTCGTAACTGGTAGAAGG
+    [2] =&gt; GTGGAGCATGAATCATGCCATCCATCTCGTATTCGAATCCGTGCGCGCGG
+    [3] =&gt; AGCCGAATATTTAAGTATACACACCCGCAGCACGAGCATCGTACTTTGCC
+    [4] =&gt; TTTCCAGCATAATTATGCATGAGGTGATAGCGAGATGATTCGGGGTAATG
+    [5] =&gt; CCGTTGTACCCGGCCTCGGTCTTTCCGACGACGTCCCAACGCCGACACCA
+)
+</code></pre>
+</div>
+</div>
+<h3 id="implode"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=implode" target="_blank"><code>implode</code></a></h3>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=implode" target="_blank"><code>implode</code></a> function takes an array and <em>glue</em> as input. The items in the array will be <em>glued</em> together into en new string. Each of the sections in the new output string will be separated by the <em>glue</em></p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/explode.html">php-basics/explode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb183-1"><a href="#cb183-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb183-2"><a href="#cb183-2"></a></span>
+<span id="cb183-3"><a href="#cb183-3"></a><span class="kw">$string</span> = <span class="st">&quot;This is the first section of a semicolon separated string;This is the second section;And this the third!&quot;</span><span class="ot">;</span></span>
+<span id="cb183-4"><a href="#cb183-4"></a></span>
+<span id="cb183-5"><a href="#cb183-5"></a><span class="kw">$array_of_sections</span> = <span class="fu">explode</span><span class="ot">(</span><span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="kw">$string</span><span class="ot">);</span></span>
+<span id="cb183-6"><a href="#cb183-6"></a></span>
+<span id="cb183-7"><a href="#cb183-7"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array_of_sections</span> <span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/explode</span></p>
+<pre class="embed--output" style="height:;"><code>Array
+(
+    [0] =&gt; This is the first section of a semicolon separated string
+    [1] =&gt; This is the second section
+    [2] =&gt; And this the third!
+)
+</code></pre>
+</div>
+</div>
+<h3 id="preg_match"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=preg_match" target="_blank"><code>preg_match</code></a></h3>
+<p><em>Regular expressions</em> are a very powerful way of detecting patterns in a string.</p>
+<p>The complete depth and power of <em>regular expressions</em> are out of the scope of this course but we will use them to detect header lines in multifasta sequences.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/preg_match.html">php-basics/preg_match</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/preg_match.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb185-1"><a href="#cb185-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb185-2"><a href="#cb185-2"></a></span>
+<span id="cb185-3"><a href="#cb185-3"></a><span class="kw">echo</span> <span class="st">&quot;We want to match a leading &gt; symbol:</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb185-4"><a href="#cb185-4"></a><span class="co">//       Pattern  Find pattern in this</span></span>
+<span id="cb185-5"><a href="#cb185-5"></a><span class="fu">var_dump</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;&gt;MultiFasta Sequence Header&quot;</span><span class="ot">);</span></span>
+<span id="cb185-6"><a href="#cb185-6"></a></span>
+<span id="cb185-7"><a href="#cb185-7"></a><span class="fu">var_dump</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;Hello World&quot;</span><span class="ot">);</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><span class="embed--srcfile">output of php-basics/preg_match</span></p>
+<pre class="embed--output" style="height:;"><code>We want to match a leading &gt; symbol:
+string(4) &quot;/^&gt;/&quot;
+string(27) &quot;&gt;MultiFasta Sequence Header&quot;
+string(4) &quot;/^&gt;/&quot;
+string(11) &quot;Hello World&quot;
+</code></pre>
+</div>
+</div>
 <h2 id="exercises-2">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -3086,7 +3312,7 @@ Exercise:
 <li>counts back from this number to zero</li>
 <li>counts from zero to the number in steps of three</li>
 </ul>
-<div class="sourceCode" id="cb171"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb171-1"><a href="#cb171-1"></a><span class="ex">php</span> count-to-number.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb187-1"><a href="#cb187-1"></a><span class="ex">php</span> count-to-number.php 9</span></code></pre></div>
 <pre class="run--output"><code>Count up from 0 to 9: 
 0
 1
@@ -3124,7 +3350,7 @@ Count up from 0 to 9 in steps of 3:
 Exercise:
 </h4>
 <p>Create a script that prints a line of a asterisks <code>*</code> defined by a command line parameter.</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb173-1"><a href="#cb173-1"></a><span class="ex">php</span> print-asterisks.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb189-1"><a href="#cb189-1"></a><span class="ex">php</span> print-asterisks.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 </code></pre>
 <div class="text-right">
@@ -3140,7 +3366,7 @@ Exercise:
 <li>prints a square of a asterisks <code>*</code> if one parameter is defined</li>
 <li>Prints a block with width and height if both parameters are defined.</li>
 </ul>
-<div class="sourceCode" id="cb175"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb175-1"><a href="#cb175-1"></a><span class="ex">php</span> print-square-of-asterisks.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb191-1"><a href="#cb191-1"></a><span class="ex">php</span> print-square-of-asterisks.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 *********
 *********
@@ -3155,7 +3381,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-square-of-asterisks.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb177"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb177-1"><a href="#cb177-1"></a><span class="ex">php</span> print-square-of-asterisks.php 15 5</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb193-1"><a href="#cb193-1"></a><span class="ex">php</span> print-square-of-asterisks.php 15 5</span></code></pre></div>
 <pre class="run--output"><code>***************
 ***************
 ***************
@@ -3172,7 +3398,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a left + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb179-1"><a href="#cb179-1"></a><span class="ex">php</span> print-left-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb195-1"><a href="#cb195-1"></a><span class="ex">php</span> print-left-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*
 **
 ***
@@ -3192,7 +3418,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a right + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb181-1"><a href="#cb181-1"></a><span class="ex">php</span> print-right-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb197-1"><a href="#cb197-1"></a><span class="ex">php</span> print-right-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>        *
        **
       ***
@@ -3213,7 +3439,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a center + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb183-1"><a href="#cb183-1"></a><span class="ex">php</span> print-center-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb199-1"><a href="#cb199-1"></a><span class="ex">php</span> print-center-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>     
     **
    ****
@@ -3230,7 +3456,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create al the triangles again but the base (maximum number of asterisks) should be on top instead of at the bottom…</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb185-1"><a href="#cb185-1"></a><span class="ex">php</span> print-left-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb201-1"><a href="#cb201-1"></a><span class="ex">php</span> print-left-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 ********
 *******
@@ -3246,7 +3472,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-left-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb187"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb187-1"><a href="#cb187-1"></a><span class="ex">php</span> print-right-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb203-1"><a href="#cb203-1"></a><span class="ex">php</span> print-right-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
  ********
   *******
@@ -3261,7 +3487,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-right-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb189"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb189-1"><a href="#cb189-1"></a><span class="ex">php</span> print-center-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb205-1"><a href="#cb205-1"></a><span class="ex">php</span> print-center-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
  *******
   *****
@@ -3278,7 +3504,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that counts the number of parameters provided</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb191-1"><a href="#cb191-1"></a><span class="ex">php</span> count-argv.php 9 12 3 5 4 1 8 5</span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb207-1"><a href="#cb207-1"></a><span class="ex">php</span> count-argv.php 9 12 3 5 4 1 8 5</span></code></pre></div>
 <pre class="run--output"><code>8 arguments where provided
 </code></pre>
 <div class="text-right">
@@ -3299,7 +3525,7 @@ Exercise:
 <li>(prints the list backwards (bonus))</li>
 <li>(prints the list sorted (bonus))</li>
 </ul>
-<div class="sourceCode" id="cb193"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb193-1"><a href="#cb193-1"></a><span class="ex">php</span> number-statistics.php 9 12 3 5 4 1 8 5</span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb209-1"><a href="#cb209-1"></a><span class="ex">php</span> number-statistics.php 9 12 3 5 4 1 8 5</span></code></pre></div>
 <pre class="run--output"><code>The numbers received:
 number 0: 9
 number 1: 12
@@ -3352,13 +3578,13 @@ Numbers from smallest to largest:
 Exercise:
 </h4>
 <p>Create a script which stores the keys of an array as values of another array. (Extract the keys from an array)</p>
-<div class="sourceCode" id="cb195"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb195-1"><a href="#cb195-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
-<span id="cb195-2"><a href="#cb195-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb195-3"><a href="#cb195-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb195-4"><a href="#cb195-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb195-5"><a href="#cb195-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb195-6"><a href="#cb195-6"></a><span class="ot">);</span></span></code></pre></div>
-<div class="sourceCode" id="cb196"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb196-1"><a href="#cb196-1"></a><span class="ex">php</span> array-keys.php </span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb211-1"><a href="#cb211-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
+<span id="cb211-2"><a href="#cb211-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb211-3"><a href="#cb211-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb211-4"><a href="#cb211-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb211-5"><a href="#cb211-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb211-6"><a href="#cb211-6"></a><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb212-1"><a href="#cb212-1"></a><span class="ex">php</span> array-keys.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (
     [0] =&gt; position 1
@@ -3379,13 +3605,13 @@ Exercise:
 <li>Create a script which reverses an array.</li>
 <li>Create a script which reverses an array and preserves the keys</li>
 </ul>
-<div class="sourceCode" id="cb198"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb198-1"><a href="#cb198-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
-<span id="cb198-2"><a href="#cb198-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb198-3"><a href="#cb198-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb198-4"><a href="#cb198-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb198-5"><a href="#cb198-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb198-6"><a href="#cb198-6"></a><span class="ot">);</span></span></code></pre></div>
-<div class="sourceCode" id="cb199"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb199-1"><a href="#cb199-1"></a><span class="ex">php</span> array-reverse.php </span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb214-1"><a href="#cb214-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
+<span id="cb214-2"><a href="#cb214-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb214-3"><a href="#cb214-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb214-4"><a href="#cb214-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb214-5"><a href="#cb214-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb214-6"><a href="#cb214-6"></a><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb215-1"><a href="#cb215-1"></a><span class="ex">php</span> array-reverse.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (
     [0] =&gt; 4
@@ -3410,7 +3636,7 @@ Array
 Exercise:
 </h4>
 <p>Create a script that generates the reverse complement of DNA string:</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb201-1"><a href="#cb201-1"></a><span class="ex">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb217-1"><a href="#cb217-1"></a><span class="ex">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
 <div class="text-right">
@@ -3418,7 +3644,7 @@ comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 </div>
 <p>Bonus:</p>
 <p>Print bonds:</p>
-<div class="sourceCode" id="cb203"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb203-1"><a href="#cb203-1"></a><span class="ex">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb219-1"><a href="#cb219-1"></a><span class="ex">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
@@ -3427,7 +3653,7 @@ comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 </div>
 <small>
 <div class="alert alert-info">
-<strong>Info:</strong> The <abbr title="Hypertext Preprocessor">PHP</abbr> functions: <a href="http://php.net/manual-lookup.php?pattern=str_split" class="w3c-ref"><code>str_split</code></a> amd <a href="http://php.net/manual-lookup.php?pattern=strlen" class="w3c-ref"><code>strlen</code></a> can be of use.
+<strong>Info:</strong> The <abbr title="Hypertext Preprocessor">PHP</abbr> functions: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=str_split" target="_blank"><code>str_split</code></a> amd <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=strlen" target="_blank"><code>strlen</code></a> can be of use.
 </div>
 <p></small></p>
 </div>
@@ -3441,7 +3667,7 @@ Exercise:
 <li>white space</li>
 <li>unvalid nucleotides (and report these)</li>
 </ul>
-<div class="sourceCode" id="cb205"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb205-1"><a href="#cb205-1"></a><span class="ex">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb221-1"><a href="#cb221-1"></a><span class="ex">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 
@@ -3459,7 +3685,7 @@ Exercise:
 </h4>
 <p>Create a script that prints the nucleotide frequency of a DNA strand.</p>
 <p>Additional: Create a simple bar plot to visualise the percentages.</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb207-1"><a href="#cb207-1"></a><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb223-1"><a href="#cb223-1"></a><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>input: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 
    STATS:
@@ -3489,7 +3715,7 @@ Exercise:
 <li>sort by character (and reverse)</li>
 <li>case-insensitive (bonus)</li>
 </ul>
-<div class="sourceCode" id="cb209"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb209-1"><a href="#cb209-1"></a><span class="ex">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb225-1"><a href="#cb225-1"></a><span class="ex">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>input: Hello world, this is a random 123#$ string.
 
 STATS:
@@ -3573,7 +3799,7 @@ Order by character:
 </div>
 <small>
 <div class="alert alert-info">
-<strong>Info:</strong> See: <a href="http://php.net/manual-lookup.php?pattern=sort" class="w3c-ref"><code>sort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=asort" class="w3c-ref"><code>asort</code></a>, <a href="http://php.net/manual-lookup.php?pattern=ksort" class="w3c-ref"><code>ksort</code></a>,… for different sort functions
+<strong>Info:</strong> See: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=sort" target="_blank"><code>sort</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=asort" target="_blank"><code>asort</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=ksort" target="_blank"><code>ksort</code></a>,… for different sort functions
 </div>
 <p></small></p>
 </div>
@@ -3582,9 +3808,9 @@ Order by character:
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
 <h3 id="starting-a-server">Starting a server</h3>
 <p>The server is started with one command on the command line:</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb211-1"><a href="#cb211-1"></a><span class="ex">php</span> -S localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> [-t /path/to/folder]</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb227-1"><a href="#cb227-1"></a><span class="ex">php</span> -S localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> [-t /path/to/folder]</span></code></pre></div>
 <p>Example:</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb212-1"><a href="#cb212-1"></a><span class="ex">php</span> -S localhost:8080</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb228-1"><a href="#cb228-1"></a><span class="ex">php</span> -S localhost:8080</span></code></pre></div>
 <p>This previous command will start a web-server in the current working directory and will be accessible at the URL: <code>http://localhost:8080</code>.</p>
 <p>You can pick any port, as long as it is between 1024 and 65535. By convention <code>8000</code> or <code>8080</code> are picked because of he resemblance with the official HTTP-port: <code>80</code>.</p>
 <p>As mentioned before, by default the server will start in the current working directory. I you wish the root of the site to be another directory, specify it via the <code>-t</code> option.</p>
@@ -3593,11 +3819,11 @@ Order by character:
 </div>
 <p>By default the web-server will search and execute serve the <code>index.html</code> or <code>index.php</code> file in the servers root directory. (root directory = the directory where the server was started)</p>
 <h3 id="making-a-simple-page">Making a simple page</h3>
-<div class="sourceCode" id="cb213"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb213-1"><a href="#cb213-1"></a><span class="fu">mkdir</span> my-website</span>
-<span id="cb213-2"><a href="#cb213-2"></a><span class="bu">cd</span> my-website</span>
-<span id="cb213-3"><a href="#cb213-3"></a><span class="bu">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="op">&gt;</span> index.html</span>
-<span id="cb213-4"><a href="#cb213-4"></a><span class="ex">php</span> -S localhost:8080</span>
-<span id="cb213-5"><a href="#cb213-5"></a><span class="ex">firefox</span> localhost:8080</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb229-1"><a href="#cb229-1"></a><span class="fu">mkdir</span> my-website</span>
+<span id="cb229-2"><a href="#cb229-2"></a><span class="bu">cd</span> my-website</span>
+<span id="cb229-3"><a href="#cb229-3"></a><span class="bu">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="op">&gt;</span> index.html</span>
+<span id="cb229-4"><a href="#cb229-4"></a><span class="ex">php</span> -S localhost:8080</span>
+<span id="cb229-5"><a href="#cb229-5"></a><span class="ex">firefox</span> localhost:8080</span></code></pre></div>
 <p>You should be greeted with <code>Hello world</code>…</p>
 <p>Because the web-pages are served via a <abbr title="Hypertext Preprocessor">PHP</abbr> server, all <abbr title="Hypertext Preprocessor">PHP</abbr> files (ending in <code>.php</code>) will be interpreted by the webserver. This allows us to generate the <abbr title="HyperText Markup Language">HTML</abbr> content dynamically.</p>
 <h3 id="exercises-3">Exercises</h3>
@@ -3668,11 +3894,11 @@ Exercise:
 </div>
 </div>
 <h2 id="include-require">Include / Require</h2>
-<p><abbr title="Hypertext Preprocessor">PHP</abbr> allows us to include one file into another. This is done via the <a href="http://php.net/manual-lookup.php?pattern=include" class="w3c-ref"><code>include</code></a> or <a href="http://php.net/manual-lookup.php?pattern=require" class="w3c-ref"><code>require</code></a>;</p>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> allows us to include one file into another. This is done via the <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=include" target="_blank"><code>include</code></a> or <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=require" target="_blank"><code>require</code></a>;</p>
 <p>The difference between the two is that <code>require</code> will fail if the specified file can’t be included where <code>include</code> will merely warn about the failed inclusion.</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb214-1"><a href="#cb214-1"></a><span class="kw">include</span><span class="ot">(</span><span class="st">&#39;path/to/file.php&#39;</span><span class="ot">);</span></span>
-<span id="cb214-2"><a href="#cb214-2"></a></span>
-<span id="cb214-3"><a href="#cb214-3"></a><span class="kw">require</span><span class="ot">(</span><span class="st">&#39;path/to/another-file.php&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb230-1"><a href="#cb230-1"></a><span class="kw">include</span><span class="ot">(</span><span class="st">&#39;path/to/file.php&#39;</span><span class="ot">);</span></span>
+<span id="cb230-2"><a href="#cb230-2"></a></span>
+<span id="cb230-3"><a href="#cb230-3"></a><span class="kw">require</span><span class="ot">(</span><span class="st">&#39;path/to/another-file.php&#39;</span><span class="ot">);</span></span></code></pre></div>
 <div class="exercise">
 <h4>
 Exercise:
@@ -3683,9 +3909,9 @@ Exercise:
 <p>Forms can be used to send data from the web-page to the server. This data can be read an processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <p>A from is composed out of a form-tag and data tags.</p>
 <h3 id="form-tag">Form tag</h3>
-<div class="sourceCode" id="cb215"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb215-1"><a href="#cb215-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">action&gt;&quot;</span><span class="ot"> method=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">method&gt;&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb215-2"><a href="#cb215-2"></a>    <span class="co">&lt;!-- content --&gt;</span></span>
-<span id="cb215-3"><a href="#cb215-3"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb231-1"><a href="#cb231-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">action&gt;&quot;</span><span class="ot"> method=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">method&gt;&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb231-2"><a href="#cb231-2"></a>    <span class="co">&lt;!-- content --&gt;</span></span>
+<span id="cb231-3"><a href="#cb231-3"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
 <p>The form tag has two required attributes:</p>
 <ul>
 <li>action</li>
@@ -3694,8 +3920,8 @@ Exercise:
 <h4 id="action">Action</h4>
 <p>This attribute specifies the page the data should be sent to.</p>
 <p>The send the data back to the same page, specify: <code>#</code> or the URL of the current page.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb216-1"><a href="#cb216-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
-<span id="cb216-2"><a href="#cb216-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;http://server.com/script-handle-data,php&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb232-1"><a href="#cb232-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
+<span id="cb232-2"><a href="#cb232-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;http://server.com/script-handle-data,php&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <h4 id="method">Method</h4>
 <p>The method defines how the data should be send to the server.</p>
 <p>There are two main methods:</p>
@@ -3717,13 +3943,13 @@ Exercise:
 <p><code>POST</code> The post method comes in where <code>GET</code> falls short.</p>
 <p>The data is sent in the body of the HTTP request and is this invisible and not limited by size.</p>
 <p>This method is most often used to send data from forms back to the server</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb218-1"><a href="#cb218-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;get&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
-<span id="cb218-2"><a href="#cb218-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb234-1"><a href="#cb234-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;get&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
+<span id="cb234-2"><a href="#cb234-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <h3 id="data-tags">Data tags</h3>
 <p>Other special tags are used to present or request data from the user.</p>
 <p>In order to send the data, contained in the elements, back to the server, the name attribute must be set on the elements. This name can than be used on the backend to retrieve the values entered by the user.</p>
 <h4 id="input">Input</h4>
-<div class="sourceCode" id="cb219"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb219-1"><a href="#cb219-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;&quot;</span><span class="ot"> name=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb235-1"><a href="#cb235-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;&quot;</span><span class="ot"> name=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <p>The input tag encompasses a lot of <em>“data types”</em>. The <code>type</code>-attribute can be used to modify the behaviour of this tag.</p>
 <p>Types:</p>
 <ul>
@@ -3740,21 +3966,21 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/input.html">php-and-html/input</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/input.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb220-1"><a href="#cb220-1"></a><span class="kw">&lt;ul&gt;</span></span>
-<span id="cb220-2"><a href="#cb220-2"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-3"><a href="#cb220-3"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-4"><a href="#cb220-4"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-file&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-5"><a href="#cb220-5"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;email&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello.world@mail.com&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-email&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-6"><a href="#cb220-6"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;42&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-number&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-7"><a href="#cb220-7"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;password&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-password&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-8"><a href="#cb220-8"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-9"><a href="#cb220-9"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-10"><a href="#cb220-10"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-text&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-11"><a href="#cb220-11"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-submit&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb220-12"><a href="#cb220-12"></a><span class="kw">&lt;/ul&gt;</span></span>
-<span id="cb220-13"><a href="#cb220-13"></a></span>
-<span id="cb220-14"><a href="#cb220-14"></a></span>
-<span id="cb220-15"><a href="#cb220-15"></a></span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb236-1"><a href="#cb236-1"></a><span class="kw">&lt;ul&gt;</span></span>
+<span id="cb236-2"><a href="#cb236-2"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-3"><a href="#cb236-3"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-4"><a href="#cb236-4"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-file&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-5"><a href="#cb236-5"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;email&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello.world@mail.com&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-email&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-6"><a href="#cb236-6"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;42&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-number&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-7"><a href="#cb236-7"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;password&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-password&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-8"><a href="#cb236-8"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-9"><a href="#cb236-9"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-10"><a href="#cb236-10"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-text&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-11"><a href="#cb236-11"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-submit&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb236-12"><a href="#cb236-12"></a><span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb236-13"><a href="#cb236-13"></a></span>
+<span id="cb236-14"><a href="#cb236-14"></a></span>
+<span id="cb236-15"><a href="#cb236-15"></a></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of php-and-html/input</span></p>
@@ -3764,35 +3990,35 @@ Exercise:
 </div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> In order to send files to the server, the form attribute: <code>enctype</code> must be set to <code>multipart/form-data</code></p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb221-1"><a href="#cb221-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb237-1"><a href="#cb237-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <p>See later for more details on how to upload files…</p>
 </div>
 <h4 id="select">Select</h4>
 <p>The select tag allows the user to choose options out of a predefined set:</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb222-1"><a href="#cb222-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb222-2"><a href="#cb222-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb222-3"><a href="#cb222-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb222-4"><a href="#cb222-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb222-5"><a href="#cb222-5"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb238-1"><a href="#cb238-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb238-2"><a href="#cb238-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb238-3"><a href="#cb238-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb238-4"><a href="#cb238-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb238-5"><a href="#cb238-5"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 <p>As can be seen in the example, a select is composed out of multiple options.</p>
 <p>The default behaviour is that only one option can be selected at once.</p>
 <p>This can be altered via the <code>multiple</code>-attribute.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/select.html">php-and-html/select</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb223-1"><a href="#cb223-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb223-2"><a href="#cb223-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-3"><a href="#cb223-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-4"><a href="#cb223-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-5"><a href="#cb223-5"></a><span class="kw">&lt;/select&gt;</span></span>
-<span id="cb223-6"><a href="#cb223-6"></a></span>
-<span id="cb223-7"><a href="#cb223-7"></a><span class="kw">&lt;br&gt;</span></span>
-<span id="cb223-8"><a href="#cb223-8"></a></span>
-<span id="cb223-9"><a href="#cb223-9"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb223-10"><a href="#cb223-10"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-11"><a href="#cb223-11"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-12"><a href="#cb223-12"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb223-13"><a href="#cb223-13"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb239-1"><a href="#cb239-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb239-2"><a href="#cb239-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-3"><a href="#cb239-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-4"><a href="#cb239-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-5"><a href="#cb239-5"></a><span class="kw">&lt;/select&gt;</span></span>
+<span id="cb239-6"><a href="#cb239-6"></a></span>
+<span id="cb239-7"><a href="#cb239-7"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb239-8"><a href="#cb239-8"></a></span>
+<span id="cb239-9"><a href="#cb239-9"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb239-10"><a href="#cb239-10"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-11"><a href="#cb239-11"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-12"><a href="#cb239-12"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb239-13"><a href="#cb239-13"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of php-and-html/select</span></p>
@@ -3804,33 +4030,33 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/select-groups.html">php-and-html/select-groups</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select-groups.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb224-1"><a href="#cb224-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-2"><a href="#cb224-2"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-3"><a href="#cb224-3"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-4"><a href="#cb224-4"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-5"><a href="#cb224-5"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-6"><a href="#cb224-6"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb224-7"><a href="#cb224-7"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-8"><a href="#cb224-8"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-9"><a href="#cb224-9"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-10"><a href="#cb224-10"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-11"><a href="#cb224-11"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb224-12"><a href="#cb224-12"></a><span class="kw">&lt;/select&gt;</span></span>
-<span id="cb224-13"><a href="#cb224-13"></a></span>
-<span id="cb224-14"><a href="#cb224-14"></a><span class="kw">&lt;br&gt;</span></span>
-<span id="cb224-15"><a href="#cb224-15"></a></span>
-<span id="cb224-16"><a href="#cb224-16"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-17"><a href="#cb224-17"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-18"><a href="#cb224-18"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-19"><a href="#cb224-19"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-20"><a href="#cb224-20"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-21"><a href="#cb224-21"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb224-22"><a href="#cb224-22"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb224-23"><a href="#cb224-23"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-24"><a href="#cb224-24"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-25"><a href="#cb224-25"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb224-26"><a href="#cb224-26"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb224-27"><a href="#cb224-27"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb240-1"><a href="#cb240-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-2"><a href="#cb240-2"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-3"><a href="#cb240-3"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-4"><a href="#cb240-4"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-5"><a href="#cb240-5"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-6"><a href="#cb240-6"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
+<span id="cb240-7"><a href="#cb240-7"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-8"><a href="#cb240-8"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-9"><a href="#cb240-9"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-10"><a href="#cb240-10"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-11"><a href="#cb240-11"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
+<span id="cb240-12"><a href="#cb240-12"></a><span class="kw">&lt;/select&gt;</span></span>
+<span id="cb240-13"><a href="#cb240-13"></a></span>
+<span id="cb240-14"><a href="#cb240-14"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb240-15"><a href="#cb240-15"></a></span>
+<span id="cb240-16"><a href="#cb240-16"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-17"><a href="#cb240-17"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-18"><a href="#cb240-18"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-19"><a href="#cb240-19"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-20"><a href="#cb240-20"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-21"><a href="#cb240-21"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
+<span id="cb240-22"><a href="#cb240-22"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb240-23"><a href="#cb240-23"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-24"><a href="#cb240-24"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-25"><a href="#cb240-25"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb240-26"><a href="#cb240-26"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
+<span id="cb240-27"><a href="#cb240-27"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of php-and-html/select-groups</span></p>
@@ -3843,13 +4069,13 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/textarea.html">php-and-html/textarea</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/textarea.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb225-1"><a href="#cb225-1"></a><span class="kw">&lt;textarea</span><span class="ot"> name=</span><span class="st">&quot;name-sent-to-server&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb225-2"><a href="#cb225-2"></a>Write</span>
-<span id="cb225-3"><a href="#cb225-3"></a></span>
-<span id="cb225-4"><a href="#cb225-4"></a>Multiline content</span>
-<span id="cb225-5"><a href="#cb225-5"></a></span>
-<span id="cb225-6"><a href="#cb225-6"></a>Here</span>
-<span id="cb225-7"><a href="#cb225-7"></a><span class="kw">&lt;/textarea&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb241-1"><a href="#cb241-1"></a><span class="kw">&lt;textarea</span><span class="ot"> name=</span><span class="st">&quot;name-sent-to-server&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb241-2"><a href="#cb241-2"></a>Write</span>
+<span id="cb241-3"><a href="#cb241-3"></a></span>
+<span id="cb241-4"><a href="#cb241-4"></a>Multiline content</span>
+<span id="cb241-5"><a href="#cb241-5"></a></span>
+<span id="cb241-6"><a href="#cb241-6"></a>Here</span>
+<span id="cb241-7"><a href="#cb241-7"></a><span class="kw">&lt;/textarea&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of php-and-html/textarea</span></p>
@@ -3864,24 +4090,24 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/label.html">php-and-html/label</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/label.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb226-1"><a href="#cb226-1"></a><span class="kw">&lt;label&gt;</span></span>
-<span id="cb226-2"><a href="#cb226-2"></a>   Name:</span>
-<span id="cb226-3"><a href="#cb226-3"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;jonh Doe&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb226-4"><a href="#cb226-4"></a><span class="kw">&lt;/label&gt;</span></span>
-<span id="cb226-5"><a href="#cb226-5"></a></span>
-<span id="cb226-6"><a href="#cb226-6"></a><span class="kw">&lt;br&gt;</span></span>
-<span id="cb226-7"><a href="#cb226-7"></a></span>
-<span id="cb226-8"><a href="#cb226-8"></a><span class="kw">&lt;label&gt;</span></span>
-<span id="cb226-9"><a href="#cb226-9"></a>   Age:</span>
-<span id="cb226-10"><a href="#cb226-10"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;21&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb226-11"><a href="#cb226-11"></a><span class="kw">&lt;/label&gt;</span></span>
-<span id="cb226-12"><a href="#cb226-12"></a></span>
-<span id="cb226-13"><a href="#cb226-13"></a><span class="kw">&lt;br&gt;</span></span>
-<span id="cb226-14"><a href="#cb226-14"></a></span>
-<span id="cb226-15"><a href="#cb226-15"></a><span class="kw">&lt;label&gt;</span></span>
-<span id="cb226-16"><a href="#cb226-16"></a>   Loves ice-cream:</span>
-<span id="cb226-17"><a href="#cb226-17"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;loves-ice-cream&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb226-18"><a href="#cb226-18"></a><span class="kw">&lt;/label&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb242-1"><a href="#cb242-1"></a><span class="kw">&lt;label&gt;</span></span>
+<span id="cb242-2"><a href="#cb242-2"></a>   Name:</span>
+<span id="cb242-3"><a href="#cb242-3"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;jonh Doe&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb242-4"><a href="#cb242-4"></a><span class="kw">&lt;/label&gt;</span></span>
+<span id="cb242-5"><a href="#cb242-5"></a></span>
+<span id="cb242-6"><a href="#cb242-6"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb242-7"><a href="#cb242-7"></a></span>
+<span id="cb242-8"><a href="#cb242-8"></a><span class="kw">&lt;label&gt;</span></span>
+<span id="cb242-9"><a href="#cb242-9"></a>   Age:</span>
+<span id="cb242-10"><a href="#cb242-10"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;21&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb242-11"><a href="#cb242-11"></a><span class="kw">&lt;/label&gt;</span></span>
+<span id="cb242-12"><a href="#cb242-12"></a></span>
+<span id="cb242-13"><a href="#cb242-13"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb242-14"><a href="#cb242-14"></a></span>
+<span id="cb242-15"><a href="#cb242-15"></a><span class="kw">&lt;label&gt;</span></span>
+<span id="cb242-16"><a href="#cb242-16"></a>   Loves ice-cream:</span>
+<span id="cb242-17"><a href="#cb242-17"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;loves-ice-cream&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb242-18"><a href="#cb242-18"></a><span class="kw">&lt;/label&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of php-and-html/label</span></p>
@@ -3899,26 +4125,26 @@ Exercise:
 <li><code>$_FILES</code>: Holds all the info about the uploaded files.</li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb227-1"><a href="#cb227-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb227-2"><a href="#cb227-2"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb227-3"><a href="#cb227-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;21 World&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb227-4"><a href="#cb227-4"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;Submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb227-5"><a href="#cb227-5"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb228"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb228-1"><a href="#cb228-1"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$_POST</span> <span class="ot">);</span></span>
-<span id="cb228-2"><a href="#cb228-2"></a></span>
-<span id="cb228-3"><a href="#cb228-3"></a><span class="co">/*</span></span>
-<span id="cb228-4"><a href="#cb228-4"></a><span class="co">Array(</span></span>
-<span id="cb228-5"><a href="#cb228-5"></a><span class="co">    [name] =&gt; &quot;Hello World&quot;,</span></span>
-<span id="cb228-6"><a href="#cb228-6"></a><span class="co">    [age] =&gt; 21</span></span>
-<span id="cb228-7"><a href="#cb228-7"></a><span class="co">)</span></span>
-<span id="cb228-8"><a href="#cb228-8"></a><span class="co">*/</span></span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb243-1"><a href="#cb243-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb243-2"><a href="#cb243-2"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb243-3"><a href="#cb243-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;21 World&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb243-4"><a href="#cb243-4"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;Submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb243-5"><a href="#cb243-5"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb244-1"><a href="#cb244-1"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$_POST</span> <span class="ot">);</span></span>
+<span id="cb244-2"><a href="#cb244-2"></a></span>
+<span id="cb244-3"><a href="#cb244-3"></a><span class="co">/*</span></span>
+<span id="cb244-4"><a href="#cb244-4"></a><span class="co">Array(</span></span>
+<span id="cb244-5"><a href="#cb244-5"></a><span class="co">    [name] =&gt; &quot;Hello World&quot;,</span></span>
+<span id="cb244-6"><a href="#cb244-6"></a><span class="co">    [age] =&gt; 21</span></span>
+<span id="cb244-7"><a href="#cb244-7"></a><span class="co">)</span></span>
+<span id="cb244-8"><a href="#cb244-8"></a><span class="co">*/</span></span></code></pre></div>
 <p>This data can no be processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <p>To test if data was submitted, the value of the <em>submit button</em> can be used.</p>
 <p>In the previous example was the value: <code>submit</code>.</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb229-1"><a href="#cb229-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span> <span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;submit&#39;</span><span class="ot">]</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
-<span id="cb229-2"><a href="#cb229-2"></a></span>
-<span id="cb229-3"><a href="#cb229-3"></a>    <span class="co">/* Do stuff with data */</span></span>
-<span id="cb229-4"><a href="#cb229-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb245-1"><a href="#cb245-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span> <span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;submit&#39;</span><span class="ot">]</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
+<span id="cb245-2"><a href="#cb245-2"></a></span>
+<span id="cb245-3"><a href="#cb245-3"></a>    <span class="co">/* Do stuff with data */</span></span>
+<span id="cb245-4"><a href="#cb245-4"></a>}</span></code></pre></div>
 <h2 id="exercises-4">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -4134,68 +4360,68 @@ Exercise:
 <h2 id="read-a-file">Read a file</h2>
 <p>There are multiple way to read a file:</p>
 <ul>
-<li><a href="http://php.net/manual-lookup.php?pattern=file" class="w3c-ref"><code>file</code></a></li>
-<li><a href="http://php.net/manual-lookup.php?pattern=file_get_contents" class="w3c-ref"><code>file_get_contents</code></a></li>
+<li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file" target="_blank"><code>file</code></a></li>
+<li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file_get_contents" target="_blank"><code>file_get_contents</code></a></li>
 </ul>
 <p>are most important ones.</p>
 <h3 id="file-1">File</h3>
-<p>The <a href="http://php.net/manual-lookup.php?pattern=file" class="w3c-ref"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb231-1"><a href="#cb231-1"></a><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file" target="_blank"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb247-1"><a href="#cb247-1"></a><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h3 id="file_get_contents">File_get_contents</h3>
 <p>This function takes filename as argument and returns a string containing the complete file contents (hence the name).</p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb232-1"><a href="#cb232-1"></a><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb248-1"><a href="#cb248-1"></a><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="createwrite-a-file">Create/Write a file</h2>
 <h3 id="touch">Touch</h3>
-<p><a href="http://php.net/manual-lookup.php?pattern=touch" class="w3c-ref"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn’t exist yet, it will be created.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb233-1"><a href="#cb233-1"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span></span>
-<span id="cb233-2"><a href="#cb233-2"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></span></code></pre></div>
+<p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=touch" target="_blank"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn’t exist yet, it will be created.</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb249-1"><a href="#cb249-1"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span></span>
+<span id="cb249-2"><a href="#cb249-2"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></span></code></pre></div>
 <h3 id="write">Write</h3>
-<p><a href="http://php.net/manual-lookup.php?pattern=fwrite" class="w3c-ref"><code>fwrite</code></a> can be used to write contents to a file handle.</p>
-<p>A handle can be created via <a href="http://php.net/manual-lookup.php?pattern=fopen" class="w3c-ref"><code>fopen</code></a>.</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb234-1"><a href="#cb234-1"></a><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></span>
-<span id="cb234-2"><a href="#cb234-2"></a><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></span>
-<span id="cb234-3"><a href="#cb234-3"></a><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></span></code></pre></div>
-<p>This sequence of opening, writing and closing a file is quite cumbersome, therefor a shorthand is also available: <a href="http://php.net/manual-lookup.php?pattern=file_put_contents" class="w3c-ref"><code>file_put_contents</code></a>.</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb235-1"><a href="#cb235-1"></a><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></span></code></pre></div>
+<p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=fwrite" target="_blank"><code>fwrite</code></a> can be used to write contents to a file handle.</p>
+<p>A handle can be created via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=fopen" target="_blank"><code>fopen</code></a>.</p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb250-1"><a href="#cb250-1"></a><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></span>
+<span id="cb250-2"><a href="#cb250-2"></a><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></span>
+<span id="cb250-3"><a href="#cb250-3"></a><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></span></code></pre></div>
+<p>This sequence of opening, writing and closing a file is quite cumbersome, therefor a shorthand is also available: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file_put_contents" target="_blank"><code>file_put_contents</code></a>.</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb251-1"><a href="#cb251-1"></a><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></span></code></pre></div>
 <h2 id="remove-a-file">Remove a file</h2>
-<p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
-<div class="sourceCode" id="cb236"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb236-1"><a href="#cb236-1"></a><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb252-1"><a href="#cb252-1"></a><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="rename-a-file">Rename a file</h2>
-<p>A file can be deleted via <a href="http://php.net/manual-lookup.php?pattern=unlink" class="w3c-ref"><code>unlink</code></a>.</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb237-1"><a href="#cb237-1"></a><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb253-1"><a href="#cb253-1"></a><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="directories">Directories</h2>
 <p>Similar functions exist for directories:</p>
 <ul>
-<li><p><a href="http://php.net/manual-lookup.php?pattern=mkdir" class="w3c-ref"><code>mkdir</code></a>: Create directory</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb238-1"><a href="#cb238-1"></a><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
-<li><p><a href="http://php.net/manual-lookup.php?pattern=rmdir" class="w3c-ref"><code>rmdir</code></a>: Delete directory</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb239-1"><a href="#cb239-1"></a><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
-<li><p><a href="http://php.net/manual-lookup.php?pattern=rename" class="w3c-ref"><code>rename</code></a>: Rename directory</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb240-1"><a href="#cb240-1"></a><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=mkdir" target="_blank"><code>mkdir</code></a>: Create directory</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb254-1"><a href="#cb254-1"></a><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=rmdir" target="_blank"><code>rmdir</code></a>: Delete directory</p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb255-1"><a href="#cb255-1"></a><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=rename" target="_blank"><code>rename</code></a>: Rename directory</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb256-1"><a href="#cb256-1"></a><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 </ul>
 <h3 id="list-all-files-in-a-directory">List all files in a directory:</h3>
 <ul>
-<li><p><a href="http://php.net/manual-lookup.php?pattern=readdir" class="w3c-ref"><code>readdir</code></a>: Iterate over the files in a directory-handle</p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb241-1"><a href="#cb241-1"></a><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span>
-<span id="cb241-2"><a href="#cb241-2"></a></span>
-<span id="cb241-3"><a href="#cb241-3"></a><span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {</span>
-<span id="cb241-4"><a href="#cb241-4"></a></span>
-<span id="cb241-5"><a href="#cb241-5"></a>    <span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb241-6"><a href="#cb241-6"></a>}</span></code></pre></div></li>
-<li><p><a href="http://php.net/manual-lookup.php?pattern=glob" class="w3c-ref"><code>glob</code></a>: List all files in a directory (as array) matching a certain pattern.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb242-1"><a href="#cb242-1"></a><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=readdir" target="_blank"><code>readdir</code></a>: Iterate over the files in a directory-handle</p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb257-1"><a href="#cb257-1"></a><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span>
+<span id="cb257-2"><a href="#cb257-2"></a></span>
+<span id="cb257-3"><a href="#cb257-3"></a><span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {</span>
+<span id="cb257-4"><a href="#cb257-4"></a></span>
+<span id="cb257-5"><a href="#cb257-5"></a>    <span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb257-6"><a href="#cb257-6"></a>}</span></code></pre></div></li>
+<li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=glob" target="_blank"><code>glob</code></a>: List all files in a directory (as array) matching a certain pattern.</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb258-1"><a href="#cb258-1"></a><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 </ul>
 <h2 id="upload-files">Upload files</h2>
 <p>File can be uploaded via a form-submission. The tag used to specify files is:</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb243-1"><a href="#cb243-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb259-1"><a href="#cb259-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> In order to use the <code>input[type=file]</code>, the form <strong>must</strong> specify the <code>enctype</code>-attribute:</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb244-1"><a href="#cb244-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb244-2"><a href="#cb244-2"></a></span>
-<span id="cb244-3"><a href="#cb244-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb244-4"><a href="#cb244-4"></a></span>
-<span id="cb244-5"><a href="#cb244-5"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb244-6"><a href="#cb244-6"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb260-1"><a href="#cb260-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb260-2"><a href="#cb260-2"></a></span>
+<span id="cb260-3"><a href="#cb260-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb260-4"><a href="#cb260-4"></a></span>
+<span id="cb260-5"><a href="#cb260-5"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb260-6"><a href="#cb260-6"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
 </div>
 <p>When a form containing files is submitted the <code>$_FILES</code> special <abbr title="Hypertext Preprocessor">PHP</abbr>-variable is populated with the file(s) currently uploading:</p>
 <pre><code>$_FILES = Array
@@ -4219,9 +4445,9 @@ Exercise:
         )
 )</code></pre>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> stores the uploaded file in a temporary location. We must use the files contents or move the file to a different location. At the next request this <code>tmp_name</code> will be something else. So keep this in mind.</p>
-<p>If we opt not to read the file and process it, but move the file instead, the <a href="http://php.net/manual-lookup.php?pattern=move_uploaded_file" class="w3c-ref"><code>move_uploaded_file</code></a> should be used to move a file to a new destination.</p>
+<p>If we opt not to read the file and process it, but move the file instead, the <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=move_uploaded_file" target="_blank"><code>move_uploaded_file</code></a> should be used to move a file to a new destination.</p>
 <p>This function has some additional checks builtin and is thus the recommended way to move uploaded files:</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb246-1"><a href="#cb246-1"></a><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb262-1"><a href="#cb262-1"></a><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="exercises-5">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -4351,70 +4577,70 @@ Exercise:
 <h1 id="php-functions">PHP functions</h1>
 <p>Sometimes you use a piece of code over and over again. This is not optimal and this code should be extracted to its own function.</p>
 <p>A function is a block of code with a given name and can be called (executed) by this name and optionally passed arguments to change the behaviour/output of the function.</p>
-<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a href="http://php.net/manual-lookup.php?pattern=print" class="w3c-ref"><code>print</code></a>, <a href="http://php.net/manual-lookup.php?pattern=isset" class="w3c-ref"><code>isset</code></a>, <a href="http://php.net/manual-lookup.php?pattern=empty" class="w3c-ref"><code>empty</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_pop" class="w3c-ref"><code>array_pop</code></a>, <a href="http://php.net/manual-lookup.php?pattern=array_push" class="w3c-ref"><code>array_push</code></a>, …</p>
+<p>We have already used a lot of <abbr title="Hypertext Preprocessor">PHP</abbr> builtin functions. For example: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=print" target="_blank"><code>print</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=empty" target="_blank"><code>empty</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_pop" target="_blank"><code>array_pop</code></a>, <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=array_push" target="_blank"><code>array_push</code></a>, …</p>
 <p>As mentioned we can define our own functions.</p>
 <p>Syntax:</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb247-1"><a href="#cb247-1"></a><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {</span>
-<span id="cb247-2"><a href="#cb247-2"></a></span>
-<span id="cb247-3"><a href="#cb247-3"></a>    <span class="co">/* function code here */</span></span>
-<span id="cb247-4"><a href="#cb247-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb263-1"><a href="#cb263-1"></a><span class="kw">function</span> &lt;name&gt; <span class="ot">(</span> &lt;arguments&gt; <span class="ot">)</span> {</span>
+<span id="cb263-2"><a href="#cb263-2"></a></span>
+<span id="cb263-3"><a href="#cb263-3"></a>    <span class="co">/* function code here */</span></span>
+<span id="cb263-4"><a href="#cb263-4"></a>}</span></code></pre></div>
 <p>Example: function without arguments</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb248-1"><a href="#cb248-1"></a><span class="kw">function</span> greet<span class="ot">()</span> {</span>
-<span id="cb248-2"><a href="#cb248-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb248-3"><a href="#cb248-3"></a>}</span>
-<span id="cb248-4"><a href="#cb248-4"></a></span>
-<span id="cb248-5"><a href="#cb248-5"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span>
-<span id="cb248-6"><a href="#cb248-6"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb264-1"><a href="#cb264-1"></a><span class="kw">function</span> greet<span class="ot">()</span> {</span>
+<span id="cb264-2"><a href="#cb264-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb264-3"><a href="#cb264-3"></a>}</span>
+<span id="cb264-4"><a href="#cb264-4"></a></span>
+<span id="cb264-5"><a href="#cb264-5"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span>
+<span id="cb264-6"><a href="#cb264-6"></a>greet<span class="ot">();</span> <span class="co">// Hello!</span></span></code></pre></div>
 <p>Example: function with arguments</p>
-<div class="sourceCode" id="cb249"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb249-1"><a href="#cb249-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {</span>
-<span id="cb249-2"><a href="#cb249-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb249-3"><a href="#cb249-3"></a>}</span>
-<span id="cb249-4"><a href="#cb249-4"></a></span>
-<span id="cb249-5"><a href="#cb249-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
-<span id="cb249-6"><a href="#cb249-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
-<span id="cb249-7"><a href="#cb249-7"></a>greet<span class="ot">();</span> <span class="co">// - ERROR -</span></span></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb265-1"><a href="#cb265-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> <span class="ot">)</span> {</span>
+<span id="cb265-2"><a href="#cb265-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb265-3"><a href="#cb265-3"></a>}</span>
+<span id="cb265-4"><a href="#cb265-4"></a></span>
+<span id="cb265-5"><a href="#cb265-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
+<span id="cb265-6"><a href="#cb265-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
+<span id="cb265-7"><a href="#cb265-7"></a>greet<span class="ot">();</span> <span class="co">// - ERROR -</span></span></code></pre></div>
 <p>If arguments are present in the function definition, these arguments must be passed when the function is invoked. Otherwise an error is thrown…</p>
 <p>Arguments can however be defined with a default value, if the argument is not passed at invocation (or the argument value is <code>NULL</code>) the default value will be used instead.</p>
 <p>Example: function with arguments</p>
-<div class="sourceCode" id="cb250"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb250-1"><a href="#cb250-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {</span>
-<span id="cb250-2"><a href="#cb250-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb250-3"><a href="#cb250-3"></a>}</span>
-<span id="cb250-4"><a href="#cb250-4"></a></span>
-<span id="cb250-5"><a href="#cb250-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
-<span id="cb250-6"><a href="#cb250-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
-<span id="cb250-7"><a href="#cb250-7"></a>greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb266-1"><a href="#cb266-1"></a><span class="kw">function</span> greet<span class="ot">(</span> <span class="kw">$name</span> = <span class="st">&#39;anonymous&#39;</span> <span class="ot">)</span> {</span>
+<span id="cb266-2"><a href="#cb266-2"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$name</span><span class="st">!</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb266-3"><a href="#cb266-3"></a>}</span>
+<span id="cb266-4"><a href="#cb266-4"></a></span>
+<span id="cb266-5"><a href="#cb266-5"></a>greet<span class="ot">(</span> <span class="st">&#39;john&#39;</span> <span class="ot">);</span> <span class="co">// Hello john!</span></span>
+<span id="cb266-6"><a href="#cb266-6"></a>greet<span class="ot">(</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span> <span class="co">// Hello jane!</span></span>
+<span id="cb266-7"><a href="#cb266-7"></a>greet<span class="ot">();</span> <span class="co">// Hello anonymous</span></span></code></pre></div>
 <p>Multiple arguments can be passed, separated by comma’s <code>,</code>.</p>
-<div class="sourceCode" id="cb251"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb251-1"><a href="#cb251-1"></a><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {</span>
-<span id="cb251-2"><a href="#cb251-2"></a></span>
-<span id="cb251-3"><a href="#cb251-3"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb251-4"><a href="#cb251-4"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb251-5"><a href="#cb251-5"></a>}</span>
-<span id="cb251-6"><a href="#cb251-6"></a></span>
-<span id="cb251-7"><a href="#cb251-7"></a>greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span></span>
-<span id="cb251-8"><a href="#cb251-8"></a><span class="co">// Hello john</span></span>
-<span id="cb251-9"><a href="#cb251-9"></a><span class="co">// Hello jane</span></span>
-<span id="cb251-10"><a href="#cb251-10"></a></span>
-<span id="cb251-11"><a href="#cb251-11"></a>greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span></span>
-<span id="cb251-12"><a href="#cb251-12"></a><span class="co">// Hello sam</span></span>
-<span id="cb251-13"><a href="#cb251-13"></a><span class="co">// Hello</span></span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb267-1"><a href="#cb267-1"></a><span class="kw">function</span> greet_both<span class="ot">(</span> <span class="kw">$first</span><span class="ot">,</span> <span class="kw">$second</span> = <span class="st">&#39;&#39;</span> <span class="ot">)</span> {</span>
+<span id="cb267-2"><a href="#cb267-2"></a></span>
+<span id="cb267-3"><a href="#cb267-3"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$first</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb267-4"><a href="#cb267-4"></a>    <span class="kw">echo</span> <span class="st">&quot;Hello </span><span class="kw">$second</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb267-5"><a href="#cb267-5"></a>}</span>
+<span id="cb267-6"><a href="#cb267-6"></a></span>
+<span id="cb267-7"><a href="#cb267-7"></a>greet_both<span class="ot">(</span> <span class="st">&#39;john&#39;</span><span class="ot">,</span> <span class="st">&#39;jane&#39;</span> <span class="ot">);</span></span>
+<span id="cb267-8"><a href="#cb267-8"></a><span class="co">// Hello john</span></span>
+<span id="cb267-9"><a href="#cb267-9"></a><span class="co">// Hello jane</span></span>
+<span id="cb267-10"><a href="#cb267-10"></a></span>
+<span id="cb267-11"><a href="#cb267-11"></a>greet_both<span class="ot">(</span><span class="st">&#39;sam&#39;</span><span class="ot">);</span></span>
+<span id="cb267-12"><a href="#cb267-12"></a><span class="co">// Hello sam</span></span>
+<span id="cb267-13"><a href="#cb267-13"></a><span class="co">// Hello</span></span></code></pre></div>
 <h2 id="return-a-value">Return a value</h2>
-<p>The <a href="http://php.net/manual-lookup.php?pattern=return" class="w3c-ref"><code>return</code></a> keyword must be used to return a value from an array:</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb252-1"><a href="#cb252-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
-<span id="cb252-2"><a href="#cb252-2"></a>    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span></span>
-<span id="cb252-3"><a href="#cb252-3"></a>}</span>
-<span id="cb252-4"><a href="#cb252-4"></a></span>
-<span id="cb252-5"><a href="#cb252-5"></a><span class="kw">$string</span> = fn<span class="ot">();</span></span></code></pre></div>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=return" target="_blank"><code>return</code></a> keyword must be used to return a value from an array:</p>
+<div class="sourceCode" id="cb268"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb268-1"><a href="#cb268-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
+<span id="cb268-2"><a href="#cb268-2"></a>    <span class="kw">return</span> <span class="st">&quot;Hello World&quot;</span><span class="ot">;</span></span>
+<span id="cb268-3"><a href="#cb268-3"></a>}</span>
+<span id="cb268-4"><a href="#cb268-4"></a></span>
+<span id="cb268-5"><a href="#cb268-5"></a><span class="kw">$string</span> = fn<span class="ot">();</span></span></code></pre></div>
 <p>Whenever a return statement is encountered, the function will stop and return the specified value. Any code defined after the return statement will not be executed…</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb253-1"><a href="#cb253-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
-<span id="cb253-2"><a href="#cb253-2"></a></span>
-<span id="cb253-3"><a href="#cb253-3"></a>    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {</span>
-<span id="cb253-4"><a href="#cb253-4"></a></span>
-<span id="cb253-5"><a href="#cb253-5"></a>        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span></span>
-<span id="cb253-6"><a href="#cb253-6"></a>    }</span>
-<span id="cb253-7"><a href="#cb253-7"></a></span>
-<span id="cb253-8"><a href="#cb253-8"></a>    <span class="kw">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span></span>
-<span id="cb253-9"><a href="#cb253-9"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb269-1"><a href="#cb269-1"></a><span class="kw">function</span> fn<span class="ot">()</span> {</span>
+<span id="cb269-2"><a href="#cb269-2"></a></span>
+<span id="cb269-3"><a href="#cb269-3"></a>    <span class="kw">if</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">)</span> {</span>
+<span id="cb269-4"><a href="#cb269-4"></a></span>
+<span id="cb269-5"><a href="#cb269-5"></a>        <span class="kw">return</span> <span class="st">&quot;was true&quot;</span><span class="ot">;</span></span>
+<span id="cb269-6"><a href="#cb269-6"></a>    }</span>
+<span id="cb269-7"><a href="#cb269-7"></a></span>
+<span id="cb269-8"><a href="#cb269-8"></a>    <span class="kw">echo</span> <span class="st">&quot;This will never execute because the function returned from the if statement&quot;</span><span class="ot">;</span></span>
+<span id="cb269-9"><a href="#cb269-9"></a>}</span></code></pre></div>
 <h2 id="exercises-6">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -4426,7 +4652,7 @@ Exercise:
 <li>sentence</li>
 </ul>
 <p>Output: <code>&lt;name&gt; -&gt; &lt;sentence&gt;</code></p>
-<div class="sourceCode" id="cb254"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb254-1"><a href="#cb254-1"></a><span class="ex">php</span> chat.php </span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb270-1"><a href="#cb270-1"></a><span class="ex">php</span> chat.php </span></code></pre></div>
 <pre class="run--output"><code>john -&gt; @jane: Hello
 jane -&gt; Hello john
 john -&gt; Nice weather...
@@ -4446,27 +4672,27 @@ Exercise:
 <li>even</li>
 <li>and smaller then 100</li>
 </ul>
-<div class="sourceCode" id="cb256"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb256-1"><a href="#cb256-1"></a><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }</span>
-<span id="cb256-2"><a href="#cb256-2"></a><span class="kw">else</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</span></code></pre></div>
-<div class="sourceCode" id="cb257"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb257-1"><a href="#cb257-1"></a><span class="ex">php</span> validate-number.php -5</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb272-1"><a href="#cb272-1"></a><span class="kw">if</span><span class="ot">(</span> check_number<span class="ot">(</span> <span class="kw">$nr</span> <span class="ot">)</span> <span class="ot">)</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) passed tests&quot;</span><span class="ot">;</span> }</span>
+<span id="cb272-2"><a href="#cb272-2"></a><span class="kw">else</span> { <span class="kw">echo</span> <span class="st">&quot;number (</span><span class="kw">$nr</span><span class="st">) failed tests&quot;</span><span class="ot">;</span> }</span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb273-1"><a href="#cb273-1"></a><span class="ex">php</span> validate-number.php -5</span></code></pre></div>
 <pre class="run--output"><code>number (-5) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb259"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb259-1"><a href="#cb259-1"></a><span class="ex">php</span> validate-number.php 7</span></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb275-1"><a href="#cb275-1"></a><span class="ex">php</span> validate-number.php 7</span></code></pre></div>
 <pre class="run--output"><code>number (7) failed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb261"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb261-1"><a href="#cb261-1"></a><span class="ex">php</span> validate-number.php 22</span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb277-1"><a href="#cb277-1"></a><span class="ex">php</span> validate-number.php 22</span></code></pre></div>
 <pre class="run--output"><code>number (22) passed tests
 </code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/validate-number.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb263"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb263-1"><a href="#cb263-1"></a><span class="ex">php</span> validate-number.php 111</span></code></pre></div>
+<div class="sourceCode" id="cb279"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb279-1"><a href="#cb279-1"></a><span class="ex">php</span> validate-number.php 111</span></code></pre></div>
 <pre class="run--output"><code>number (111) failed tests
 </code></pre>
 <div class="text-right">
@@ -4479,9 +4705,9 @@ Exercise:
 </h4>
 <p>Create a barplot: 25%, 80%, 15%.</p>
 <p>Abstract the bars away in a function.</p>
-<div class="sourceCode" id="cb265"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb265-1"><a href="#cb265-1"></a>print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span></span>
-<span id="cb265-2"><a href="#cb265-2"></a>print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span></span>
-<span id="cb265-3"><a href="#cb265-3"></a>print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb281"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb281-1"><a href="#cb281-1"></a>print_bar<span class="ot">(</span><span class="st">&#39;25%&#39;</span><span class="ot">);</span></span>
+<span id="cb281-2"><a href="#cb281-2"></a>print_bar<span class="ot">(</span><span class="st">&#39;80%&#39;</span><span class="ot">);</span></span>
+<span id="cb281-3"><a href="#cb281-3"></a>print_bar<span class="ot">(</span><span class="st">&#39;15%&#39;</span><span class="ot">);</span></span></code></pre></div>
 <iframe src="embeds/exercises/php-functions/barplot.html" class="embed--output" height="350px" frameborder="0">
 </iframe>
 <div class="text-right">
@@ -4494,18 +4720,18 @@ Exercise:
 </h4>
 <p>Create a function for each arithmetic operator: <code>+</code>, <code>-</code>, <code>x</code>, <code>/</code>. The function should accept an array of values and apply the operations in sequence:</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb266"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb266-1"><a href="#cb266-1"></a>plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span></span>
-<span id="cb266-2"><a href="#cb266-2"></a>subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span></span>
-<span id="cb266-3"><a href="#cb266-3"></a>divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span></span>
-<span id="cb266-4"><a href="#cb266-4"></a>multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb282-1"><a href="#cb282-1"></a>plus<span class="ot">([</span><span class="dv">1</span><span class="ot">,</span><span class="dv">2</span><span class="ot">,</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]);</span> <span class="co">// -&gt; 10</span></span>
+<span id="cb282-2"><a href="#cb282-2"></a>subtract<span class="ot">([</span><span class="dv">10</span><span class="ot">,</span><span class="dv">5</span><span class="ot">,</span><span class="dv">1</span><span class="ot">]);</span> <span class="co">// -&gt; ( 10 - 5 ) - 1</span></span>
+<span id="cb282-3"><a href="#cb282-3"></a>divide<span class="ot">([</span><span class="dv">100</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">])</span> <span class="co">// -&gt; ( 100 / 10) / 5</span></span>
+<span id="cb282-4"><a href="#cb282-4"></a>multiply<span class="ot">([</span><span class="dv">7</span><span class="ot">,</span><span class="dv">9</span><span class="ot">,</span><span class="dv">8</span><span class="ot">,</span><span class="dv">4</span><span class="ot">])</span> <span class="co">// -&gt; 7 * 9 * 8 * 4</span></span></code></pre></div>
 <ul>
 <li>Extra: accept two values: <code>plus( 1, 2 )</code> or array: <code>plus([1,2])</code> <small>
 <div class="alert alert-info">
-<strong>Info:</strong> Use <a href="http://php.net/manual-lookup.php?pattern=is_array" class="w3c-ref"><code>is_array</code></a> to check if a variable is an array…
+<strong>Info:</strong> Use <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=is_array" target="_blank"><code>is_array</code></a> to check if a variable is an array…
 </div>
 </small></li>
 </ul>
-<div class="sourceCode" id="cb267"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb267-1"><a href="#cb267-1"></a><span class="ex">php</span> arithmetic-operators.php </span></code></pre></div>
+<div class="sourceCode" id="cb283"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb283-1"><a href="#cb283-1"></a><span class="ex">php</span> arithmetic-operators.php </span></code></pre></div>
 <pre class="run--output"><code>10
 4
 2
@@ -4526,7 +4752,7 @@ Exercise:
 <li>check if value is not longer than 50 characters (otherwise show error)</li>
 <li>modify the function so a default value can be passed to the function, if the key is not found in the array, retrun this value.</li>
 </ul>
-<div class="sourceCode" id="cb269"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb269-1"><a href="#cb269-1"></a><span class="ex">php</span> retrieve-key.php </span></code></pre></div>
+<div class="sourceCode" id="cb285"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb285-1"><a href="#cb285-1"></a><span class="ex">php</span> retrieve-key.php </span></code></pre></div>
 <pre class="run--output"><code>value1
 default value
 default value
@@ -4543,7 +4769,7 @@ Exercise:
 </h4>
 <p><strong>Extra:</strong> Create a function that can calculate the factorial of a number.</p>
 <p>Try not to use loops but recursion…</p>
-<div class="sourceCode" id="cb271"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb271-1"><a href="#cb271-1"></a><span class="ex">php</span> factorial.php 5</span></code></pre></div>
+<div class="sourceCode" id="cb287"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb287-1"><a href="#cb287-1"></a><span class="ex">php</span> factorial.php 5</span></code></pre></div>
 <pre class="run--output"><code>120</code></pre>
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-functions/factorial.php" target="_blank">Solution (github)</a> </small></p>
@@ -4554,7 +4780,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2020-09-23
+                  at 2020-11-08
                </p>
             </footer>
          </div>
