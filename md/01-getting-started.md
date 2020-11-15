@@ -49,7 +49,7 @@ You can store all your scripts in this folder...
 ## Get local copy of this site.
 
 Although all documents are hosted online
-(<https://asoete.github.io/howest-webtechnology>) **it is recommend to host the
+(<https://asoete.github.io/howest-webtechnology>) **it is recommended to host the
 cursus-site locally**.
 
 Github doesn't allow the execution of PHP scripts, so the exercise solution may

@@ -17,13 +17,13 @@ programming language.
 
 ## Resources
 
-The main documentation for this course is a site an can be found at
-<https://asoete.github.io/howest-webtechnology>. The main advantage of a using
+The main documentation for this course is a site and can be found at
+<https://asoete.github.io/howest-webtechnology>. The main advantage of using
 a site as a textbook is that the included examples and snippets can be
 rendered/formatted by the browser on the fly.
 
 A [PDF version](pdfs/cursus.pdf) of this document is also available. But keep
-in mind that some HTML features can will be lost in the conversion to a pdf.
+in mind that some HTML features will be lost in the conversion to a pdf.
 
 There are no slides available, all the key aspects of this course will
 introduced via examples during the lessons. These examples and example

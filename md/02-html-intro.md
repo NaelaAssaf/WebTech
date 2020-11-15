@@ -16,7 +16,7 @@ means it is composed out of tags which can contain attributes.
 
 ## Tags
 
-An HTML-tag indicator starts with `<` and end with `>`, for example: `<body>`.
+An HTML-tag indicator starts with `<` and ends with `>`, for example: `<body>`.
 
 There are two types of HTML-tags:
 
@@ -39,7 +39,7 @@ These opening and closing tags can contain plain text and/or additional HTML mar
 
 Example: `<strong>Bold Font</strong>`
 <small>
-(This tags formats its content in a bold font: <strong>Bold Font</strong>)
+(This tag formats its content in a bold font: <strong>Bold Font</strong>)
 </small>
 
 The whole (start + content + end) is an HTML element.
@@ -201,7 +201,7 @@ firefox hello-world.html
 
 ## Headers: `H*`
 
-The purpose of a header is to indicate the start of a new block a add an
+The purpose of a header is to indicate the start of a new block and add an
 appropriate heading.
 
 The m4_tag(hn)-tags come in 6 variations. From to highest order header `h1` to
@@ -233,7 +233,7 @@ m4_embed_php_as_html(html-intro/p-tag,180px,.html)
 
 ### Generic container `div`
 
-The m4_tag(div) defines a _division_ in the document. It is used al lot to wrap
+The m4_tag(div) defines a _division_ in the document. It is used a lot to wrap
 some content and apply styles.
 
 It has no special styles by default
@@ -242,7 +242,7 @@ m4_embed_php_as_html(html-intro/div-tag,150px,.html)
 
 ### Pre-formatted text: `pre`
 
-The m4_tag(pre) Keeps al white-space in the element (in contrast to all the
+The m4_tag(pre) keeps all white-space in the element (in contrast to all the
 other elements). The text is also displayed in a monospaced font.
 
 m4_embed_php_as_html(html-intro/pre-tag,180px,.html)
@@ -269,6 +269,7 @@ m4_exercise([[
     * div tags
     * p tags
     * blockquote tags
+
   And notice the difference
 ]])
 
@@ -383,7 +384,7 @@ m4_exercise([[
 
     > Let's make hello world bold in this sentence.
 
-* Print the following text so `hello world` is crossed of.
+* Print the following text so `hello world` is crossed off.
 
     > Let's strike hello world in this sentence.
 ]])
@@ -395,11 +396,11 @@ larger elements-group.
 
 ### Fieldset
 
-m4_tag(fieldset) is a container with an (optional) header (m4_tag(legend).
+m4_tag(fieldset) is a container with an (optional) header (m4_tag(legend) ).
 
 m4_embed_php_as_html(html-intro/fieldset,100px,.html)
 
-This container is often used to group related from items togheter.
+This container is often used to group related from items together.
 
 ### Lists
 
