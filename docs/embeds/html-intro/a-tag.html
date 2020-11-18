@@ -1,1 +1,1 @@
-<a href="http://google.com">Link to goole</a>
+<a href="http://google.com">Link to google</a>

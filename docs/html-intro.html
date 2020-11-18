@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2020-11-08" />
+        <meta name="date" content="2020-11-18" />
    
    
    <title>HTML basics - BIT01 Webtechnology</title>
@@ -190,7 +190,7 @@
 <p></small></p>
 <p><abbr title="HyperText Markup Language">HTML</abbr> is an <abbr title="Extensible Markup Language">XML</abbr> subset. This means it is composed out of tags which can contain attributes.</p>
 <h2 id="tags">Tags</h2>
-<p>An <abbr title="HyperText Markup Language">HTML</abbr>-tag indicator starts with <code>&lt;</code> and end with <code>&gt;</code>, for example: <code>&lt;body&gt;</code>.</p>
+<p>An <abbr title="HyperText Markup Language">HTML</abbr>-tag indicator starts with <code>&lt;</code> and ends with <code>&gt;</code>, for example: <code>&lt;body&gt;</code>.</p>
 <p>There are two types of <abbr title="HyperText Markup Language">HTML</abbr>-tags:</p>
 <ul>
 <li>Non self-enclosing tags</li>
@@ -204,7 +204,7 @@
 </ol>
 <p>These opening and closing tags can contain plain text and/or additional <abbr title="HyperText Markup Language">HTML</abbr> markup.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</span></code></pre></div>
-<p>Example: <code>&lt;strong&gt;Bold Font&lt;/strong&gt;</code> <small> (This tags formats its content in a bold font: <strong>Bold Font</strong>) </small></p>
+<p>Example: <code>&lt;strong&gt;Bold Font&lt;/strong&gt;</code> <small> (This tag formats its content in a bold font: <strong>Bold Font</strong>) </small></p>
 <p>The whole (start + content + end) is an <abbr title="HyperText Markup Language">HTML</abbr> element.</p>
 <h3 id="self-enclosing-tags">Self-enclosing tags</h3>
 <p>A self-enclosing tag has no content. So the closing part is left of:</p>
@@ -290,7 +290,7 @@ Exercise:
 <p>Open the local <abbr title="HyperText Markup Language">HTML</abbr> file in the browser.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">firefox</span> hello-world.html</span></code></pre></div>
 <h2 id="headers-h">Headers: <code>H*</code></h2>
-<p>The purpose of a header is to indicate the start of a new block a add an appropriate heading.</p>
+<p>The purpose of a header is to indicate the start of a new block and add an appropriate heading.</p>
 <p>The <a href="http://www.w3schools.com/tags/tag_hn.asp" class="w3c-ref"><code>hn</code></a>-tags come in 6 variations. From to highest order header <code>h1</code> to the lowest <code>h6</code>.</p>
 <p>The browser auto-formats these headers accordingly from largest to smallest font-size.</p>
 <div class="row">
@@ -345,7 +345,7 @@ Exercise:
 </div>
 </div>
 <h3 id="generic-container-div">Generic container <code>div</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_div.asp" class="w3c-ref"><code>div</code></a> defines a <em>division</em> in the document. It is used al lot to wrap some content and apply styles.</p>
+<p>The <a href="http://www.w3schools.com/tags/tag_div.asp" class="w3c-ref"><code>div</code></a> defines a <em>division</em> in the document. It is used a lot to wrap some content and apply styles.</p>
 <p>It has no special styles by default</p>
 <div class="row">
 <div class="col-md-6">
@@ -366,7 +366,7 @@ Exercise:
 </div>
 </div>
 <h3 id="pre-formatted-text-pre">Pre-formatted text: <code>pre</code></h3>
-<p>The <a href="http://www.w3schools.com/tags/tag_pre.asp" class="w3c-ref"><code>pre</code></a> Keeps al white-space in the element (in contrast to all the other elements). The text is also displayed in a monospaced font.</p>
+<p>The <a href="http://www.w3schools.com/tags/tag_pre.asp" class="w3c-ref"><code>pre</code></a> keeps all white-space in the element (in contrast to all the other elements). The text is also displayed in a monospaced font.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/pre-tag.html">html-intro/pre-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/pre-tag.php" taret="_blank">src</a></span></p>
@@ -433,8 +433,9 @@ Exercise:
 <li>No tags</li>
 <li>div tags</li>
 <li>p tags</li>
-<li>blockquote tags And notice the difference</li>
-</ul></li>
+<li>blockquote tags</li>
+</ul>
+And notice the difference</li>
 </ul>
 </div>
 <h2 id="inline-tags">Inline tags</h2>
@@ -446,7 +447,7 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/a-tag.html">html-intro/a-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/a-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span>Link to goole<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode html php embed--src"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span>Link to google<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/a-tag</span></p>
@@ -623,7 +624,7 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 <blockquote>
 <p>Let’s make hello world bold in this sentence.</p>
 </blockquote></li>
-<li><p>Print the following text so <code>hello world</code> is crossed of.</p>
+<li><p>Print the following text so <code>hello world</code> is crossed off.</p>
 <blockquote>
 <p>Let’s strike hello world in this sentence.</p>
 </blockquote></li>
@@ -632,7 +633,7 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 <h2 id="multi-element-markup">Multi element markup</h2>
 <p>Some elements don’t make any sense on their own. They should be part of a larger elements-group.</p>
 <h3 id="fieldset">Fieldset</h3>
-<p><a href="http://www.w3schools.com/tags/tag_fieldset.asp" class="w3c-ref"><code>fieldset</code></a> is a container with an (optional) header (<a href="http://www.w3schools.com/tags/tag_legend.asp" class="w3c-ref"><code>legend</code></a>.</p>
+<p><a href="http://www.w3schools.com/tags/tag_fieldset.asp" class="w3c-ref"><code>fieldset</code></a> is a container with an (optional) header (<a href="http://www.w3schools.com/tags/tag_legend.asp" class="w3c-ref"><code>legend</code></a> ).</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/fieldset.html">html-intro/fieldset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/fieldset.php" taret="_blank">src</a></span></p>
@@ -647,7 +648,7 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 </iframe>
 </div>
 </div>
-<p>This container is often used to group related from items togheter.</p>
+<p>This container is often used to group related from items together.</p>
 <h3 id="lists">Lists</h3>
 <p>A <abbr title="HyperText Markup Language">HTML</abbr>-list is composed of <a href="http://www.w3schools.com/tags/tag_li.asp" class="w3c-ref"><code>li</code></a>-tags enclosed by an <a href="http://www.w3schools.com/tags/tag_ul.asp" class="w3c-ref"><code>ul</code></a> or <a href="http://www.w3schools.com/tags/tag_ol.asp" class="w3c-ref"><code>ol</code></a>-tag.</p>
 <h4 id="unordered-lists-ul">Unordered lists <code>ul</code></h4>
@@ -824,7 +825,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2020-11-08
+                  at 2020-11-18
                </p>
             </footer>
          </div>
