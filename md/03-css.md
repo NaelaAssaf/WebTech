@@ -284,7 +284,7 @@ selector:hover {
 }
 ```
 
-Via the (hover selector)[http://www.w3schools.com/cssref/sel_hover.asp]{.csstag} allows us to apply styles to an element only when the mouse hovers over the element.
+Via the [hover selector](http://www.w3schools.com/cssref/sel_hover.asp){.csstag} allows us to apply styles to an element only when the mouse hovers over the element.
 
 For example: overline a link when the mouse passes over the element:
 
@@ -520,8 +520,8 @@ but is still occupies space and interacts with the other DOM-elements.
 ```css
 div {
 
-    display: hidden;
-    visibility: none;
+    display: none;
+    visibility: hidden;
 }
 ```
 
