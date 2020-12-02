@@ -85,7 +85,7 @@ way up to PHP as a web server.
 
 
 PHP at its core is a program which reads a source file, interprets the
-directives an prints out the result.
+directives and prints out the result.
 
 Basic invocation:
 
@@ -108,7 +108,7 @@ m4_info([[The echo statement prints a string. See [echo](#echo) for more info]])
 </small>
 
 <small>
-m4_note([[If you get an _command not found_ error, you probably have to install
+m4_note([[If you get a _command not found_ error, you probably have to install
 php. Run: `sudo dnf install php`]])
 </small>
 
@@ -288,7 +288,7 @@ Floats an Integers can be used in arithmetic.
 +==================+================+===========================================+
 | `-$a`{.php}      | Negation       | Opposite of $a.                           |
 +-----+------------+----------------+-------------------------------------------+
-| `$a + $b` {.php} | Addition       | Sum of $a and $b.                         |
+| `$a + $b`{.php}  | Addition       | Sum of $a and $b.                         |
 +------------------+----------------+-------------------------------------------+
 | `$a - $b`{.php}  | Subtraction    | Difference of $a and $b.                  |
 +------------------+----------------+-------------------------------------------+
@@ -352,7 +352,7 @@ m4_embed_php(php-basics/print_r)
 
 #### Get a value from an array
 
-A value can be retrieved by specifying the array variable name followed by the index you which to retrieve encloded in square brackets:
+A value can be retrieved by specifying the array variable name followed by the index you wish to retrieve enclosed in square brackets:
 
 ```php
 $array[<key>];
@@ -423,7 +423,7 @@ PHP has some special, reserved, arrays. These arrays are created and filled by P
 
 #### $argv
 
-This array holds al the arguments passed to a PHP-script from the command line.
+This array holds all the arguments passed to a PHP-script from the command line.
 
 m4_run(php-basics,print_r-argv.php,[['arg1' 'arg2' 123 --options]])
 
@@ -488,7 +488,7 @@ Array
 
 ## Conditionals
 
-It can be very handy to execute a piece of code only when certain requirement
+It can be very handy to execute a piece of code only when certain requirements
 are met. This kind of behaviour can be accomplished via conditionals
 
 The `if` language structure defines the conditions to fulfil and the accompanying block
@@ -515,7 +515,7 @@ else {
 }
 ```
 
-On top of this, multiple conditions can be chained into an `if-elsif-else` construct.
+On top of this, multiple conditions can be chained into an `if-elseif-else` construct.
 
 ```php
 if( /* condition 1 */ ) {
@@ -658,7 +658,7 @@ m4_embed_php(php-basics/loops-while)
 
 m4_info([[
 The pattern `$variable = $variable + 1` is used a lot in programming. Therefore
-shorthand versions if this,and similar operations, are available:
+shorthand versions of this, and similar operations, are available:
 
 ```php
 $var = 1;
@@ -690,7 +690,7 @@ Only while loops are allowed.
 ### For
 
 For is similar to while in functionality. It also loops until a certain
-condition evaluates to `true`. The main difference is the boilerplate required
+condition evaluates to `false`. The main difference is the boilerplate required
 to construct the loop.
 
 The `for`-construct forces you to define the counter variable and the
@@ -755,7 +755,7 @@ m4_embed_php(php-basics/loops-foreach)
 
 The m4_phpfunc(isset) function checks whether a PHP variable was created / assigned.
 
-This function return false is the tested variable isn't declared before or is equal to `null`
+This function returns false if the tested variable isn't declared before or is equal to `null`
 
 m4_embed_php(php-basics/isset)
 
@@ -791,9 +791,9 @@ m4_embed_php(php-basics/explode-newline)
 
 [[###]] m4_phpfunc(implode)
 
-The m4_phpfunc(implode) function takes an array and _glue_ as input. The items in the array will be _glued_ together into en new string. Each of the sections in the new output string will be separated by the _glue_
+The m4_phpfunc(implode) function takes an array and _glue_ as input. The items in the array will be _glued_ together into a new string. Each of the sections in the new output string will be separated by the _glue_
 
-m4_embed_php(php-basics/explode)
+m4_embed_php(php-basics/implode)
 
 [[###]] m4_phpfunc(preg_match)
 

@@ -17,7 +17,7 @@ if( !true ) {
 }
 else {
 
-   echo "`!true` evaluated to FALSE\n";
+   echo "`!true` evaluated to FALSE\n";
 }
 
 echo "----------------------------------------------------------------------\n";
