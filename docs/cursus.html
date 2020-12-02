@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2020-11-19" />
+        <meta name="date" content="2020-12-02" />
    
    
    <title>An intro to HTML, CSS and PHP - BIT01 Webtechnology</title>
@@ -3287,17 +3287,15 @@ bool(false)
 <span id="cb185-2"><a href="#cb185-2"></a></span>
 <span id="cb185-3"><a href="#cb185-3"></a><span class="kw">echo</span> <span class="st">&quot;We want to match a leading &gt; symbol:</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb185-4"><a href="#cb185-4"></a><span class="co">//       Pattern  Find pattern in this</span></span>
-<span id="cb185-5"><a href="#cb185-5"></a><span class="fu">var_dump</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;&gt;MultiFasta Sequence Header&quot;</span><span class="ot">);</span></span>
+<span id="cb185-5"><a href="#cb185-5"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="fu">preg_match</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;&gt;MultiFasta Sequence Header&quot;</span><span class="ot">)</span> <span class="ot">);</span></span>
 <span id="cb185-6"><a href="#cb185-6"></a></span>
-<span id="cb185-7"><a href="#cb185-7"></a><span class="fu">var_dump</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;Hello World&quot;</span><span class="ot">);</span></span></code></pre></div>
+<span id="cb185-7"><a href="#cb185-7"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="fu">preg_match</span><span class="ot">(</span><span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;Hello World&quot;</span><span class="ot">)</span> <span class="ot">);</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <p><span class="embed--srcfile">output of php-basics/preg_match</span></p>
 <pre class="embed--output" style="height:;"><code>We want to match a leading &gt; symbol:
-string(4) &quot;/^&gt;/&quot;
-string(27) &quot;&gt;MultiFasta Sequence Header&quot;
-string(4) &quot;/^&gt;/&quot;
-string(11) &quot;Hello World&quot;
+int(1)
+int(0)
 </code></pre>
 </div>
 </div>
@@ -4782,7 +4780,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2020-11-19
+                  at 2020-12-02
                </p>
             </footer>
          </div>
