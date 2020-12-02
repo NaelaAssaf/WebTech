@@ -403,7 +403,7 @@ Exercise:
 <span id="cb26-3"><a href="#cb26-3"></a><span class="kw">&lt;h3&gt;</span>Header 3<span class="kw">&lt;/h3&gt;</span></span>
 <span id="cb26-4"><a href="#cb26-4"></a><span class="kw">&lt;h4&gt;</span>Header 4<span class="kw">&lt;/h4&gt;</span></span>
 <span id="cb26-5"><a href="#cb26-5"></a><span class="kw">&lt;h5&gt;</span>Header 5<span class="kw">&lt;/h5&gt;</span></span>
-<span id="cb26-6"><a href="#cb26-6"></a><span class="kw">&lt;h6&gt;</span>Header 6<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<span id="cb26-6"><a href="#cb26-6"></a><span class="kw">&lt;h6&gt;</span>Header 6<span class="kw">&lt;/h6&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
 <p><span class="embed--srcfile">output of html-intro/headers</span></p>
@@ -1408,7 +1408,7 @@ Exercise:
 <span id="cb76-2"><a href="#cb76-2"></a></span>
 <span id="cb76-3"><a href="#cb76-3"></a>    <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
 <span id="cb76-4"><a href="#cb76-4"></a>}</span></code></pre></div>
-<p>Via the (hover selector)<span class="csstag">http://www.w3schools.com/cssref/sel_hover.asp</span> allows us to apply styles to an element only when the mouse hovers over the element.</p>
+<p>Via the <a href="http://www.w3schools.com/cssref/sel_hover.asp" class="csstag">hover selector</a> allows us to apply styles to an element only when the mouse hovers over the element.</p>
 <p>For example: overline a link when the mouse passes over the element:</p>
 <div class="row">
 <div class="col-md-6">
@@ -1575,8 +1575,8 @@ Exercise:
 <p>The <a href="http://www.w3schools.com/css/css_visibility.asp" class="w3c-ref"><code>visibility</code></a>-property allows one to hide an element from view, but is still occupies space and interacts with the other DOM-elements.</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb88-1"><a href="#cb88-1"></a>div {</span>
 <span id="cb88-2"><a href="#cb88-2"></a></span>
-<span id="cb88-3"><a href="#cb88-3"></a>    <span class="kw">display</span>: <span class="dv">hidden</span><span class="op">;</span></span>
-<span id="cb88-4"><a href="#cb88-4"></a>    <span class="kw">visibility</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb88-3"><a href="#cb88-3"></a>    <span class="kw">display</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb88-4"><a href="#cb88-4"></a>    <span class="kw">visibility</span>: <span class="dv">hidden</span><span class="op">;</span></span>
 <span id="cb88-5"><a href="#cb88-5"></a>}</span></code></pre></div>
 <h3 id="position"><a href="http://www.w3schools.com/css/css_position.asp" class="w3c-ref">Position</a></h3>
 <p>This property defines how an element behaves in the page flow. There are four possible values:</p>
@@ -1830,7 +1830,7 @@ echo &quot;After php-tags&quot;;
 <span id="cb96-8"><a href="#cb96-8"></a><span class="kw">echo</span> <span class="st">&#39;by world&#39;</span><span class="ot">;</span></span></code></pre></div>
 <h3 id="execute-a-php-script">Execute a PHP-script</h3>
 <p>To get acquainted with php we will start of on the command line and work our way up to <abbr title="Hypertext Preprocessor">PHP</abbr> as a web server.</p>
-<p><abbr title="Hypertext Preprocessor">PHP</abbr> at its core is a program which reads a source file, interprets the directives an prints out the result.</p>
+<p><abbr title="Hypertext Preprocessor">PHP</abbr> at its core is a program which reads a source file, interprets the directives and prints out the result.</p>
 <p>Basic invocation:</p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb97-1"><a href="#cb97-1"></a><span class="ex">php</span> <span class="op">&lt;</span>script-to-execute<span class="op">&gt;</span>.php</span></code></pre></div>
 <p>The above command will print the output to the <code>STDOUT</code>.</p>
@@ -1858,7 +1858,7 @@ echo &quot;After php-tags&quot;;
 <p></small></p>
 <small>
 <div class="alert alert-info">
-<strong>Info:</strong> If you get an <em>command not found</em> error, you probably have to install php. Run: <code>sudo dnf install php</code>
+<strong>Info:</strong> If you get a <em>command not found</em> error, you probably have to install php. Run: <code>sudo dnf install php</code>
 </div>
 <p></small></p>
 <p>Run it via:</p>
@@ -2098,7 +2098,7 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <td>Opposite of $a.</td>
 </tr>
 <tr class="even">
-<td><code>$a + $b</code> {.php}</td>
+<td><code class="sourceCode php"><span class="kw">$a</span> + <span class="kw">$b</span></code></td>
 <td>Addition</td>
 <td>Sum of $a and $b.</td>
 </tr>
@@ -2255,7 +2255,7 @@ Array
 </div>
 </div>
 <h4 id="get-a-value-from-an-array">Get a value from an array</h4>
-<p>A value can be retrieved by specifying the array variable name followed by the index you which to retrieve encloded in square brackets:</p>
+<p>A value can be retrieved by specifying the array variable name followed by the index you wish to retrieve enclosed in square brackets:</p>
 <div class="sourceCode" id="cb126"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb126-1"><a href="#cb126-1"></a><span class="kw">$array</span><span class="ot">[</span>&lt;<span class="fu">key</span>&gt;<span class="ot">];</span></span></code></pre></div>
 <p>If the key is a string, the appropriate quoting must be used.</p>
 <div class="sourceCode" id="cb127"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb127-1"><a href="#cb127-1"></a><span class="kw">$array</span><span class="ot">[</span><span class="st">&#39;&lt;key&gt;&#39;</span><span class="ot">];</span></span></code></pre></div>
@@ -2515,7 +2515,7 @@ Array
 <h3 id="special-arrays">Special arrays</h3>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has some special, reserved, arrays. These arrays are created and filled by <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <h4 id="argv">$argv</h4>
-<p>This array holds al the arguments passed to a <abbr title="Hypertext Preprocessor">PHP</abbr>-script from the command line.</p>
+<p>This array holds all the arguments passed to a <abbr title="Hypertext Preprocessor">PHP</abbr>-script from the command line.</p>
 <div class="sourceCode" id="cb143"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb143-1"><a href="#cb143-1"></a><span class="ex">php</span> print_r-argv.php <span class="st">&#39;arg1&#39;</span> <span class="st">&#39;arg2&#39;</span> 123 --options</span></code></pre></div>
 <pre class="run--output"><code>Array
 (
@@ -2569,7 +2569,7 @@ Array
         )
 )</code></pre>
 <h2 id="conditionals">Conditionals</h2>
-<p>It can be very handy to execute a piece of code only when certain requirement are met. This kind of behaviour can be accomplished via conditionals</p>
+<p>It can be very handy to execute a piece of code only when certain requirements are met. This kind of behaviour can be accomplished via conditionals</p>
 <p>The <code>if</code> language structure defines the conditions to fulfil and the accompanying block of code to run if the conditions evaluate to <code>true</code> (enclosed in curly brackets <code>{}</code>).</p>
 <div class="sourceCode" id="cb148"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb148-1"><a href="#cb148-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* &lt;condition&gt; */</span> <span class="ot">)</span> {</span>
 <span id="cb148-2"><a href="#cb148-2"></a></span>
@@ -2584,7 +2584,7 @@ Array
 <span id="cb149-6"><a href="#cb149-6"></a></span>
 <span id="cb149-7"><a href="#cb149-7"></a>    <span class="co">/* execute when condition is false */</span></span>
 <span id="cb149-8"><a href="#cb149-8"></a>}</span></code></pre></div>
-<p>On top of this, multiple conditions can be chained into an <code>if-elsif-else</code> construct.</p>
+<p>On top of this, multiple conditions can be chained into an <code>if-elseif-else</code> construct.</p>
 <div class="sourceCode" id="cb150"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb150-1"><a href="#cb150-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 1 */</span> <span class="ot">)</span> {</span>
 <span id="cb150-2"><a href="#cb150-2"></a></span>
 <span id="cb150-3"><a href="#cb150-3"></a>    <span class="co">/* execute when condition 1 is true */</span></span>
@@ -2787,7 +2787,7 @@ bool(false)
 <span id="cb154-17"><a href="#cb154-17"></a>}</span>
 <span id="cb154-18"><a href="#cb154-18"></a><span class="kw">else</span> {</span>
 <span id="cb154-19"><a href="#cb154-19"></a></span>
-<span id="cb154-20"><a href="#cb154-20"></a>   <span class="kw">echo</span> <span class="st">&quot;`!true` evaluated to FALSE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb154-20"><a href="#cb154-20"></a>   <span class="kw">echo</span> <span class="st">&quot;`!true` evaluated to FALSE</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb154-21"><a href="#cb154-21"></a>}</span>
 <span id="cb154-22"><a href="#cb154-22"></a></span>
 <span id="cb154-23"><a href="#cb154-23"></a><span class="kw">echo</span> <span class="st">&quot;----------------------------------------------------------------------</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
@@ -2807,7 +2807,7 @@ bool(false)
 <p><span class="embed--srcfile">output of php-basics/logical-operators</span></p>
 <pre class="embed--output" style="height:;"><code>`true or false` evaluated to TRUE
 ----------------------------------------------------------------------
-`!true` evaluated to FALSE
+`!true` evaluated to FALSE
 ----------------------------------------------------------------------
 `true and false` evaluated to FALSE
 </code></pre>
@@ -2826,17 +2826,17 @@ bool(false)
 <span id="cb156-7"><a href="#cb156-7"></a>   <span class="kw">echo</span> <span class="st">&quot;`( 1 and 0 ) and true` --&gt; false</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb156-8"><a href="#cb156-8"></a>}</span>
 <span id="cb156-9"><a href="#cb156-9"></a></span>
-<span id="cb156-10"><a href="#cb156-10"></a><span class="kw">if</span><span class="ot">(</span> <span class="dv">1</span> <span class="kw">and</span> <span class="ot">(</span> <span class="dv">0</span>  <span class="kw">and</span> <span class="kw">true</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
-<span id="cb156-11"><a href="#cb156-11"></a>   <span class="kw">echo</span> <span class="st">&quot;`1 and ( 0  and true )` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb156-10"><a href="#cb156-10"></a><span class="kw">if</span><span class="ot">(</span> <span class="dv">1</span> <span class="kw">and</span> <span class="ot">(</span> <span class="dv">0</span> <span class="kw">and</span> <span class="kw">true</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
+<span id="cb156-11"><a href="#cb156-11"></a>   <span class="kw">echo</span> <span class="st">&quot;`1 and ( 0 and true )` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb156-12"><a href="#cb156-12"></a>}</span>
 <span id="cb156-13"><a href="#cb156-13"></a><span class="kw">else</span> {</span>
-<span id="cb156-14"><a href="#cb156-14"></a>   <span class="kw">echo</span> <span class="st">&quot;`1 and ( 0  and true )` --&gt; true</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb156-14"><a href="#cb156-14"></a>   <span class="kw">echo</span> <span class="st">&quot;`1 and ( 0 and true )` --&gt; false</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb156-15"><a href="#cb156-15"></a>}</span></code></pre></div>
 </div>
 <div class="col-md-6">
 <p><span class="embed--srcfile">output of php-basics/logical-precedence</span></p>
 <pre class="embed--output" style="height:;"><code>`( 1 and 0 ) and true` --&gt; false
-`1 and ( 0  and true )` --&gt; true
+`1 and ( 0 and true )` --&gt; false
 </code></pre>
 </div>
 </div>
@@ -2889,7 +2889,7 @@ Countdown finished in 1 iterations
 </div>
 </div>
 <div class="alert alert-info">
-<p><strong>Info:</strong> The pattern <code>$variable = $variable + 1</code> is used a lot in programming. Therefore shorthand versions if this,and similar operations, are available:</p>
+<p><strong>Info:</strong> The pattern <code>$variable = $variable + 1</code> is used a lot in programming. Therefore shorthand versions of this, and similar operations, are available:</p>
 <div class="sourceCode" id="cb162"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb162-1"><a href="#cb162-1"></a><span class="kw">$var</span> = <span class="dv">1</span><span class="ot">;</span></span>
 <span id="cb162-2"><a href="#cb162-2"></a></span>
 <span id="cb162-3"><a href="#cb162-3"></a><span class="co"># Add or substract by 1:</span></span>
@@ -2918,7 +2918,7 @@ Exercise:
 <p>Only while loops are allowed.</p>
 </div>
 <h3 id="for">For</h3>
-<p>For is similar to while in functionality. It also loops until a certain condition evaluates to <code>true</code>. The main difference is the boilerplate required to construct the loop.</p>
+<p>For is similar to while in functionality. It also loops until a certain condition evaluates to <code>false</code>. The main difference is the boilerplate required to construct the loop.</p>
 <p>The <code>for</code>-construct forces you to define the counter variable and the increments right in the construct.</p>
 <div class="sourceCode" id="cb163"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb163-1"><a href="#cb163-1"></a><span class="kw">for</span><span class="ot">(</span> &lt;init counter&gt;<span class="ot">;</span> &lt;condition&gt;<span class="ot">;</span> &lt;increment counter&gt; <span class="ot">)</span> {</span>
 <span id="cb163-2"><a href="#cb163-2"></a></span>
@@ -3079,7 +3079,7 @@ Key: `100` has value: `hello`
 <h2 id="commonly-used-builtin-functions">Commonly used (builtin) functions</h2>
 <h3 id="isset"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a></h3>
 <p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a> function checks whether a <abbr title="Hypertext Preprocessor">PHP</abbr> variable was created / assigned.</p>
-<p>This function return false is the tested variable isn’t declared before or is equal to <code>null</code></p>
+<p>This function returns false if the tested variable isn’t declared before or is equal to <code>null</code></p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/isset.html">php-basics/isset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/isset.php" taret="_blank">src</a></span></p>
@@ -3254,27 +3254,35 @@ bool(false)
 </div>
 </div>
 <h3 id="implode"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=implode" target="_blank"><code>implode</code></a></h3>
-<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=implode" target="_blank"><code>implode</code></a> function takes an array and <em>glue</em> as input. The items in the array will be <em>glued</em> together into en new string. Each of the sections in the new output string will be separated by the <em>glue</em></p>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=implode" target="_blank"><code>implode</code></a> function takes an array and <em>glue</em> as input. The items in the array will be <em>glued</em> together into a new string. Each of the sections in the new output string will be separated by the <em>glue</em></p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/php-basics/explode.html">php-basics/explode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode.php" taret="_blank">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/php-basics/implode.html">php-basics/implode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/implode.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb183"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb183-1"><a href="#cb183-1"></a><span class="kw">&lt;?php</span></span>
 <span id="cb183-2"><a href="#cb183-2"></a></span>
-<span id="cb183-3"><a href="#cb183-3"></a><span class="kw">$string</span> = <span class="st">&quot;This is the first section of a semicolon separated string;This is the second section;And this the third!&quot;</span><span class="ot">;</span></span>
-<span id="cb183-4"><a href="#cb183-4"></a></span>
-<span id="cb183-5"><a href="#cb183-5"></a><span class="kw">$array_of_sections</span> = <span class="fu">explode</span><span class="ot">(</span><span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="kw">$string</span><span class="ot">);</span></span>
-<span id="cb183-6"><a href="#cb183-6"></a></span>
-<span id="cb183-7"><a href="#cb183-7"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array_of_sections</span> <span class="ot">);</span></span></code></pre></div>
+<span id="cb183-3"><a href="#cb183-3"></a><span class="kw">$array_of_sections</span> = <span class="ot">[</span></span>
+<span id="cb183-4"><a href="#cb183-4"></a>   <span class="st">&quot;section 1&quot;</span><span class="ot">,</span></span>
+<span id="cb183-5"><a href="#cb183-5"></a>   <span class="st">&quot;section 2&quot;</span><span class="ot">,</span></span>
+<span id="cb183-6"><a href="#cb183-6"></a>   <span class="st">&quot;section 3&quot;</span><span class="ot">,</span></span>
+<span id="cb183-7"><a href="#cb183-7"></a>   <span class="st">&quot;section 4&quot;</span><span class="ot">,</span></span>
+<span id="cb183-8"><a href="#cb183-8"></a><span class="ot">];</span></span>
+<span id="cb183-9"><a href="#cb183-9"></a></span>
+<span id="cb183-10"><a href="#cb183-10"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by semicolons: </span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb183-11"><a href="#cb183-11"></a><span class="kw">echo</span> <span class="fu">implode</span><span class="ot">(</span><span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="kw">$array_of_sections</span><span class="ot">);</span></span>
+<span id="cb183-12"><a href="#cb183-12"></a></span>
+<span id="cb183-13"><a href="#cb183-13"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb183-14"><a href="#cb183-14"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by newlines: </span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb183-15"><a href="#cb183-15"></a><span class="kw">echo</span> <span class="fu">implode</span><span class="ot">(</span><span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="kw">$array_of_sections</span><span class="ot">);</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
-<p><span class="embed--srcfile">output of php-basics/explode</span></p>
-<pre class="embed--output" style="height:;"><code>Array
-(
-    [0] =&gt; This is the first section of a semicolon separated string
-    [1] =&gt; This is the second section
-    [2] =&gt; And this the third!
-)
-</code></pre>
+<p><span class="embed--srcfile">output of php-basics/implode</span></p>
+<pre class="embed--output" style="height:;"><code>Create a new string delimited by semicolons: 
+section 1;section 2;section 3;section 4
+Create a new string delimited by newlines: 
+section 1
+section 2
+section 3
+section 4</code></pre>
 </div>
 </div>
 <h3 id="preg_match"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=preg_match" target="_blank"><code>preg_match</code></a></h3>
