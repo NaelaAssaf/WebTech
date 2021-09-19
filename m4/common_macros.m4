@@ -52,7 +52,7 @@ m4_define(m4_embed_php,[[
 
 <span class="embed--srcfile">m4_embed2href($1) | m4_embed2src($1)</span>
 
-```{.php .embed--src}
+```{.php .numberLines .embed--src}
 m4_include($1.php)
 ```
 
@@ -75,7 +75,7 @@ m4_define(m4_embed_php_as_html,[[
 
 <span class="embed--srcfile">m4_embed2href($1) | m4_embed2src($1)</span>
 
-```{$3 .php .embed--src}
+```{$3 .php .numberLines .embed--src}
 m4_include($1.php)
 ```
 

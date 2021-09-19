@@ -175,7 +175,7 @@ m4_exercise([[
 
 Create a text file name `hello-world.html`{.file}
 
-```bash
+```{.bash .numberLines}
 gedit hello-world.html
 ```
 
@@ -195,7 +195,7 @@ With contents:
 
 Open the local HTML file in the browser.
 
-```bash
+```{.bash .numberLines}
 firefox hello-world.html
 ```
 

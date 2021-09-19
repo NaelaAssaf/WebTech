@@ -89,7 +89,7 @@ directives and prints out the result.
 
 Basic invocation:
 
-```bash
+```{.bash .numberLines}
 php <script-to-execute>.php
 ```
 
@@ -114,7 +114,7 @@ php. Run: `sudo dnf install php`]])
 
 Run it via:
 
-```bash
+```{.bash .numberLines}
 php hello-world.php
 ```
 on the command line.
@@ -438,7 +438,7 @@ The `$_GET`-array holds data sent to a webpage via a HTTP-get method.
 
 This corresponds with URL parameters.
 
-```bash
+```{.bash .numberLines}
 http://example.com/page.php?arg1=hello&arg2=world&end=!
 ```
 

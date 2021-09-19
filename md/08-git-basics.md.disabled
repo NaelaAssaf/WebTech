@@ -19,7 +19,7 @@ the experiment worked.
 To start tracking the contents of a directory, git must be initialised in this
 directory. This is done via the m4_gitcmd(git-init) command
 
-```bash
+```{.bash .numberLines}
 # Setup directory:
 # mkdir /tmp/git-playground
 # cd /tmp/git-playground
@@ -31,7 +31,7 @@ git init
 Git tells you is initialised the git data store in a hidden `.git` folder in
 the root of our project directory.
 
-```bash
+```{.bash .numberLines}
 .git/
 ├── branches
 ├── config
@@ -59,7 +59,7 @@ the root of our project directory.
 
 For the moment this is just a skeleton without any data e.g. we are not tracking any files. The status of our repository can always be obtained bu running the m4_gitcmd(git-status)-command:
 
-```bash
+```{.bash .numberLines}
 git status
 # On branch master
 #
@@ -74,7 +74,7 @@ So we should start adding files to our git repository...
 
 Let us first create a file we want to track and run m4_gitcmd(git-status) again.
 
-```bash
+```{.bash .numberLines}
 echo "Let's track this file..." > file.txt
 
 git status
@@ -100,7 +100,7 @@ To start tracking a file two actions must be performed:
 m4_gitcmd(git-add) will add the file to the staging area. This means group/tag
 the files so future commands can operate on them.
 
-```bash
+```{.bash .numberLines}
 git add file.txt
 git status
 # On branch master
@@ -120,7 +120,7 @@ snapshot of their current contents. This commit takes a commit message: a
 description of the changes to the project via the modifications of those staged
 files.
 
-```bash
+```{.bash .numberLines}
 git commit # a text editor will open, type your message and save + quit the file
 
 git commit -m "start tracking file.txt" # the -m options allows us to specify the commit message on the command line
@@ -133,7 +133,7 @@ git commit -m "start tracking file.txt" # the -m options allows us to specify th
 If we run m4_gitcmd(git-status) again, we see that all our changes are saved in
 a snapshot. This is what git calls a _clean working directory_.
 
-```bash
+```{.bash .numberLines}
 git status
 # On branch master
 # nothing to commit, working directory clean
@@ -195,7 +195,7 @@ completely different key.
 
 For example:
 
-```bash
+```{.bash .numberLines}
 echo "Hello World"  | sha1sum # 648a6a6ffffdaa0badb23b8baf90b6168dd16b3a
 echo "Hello World." | sha1sum # b924c2f360b572e17c971f1b1b667e0732944df7
 ```
@@ -213,7 +213,7 @@ The other two files are the commit message and a list of all the tracked files..
 Via this checksumming, git knows which files are modified and which are not
 because each change results in another checksum...
 
-```bash
+```{.bash .numberLines}
 echo "Modify the file" >> file.txt
 git status
 # On branch master
@@ -228,7 +228,7 @@ git status
 
 Let's commit (save) this change:
 
-```bash
+```{.bash .numberLines}
 # add the file to the staging area:
 git add file.txt
 
@@ -246,7 +246,7 @@ git status
 
 To get a list of all commits (snapshots/return points) use the m4_gitcmd(git-log)-command:
 
-```bash
+```{.bash .numberLines}
 git log
 # commit 1de3a699080e8df52f3f12af988152208c632b00
 # Author: Arne Soete <arne.soete@irc.vib-ugent.be>
@@ -265,7 +265,7 @@ git log
 
 Via m4_gitcmd(git-checkout) we can jump back in time to another snapshot:
 
-```bash
+```{.bash .numberLines}
 git checkout 1de3a
 ```
 
@@ -280,7 +280,7 @@ unique in the project...]])
 
 m4_gitcmd(git-diff) allows to show the differences between two revisions.
 
-```bash
+```{.bash .numberLines}
 git diff 13ce4 1de3a
 # diff --git a/file.txt b/file.txt
 # index 7725275..817f387 100644
@@ -304,7 +304,7 @@ etc...
 
 Thus the previous diff can be written as:
 
-```bash
+```{.bash .numberLines}
 git diff HEAD^
 # diff --git a/file.txt b/file.txt
 # index 7725275..817f387 100644
@@ -331,7 +331,7 @@ via m4_gitcmd(git-branch).
 
 When no arguments are passed to m4_gitcmd(git-branch), the command will list all the available (local) branches.
 
-```bash
+```{.bash .numberLines}
 git branch
 # * master
 ```
@@ -340,7 +340,7 @@ The asterisks indicates which branch you are currently on.
 
 If we pass git branch a name, a new branch with this name will be created:
 
-```bash
+```{.bash .numberLines}
 git branch 'my-new-branch'
 
 git branch
@@ -350,7 +350,7 @@ git branch
 
 m4_gitcmd(git-checkout) is used to switch branches:
 
-```bash
+```{.bash .numberLines}
 git checkout 'my-new-branch'
 # Switched to branch 'my-new-branch'
 
@@ -361,7 +361,7 @@ git branch
 
 Lets add a change in this branch:
 
-```bash
+```{.bash .numberLines}
 echo "Add line from 'my-new-branch!'" >> file.txt
 
 git add file.txt
@@ -376,7 +376,7 @@ pointing to a certain commit.
 
 So we can also take a _diff_ between two branches:
 
-```bash
+```{.bash .numberLines}
 git diff master my-new-branch
 # diff --git a/file.txt b/file.txt
 # index 817f387..082bfe1 100644
@@ -411,12 +411,12 @@ m4_gitcmd(git-merge).
 
 First we have to position ourselves at the _master_-branch:
 
-```bash
+```{.bash .numberLines}
 git checkout master
 # Switched to branch 'master'
 ```
 
-```bash
+```{.bash .numberLines}
 git diff my-new-branch
 # diff --git a/file.txt b/file.txt
 # index 082bfe1..817f387 100644
@@ -432,7 +432,7 @@ Via the _diff_ we notice we are missing the `Add line from my-new-branch` line.
 
 The include these changes:
 
-```bash
+```{.bash .numberLines}
 git merge my-new-branch
 # Updating 1de3a69..e336094
 # Fast-forward
@@ -447,7 +447,7 @@ git was able to auto-merge the branches...
 
 Not all merges will go as smooth as the previous example. Lets create a merge conflict.
 
-```bash
+```{.bash .numberLines}
 # Create two branches
 git checkout master
 git branch conflicting-branch
@@ -481,7 +481,7 @@ The commit graph looks something like:
 
 Lets run a merge and see what happens:
 
-```bash
+```{.bash .numberLines}
 git checkout master
 # Switched to branch 'master'
 
@@ -493,7 +493,7 @@ git merge conflicting-branch
 
 To resolve a merge conflict via a third party application (GUI?) use m4_gitcmd(git-mergetool)
 
-```bash
+```{.bash .numberLines}
 git mergetool
 # Merging:
 # file.txt
@@ -518,7 +518,7 @@ ask if the merge was a success.
 
 The merge can also be made manually by editing the file directly:
 
-```bash
+```{.bash .numberLines}
 gedit file.txt
 ```
 
@@ -555,7 +555,7 @@ We can now modify the file, add it and commit the merge. This will resolve the m
      > Add line line from conflicting-branch
      > ```
 * Save changes
-```bash
+```{.bash .numberLines}
 git add file.txt
 git commit -m "merge: conflicting-branch into master"
 ```
@@ -579,7 +579,7 @@ m4_info([[To create a similar graph, run: `git log --oneline --decorate --graph`
 
 Once a branch is merged in we can delete the branch via:
 
-```bash
+```{.bash .numberLines}
 git branch -d my-new-branch
 # Deleted branch my-new-branch (was e336094).
 ```
@@ -609,7 +609,7 @@ same principles apply to remoter servers.
 
 m4_gitcmd(git-clone) allows us to fetch a local copy of a remote repository...
 
-```bash
+```{.bash .numberLines}
 git clone /tmp/git-playground /tmp/git-clone
 # Cloning into '/tmp/git-clone'...
 # done.
@@ -672,7 +672,7 @@ If a repository is cloned, by default the name of the remote is `origin`.
 
 A list of all the remotes can be obtained via m4_gitcmd(git-remote):
 
-```bash
+```{.bash .numberLines}
 git remote
 # origin
 
@@ -685,7 +685,7 @@ Lets see a m4_gitcmd(git-pull) in action
 
 Make some changes to original repository:
 
-```bash
+```{.bash .numberLines}
 cd /tmp/git-playground
 echo "add another file" > file2.txt
 git add file2.txt
@@ -694,7 +694,7 @@ git commit -m "add a second file"
 
 Fetch the latest changes into clone:
 
-```bash
+```{.bash .numberLines}
 cd /tmp/git-clone
 git pull origin master
 # remote: Counting objects: 3, done.
@@ -725,7 +725,7 @@ Similar to m4_gitcmd(git-pull), m4_gitcmd(git-push) accepts two parameters:
 1. the name of the remote
 1. the remote branch to push to
 
-```bash
+```{.bash .numberLines}
 git push origin master
 # Counting objects: 3, done.
 # Delta compression using up to 8 threads.
@@ -738,7 +738,7 @@ git push origin master
 
 m4_info([[You cannot pus to a normal _checked out_ repository. Only to bare repositories.
 Create a bare repository:
-```bash
+```{.bash .numberLines}
 git clone --bare /tmp/git-playground /tmp/git-bare
 ```
 See m4_gitcmd(git-clone) for more info

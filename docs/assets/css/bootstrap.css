@@ -3123,16 +3123,18 @@ blockquote {
 
 pre {
   border: none;
-  background: none;
   border-radius: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  overflow: visible; }
+
+pre.numberSource {
+  border-left-color: #ccc; }
 
 div.sourceCode {
-  background: #f6f6f6;
-  padding: 0.5em;
-  padding-bottom: 0;
   margin-bottom: 0.5em;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  box-shadow: 2px 2px 8px grey;
+  border-radius: 5px; }
 
 .m4_indent {
   margin-left: 40px; }

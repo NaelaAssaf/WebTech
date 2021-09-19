@@ -14,7 +14,7 @@ This course requires some software to be installed.
 Normally these packages are already installed on the provided VM. If not, they
 can easily be installed by running:
 
-```bash
+```{.bash .numberLines}
 sudo dnf install firefox gedit php git
 ```
 
@@ -34,13 +34,13 @@ All the code created during the lessons will be made available at
 ### Init workspace
 
 *
-```bash
+```{.bash .numberLines}
 mkdir ~/webtechnology
 cd  ~/webtechnology
 ```
 
 * Create your own exercises directory
-```bash
+```{.bash .numberLines}
 mkdir exercises
 ```
 
@@ -58,17 +58,17 @@ not work as they should because Github is preventing PHP-code execution...
 The following steps must be taken to start/open the site locally:
 
 * Get an initial copy of the repository:
-```bash
+```{.bash .numberLines}
 cd ~/webtechnology
 git clone https://github.com/asoete/howest-webtechnology.git cursus
 ```
 * To get the latest version/updates
-```bash
+```{.bash .numberLines}
 cd ~/webtechnology/cursus
 git pull origin master
 ```
 * Start a local instance of the site:
-```bash
+```{.bash .numberLines}
 cd ~/webtechnology/cursus
 make serve
 ```
@@ -78,7 +78,7 @@ And open <http://localhost:8000> in a web browser.
 
 * Get an initial copy of the repository located at <https://github.com/asoete/howest-webtechnology-examples>:
 
-```bash
+```{.bash .numberLines}
 cd ~/webtechnology
 git clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples
 ```
@@ -87,7 +87,7 @@ git clone https://github.com/asoete/howest-webtechnology-examples.git solutions-
     * Exercise solutions
 
 * To get the latest version (aka. update the repository) run:
-```bash
+```{.bash .numberLines}
 cd ~/webtechnology/solutions-and-examples
 git pull origin master
 ```
@@ -96,7 +96,7 @@ repository, this update command (`git pull`) will most likely fail. So don't
 modify the contents in this folder...]])
 m4_dnl
 m4_info([[When you do encounter errors while pulling, run:
-```bash
+```{.bash .numberLines}
 git fetch --all
 git reset --hard origin/master
 ```

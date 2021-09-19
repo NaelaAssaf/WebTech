@@ -13,13 +13,13 @@ PHP has a built in web-server. This means that no external server like Apache or
 
 The server is started with one command on the command line:
 
-```bash
+```{.bash .numberLines}
 php -S localhost:<port> [-t /path/to/folder]
 ```
 
 Example:
 
-```bash
+```{.bash .numberLines}
 php -S localhost:8080
 ```
 
@@ -43,7 +43,7 @@ where the server was started)
 
 ### Making a simple page
 
-```bash
+```{.bash .numberLines}
 mkdir my-website
 cd my-website
 echo "Hello world" > index.html
