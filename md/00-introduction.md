@@ -43,8 +43,13 @@ For an HTML and CSS reference see <http://www.w3schools.com/html> and
 
 ## Contact
 
-If you have questions about this course, please ask...
-You can contact me via [arne.soete@howest.be](mailto:arne.soete@howest.be)
+If you have questions about the contents of this course or get stuck during a
+certain exercise, please ask a question via de  discussions on LEHO. This way
+fellow students can help you with your problem or questions.
+
+I will also monitor the discussions page and post answers there.
+
+If you have any remaining questions, please contact me via [arne.soete@howest.be](mailto:arne.soete@howest.be)
 
 ## Code in this document
 
