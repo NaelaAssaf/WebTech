@@ -95,20 +95,23 @@
       <div class="col-md-2 fixedsticky complete-toc">
                      <h3>Table of contents</h3>
             <ul>
-            <li><a href="introduction.html#introduction">Introduction</a><ul>
+            <li><a href="introduction.html#introduction">Introduction</a>
+            <ul>
             <li><a href="introduction.html#resources">Resources</a></li>
             <li><a href="introduction.html#contact">Contact</a></li>
             <li><a href="introduction.html#code-in-this-document">Code in this document</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="getting-started.html#getting-started">Getting started</a><ul>
+            <li><a href="getting-started.html#getting-started">Getting started</a>
+            <ul>
             <li><a href="getting-started.html#get-local-copy-of-this-site.">Get local copy of this site.</a></li>
             <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="html-intro.html#html-basics">HTML Basics</a><ul>
+            <li><a href="html-intro.html#html-basics">HTML Basics</a>
+            <ul>
             <li><a href="html-intro.html#tags">Tags</a></li>
             <li><a href="html-intro.html#attributes">Attributes</a></li>
             <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
@@ -123,7 +126,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#css">CSS</a>
+            <ul>
             <li><a href="css.html#include-style-information">Include style information</a></li>
             <li><a href="css.html#css-selectors">CSS selectors</a></li>
             <li><a href="css.html#css-properties">CSS properties</a></li>
@@ -131,7 +135,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-intro.html#php-basics">PHP Basics</a><ul>
+            <li><a href="php-intro.html#php-basics">PHP Basics</a>
+            <ul>
             <li><a href="php-intro.html#what-makes-a-php-script">What makes a PHP-script</a></li>
             <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
             <li><a href="php-intro.html#conditionals">Conditionals</a></li>
@@ -141,7 +146,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a><ul>
+            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a>
+            <ul>
             <li><a href="php-and-html.html#php-webserver">PHP Webserver</a></li>
             <li><a href="php-and-html.html#include-require">Include / Require</a></li>
             <li><a href="php-and-html.html#forms">Forms</a></li>
@@ -150,7 +156,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#io">IO</a>
+            <ul>
             <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
             <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
             <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
@@ -161,9 +168,18 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
+            <li><a href="php-functions.html#php-functions">PHP functions</a>
+            <ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="beyond-this-course.html#beyond-this-course">Beyond this course</a>
+            <ul>
+            <li><a href="beyond-this-course.html#javascript">JavaScript</a></li>
+            <li><a href="beyond-this-course.html#css-frameworks">CSS frameworks</a></li>
+            <li><a href="beyond-this-course.html#php-frameworks">PHP frameworks</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -185,7 +201,7 @@
 <h1 id="io">IO</h1>
 <p>By IO we mean working with files…</p>
 <h2 id="read-a-file">Read a file</h2>
-<p>There are multiple way to read a file:</p>
+<p>There are multiple ways to read a file:</p>
 <ul>
 <li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file" target="_blank"><code>file</code></a></li>
 <li><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file_get_contents" target="_blank"><code>file_get_contents</code></a></li>
@@ -195,7 +211,7 @@
 <p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file" target="_blank"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h3 id="file_get_contents">File_get_contents</h3>
-<p>This function takes filename as argument and returns a string containing the complete file contents (hence the name).</p>
+<p>This function takes a filename as argument and returns a string containing the complete file contents (hence the name).</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="createwrite-a-file">Create/Write a file</h2>
 <h3 id="touch">Touch</h3>
@@ -214,7 +230,7 @@
 <p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="rename-a-file">Rename a file</h2>
-<p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
+<p>A file can be renamed via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=rename" target="_blank"><code>rename</code></a>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="directories">Directories</h2>
 <p>Similar functions exist for directories:</p>

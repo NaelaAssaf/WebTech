@@ -95,20 +95,23 @@
       <div class="col-md-2 fixedsticky complete-toc">
                      <h3>Table of contents</h3>
             <ul>
-            <li><a href="introduction.html#introduction">Introduction</a><ul>
+            <li><a href="introduction.html#introduction">Introduction</a>
+            <ul>
             <li><a href="introduction.html#resources">Resources</a></li>
             <li><a href="introduction.html#contact">Contact</a></li>
             <li><a href="introduction.html#code-in-this-document">Code in this document</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="getting-started.html#getting-started">Getting started</a><ul>
+            <li><a href="getting-started.html#getting-started">Getting started</a>
+            <ul>
             <li><a href="getting-started.html#get-local-copy-of-this-site.">Get local copy of this site.</a></li>
             <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</a></li>
             </ul></li>
             </ul>
             <ul>
-            <li><a href="html-intro.html#html-basics">HTML Basics</a><ul>
+            <li><a href="html-intro.html#html-basics">HTML Basics</a>
+            <ul>
             <li><a href="html-intro.html#tags">Tags</a></li>
             <li><a href="html-intro.html#attributes">Attributes</a></li>
             <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
@@ -123,7 +126,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="css.html#css">CSS</a><ul>
+            <li><a href="css.html#css">CSS</a>
+            <ul>
             <li><a href="css.html#include-style-information">Include style information</a></li>
             <li><a href="css.html#css-selectors">CSS selectors</a></li>
             <li><a href="css.html#css-properties">CSS properties</a></li>
@@ -131,7 +135,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-intro.html#php-basics">PHP Basics</a><ul>
+            <li><a href="php-intro.html#php-basics">PHP Basics</a>
+            <ul>
             <li><a href="php-intro.html#what-makes-a-php-script">What makes a PHP-script</a></li>
             <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
             <li><a href="php-intro.html#conditionals">Conditionals</a></li>
@@ -141,7 +146,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a><ul>
+            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a>
+            <ul>
             <li><a href="php-and-html.html#php-webserver">PHP Webserver</a></li>
             <li><a href="php-and-html.html#include-require">Include / Require</a></li>
             <li><a href="php-and-html.html#forms">Forms</a></li>
@@ -150,7 +156,8 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="working-with-files.html#io">IO</a><ul>
+            <li><a href="working-with-files.html#io">IO</a>
+            <ul>
             <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
             <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
             <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
@@ -161,9 +168,18 @@
             </ul></li>
             </ul>
             <ul>
-            <li><a href="php-functions.html#php-functions">PHP functions</a><ul>
+            <li><a href="php-functions.html#php-functions">PHP functions</a>
+            <ul>
             <li><a href="php-functions.html#return-a-value">Return a value</a></li>
             <li><a href="php-functions.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="beyond-this-course.html#beyond-this-course">Beyond this course</a>
+            <ul>
+            <li><a href="beyond-this-course.html#javascript">JavaScript</a></li>
+            <li><a href="beyond-this-course.html#css-frameworks">CSS frameworks</a></li>
+            <li><a href="beyond-this-course.html#php-frameworks">PHP frameworks</a></li>
             </ul></li>
             </ul>
                   <hr>
@@ -219,7 +235,7 @@ echo &quot;After php-tags&quot;;
 </code></pre>
 </div>
 </div>
-<p>Notice that the code outside of the <abbr title="Hypertext Preprocessor">PHP</abbr>-tags is not interpreted and this printed out unchanged.</p>
+<p>Notice that the code outside of the <abbr title="Hypertext Preprocessor">PHP</abbr>-tags is not interpreted and is printed out unchanged.</p>
 <p>A valid <abbr title="Hypertext Preprocessor">PHP</abbr> instruction generally has the form:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>{{ instruction }}<span class="ot">;</span></span></code></pre></div>
 <p>Each statement must be terminated by a semicolon (<code>;</code>)!</p>
@@ -971,7 +987,7 @@ Array
 <li>user info</li>
 <li>preferences</li>
 </ul>
-<h4 id="file">$_FILE</h4>
+<h4 id="files">$_FILES</h4>
 <p>When files are uploaded, <abbr title="Hypertext Preprocessor">PHP</abbr> stores information about these files in this array.</p>
 <p>Example:</p>
 <pre class="embed--output"><code>Array
@@ -1533,32 +1549,38 @@ bool(false)
 <p>Examples of empty values: <code>null</code>, <code>""</code>, <code>0</code>, …</p>
 <div class="row">
 <div class="col-md-6">
-<p><span class="embed--srcfile"><a href="embeds/php-basics/isset.html">php-basics/isset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/isset.php" taret="_blank">src</a></span></p>
+<p><span class="embed--srcfile"><a href="embeds/php-basics/empty.html">php-basics/empty</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/empty.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode php embed--src"><code class="sourceCode php"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true"></a><span class="kw">&lt;?php</span></span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true"></a></span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">empty</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
 <span id="cb82-5"><a href="#cb82-5" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb82-6"><a href="#cb82-6" aria-hidden="true"></a></span>
 <span id="cb82-7"><a href="#cb82-7" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb82-8"><a href="#cb82-8" aria-hidden="true"></a><span class="kw">$some_variable</span> = <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
-<span id="cb82-9"><a href="#cb82-9" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb82-9"><a href="#cb82-9" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">empty</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
 <span id="cb82-10"><a href="#cb82-10" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
 <span id="cb82-11"><a href="#cb82-11" aria-hidden="true"></a></span>
-<span id="cb82-12"><a href="#cb82-12" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;test null variable</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-13"><a href="#cb82-13" aria-hidden="true"></a><span class="kw">$some_variable</span> = <span class="kw">null</span><span class="ot">;</span></span>
-<span id="cb82-14"><a href="#cb82-14" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span></code></pre></div>
+<span id="cb82-12"><a href="#cb82-12" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&quot;test empty variables</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb82-13"><a href="#cb82-13" aria-hidden="true"></a><span class="kw">$some_variable</span> = <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
+<span id="cb82-14"><a href="#cb82-14" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">empty</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb82-15"><a href="#cb82-15" aria-hidden="true"></a><span class="kw">$some_variable</span> = <span class="dv">0</span><span class="ot">;</span></span>
+<span id="cb82-16"><a href="#cb82-16" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">empty</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span>
+<span id="cb82-17"><a href="#cb82-17" aria-hidden="true"></a><span class="kw">$some_variable</span> = <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb82-18"><a href="#cb82-18" aria-hidden="true"></a><span class="fu">var_dump</span><span class="ot">(</span> <span class="kw">empty</span><span class="ot">(</span><span class="kw">$some_variable</span><span class="ot">)</span> <span class="ot">);</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
-<p><span class="embed--srcfile">output of php-basics/isset</span></p>
+<p><span class="embed--srcfile">output of php-basics/empty</span></p>
 <pre class="embed--output" style="height:;"><code>test undeclared variable
-bool(false)
-
-test declared variable
 bool(true)
 
-test null variable
+test declared variable
 bool(false)
+
+test empty variables
+bool(true)
+bool(true)
+bool(true)
 </code></pre>
 </div>
 </div>
@@ -1616,7 +1638,7 @@ bool(false)
 </div>
 </div>
 <h3 id="explode"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=explode" target="_blank"><code>explode</code></a></h3>
-<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=explode" target="_blank"><code>explode</code></a> function parses a string into individual pieces based on an delimiter and returns an array where each item in the array corresponds to a section in the original string separated by the delimiter.</p>
+<p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=explode" target="_blank"><code>explode</code></a> function parses a string into individual pieces based on a delimiter and returns an array where each item in the array corresponds to a section in the original string separated by the delimiter.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/explode.html">php-basics/explode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode.php" taret="_blank">src</a></span></p>
