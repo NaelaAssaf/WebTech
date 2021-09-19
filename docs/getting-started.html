@@ -177,7 +177,7 @@
       <div class="col-md-10">
 
          <div class="site-header">
-            BIT01 Webtechnology &mdash; Getting started
+            BIT02 Web Technologies &mdash; Getting started
          </div>
 
 <h1 id="getting-started">Getting started</h1>
@@ -189,7 +189,7 @@
 <li><a href="https://www.git-scm.com">GIT</a></li>
 </ul>
 <p>Normally these packages are already installed on the provided VM. If not, they can easily be installed by running:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">sudo</span> dnf install firefox gedit php git</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">sudo</span> dnf install firefox gedit php git</span></code></pre></div>
 <p>Press <code>y</code> when prompted <code class="text-muted">Is this ok [y/N]:</code>.</p>
 <p>This document and all the exercises/examples are hosted on <a href="https.github.com">GitHub</a>. This means a local copy of the source can be obtained easily <strong>and kept in sync with the latest changes and updates</strong>.</p>
 <p>This website source can be found at <a href="https://github.com/asoete/howest-webtechnology" class="uri">https://github.com/asoete/howest-webtechnology</a> and the result viewed at <a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a></p>
@@ -198,12 +198,12 @@
 <ul>
 <li></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">mkdir</span> ~/webtechnology</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">cd</span>  ~/webtechnology</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">mkdir</span> ~/webtechnology</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="bu">cd</span>  ~/webtechnology</span></code></pre></div>
 <ul>
 <li>Create your own exercises directory</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mkdir</span> exercises</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">mkdir</span> exercises</span></code></pre></div>
 <p>You can store all your scripts in this folder…</p>
 <h2 id="get-local-copy-of-this-site.">Get local copy of this site.</h2>
 <p>Although all documents are hosted online (<a href="https://asoete.github.io/howest-webtechnology" class="uri">https://asoete.github.io/howest-webtechnology</a>) <strong>it is recommended to host the cursus-site locally</strong>.</p>
@@ -212,40 +212,40 @@
 <ul>
 <li>Get an initial copy of the repository:</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">cd</span> ~/webtechnology</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology.git cursus</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="bu">cd</span> ~/webtechnology</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology.git cursus</span></code></pre></div>
 <ul>
 <li>To get the latest version/updates</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">cd</span> ~/webtechnology/cursus</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">git</span> pull origin master</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="bu">cd</span> ~/webtechnology/cursus</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="fu">git</span> pull origin master</span></code></pre></div>
 <ul>
 <li>Start a local instance of the site:</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">cd</span> ~/webtechnology/cursus</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">make</span> serve</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="bu">cd</span> ~/webtechnology/cursus</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="fu">make</span> serve</span></code></pre></div>
 <p>And open <a href="http://localhost:8000" class="uri">http://localhost:8000</a> in a web browser.</p>
 <h2 id="get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</h2>
 <ul>
 <li>Get an initial copy of the repository located at <a href="https://github.com/asoete/howest-webtechnology-examples" class="uri">https://github.com/asoete/howest-webtechnology-examples</a>:</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">cd</span> ~/webtechnology</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="bu">cd</span> ~/webtechnology</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="fu">git</span> clone https://github.com/asoete/howest-webtechnology-examples.git solutions-and-examples</span></code></pre></div>
 <pre><code>This command will create a `solutions-and-examples`-folder which will contain all the code featured during the lessons:
 * Example snippet
 * Exercise solutions</code></pre>
 <ul>
 <li>To get the latest version (aka. update the repository) run:</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">cd</span> ~/webtechnology/solutions-and-examples</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">git</span> pull origin master</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="bu">cd</span> ~/webtechnology/solutions-and-examples</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="fu">git</span> pull origin master</span></code></pre></div>
 <div class="alert alert-warning">
 <strong>Warning:</strong> If you made local modifications to any of the files in this repository, this update command (<code>git pull</code>) will most likely fail. So don’t modify the contents in this folder…
 </div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> When you do encounter errors while pulling, run:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">git</span> fetch --all</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">git</span> reset --hard origin/master</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="fu">git</span> fetch --all</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="fu">git</span> reset --hard origin/master</span></code></pre></div>
 <p>This will reset the repository to be identical to the one on GitHub. <strong>Be warned: local modifications will be lost…</strong></p>
 </div>
 <h3 id="final-result">Final result</h3>

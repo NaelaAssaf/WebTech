@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2020-12-02" />
+        <meta name="date" content="2021-09-19" />
    
    
    <title>IO - BIT01 Webtechnology</title>
@@ -179,7 +179,7 @@
       <div class="col-md-10">
 
          <div class="site-header">
-            BIT01 Webtechnology &mdash; IO
+            BIT02 Web Technologies &mdash; IO
          </div>
 
 <h1 id="io">IO</h1>
@@ -193,62 +193,62 @@
 <p>are most important ones.</p>
 <h3 id="file">File</h3>
 <p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file" target="_blank"><code>file</code></a>-function takes a filename as argument and returns an array where each array item corresponds to a line in the file.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">$lines</span> = <span class="fu">file</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h3 id="file_get_contents">File_get_contents</h3>
 <p>This function takes filename as argument and returns a string containing the complete file contents (hence the name).</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">$complete_contents</span> = <span class="fu">file_get_contents</span><span class="ot">(</span><span class="st">&#39;path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="createwrite-a-file">Create/Write a file</h2>
 <h3 id="touch">Touch</h3>
 <p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=touch" target="_blank"><code>touch</code></a> can be used to update the modification date of a file. If the file doesn’t exist yet, it will be created.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// create new-file.txt</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="fu">touch</span><span class="ot">(</span><span class="st">&#39;new-file.txt&#39;</span><span class="ot">);</span> <span class="co">// update modifaction timestamp of new-file.txt</span></span></code></pre></div>
 <h3 id="write">Write</h3>
 <p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=fwrite" target="_blank"><code>fwrite</code></a> can be used to write contents to a file handle.</p>
 <p>A handle can be created via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=fopen" target="_blank"><code>fopen</code></a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">$handle</span> = <span class="fu">fopen</span><span class="ot">(</span><span class="st">&#39;file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;w&#39;</span><span class="ot">);</span> <span class="co">// &#39;w&#39; indicatets open file for writing</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="fu">fwrite</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">,</span> <span class="st">&#39;Hello world&#39;</span><span class="ot">);</span> <span class="co">// Write hello world to opened file</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="fu">fclose</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">);</span> <span class="co">// close file</span></span></code></pre></div>
 <p>This sequence of opening, writing and closing a file is quite cumbersome, therefor a shorthand is also available: <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=file_put_contents" target="_blank"><code>file_put_contents</code></a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">$nr_bytes_written</span> = <span class="fu">file_put_contents</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="kw">$file_contents</span> <span class="ot">);</span></span></code></pre></div>
 <h2 id="remove-a-file">Remove a file</h2>
 <p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">$delete_ok</span> = <span class="fu">unlink</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="rename-a-file">Rename a file</h2>
 <p>A file can be deleted via <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=unlink" target="_blank"><code>unlink</code></a>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">$rename_ok</span> = <span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/file.txt&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/to-new-filename.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="directories">Directories</h2>
 <p>Similar functions exist for directories:</p>
 <ul>
 <li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=mkdir" target="_blank"><code>mkdir</code></a>: Create directory</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="fu">mkdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 <li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=rmdir" target="_blank"><code>rmdir</code></a>: Delete directory</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="fu">rmdir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 <li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=rename" target="_blank"><code>rename</code></a>: Rename directory</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="fu">rename</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">,</span> <span class="st">&#39;/path/-to-new-dirname&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 </ul>
 <h3 id="list-all-files-in-a-directory">List all files in a directory:</h3>
 <ul>
 <li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=readdir" target="_blank"><code>readdir</code></a>: Iterate over the files in a directory-handle</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {</span>
-<span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a>    <span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a>}</span></code></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">$handle</span> = <span class="fu">opendir</span><span class="ot">(</span><span class="st">&#39;/path/to/dir&#39;</span><span class="ot">);</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a><span class="kw">while</span> <span class="ot">(</span><span class="kw">false</span> !== <span class="ot">(</span><span class="kw">$file</span> = <span class="fu">readdir</span><span class="ot">(</span><span class="kw">$handle</span><span class="ot">)))</span> {</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&quot;</span><span class="kw">$file\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>}</span></code></pre></div></li>
 <li><p><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=glob" target="_blank"><code>glob</code></a>: List all files in a directory (as array) matching a certain pattern.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">$files</span> = <span class="fu">glob</span><span class="ot">(</span><span class="st">&#39;/path/to/dir/*.php&#39;</span><span class="ot">);</span></span></code></pre></div></li>
 </ul>
 <h2 id="upload-files">Upload files</h2>
 <p>File can be uploaded via a form-submission. The tag used to specify files is:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> In order to use the <code>input[type=file]</code>, the form <strong>must</strong> specify the <code>enctype</code>-attribute:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a></span>
-<span id="cb14-5"><a href="#cb14-5"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> name=</span><span class="st">&quot;uploaded-file&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
 </div>
 <p>When a form containing files is submitted the <code>$_FILES</code> special <abbr title="Hypertext Preprocessor">PHP</abbr>-variable is populated with the file(s) currently uploading:</p>
 <pre><code>$_FILES = Array
@@ -274,7 +274,7 @@
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> stores the uploaded file in a temporary location. We must use the files contents or move the file to a different location. At the next request this <code>tmp_name</code> will be something else. So keep this in mind.</p>
 <p>If we opt not to read the file and process it, but move the file instead, the <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=move_uploaded_file" target="_blank"><code>move_uploaded_file</code></a> should be used to move a file to a new destination.</p>
 <p>This function has some additional checks builtin and is thus the recommended way to move uploaded files:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="fu">move_uploaded_file</span><span class="ot">(</span><span class="st">&#39;/tmp/php/php1h4j10&#39;</span><span class="ot">,</span> <span class="st">&#39;/home/me/some-file.txt&#39;</span><span class="ot">);</span></span></code></pre></div>
 <h2 id="exercises">Exercises</h2>
 <div class="exercise">
 <h4>
@@ -368,7 +368,7 @@ Exercise:
 <ul>
 <li>Print the uploaded/pasted text</li>
 <li>Highlight all the specified terms in the uploaded/pasted text. (for example each term starts at a new line in a textarea)</li>
-<li>Extra: allow the user to specify the color per term. For example: <code>the|red   a|green   an</code></li>
+<li>Extra: allow the user to specify the color per term. For example: <code>the|red     a|green     an</code></li>
 </ul>
 <iframe src="embeds/exercises/io/highlight-words.php" class="embed--output" height frameborder="0">
 </iframe>
@@ -406,7 +406,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2020-12-02
+                  at 2021-09-19
                </p>
             </footer>
          </div>
