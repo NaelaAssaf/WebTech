@@ -22,7 +22,7 @@ are most important ones.
 The m4_phpfunc(file)-function takes a filename as argument and returns an array
 where each array item corresponds to a line in the file.
 
-```php
+```{.php .numberLines}
 $lines = file('/path/to/file.txt');
 ```
 
@@ -31,7 +31,7 @@ $lines = file('/path/to/file.txt');
 This function takes a filename as argument and returns a string containing the
 complete file contents (hence the name).
 
-```php
+```{.php .numberLines}
 $complete_contents = file_get_contents('path/to/file.txt');
 ```
 
@@ -42,7 +42,7 @@ $complete_contents = file_get_contents('path/to/file.txt');
 m4_phpfunc(touch) can be used to update the modification date of a file. If the
 file doesn't exist yet, it will be created.
 
-```php
+```{.php .numberLines}
 touch('new-file.txt'); // create new-file.txt
 touch('new-file.txt'); // update modifaction timestamp of new-file.txt
 ```
@@ -53,7 +53,7 @@ m4_phpfunc(fwrite) can be used to write contents to a file handle.
 
 A handle can be created via m4_phpfunc(fopen).
 
-```php
+```{.php .numberLines}
 $handle = fopen('file.txt', 'w'); // 'w' indicatets open file for writing
 fwrite($handle, 'Hello world'); // Write hello world to opened file
 fclose($handle); // close file
@@ -62,7 +62,7 @@ fclose($handle); // close file
 This sequence of opening, writing and closing a file is quite cumbersome,
 therefor a shorthand is also available: m4_phpfunc(file_put_contents).
 
-```php
+```{.php .numberLines}
 $nr_bytes_written = file_put_contents('/path/to/file.txt', $file_contents );
 ```
 
@@ -70,14 +70,14 @@ $nr_bytes_written = file_put_contents('/path/to/file.txt', $file_contents );
 
 A file can be deleted via m4_phpfunc(unlink).
 
-```php
+```{.php .numberLines}
 $delete_ok = unlink('/path/to/file.txt');
 ```
 
 ## Rename a file
 A file can be renamed via m4_phpfunc(rename).
 
-```php
+```{.php .numberLines}
 $rename_ok = rename('/path/to/file.txt', '/path/to-new-filename.txt');
 ```
 
@@ -124,14 +124,14 @@ Similar functions exist for directories:
 
 File can be uploaded via a form-submission. The tag used to specify files is:
 
-```html
+```{.html .numberLines}
 <input type="file" name="uploaded-file">
 ```
 
 m4_info([[In order to use the `input[type=file]`, the form **must** specify the
 `enctype`-attribute:
 
-```html
+```{.html .numberLines}
 <form action="#" method="post" enctype="multipart/form-data">
 
     <input type="file" name="uploaded-file">
@@ -176,7 +176,7 @@ If we opt not to read the file and process it, but move the file instead, the m4
 This function has some additional checks builtin and is thus the recommended
 way to move uploaded files:
 
-```php
+```{.php .numberLines}
 move_uploaded_file('/tmp/php/php1h4j10', '/home/me/some-file.txt');
 ```
 

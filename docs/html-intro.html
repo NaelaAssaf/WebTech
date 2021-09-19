@@ -218,65 +218,65 @@
 <li>And a closing part: <code>&lt;/tag&gt;</code>. The closing part is identified by the forward slash (<code>/</code>) before the tag-name.</li>
 </ol>
 <p>These opening and closing tags can contain plain text and/or additional <abbr title="HyperText Markup Language">HTML</abbr> markup.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;tag&gt;</span> {{content}} <span class="kw">&lt;/tag&gt;</span>`</span></code></pre></div>
 <p>Example: <code>&lt;strong&gt;Bold Font&lt;/strong&gt;</code> <small> (This tag formats its content in a bold font: <strong>Bold Font</strong>) </small></p>
 <p>The whole (start + content + end) is an <abbr title="HyperText Markup Language">HTML</abbr> element.</p>
 <h3 id="self-enclosing-tags">Self-enclosing tags</h3>
 <p>A self-enclosing tag has no content. So the closing part is left of:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">&lt;tag&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;tag&gt;</span></span></code></pre></div>
 <p>Example: <code>&lt;br&gt;</code> <small>(this will insert a newline into your <abbr title="HyperText Markup Language">HTML</abbr>)</small></p>
 <p>Sometimes you may see self-closing tags used like <code>&lt;tag /&gt;</code>, this trailing tag is optional since HTML5 and can be left of.</p>
 <h2 id="attributes">Attributes</h2>
 <p>Attributes modify the behaviour of a tag.</p>
 <p>For example the <code>a</code>-tag converts a piece of text into a clickable link.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">&lt;a&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;a&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 <p>The <code>href</code>-attribute defines where the link should point to:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 <p>Attributes are also used to modify the appearance of a tag. Later in this course we’ll see more detailed examples of this.</p>
 <h2 id="a-valid-html-document">A valid HTML document</h2>
 <p>A valid HTML5 document requires a bit of boilerplate:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="co">&lt;!-- Your webpages metadata --&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>    <span class="co">&lt;!-- your webpage specific content --&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="co">&lt;!-- Your webpages metadata --&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="co">&lt;!-- your webpage specific content --&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
 <p>This minimal markup tells the browser to treat the document as a HTML5 document.</p>
 <h2 id="the-document-head">The document head</h2>
 <p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag allows the developer to define meta-data about the webpage. It is a wrapper around multiple other tags.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="co">&lt;!-- meta tags here --&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="co">&lt;!-- meta tags here --&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>The <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a>-tag may only be defined once in the complete document.</p>
 <p>Everything defined within the <a href="http://www.w3schools.com/tags/tag_head.asp" class="w3c-ref"><code>head</code></a> element will not be visible in the <abbr title="HyperText Markup Language">HTML</abbr> document. The head content can have an effect on the appearance of the page but it’s content will not be visualised.</p>
 <h3 id="title">Title</h3>
 <p>The title tag sets the web-page title. This title is displayed by the browser in the browser-tab.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>My web-page&#39;s title...<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="kw">&lt;title&gt;</span>My web-page&#39;s title...<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <h3 id="style">Style</h3>
 <p>We will address styling later in this course but for now it is sufficient to know that style information should be included in the head of a web-page.</p>
 <h4 id="raw-style">Raw style</h4>
 <p>The <a href="http://www.w3schools.com/tags/tag_style.asp" class="w3c-ref"><code>style</code></a>-tag allows to include raw <abbr title="Cascading Style Sheets">CSS</abbr> rules in the documents</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>        <span class="co">/* style information here */</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="kw">&lt;/style&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>        <span class="co">/* style information here */</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <h4 id="external-style-sheets">External style sheets</h4>
 <p>The <a href="http://www.w3schools.com/tags/tag_link.asp" class="w3c-ref"><code>link</code></a>-tag allows to external style sheets into the document. <small> (Do not confuse this tag with the <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a>-tag…). </small></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/link/to/file.css&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/link/to/file.css&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>We will only ever include <abbr title="Cascading Style Sheets">CSS</abbr>-files to style our web-pages. The provided attributes in the example are required to include a <abbr title="Cascading Style Sheets">CSS</abbr>-file and avoid browser quirks.</p>
 <h2 id="the-document-body">The document body</h2>
 <p>The <a href="http://www.w3schools.com/tags/tag_body.asp" class="w3c-ref"><code>body</code></a>-tag should wrap all the content to be displayed.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="co">&lt;!-- all displayed tags and content go here --&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co">&lt;!-- all displayed tags and content go here --&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">&lt;/body&gt;</span></span></code></pre></div>
 <div class="exercise">
 <h4>
 Exercise:
@@ -293,15 +293,15 @@ Exercise:
 <p>Create a text file name <code class="file">hello-world.html</code></p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">gedit</span> hello-world.html</span></code></pre></div>
 <p>With contents:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>    <span class="kw">&lt;title&gt;</span>Hello World<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a>    Hello World from my first web-page.</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="kw">&lt;title&gt;</span>Hello World<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>    Hello World from my first web-page.</span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
 <p>Open the local <abbr title="HyperText Markup Language">HTML</abbr> file in the browser.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">firefox</span> hello-world.html</span></code></pre></div>
 <h2 id="headers-h">Headers: <code>H*</code></h2>
@@ -769,23 +769,23 @@ Exercise:
 <h3 id="class">Class</h3>
 <p>The class attribute holds a space separated list class-names. The element is member of all the classes specified in the attribute. These classes can be used to style a group of elements the same way.</p>
 <p>For example all the elements which are member of the same class (have the same class-name in the class attribute) should have the text colour set to red…</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <h3 id="id">Id</h3>
 <p>The <code>id</code>-attribute lets you assign a unique identifier to an element.</p>
 <p>This identifier should be unique for the whole page and thus occur only once.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;unique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;unique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p><small> If the id is specified in the URL prefixed by a pound symbol (<code>#</code>), the element will be automatically scrolled into view.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a><span class="co">&lt;!-- http://WWW.example.com/script.php#chapter --&gt;</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true"></a></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;chapter1&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true"></a>Scroll into view...</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb36-1"><a href="#cb36-1"></a><span class="co">&lt;!-- http://WWW.example.com/script.php#chapter --&gt;</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;chapter1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a>Scroll into view...</span>
+<span id="cb36-5"><a href="#cb36-5"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p></small></p>
 <h3 id="style-1">Style</h3>
 <p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to a single element.</p>
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true"></a><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</p>
 <h3 id="title-1">Title</h3>
 <p>The title attribute lets you assign a title to an element. This title will be displayed as a tooltip when hovering with the mouse over this element.</p>

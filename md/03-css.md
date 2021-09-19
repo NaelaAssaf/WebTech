@@ -31,7 +31,7 @@ Elements can be styled via three methods:
 
 ### Style attribute
 
-```html
+```{.html .numberLines}
 <element style="/* my styles */"></element>
 ```
 
@@ -44,7 +44,7 @@ styling web-pages.  For example: styles can not be shared by elements...
 The m4_tag(style)-tag that should be defined in the head of the document. The styles
 defined in this tag apply to the complete page.
 
-```html
+```{.html .numberLines}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +77,7 @@ The rules defined in the file can be included in as many HTML-pages as you
 want. This makes it the most scalable method of defining and including
 CSS-rules.
 
-```html
+```{.html .numberLines}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,7 +177,7 @@ should be found inside the previous, inside the previous, ...
 <small>
 m4_note([[Inside in this context means, the element must be wrapped by the other element:
 
-```html
+```{.html .numberLines}
 <elem1>
     <elem2>
     </elem2>
@@ -186,7 +186,7 @@ m4_note([[Inside in this context means, the element must be wrapped by the other
 
 Is doesn't matter how many other tags are in-between the parent and the nested element:
 
-```html
+```{.html .numberLines}
 <elem1>
     <antoher-elem>
         <elem2>
@@ -212,7 +212,7 @@ The `>` symbol between two selectors indicates an direct parent -> child
 relationship. By this we mean the second element must be an immediate child of
 the first selector. No other tags may warp the child element.
 
-```html
+```{.html .numberLines}
 <parent>
     <child>
     </child>

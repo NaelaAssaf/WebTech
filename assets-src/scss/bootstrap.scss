@@ -147,15 +147,15 @@ table {
 
 pre {
    border: none;
-   // background: white;
+   background: none;
    border-radius: 0;
    margin-bottom: 0;
-   overflow: visible;
 }
 
 pre.numberSource {
 
    border-left-color: #ccc;
+   overflow: visible;
 }
 
 div.sourceCode{
@@ -163,7 +163,7 @@ div.sourceCode{
    // background: $lightgray-bg;
    // padding: 0.5em;
    // padding-bottom: 0;
-   margin-bottom: 0.5em;
+   // margin-bottom: 0.5em;
    font-size: 0.9em;
    box-shadow: 2px 2px 8px grey;
    border-radius: 5px;
@@ -189,6 +189,14 @@ div.sourceCode{
    }
 }
 
+// .iframe-wrapper .embed--srcfile {
+//    margin: 1em;
+//    margin-right: 2em;
+//    // background: rgba(173,216,230,0.5);
+//    padding: 0.25em;
+//    padding-right: 0.5em;
+// }
+
 .embed--src {
 
    position: relative;
@@ -196,7 +204,10 @@ div.sourceCode{
 
 .embed--output {
 
+   border: solid lightblue  1px;
    border-left: solid lightblue  0.5em;
+   box-shadow: 2px 2px 8px grey;
+   resize: vertical;
 }
 
 .run--output {
@@ -211,6 +222,7 @@ pre.embed--output {
 
    padding: 2em 8px;
 }
+
 
 iframe {
 

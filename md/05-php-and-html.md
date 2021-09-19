@@ -111,7 +111,7 @@ PHP allows us to include one file into another. This is done via the m4_phpfunc(
 The difference between the two is that `require` will fail if the specified file
 can't be included where `include` will merely warn about the failed inclusion.
 
-```php
+```{.php .numberLines}
 include('path/to/file.php');
 
 require('path/to/another-file.php');
@@ -130,7 +130,7 @@ A form is composed out of a form-tag and data tags.
 
 ### Form tag
 
-```html
+```{.html .numberLines}
 <form action="<action>" method="<method>">
     <!-- content -->
 </form>
@@ -148,7 +148,7 @@ This attribute specifies the page the data should be sent to.
 To send the data back to the same page, specify: `#` or the URL of the current
 page.
 
-```html
+```{.html .numberLines}
 <form action="#"></form>
 <form action="http://server.com/script-handle-data,php"></form>
 ```
@@ -191,7 +191,7 @@ limited by size.
 
 This method is most often used to send data from forms back to the server
 
-```html
+```{.html .numberLines}
 <form action="#" method="get"></form>
 <form action="#" method="post"></form>
 ```
@@ -206,7 +206,7 @@ backend to retrieve the values entered by the user.
 
 #### Input
 
-```html
+```{.html .numberLines}
 <input type="text" value="" name="">
 ```
 
@@ -232,7 +232,7 @@ m4_embed_php_as_html(php-and-html/input,330px,.html)
 
 m4_note([[In order to send files to the server, the form attribute: `enctype`
 must be set to `multipart/form-data`
-```html
+```{.html .numberLines}
 <form action="#" method="post" enctype="multipart/form-data"></form>
 ```
 
@@ -243,7 +243,7 @@ See later for more details on how to upload files...
 
 The select tag allows the user to choose options out of a predefined set:
 
-```html
+```{.html .numberLines}
 <select name="name-sent-backend">
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -297,7 +297,7 @@ Special arrays:
 
 Example:
 
-```html
+```{.html .numberLines}
 <form action="#" method="post">
     <input type="text" value="Hello World" name="name">
     <input type="number" value="21 World" name="age">
@@ -305,7 +305,7 @@ Example:
 </form>
 ```
 
-```php
+```{.php .numberLines}
 print_r( $_POST );
 
 /*
@@ -322,7 +322,7 @@ To test if data was submitted, the value of the _submit button_ can be used.
 
 In the previous example was the value: `submit`.
 
-```php
+```{.php .numberLines}
 if( isset( $_POST['submit'] ) ) {
 
     /* Do stuff with data */

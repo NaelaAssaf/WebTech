@@ -2,7 +2,7 @@
 ### Make css related stuff
 ###
 
-sass := /usr/bin/sass
+sass := /usr/bin/sassc
 
 # ============================================================================ #
 
@@ -20,12 +20,12 @@ $(css_dir):
 	mkdir -p $@
 
 $(css_dir)/%.css: $(scss_dir)/%.scss | $(css_dir) $(sass)
-	$(sass) --scss $< $@
+	$(sass) $< $@
 
 # ============================================================================ #
 
 $(sass):
-	sudo dnf install -y rubygem-sass.noarch
+	sudo dnf install -y sassc
 
 # ============================================================================ #
 

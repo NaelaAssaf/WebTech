@@ -33,7 +33,7 @@ Non self-enclosing tags exist out of two parts:
 
 These opening and closing tags can contain plain text and/or additional HTML markup.
 
-```html
+```{.html .numberLines}
 <tag> {{content}} </tag>`
 ```
 
@@ -48,7 +48,7 @@ The whole (start + content + end) is an HTML element.
 
 A self-enclosing tag has no content. So the closing part is left of:
 
-```html
+```{.html .numberLines}
 <tag>
 ```
 
@@ -64,13 +64,13 @@ Attributes modify the behaviour of a tag.
 
 For example the `a`-tag converts a piece of text into a clickable link.
 
-```html
+```{.html .numberLines}
 <a>My text to click</a>
 ```
 
 The `href`-attribute defines where the link should point to:
 
-```html
+```{.html .numberLines}
 <a href="http://go-here-when-clicked.com">My text to click</a>
 ```
 
@@ -81,7 +81,7 @@ course we'll see more detailed examples of this.
 
 A valid HTML5 document requires a bit of boilerplate:
 
-```html
+```{.html .numberLines}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +100,7 @@ This minimal markup tells the browser to treat the document as a HTML5 document.
 The m4_tag(head)-tag allows the developer to define meta-data about the webpage.
 It is a wrapper around multiple other tags.
 
-```html
+```{.html .numberLines}
 <head>
     <!-- meta tags here -->
 </head>
@@ -117,7 +117,7 @@ page but it's content will not be visualised.
 The title tag sets the web-page title. This title is displayed by the browser
 in the browser-tab.
 
-```html
+```{.html .numberLines}
 <head>
     <title>My web-page's title...</title>
 </head>
@@ -132,7 +132,7 @@ know that style information should be included in the head of a web-page.
 
 The m4_tag(style)-tag allows to include raw CSS rules in the documents
 
-```html
+```{.html .numberLines}
 <head>
     <style type="text/css">
         /* style information here */
@@ -145,7 +145,7 @@ The m4_tag(style)-tag allows to include raw CSS rules in the documents
 The m4_tag(link)-tag allows to external style sheets into the document.
 <small> (Do not confuse this tag with the m4_tag(a)-tag...).  </small>
 
-```html
+```{.html .numberLines}
 <head>
     <link href="/link/to/file.css" type="text/css" rel="stylesheet">
 </head>
@@ -159,7 +159,7 @@ quirks.
 
 The m4_tag(body)-tag should wrap all the content to be displayed.
 
-```html
+```{.html .numberLines}
 <body>
     <!-- all displayed tags and content go here -->
 </body>
@@ -181,7 +181,7 @@ gedit hello-world.html
 
 With contents:
 
-```html
+```{.html .numberLines}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -462,7 +462,7 @@ The class attribute holds a space separated list class-names. The element is mem
 For example all the elements which are member of the same class (have the same
 class-name in the class attribute) should have the text colour set to red...
 
-```html
+```{.html .numberLines}
 <p class="class1" >...</p>
 <p class="class1 class-two" >...</p>
 ```
@@ -473,14 +473,14 @@ The `id`-attribute lets you assign a unique identifier to an element.
 
 This identifier should be unique for the whole page and thus occur only once.
 
-```html
+```{.html .numberLines}
 <p id="unique-identifier" >...</p>
 ```
 
 <small>
 If the id is specified in the URL prefixed by a pound symbol (`#`), the element will be automatically scrolled into view.
 
-```html
+```{.html .numberLines}
 <!-- http://WWW.example.com/script.php#chapter -->
 
 <p id="chapter1">
@@ -499,7 +499,7 @@ style block in the `head` of page or an external style sheet are better, more
 scalable, options. It can however come in handy in this introduction to HTML and
 CSS.
 
-```html
+```{.html .numberLines}
 <p style="background: red; color: green;">...</p>
 ```
 

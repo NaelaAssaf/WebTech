@@ -32,7 +32,7 @@ Notice that the code outside of the PHP-tags is not interpreted and is printed o
 
 A valid PHP instruction generally has the form:
 
-```php
+```{.php .numberLines}
 {{ instruction }};
 ```
 
@@ -50,7 +50,7 @@ thus end in a `}`...
 
 PHP will ignore everything behind a `#` or `//`.
 
-```php
+```{.php .numberLines}
 
 echo 'hello world';
 
@@ -66,7 +66,7 @@ echo 'by world';
 
 PHP will ignore everything enclosed by `/*` and `*/`.
 
-```php
+```{.php .numberLines}
 
 echo 'hello world';
 
@@ -124,7 +124,7 @@ on the command line.
 Variables are a way to store some information and give the storage space a
 name. Via this name, the content that was stored can be retrieved.
 
-```php
+```{.php .numberLines}
 $name = 'value to store';
 ```
 
@@ -174,13 +174,13 @@ Assign a value to a variable:
 
 _Generic syntax:_
 
-```php
+```{.php .numberLines}
 $varname = 'value to store';
 ```
 
 Examples:
 
-```php
+```{.php .numberLines}
 $int    = 123;
 $float  = 4.56;
 $string = 'Hello World';
@@ -199,7 +199,7 @@ A scalar can be printed via two methods:
 
 _Generic syntax:_
 
-```php
+```{.php .numberLines}
 echo <scalar>;
 echo <scalar1>, <scalar2>, ...;
 ```
@@ -210,7 +210,7 @@ Multiple scalars can be printed at once, just separate them by a comma `,`.
 
 Example:
 
-```php
+```{.php .numberLines}
 echo 123;
 echo 4.56;
 echo 'Hello World';
@@ -222,7 +222,7 @@ echo false;
 
 _Generic syntax:_
 
-```php
+```{.php .numberLines}
 print( <scalar> );
 ```
 
@@ -231,7 +231,7 @@ Print can only output one scalar at the time.
 
 Example:
 
-```php
+```{.php .numberLines}
 print( 123 );
 print( 4.56 );
 print( 'Hello World' );
@@ -319,7 +319,7 @@ is used as the keys.
 
 An array can be declared in two ways:
 
-```php
+```{.php .numberLines}
 $array = array( /* list of array items */ );
 
 $array = [ /* list of array items */ ];
@@ -344,7 +344,7 @@ The function m4_phpfunc(print_r) can be used to print an array.
 
 _Generic syntax:_
 
-```php
+```{.php .numberLines}
 print_r( $array );
 ```
 
@@ -354,13 +354,13 @@ m4_embed_php(php-basics/print_r)
 
 A value can be retrieved by specifying the array variable name followed by the index you wish to retrieve enclosed in square brackets:
 
-```php
+```{.php .numberLines}
 $array[<key>];
 ```
 
 If the key is a string, the appropriate quoting must be used.
 
-```php
+```{.php .numberLines}
 $array['<key>'];
 ```
 
@@ -372,7 +372,7 @@ m4_embed_php(php-basics/array-get-key)
 
 An array value can be targeted by its key. This key can also be used to update the value:
 
-```php
+```{.php .numberLines}
 $array[<key>] = <new value>;
 ```
 
@@ -494,7 +494,7 @@ are met. This kind of behaviour can be accomplished via conditionals
 The `if` language structure defines the conditions to fulfil and the accompanying block
 of code to run if the conditions evaluate to `true` (enclosed in curly brackets `{}`).
 
-```php
+```{.php .numberLines}
 if( /* <condition> */ ) {
 
     /* execute this code here */
@@ -504,7 +504,7 @@ if( /* <condition> */ ) {
 Additionally an `else`-block can be defined. The code in this block will be
 executed when the _`if`-condition_ evaluated to false.
 
-```php
+```{.php .numberLines}
 if( /* condition */ ) {
 
     /* execute when condition is true */
@@ -517,7 +517,7 @@ else {
 
 On top of this, multiple conditions can be chained into an `if-elseif-else` construct.
 
-```php
+```{.php .numberLines}
 if( /* condition 1 */ ) {
 
     /* execute when condition 1 is true */
@@ -538,7 +538,7 @@ else {
 
 Conditionals can also be nested:
 
-```php
+```{.php .numberLines}
 if( /* condition 1 */ ) {
 
     if( /* condition 2 */ ) {
@@ -632,7 +632,7 @@ Loops enable you to repeat a block of code until a condition is met.
 
 This construct will repeat until the defined condition evaluates to false:
 
-```php
+```{.php .numberLines}
 while( /* <condition> */ ) {
 
     /* execute this block */
@@ -644,7 +644,7 @@ script. If this happens, use `Ctrl`+`c` on the command line to abort the
 running script.]])
 
 m4_danger([[The never ending loop:
-```php
+```{.php .numberLines}
 # This will run until interrupted by the user.
 
 while(1) {
@@ -660,7 +660,7 @@ m4_info([[
 The pattern `$variable = $variable + 1` is used a lot in programming. Therefore
 shorthand versions of this, and similar operations, are available:
 
-```php
+```{.php .numberLines}
 $var = 1;
 
 # Add or substract by 1:
@@ -696,7 +696,7 @@ to construct the loop.
 The `for`-construct forces you to define the counter variable and the
 increments right in the construct.
 
-```php
+```{.php .numberLines}
 for( <init counter>; <condition>; <increment counter> ) {
 
     /* execute this block */
@@ -733,7 +733,7 @@ What if we have an array with custom keys (not a sequential list of integers...)
 We can solve this problem with the `foreach` construct. This construct is
 specifically designed to iterate over array items.
 
-```php
+```{.php .numberLines}
 foreach( <array> as [<key-placeholder> =>] <value-placeholder>) {
 
     /* use key and value here*/
@@ -905,7 +905,7 @@ m4_exercise([[
 Create a script which stores the keys of an array as values of another array.
 (Extract the keys from an array)
 
-```php
+```{.php .numberLines}
 $array = array(
     'position 1' => 'hello',
     'position 2' => 'world',
@@ -922,7 +922,7 @@ m4_exercise([[
 * Create a script which reverses an array.
 * Create a script which reverses an array and preserves the keys
 
-```php
+```{.php .numberLines}
 $array = array(
     'position 1' => 'hello',
     'position 2' => 'world',

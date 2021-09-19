@@ -236,30 +236,30 @@ echo &quot;After php-tags&quot;;
 </div>
 <p>Notice that the code outside of the <abbr title="Hypertext Preprocessor">PHP</abbr>-tags is not interpreted and is printed out unchanged.</p>
 <p>A valid <abbr title="Hypertext Preprocessor">PHP</abbr> instruction generally has the form:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>{{ instruction }}<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1"></a>{{ instruction }}<span class="ot">;</span></span></code></pre></div>
 <p>Each statement must be terminated by a semicolon (<code>;</code>)!</p>
 <p><small> An exception to this rule are <a href="#loops">loops</a> and <a href="#conditionals">conditionals</a>. These can encapsulate a block of code in curly brackets <code>{}</code> and thus end in a <code>}</code>… </small></p>
 <h3 id="comments">Comments</h3>
 <h4 id="single-line-comments">Single line comments</h4>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> will ignore everything behind a <code>#</code> or <code>//</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;hello world&#39;</span><span class="ot">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="co">// ignore this</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="co"># and ignore this</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;by world&#39;</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">echo</span> <span class="st">&#39;hello world&#39;</span><span class="ot">;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">// ignore this</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># and ignore this</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="kw">echo</span> <span class="st">&#39;by world&#39;</span><span class="ot">;</span></span></code></pre></div>
 <h4 id="multi-line-comments">Multi-line comments</h4>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> will ignore everything enclosed by <code>/*</code> and <code>*/</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;hello world&#39;</span><span class="ot">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="co">/* ignore this</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="co">and ignore this */</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;by world&#39;</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">echo</span> <span class="st">&#39;hello world&#39;</span><span class="ot">;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">/* ignore this</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">and ignore this */</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="kw">echo</span> <span class="st">&#39;by world&#39;</span><span class="ot">;</span></span></code></pre></div>
 <h3 id="execute-a-php-script">Execute a PHP-script</h3>
 <p>To get acquainted with php we will start of on the command line and work our way up to <abbr title="Hypertext Preprocessor">PHP</abbr> as a web server.</p>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> at its core is a program which reads a source file, interprets the directives and prints out the result.</p>
@@ -298,7 +298,7 @@ echo &quot;After php-tags&quot;;
 <p>on the command line.</p>
 <h2 id="types-and-variables">Types and variables</h2>
 <p>Variables are a way to store some information and give the storage space a name. Via this name, the content that was stored can be retrieved.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">$name</span> = <span class="st">&#39;value to store&#39;</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">$name</span> = <span class="st">&#39;value to store&#39;</span><span class="ot">;</span></span></code></pre></div>
 A variable is identified by the leading dollar <code>$</code>-symbol followed by a alpha-numeric sequence.
 <div class="alert alert-warning">
 <p><strong>Warning:</strong> It is not allowed to start variable name with a number:</p>
@@ -369,13 +369,13 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <h4 id="declare">Declare</h4>
 <p>Assign a value to a variable:</p>
 <p><em>Generic syntax:</em></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">$varname</span> = <span class="st">&#39;value to store&#39;</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">$varname</span> = <span class="st">&#39;value to store&#39;</span><span class="ot">;</span></span></code></pre></div>
 <p>Examples:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">$int</span>    = <span class="dv">123</span><span class="ot">;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a><span class="kw">$float</span>  = <span class="fl">4.56</span><span class="ot">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="kw">$string</span> = <span class="st">&#39;Hello World&#39;</span><span class="ot">;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a><span class="kw">$true</span>   = <span class="kw">true</span><span class="ot">;</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a><span class="kw">$false</span>  = <span class="kw">false</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">$int</span>    = <span class="dv">123</span><span class="ot">;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">$float</span>  = <span class="fl">4.56</span><span class="ot">;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="kw">$string</span> = <span class="st">&#39;Hello World&#39;</span><span class="ot">;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="kw">$true</span>   = <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="kw">$false</span>  = <span class="kw">false</span><span class="ot">;</span></span></code></pre></div>
 <h4 id="printingdisplaying-scalars">Printing/Displaying scalars</h4>
 <p>A scalar can be printed via two methods:</p>
 <ul>
@@ -384,26 +384,26 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 </ul>
 <h5 id="echo">Echo</h5>
 <p><em>Generic syntax:</em></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">echo</span> &lt;scalar&gt;<span class="ot">;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="kw">echo</span> &lt;scalar1&gt;<span class="ot">,</span> &lt;scalar2&gt;<span class="ot">,</span> <span class="st">...</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">echo</span> &lt;scalar&gt;<span class="ot">;</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="kw">echo</span> &lt;scalar1&gt;<span class="ot">,</span> &lt;scalar2&gt;<span class="ot">,</span> <span class="st">...</span><span class="ot">;</span></span></code></pre></div>
 <p>Echo outputs the provided scalars.</p>
 <p>Multiple scalars can be printed at once, just separate them by a comma <code>,</code>.</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">echo</span> <span class="dv">123</span><span class="ot">;</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="kw">echo</span> <span class="fl">4.56</span><span class="ot">;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;Hello World&#39;</span><span class="ot">;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a><span class="kw">echo</span> <span class="kw">true</span><span class="ot">;</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a><span class="kw">echo</span> <span class="kw">false</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">echo</span> <span class="dv">123</span><span class="ot">;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="kw">echo</span> <span class="fl">4.56</span><span class="ot">;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="kw">echo</span> <span class="st">&#39;Hello World&#39;</span><span class="ot">;</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="kw">echo</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="kw">echo</span> <span class="kw">false</span><span class="ot">;</span></span></code></pre></div>
 <h5 id="print">Print</h5>
 <p><em>Generic syntax:</em></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> &lt;scalar&gt; <span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">print</span><span class="ot">(</span> &lt;scalar&gt; <span class="ot">);</span></span></code></pre></div>
 <p>Print can only output one scalar at the time. <small>(This can be circumvented via concatenation…)</small></p>
 <p>Example:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> <span class="dv">123</span> <span class="ot">);</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> <span class="fl">4.56</span> <span class="ot">);</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> <span class="st">&#39;Hello World&#39;</span> <span class="ot">);</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">);</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a><span class="kw">print</span><span class="ot">(</span> <span class="kw">false</span> <span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">print</span><span class="ot">(</span> <span class="dv">123</span> <span class="ot">);</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="kw">print</span><span class="ot">(</span> <span class="fl">4.56</span> <span class="ot">);</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="kw">print</span><span class="ot">(</span> <span class="st">&#39;Hello World&#39;</span> <span class="ot">);</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="kw">print</span><span class="ot">(</span> <span class="kw">true</span> <span class="ot">);</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="kw">print</span><span class="ot">(</span> <span class="kw">false</span> <span class="ot">);</span></span></code></pre></div>
 <h4 id="string-concatenation-and-interpolation-or-single-vs.-double-quotes">String concatenation and interpolation <small>Or single vs. double quotes</small></h4>
 <p>Scalars can be combined, concatenated into larger strings.</p>
 <p>The concatenation symbol is a dot: <code>.</code>.</p>
@@ -594,9 +594,9 @@ A variable is identified by the leading dollar <code>$</code>-symbol followed by
 <p>An item is stored in the array at a named location. If no name/key/index is explicitly specified, an numeric index from <code>0</code> to <code>n</code> <small>(where n is the number of items in the array minus one)</small> is used as the keys.</p>
 <h4 id="declare-1">Declare</h4>
 <p>An array can be declared in two ways:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span> <span class="co">/* list of array items */</span> <span class="ot">);</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a><span class="kw">$array</span> = <span class="ot">[</span> <span class="co">/* list of array items */</span> <span class="ot">];</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span> <span class="co">/* list of array items */</span> <span class="ot">);</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a></span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="kw">$array</span> = <span class="ot">[</span> <span class="co">/* list of array items */</span> <span class="ot">];</span></span></code></pre></div>
 <p>The <code>[]</code>-method can only be used from <abbr title="Hypertext Preprocessor">PHP</abbr> version 5.4 and higher.</p>
 <p>A normal typical array is a <strong>list of values</strong>. The keys of those values are automatically assigned, starting with zero <code>0</code> and auto incrementing for each element added.</p>
 <p><small>See below for how to print and add values to arrays</small></p>
@@ -659,7 +659,7 @@ Array
 <h4 id="printdisplay-arrays">Print/Display arrays</h4>
 <p>The function <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=print_r" target="_blank"><code>print_r</code></a> can be used to print an array.</p>
 <p><em>Generic syntax:</em></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array</span> <span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$array</span> <span class="ot">);</span></span></code></pre></div>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/print_r.html">php-basics/print_r</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/print_r.php" taret="_blank">src</a></span></p>
@@ -688,9 +688,9 @@ Array
 </div>
 <h4 id="get-a-value-from-an-array">Get a value from an array</h4>
 <p>A value can be retrieved by specifying the array variable name followed by the index you wish to retrieve enclosed in square brackets:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a><span class="kw">$array</span><span class="ot">[</span>&lt;<span class="fu">key</span>&gt;<span class="ot">];</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">$array</span><span class="ot">[</span>&lt;<span class="fu">key</span>&gt;<span class="ot">];</span></span></code></pre></div>
 <p>If the key is a string, the appropriate quoting must be used.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a><span class="kw">$array</span><span class="ot">[</span><span class="st">&#39;&lt;key&gt;&#39;</span><span class="ot">];</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">$array</span><span class="ot">[</span><span class="st">&#39;&lt;key&gt;&#39;</span><span class="ot">];</span></span></code></pre></div>
 <p>Example:</p>
 <div class="row">
 <div class="col-md-6">
@@ -727,7 +727,7 @@ value3
 </div>
 <h4 id="update-a-value-in-an-array">Update a value in an array</h4>
 <p>An array value can be targeted by its key. This key can also be used to update the value:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true"></a><span class="kw">$array</span><span class="ot">[</span>&lt;<span class="fu">key</span>&gt;<span class="ot">]</span> = &lt;<span class="kw">new</span> value&gt;<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb39-1"><a href="#cb39-1"></a><span class="kw">$array</span><span class="ot">[</span>&lt;<span class="fu">key</span>&gt;<span class="ot">]</span> = &lt;<span class="kw">new</span> value&gt;<span class="ot">;</span></span></code></pre></div>
 <p>Example:</p>
 <div class="row">
 <div class="col-md-6">
@@ -1003,52 +1003,52 @@ Array
 <h2 id="conditionals">Conditionals</h2>
 <p>It can be very handy to execute a piece of code only when certain requirements are met. This kind of behaviour can be accomplished via conditionals</p>
 <p>The <code>if</code> language structure defines the conditions to fulfil and the accompanying block of code to run if the conditions evaluate to <code>true</code> (enclosed in curly brackets <code>{}</code>).</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* &lt;condition&gt; */</span> <span class="ot">)</span> {</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true"></a></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true"></a>    <span class="co">/* execute this code here */</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb57-1"><a href="#cb57-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* &lt;condition&gt; */</span> <span class="ot">)</span> {</span>
+<span id="cb57-2"><a href="#cb57-2"></a></span>
+<span id="cb57-3"><a href="#cb57-3"></a>    <span class="co">/* execute this code here */</span></span>
+<span id="cb57-4"><a href="#cb57-4"></a>}</span></code></pre></div>
 <p>Additionally an <code>else</code>-block can be defined. The code in this block will be executed when the <em><code>if</code>-condition</em> evaluated to false.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition */</span> <span class="ot">)</span> {</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true"></a></span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true"></a>    <span class="co">/* execute when condition is true */</span></span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true"></a>}</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true"></a><span class="kw">else</span> {</span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true"></a></span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true"></a>    <span class="co">/* execute when condition is false */</span></span>
-<span id="cb58-8"><a href="#cb58-8" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb58-1"><a href="#cb58-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition */</span> <span class="ot">)</span> {</span>
+<span id="cb58-2"><a href="#cb58-2"></a></span>
+<span id="cb58-3"><a href="#cb58-3"></a>    <span class="co">/* execute when condition is true */</span></span>
+<span id="cb58-4"><a href="#cb58-4"></a>}</span>
+<span id="cb58-5"><a href="#cb58-5"></a><span class="kw">else</span> {</span>
+<span id="cb58-6"><a href="#cb58-6"></a></span>
+<span id="cb58-7"><a href="#cb58-7"></a>    <span class="co">/* execute when condition is false */</span></span>
+<span id="cb58-8"><a href="#cb58-8"></a>}</span></code></pre></div>
 <p>On top of this, multiple conditions can be chained into an <code>if-elseif-else</code> construct.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 1 */</span> <span class="ot">)</span> {</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true"></a></span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true"></a>    <span class="co">/* execute when condition 1 is true */</span></span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true"></a>}</span>
-<span id="cb59-5"><a href="#cb59-5" aria-hidden="true"></a><span class="kw">elseif</span><span class="ot">(</span> <span class="co">/* condition 2 */</span> <span class="ot">)</span> {</span>
-<span id="cb59-6"><a href="#cb59-6" aria-hidden="true"></a></span>
-<span id="cb59-7"><a href="#cb59-7" aria-hidden="true"></a>    <span class="co">/* execute when condition 2 is true */</span></span>
-<span id="cb59-8"><a href="#cb59-8" aria-hidden="true"></a>}</span>
-<span id="cb59-9"><a href="#cb59-9" aria-hidden="true"></a><span class="kw">elseif</span><span class="ot">(</span> <span class="co">/* condition 3 */</span> <span class="ot">)</span> {</span>
-<span id="cb59-10"><a href="#cb59-10" aria-hidden="true"></a></span>
-<span id="cb59-11"><a href="#cb59-11" aria-hidden="true"></a>    <span class="co">/* execute when condition 3 is true */</span></span>
-<span id="cb59-12"><a href="#cb59-12" aria-hidden="true"></a>}</span>
-<span id="cb59-13"><a href="#cb59-13" aria-hidden="true"></a><span class="kw">else</span> {</span>
-<span id="cb59-14"><a href="#cb59-14" aria-hidden="true"></a></span>
-<span id="cb59-15"><a href="#cb59-15" aria-hidden="true"></a>    <span class="co">/* execute when conditions 1, 2 and 3 are false */</span></span>
-<span id="cb59-16"><a href="#cb59-16" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb59-1"><a href="#cb59-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 1 */</span> <span class="ot">)</span> {</span>
+<span id="cb59-2"><a href="#cb59-2"></a></span>
+<span id="cb59-3"><a href="#cb59-3"></a>    <span class="co">/* execute when condition 1 is true */</span></span>
+<span id="cb59-4"><a href="#cb59-4"></a>}</span>
+<span id="cb59-5"><a href="#cb59-5"></a><span class="kw">elseif</span><span class="ot">(</span> <span class="co">/* condition 2 */</span> <span class="ot">)</span> {</span>
+<span id="cb59-6"><a href="#cb59-6"></a></span>
+<span id="cb59-7"><a href="#cb59-7"></a>    <span class="co">/* execute when condition 2 is true */</span></span>
+<span id="cb59-8"><a href="#cb59-8"></a>}</span>
+<span id="cb59-9"><a href="#cb59-9"></a><span class="kw">elseif</span><span class="ot">(</span> <span class="co">/* condition 3 */</span> <span class="ot">)</span> {</span>
+<span id="cb59-10"><a href="#cb59-10"></a></span>
+<span id="cb59-11"><a href="#cb59-11"></a>    <span class="co">/* execute when condition 3 is true */</span></span>
+<span id="cb59-12"><a href="#cb59-12"></a>}</span>
+<span id="cb59-13"><a href="#cb59-13"></a><span class="kw">else</span> {</span>
+<span id="cb59-14"><a href="#cb59-14"></a></span>
+<span id="cb59-15"><a href="#cb59-15"></a>    <span class="co">/* execute when conditions 1, 2 and 3 are false */</span></span>
+<span id="cb59-16"><a href="#cb59-16"></a>}</span></code></pre></div>
 <p>Conditionals can also be nested:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 1 */</span> <span class="ot">)</span> {</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true"></a></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true"></a>    <span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 2 */</span> <span class="ot">)</span> {</span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true"></a></span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true"></a>        <span class="co">/* execute when condition 1 and 2 evaluate to true */</span></span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true"></a>    }</span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true"></a>    <span class="kw">else</span> {</span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true"></a></span>
-<span id="cb60-9"><a href="#cb60-9" aria-hidden="true"></a>        <span class="co">/* execute when conditions 1 evalutes to true and condition 2 to false */</span></span>
-<span id="cb60-10"><a href="#cb60-10" aria-hidden="true"></a>    }</span>
-<span id="cb60-11"><a href="#cb60-11" aria-hidden="true"></a>}</span>
-<span id="cb60-12"><a href="#cb60-12" aria-hidden="true"></a><span class="kw">else</span> {</span>
-<span id="cb60-13"><a href="#cb60-13" aria-hidden="true"></a></span>
-<span id="cb60-14"><a href="#cb60-14" aria-hidden="true"></a>    <span class="co">/* execute when condition 1 evaluates to false*/</span></span>
-<span id="cb60-15"><a href="#cb60-15" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb60-1"><a href="#cb60-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 1 */</span> <span class="ot">)</span> {</span>
+<span id="cb60-2"><a href="#cb60-2"></a></span>
+<span id="cb60-3"><a href="#cb60-3"></a>    <span class="kw">if</span><span class="ot">(</span> <span class="co">/* condition 2 */</span> <span class="ot">)</span> {</span>
+<span id="cb60-4"><a href="#cb60-4"></a></span>
+<span id="cb60-5"><a href="#cb60-5"></a>        <span class="co">/* execute when condition 1 and 2 evaluate to true */</span></span>
+<span id="cb60-6"><a href="#cb60-6"></a>    }</span>
+<span id="cb60-7"><a href="#cb60-7"></a>    <span class="kw">else</span> {</span>
+<span id="cb60-8"><a href="#cb60-8"></a></span>
+<span id="cb60-9"><a href="#cb60-9"></a>        <span class="co">/* execute when conditions 1 evalutes to true and condition 2 to false */</span></span>
+<span id="cb60-10"><a href="#cb60-10"></a>    }</span>
+<span id="cb60-11"><a href="#cb60-11"></a>}</span>
+<span id="cb60-12"><a href="#cb60-12"></a><span class="kw">else</span> {</span>
+<span id="cb60-13"><a href="#cb60-13"></a></span>
+<span id="cb60-14"><a href="#cb60-14"></a>    <span class="co">/* execute when condition 1 evaluates to false*/</span></span>
+<span id="cb60-15"><a href="#cb60-15"></a>}</span></code></pre></div>
 <h3 id="comparison-operators">Comparison operators</h3>
 <table>
 <colgroup>
@@ -1276,21 +1276,21 @@ bool(false)
 <p>Loops enable you to repeat a block of code until a condition is met.</p>
 <h3 id="while">While</h3>
 <p>This construct will repeat until the defined condition evaluates to false:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true"></a><span class="kw">while</span><span class="ot">(</span> <span class="co">/* &lt;condition&gt; */</span> <span class="ot">)</span> {</span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true"></a></span>
-<span id="cb67-3"><a href="#cb67-3" aria-hidden="true"></a>    <span class="co">/* execute this block */</span></span>
-<span id="cb67-4"><a href="#cb67-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb67-1"><a href="#cb67-1"></a><span class="kw">while</span><span class="ot">(</span> <span class="co">/* &lt;condition&gt; */</span> <span class="ot">)</span> {</span>
+<span id="cb67-2"><a href="#cb67-2"></a></span>
+<span id="cb67-3"><a href="#cb67-3"></a>    <span class="co">/* execute this block */</span></span>
+<span id="cb67-4"><a href="#cb67-4"></a>}</span></code></pre></div>
 <div class="alert alert-warning">
 <strong>Warning:</strong> Incorrectly formatted code can result in an endlessly running script. If this happens, use <code>Ctrl</code>+<code>c</code> on the command line to abort the running script.
 </div>
 <div class="alert alert-danger">
 <p><strong>Danger:</strong> The never ending loop:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true"></a><span class="co"># This will run until interrupted by the user.</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true"></a></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true"></a><span class="kw">while</span><span class="ot">(</span><span class="dv">1</span><span class="ot">)</span> {</span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true"></a></span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&quot;Use `Ctrl`+`c` to abort this loop</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb68-6"><a href="#cb68-6" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb68-1"><a href="#cb68-1"></a><span class="co"># This will run until interrupted by the user.</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a></span>
+<span id="cb68-3"><a href="#cb68-3"></a><span class="kw">while</span><span class="ot">(</span><span class="dv">1</span><span class="ot">)</span> {</span>
+<span id="cb68-4"><a href="#cb68-4"></a></span>
+<span id="cb68-5"><a href="#cb68-5"></a>    <span class="kw">echo</span> <span class="st">&quot;Use `Ctrl`+`c` to abort this loop</span><span class="kw">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb68-6"><a href="#cb68-6"></a>}</span></code></pre></div>
 </div>
 <div class="row">
 <div class="col-md-6">
@@ -1322,20 +1322,20 @@ Countdown finished in 1 iterations
 </div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> The pattern <code>$variable = $variable + 1</code> is used a lot in programming. Therefore shorthand versions of this, and similar operations, are available:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true"></a><span class="kw">$var</span> = <span class="dv">1</span><span class="ot">;</span></span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true"></a></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true"></a><span class="co"># Add or substract by 1:</span></span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true"></a><span class="kw">$var</span>++<span class="ot">;</span> <span class="co">// increment by 1</span></span>
-<span id="cb71-5"><a href="#cb71-5" aria-hidden="true"></a><span class="kw">$var</span>--  <span class="co">// decrement by 1</span></span>
-<span id="cb71-6"><a href="#cb71-6" aria-hidden="true"></a></span>
-<span id="cb71-7"><a href="#cb71-7" aria-hidden="true"></a><span class="co"># Add or substract by n:</span></span>
-<span id="cb71-8"><a href="#cb71-8" aria-hidden="true"></a><span class="co"># $var += n;</span></span>
-<span id="cb71-9"><a href="#cb71-9" aria-hidden="true"></a><span class="co"># $var -= n;</span></span>
-<span id="cb71-10"><a href="#cb71-10" aria-hidden="true"></a></span>
-<span id="cb71-11"><a href="#cb71-11" aria-hidden="true"></a><span class="kw">$var</span> += <span class="dv">3</span><span class="ot">;</span></span>
-<span id="cb71-12"><a href="#cb71-12" aria-hidden="true"></a><span class="kw">$var</span> += <span class="dv">100</span><span class="ot">;</span></span>
-<span id="cb71-13"><a href="#cb71-13" aria-hidden="true"></a><span class="kw">$var</span> -= <span class="dv">42</span><span class="ot">;</span></span>
-<span id="cb71-14"><a href="#cb71-14" aria-hidden="true"></a><span class="kw">$var</span> -= <span class="dv">4</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb71-1"><a href="#cb71-1"></a><span class="kw">$var</span> = <span class="dv">1</span><span class="ot">;</span></span>
+<span id="cb71-2"><a href="#cb71-2"></a></span>
+<span id="cb71-3"><a href="#cb71-3"></a><span class="co"># Add or substract by 1:</span></span>
+<span id="cb71-4"><a href="#cb71-4"></a><span class="kw">$var</span>++<span class="ot">;</span> <span class="co">// increment by 1</span></span>
+<span id="cb71-5"><a href="#cb71-5"></a><span class="kw">$var</span>--  <span class="co">// decrement by 1</span></span>
+<span id="cb71-6"><a href="#cb71-6"></a></span>
+<span id="cb71-7"><a href="#cb71-7"></a><span class="co"># Add or substract by n:</span></span>
+<span id="cb71-8"><a href="#cb71-8"></a><span class="co"># $var += n;</span></span>
+<span id="cb71-9"><a href="#cb71-9"></a><span class="co"># $var -= n;</span></span>
+<span id="cb71-10"><a href="#cb71-10"></a></span>
+<span id="cb71-11"><a href="#cb71-11"></a><span class="kw">$var</span> += <span class="dv">3</span><span class="ot">;</span></span>
+<span id="cb71-12"><a href="#cb71-12"></a><span class="kw">$var</span> += <span class="dv">100</span><span class="ot">;</span></span>
+<span id="cb71-13"><a href="#cb71-13"></a><span class="kw">$var</span> -= <span class="dv">42</span><span class="ot">;</span></span>
+<span id="cb71-14"><a href="#cb71-14"></a><span class="kw">$var</span> -= <span class="dv">4</span><span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="exercise">
 <h4>
@@ -1352,10 +1352,10 @@ Exercise:
 <h3 id="for">For</h3>
 <p>For is similar to while in functionality. It also loops until a certain condition evaluates to <code>false</code>. The main difference is the boilerplate required to construct the loop.</p>
 <p>The <code>for</code>-construct forces you to define the counter variable and the increments right in the construct.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true"></a><span class="kw">for</span><span class="ot">(</span> &lt;init counter&gt;<span class="ot">;</span> &lt;condition&gt;<span class="ot">;</span> &lt;increment counter&gt; <span class="ot">)</span> {</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true"></a></span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true"></a>    <span class="co">/* execute this block */</span></span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb72-1"><a href="#cb72-1"></a><span class="kw">for</span><span class="ot">(</span> &lt;init counter&gt;<span class="ot">;</span> &lt;condition&gt;<span class="ot">;</span> &lt;increment counter&gt; <span class="ot">)</span> {</span>
+<span id="cb72-2"><a href="#cb72-2"></a></span>
+<span id="cb72-3"><a href="#cb72-3"></a>    <span class="co">/* execute this block */</span></span>
+<span id="cb72-4"><a href="#cb72-4"></a>}</span></code></pre></div>
 <p>Notice the semi-colons <code>;</code> between each of the <code>for</code>-parts!</p>
 <div class="row">
 <div class="col-md-6">
@@ -1442,10 +1442,10 @@ Exercise:
 <h3 id="foreach">Foreach</h3>
 <p>The for and the while construct have their limitations regarding arrays. What if we have an array with custom keys (not a sequential list of integers…)?</p>
 <p>We can solve this problem with the <code>foreach</code> construct. This construct is specifically designed to iterate over array items.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true"></a><span class="kw">foreach</span><span class="ot">(</span> &lt;<span class="kw">array</span>&gt; <span class="kw">as</span> <span class="ot">[</span>&lt;<span class="fu">key</span>-placeholder&gt; =&gt;<span class="ot">]</span> &lt;value-placeholder&gt;<span class="ot">)</span> {</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true"></a></span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true"></a>    <span class="co">/* use key and value here*/</span></span>
-<span id="cb77-4"><a href="#cb77-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb77-1"><a href="#cb77-1"></a><span class="kw">foreach</span><span class="ot">(</span> &lt;<span class="kw">array</span>&gt; <span class="kw">as</span> <span class="ot">[</span>&lt;<span class="fu">key</span>-placeholder&gt; =&gt;<span class="ot">]</span> &lt;value-placeholder&gt;<span class="ot">)</span> {</span>
+<span id="cb77-2"><a href="#cb77-2"></a></span>
+<span id="cb77-3"><a href="#cb77-3"></a>    <span class="co">/* use key and value here*/</span></span>
+<span id="cb77-4"><a href="#cb77-4"></a>}</span></code></pre></div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> The <code>key-placeholder =&gt;</code> part is placed into square brackets to indicate that this part of the construct is optional. The part can be omitted when we have no need of the key in the accompanying block but are only interested in the values…</p>
 </div>
@@ -2023,12 +2023,12 @@ Numbers from smallest to largest:
 Exercise:
 </h4>
 <p>Create a script which stores the keys of an array as values of another array. (Extract the keys from an array)</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
-<span id="cb120-2"><a href="#cb120-2" aria-hidden="true"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb120-3"><a href="#cb120-3" aria-hidden="true"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb120-4"><a href="#cb120-4" aria-hidden="true"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb120-5"><a href="#cb120-5" aria-hidden="true"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb120-6"><a href="#cb120-6" aria-hidden="true"></a><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb120-1"><a href="#cb120-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
+<span id="cb120-2"><a href="#cb120-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb120-3"><a href="#cb120-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb120-4"><a href="#cb120-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb120-5"><a href="#cb120-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb120-6"><a href="#cb120-6"></a><span class="ot">);</span></span></code></pre></div>
 <div class="sourceCode" id="cb121"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true"></a><span class="ex">php</span> array-keys.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (
@@ -2050,12 +2050,12 @@ Exercise:
 <li>Create a script which reverses an array.</li>
 <li>Create a script which reverses an array and preserves the keys</li>
 </ul>
-<div class="sourceCode" id="cb123"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
-<span id="cb123-2"><a href="#cb123-2" aria-hidden="true"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb123-3"><a href="#cb123-3" aria-hidden="true"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb123-4"><a href="#cb123-4" aria-hidden="true"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb123-5"><a href="#cb123-5" aria-hidden="true"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb123-6"><a href="#cb123-6" aria-hidden="true"></a><span class="ot">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb123-1"><a href="#cb123-1"></a><span class="kw">$array</span> = <span class="kw">array</span><span class="ot">(</span></span>
+<span id="cb123-2"><a href="#cb123-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb123-3"><a href="#cb123-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb123-4"><a href="#cb123-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb123-5"><a href="#cb123-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb123-6"><a href="#cb123-6"></a><span class="ot">);</span></span></code></pre></div>
 <div class="sourceCode" id="cb124"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true"></a><span class="ex">php</span> array-reverse.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (

@@ -22,7 +22,7 @@ As mentioned we can define our own functions.
 
 Syntax:
 
-```php
+```{.php .numberLines}
 function <name> ( <arguments> ) {
 
     /* function code here */
@@ -31,7 +31,7 @@ function <name> ( <arguments> ) {
 
 Example: function without arguments
 
-```php
+```{.php .numberLines}
 function greet() {
     echo "Hello!\n";
 }
@@ -42,7 +42,7 @@ greet(); // Hello!
 
 Example: function with arguments
 
-```php
+```{.php .numberLines}
 function greet( $name ) {
     echo "Hello $name!\n";
 }
@@ -61,7 +61,7 @@ be used instead.
 
 Example: function with arguments
 
-```php
+```{.php .numberLines}
 function greet( $name = 'anonymous' ) {
     echo "Hello $name!\n";
 }
@@ -73,7 +73,7 @@ greet(); // Hello anonymous
 
 Multiple arguments can be passed, separated by comma's `,`.
 
-```php
+```{.php .numberLines}
 function greet_both( $first, $second = '' ) {
 
     echo "Hello $first";
@@ -93,7 +93,7 @@ greet_both('sam');
 
 The m4_phpfunc(return) keyword must be used to return a value from an array:
 
-```php
+```{.php .numberLines}
 function fn() {
     return "Hello World";
 }
@@ -107,7 +107,7 @@ executed...
 
 Example:
 
-```php
+```{.php .numberLines}
 function fn() {
 
     if( true ) {
@@ -141,7 +141,7 @@ Create a function which checks if a number is:
 * even
 * and smaller then 100
 
-```php
+```{.php .numberLines}
 if( check_number( $nr ) ) { echo "number ($nr) passed tests"; }
 else { echo "number ($nr) failed tests"; }
 ```
@@ -159,7 +159,7 @@ Create a barplot: 25%, 80%, 15%.
 
 Abstract the bars away in a function.
 
-```php
+```{.php .numberLines}
 print_bar('25%');
 print_bar('80%');
 print_bar('15%');
@@ -175,7 +175,7 @@ Create a function for each arithmetic operator: `+`, `-`, `x`, `/`.
 The function should accept an array of values and apply the operations in sequence:
 
 Example:
-```php
+```{.php .numberLines}
 plus([1,2,3, 4]); // -> 10
 subtract([10,5,1]); // -> ( 10 - 5 ) - 1
 divide([100, 10, 5]) // -> ( 100 / 10) / 5
