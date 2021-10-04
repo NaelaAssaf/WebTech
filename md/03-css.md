@@ -210,7 +210,7 @@ selector1 > selector2 {}
 
 The `>` symbol between two selectors indicates an direct parent -> child
 relationship. By this we mean the second element must be an immediate child of
-the first selector. No other tags may warp the child element.
+the first selector. No other tags may wrap the child element.
 
 ```{.html .numberLines}
 <parent>
@@ -327,8 +327,8 @@ An element can be given a border:
 ```css
 div {
 
-    background: solid red 1px;
-    background: dashed #bbb 1px;
+    border: solid red 1px;
+    border: dashed #bbb 1px;
 }
 ```
 
