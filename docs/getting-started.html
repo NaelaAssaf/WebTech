@@ -104,6 +104,7 @@
             <ul>
             <li><a href="getting-started.html#get-local-copy-of-this-site.">Get local copy of this site.</a></li>
             <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</a></li>
+            <li><a href="getting-started.html#editors">Editors</a></li>
             </ul></li>
             </ul>
             <ul>
@@ -269,6 +270,66 @@
 ├── cursus
 ├── exercises
 └── solutions-and-examples</code></pre>
+<h2 id="editors">Editors</h2>
+<h3 id="gui-editors-present-in-repositories">GUI editors (present in repositories)</h3>
+<p>These editors come shipped with the default enabled package repository and are only a <code>sudo dnf install...</code> away.</p>
+<h4 id="gedit">Gedit</h4>
+<p>This is a very basic editor equipped for basic file editing. Installed by default.</p>
+<p>https://wiki.gnome.org/Apps/Gedit</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">sudo</span> dnf install gedit</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># install additional plugins for more &quot;advanced&quot; features linke snippets</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="fu">sudo</span> dnf install gedit-plugins</span></code></pre></div>
+<h4 id="geany">Geany</h4>
+<p>This is a very little more advanced editor equipped for simple programming.</p>
+<p>https://www.geany.org/</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">sudo</span> dnf install geany</span></code></pre></div>
+<p>Search dnf for additional plugins and install them:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">sudo</span> dnf search geany-plugins</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co"># Example install spellcheck</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="fu">sudo</span>  dnf install geany-plugins-spellcheck</span></code></pre></div>
+<h4 id="gnome-builder">Gnome builder</h4>
+<p>Gnome builder is a full featured <em>Integrated Development Environment</em> (IDE) with advanced features.</p>
+<p>https://wiki.gnome.org/Apps/Builder</p>
+<p>https://builder.readthedocs.io/en/latest/exploring.html</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">sudo</span>  dnf install gnome-builder</span></code></pre></div>
+<h3 id="gui-editors-third-party">GUI editors (third party)</h3>
+<p>Some editors are not present in the default repositories because they do not conform to the Free and Open Source policies Fedora upholds.</p>
+<h4 id="vscode-vscodium">VScode / VSCodium</h4>
+<p>Microsoft publishes a very capable and popular code editor named VSCode: https://code.visualstudio.com/</p>
+<p>There is however no open build of this editor. This is what VSCodium is trying to solve: https://vscodium.com/</p>
+<blockquote>
+<p>When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.</p>
+<p>When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a “clean” build, without the Microsoft customizations, which is by default licensed under the MIT license</p>
+</blockquote>
+<p>Installation:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">sudo</span> tee -a /etc/yum.repos.d/vscodium.repo <span class="op">&lt;&lt; &#39;EOF&#39;</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>[gitlab.com_paulcarroty_vscodium_repo]</span>
+<span id="cb16-3"><a href="#cb16-3"></a>name=gitlab.com_paulcarroty_vscodium_repo</span>
+<span id="cb16-4"><a href="#cb16-4"></a>baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/</span>
+<span id="cb16-5"><a href="#cb16-5"></a>enabled=1</span>
+<span id="cb16-6"><a href="#cb16-6"></a>gpgcheck=1</span>
+<span id="cb16-7"><a href="#cb16-7"></a>repo_gpgcheck=1</span>
+<span id="cb16-8"><a href="#cb16-8"></a>gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg</span>
+<span id="cb16-9"><a href="#cb16-9"></a>metadata_expire=1h</span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="op">EOF</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a><span class="fu">sudo</span> dnf search codium</span>
+<span id="cb16-12"><a href="#cb16-12"></a><span class="fu">sudo</span> dnf install codium.x86_64</span></code></pre></div>
+<h3 id="command-line-editors">Command line editors</h3>
+<p>These are command line editors run from within a terminal. They are most commonly used to edit configuration files and can also be used over SSH.</p>
+<p>With some configuration they can also be used for more advanced editing and code development.</p>
+<h4 id="vim">ViM</h4>
+<p>This is the editor you may be seen during the lessons. It has quite a steep learning curve. Be advised!</p>
+<p>https://www.vim.org/</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">sudo</span> dnf install vim</span></code></pre></div>
+<h4 id="nano">Nano</h4>
+<p>This editor is used during BIT01 Linux to edit config files.</p>
+<p>https://www.nano-editor.org/</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">sudo</span> dnf install nano</span></code></pre></div>
+<h4 id="emacs">Emacs</h4>
+<p>http://www.gnu.org/software/emacs/</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">sudo</span> dnf install emacs</span></code></pre></div>
          <div class="row">
             <footer class="col-md-24">
                <p class="text-center text-muted">
