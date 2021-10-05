@@ -8,7 +8,7 @@ This course requires some software to be installed.
 
 * A web browser: [firefox](https://firefox.com)
 * A text editor: [gedit](https://wiki.gnome.org/Apps/Gedit)
-* [PHP](http://www.php.net)
+* [PHP](https://www.php.net)
 * [GIT](https://www.git-scm.com)
 
 Normally these packages are already installed on the provided VM. If not, they
@@ -127,7 +127,7 @@ only a `sudo dnf install...` away.
 
 This is a very basic editor equipped for basic file editing. Installed by default.
 
-https://wiki.gnome.org/Apps/Gedit
+<https://wiki.gnome.org/Apps/Gedit>
 
 ```{.bash .numberLines}
 sudo dnf install gedit
@@ -140,7 +140,7 @@ sudo dnf install gedit-plugins
 
 This is a very little more advanced editor equipped for simple programming.
 
-https://www.geany.org/
+<https://www.geany.org/>
 
 ```{.bash .numberLines}
 sudo dnf install geany
@@ -160,9 +160,9 @@ sudo  dnf install geany-plugins-spellcheck
 Gnome builder is a full featured _Integrated Development Environment_ (IDE)
 with advanced features.
 
-https://wiki.gnome.org/Apps/Builder
+<https://wiki.gnome.org/Apps/Builder>
 
-https://builder.readthedocs.io/en/latest/exploring.html
+<https://builder.readthedocs.io/en/latest/exploring.html>
 
 ```{.bash .numberLines}
 sudo  dnf install gnome-builder
@@ -175,10 +175,10 @@ Some editors are not present in the default repositories because they do not con
 #### VScode / VSCodium
 
 Microsoft publishes a very capable and popular code editor named VSCode:
-https://code.visualstudio.com/
+<https://code.visualstudio.com/>
 
 There is however no open build of this editor. This is what VSCodium is trying
-to solve: https://vscodium.com/
+to solve: <https://vscodium.com/>
 
 > When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the
 > vscode repository, we lay down a customized product.json that has Microsoft
@@ -220,7 +220,7 @@ code development.
 This is the editor you may be seen during the lessons. It has quite a steep
 learning curve. Be advised!
 
-https://www.vim.org/
+<https://www.vim.org/>
 
 ```{.bash .numberLines}
 sudo dnf install vim
@@ -230,7 +230,7 @@ sudo dnf install vim
 
 This editor is used during BIT01 Linux to edit config files.
 
-https://www.nano-editor.org/
+<https://www.nano-editor.org/>
 
 ```{.bash .numberLines}
 sudo dnf install nano
@@ -238,7 +238,7 @@ sudo dnf install nano
 
 #### Emacs
 
-http://www.gnu.org/software/emacs/
+<http://www.gnu.org/software/emacs/>
 
 ```{.bash .numberLines}
 sudo dnf install emacs
