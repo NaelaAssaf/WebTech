@@ -331,6 +331,20 @@ if( isset( $_POST['submit'] ) ) {
 
 ## Exercises
 
+m4_exercise([[Print a rainbow pyramid, each column should have it's own color
+
+* red
+* orange
+* yellow
+* green
+* blue
+* indigo
+* violet
+
+m4_embed(css/rainbow-pyramid)
+]])
+
+m4_dnl ------------------------------------------------------------------------
 m4_exercise([[
 Create a webpage with a login form:
 
@@ -346,21 +360,6 @@ m4_page(php-and-html/form,250px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
-
-m4_exercise([[Print a rainbow pyramid, each column should have it's own color
-
-* red
-* orange
-* yellow
-* green
-* blue
-* indigo
-* violet
-
-m4_embed(css/rainbow-pyramid)
-]])
-
-m4_dnl ------------------------------------------------------------------------
 
 m4_exercise([[
 Create a login form with a
