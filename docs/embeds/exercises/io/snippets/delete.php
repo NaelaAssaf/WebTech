@@ -5,12 +5,12 @@
    <title>Show - Snippets</title>
 
    <style type="text/css">
-      pre {
+      textarea {
          border-left: solid lightgray 10px;
-         margin: 15px 50px;
          padding: 15px;
+		 width: 90%;
+		 height: 50vh;
       }
-	  .inline-form { display: inline-block;}
    </style>
 
 </head>
@@ -22,13 +22,15 @@
 $errors = [];
 $file_path = null;
 
-if( !isset( $_GET['file']) or empty( $_GET['file'] ) ) {
+$file = $_GET['file'] ?? $_POST['file'] ?? null;
+
+if(empty( $file )){
 
    $errors[] = "ERROR: No snippet name provided in URL. <small>Use format: http://some.url.com/show.php?file=THE-FILE-NAME.EXT</small>";
 }
-elseif( !file_exists( "store/$_GET[file]" ) ) {
+elseif( !file_exists( "store/$file" ) ) {
 
-   $errors[] = "Snippet `$_GET[file]` not found!";
+   $errors[] = "Snippet `$file` not found!";
 }
 
 if( !empty($errors) ): ?>
@@ -51,21 +53,11 @@ if( !empty($errors) ): ?>
 
 <?php else: ?>
 
-   <h2>
-      <small>Contents of snippet</small>
-      `<?=$_GET['file']?>`:
-   </h2>
-   <pre><?= file_get_contents( "store/$_GET[file]" ); ?></pre>
+   <?php unlink("store/$file"); ?>
 
-   <form action="delete.php" method="post" class="inline-form">
-   <input type="hidden" name="file" value="<?= $_GET['file'] ?>">
-	  <input type="submit" name"delete" value="delete">
-   </form>
-   
-   <form action="edit.php" method="get" class="inline-form">
-	  <input type="hidden" name="file" value="<?= $_GET['file']?>">
-	  <input type="submit" name"edit" value="edit">
-   </form>
+   <h3>
+      <small>Deleted: </small> `<?=$file?>`...
+   </h3>
    
 
 <?php endif; ?>
