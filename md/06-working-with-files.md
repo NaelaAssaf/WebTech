@@ -216,7 +216,7 @@ Create a web-page which allows to upload or paste multi-fasta data and:
     - nucleotides are monospaced, 80 characters wide
 * report GC-content per sequence
 
-m4_page(io/format-fasta)
+m4_page(io/format-fasta,420px)
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -235,8 +235,24 @@ Create a web-page which allows to upload or paste multi-fasta data and:
         - C: blue
 * Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, ...)
 
-m4_page(io/color-fasta)
+m4_page(io/color-fasta, 500px)
 ]])
+
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+Create a web-page which allows to upload or paste multi-fasta data and:
+
+* print the sequences:
+    - fasta header is header
+    - (inter)link to fasta blocks
+    - nucleotides are monospaced, 80 characters wide
+    - each nucleotide should have its own color the user can select from a list of options
+* Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, ...)
+
+m4_page(io/color-fasta-select-color, 500px)
+]])
+
 m4_dnl -----------------------------------------------------------------------
 
 m4_exercise([[
@@ -254,7 +270,7 @@ a list of terms.
     an
     ```
 
-m4_page(io/highlight-words)
+m4_page(io/highlight-words,500px)
 ]])
 
 
