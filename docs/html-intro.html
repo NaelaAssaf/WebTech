@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2021-10-26" />
+        <meta name="date" content="2022-09-19" />
    
    
    <title>HTML basics - BIT02 Web Technologies</title>
@@ -17,6 +17,7 @@
          pre > code.sourceCode { white-space: pre; position: relative; }
          pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
          pre > code.sourceCode > span:empty { height: 1.2em; }
+         .sourceCode { overflow: visible; }
          code.sourceCode > span { color: inherit; text-decoration: inherit; }
          div.sourceCode { margin: 1em 0; }
          pre.sourceCode { margin: 0; }
@@ -232,12 +233,12 @@
 <p>For example the <code>a</code>-tag converts a piece of text into a clickable link.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;a&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 <p>The <code>href</code>-attribute defines where the link should point to:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;http://go-here-when-clicked.com&quot;</span><span class="kw">&gt;</span>My text to click<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 <p>Attributes are also used to modify the appearance of a tag. Later in this course we’ll see more detailed examples of this.</p>
 <h2 id="a-valid-html-document">A valid HTML document</h2>
 <p>A valid HTML5 document requires a bit of boilerplate:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a>    <span class="co">&lt;!-- Your webpages metadata --&gt;</span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="kw">&lt;/head&gt;</span></span>
@@ -263,14 +264,14 @@
 <h4 id="raw-style">Raw style</h4>
 <p>The <a href="http://www.w3schools.com/tags/tag_style.asp" class="w3c-ref"><code>style</code></a>-tag allows to include raw <abbr title="Cascading Style Sheets">CSS</abbr> rules in the documents</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="kw">&lt;style</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>        <span class="co">/* style information here */</span></span>
 <span id="cb8-4"><a href="#cb8-4"></a>    <span class="kw">&lt;/style&gt;</span></span>
 <span id="cb8-5"><a href="#cb8-5"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <h4 id="external-style-sheets">External style sheets</h4>
 <p>The <a href="http://www.w3schools.com/tags/tag_link.asp" class="w3c-ref"><code>link</code></a>-tag allows to external style sheets into the document. <small> (Do not confuse this tag with the <a href="http://www.w3schools.com/tags/tag_a.asp" class="w3c-ref"><code>a</code></a>-tag…). </small></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/link/to/file.css&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="kw">&lt;link</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/link/to/file.css&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>We will only ever include <abbr title="Cascading Style Sheets">CSS</abbr>-files to style our web-pages. The provided attributes in the example are required to include a <abbr title="Cascading Style Sheets">CSS</abbr>-file and avoid browser quirks.</p>
 <h2 id="the-document-body">The document body</h2>
@@ -295,7 +296,7 @@ Exercise:
 <div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">gedit</span> hello-world.html</span></code></pre></div>
 <p>With contents:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb12-4"><a href="#cb12-4"></a>    <span class="kw">&lt;title&gt;</span>Hello World<span class="kw">&lt;/title&gt;</span></span>
 <span id="cb12-5"><a href="#cb12-5"></a><span class="kw">&lt;/head&gt;</span></span>
@@ -320,9 +321,9 @@ Exercise:
 <span id="cb14-6"><a href="#cb14-6"></a><span class="kw">&lt;h6&gt;</span>Header 6<span class="kw">&lt;/h6&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/headers</span></p>
-<iframe src="embeds/html-intro/headers.html" class="embed--output" height="300px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/headers</code></em></small> </legend> <iframe src="embeds/html-intro/headers.html" class="embed--output" height="300px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="exercise">
@@ -355,9 +356,9 @@ Exercise:
 <span id="cb15-8"><a href="#cb15-8"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/p-tag</span></p>
-<iframe src="embeds/html-intro/p-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/p-tag</code></em></small> </legend> <iframe src="embeds/html-intro/p-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="generic-container-div">Generic container <code>div</code></h3>
@@ -376,9 +377,9 @@ Exercise:
 <span id="cb16-8"><a href="#cb16-8"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/div-tag</span></p>
-<iframe src="embeds/html-intro/div-tag.html" class="embed--output" height="150px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/div-tag</code></em></small> </legend> <iframe src="embeds/html-intro/div-tag.html" class="embed--output" height="150px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="pre-formatted-text-pre">Pre-formatted text: <code>pre</code></h3>
@@ -398,9 +399,9 @@ Exercise:
 <span id="cb17-10"><a href="#cb17-10"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/pre-tag</span></p>
-<iframe src="embeds/html-intro/pre-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/pre-tag</code></em></small> </legend> <iframe src="embeds/html-intro/pre-tag.html" class="embed--output" height="180px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="blockquote-blockquote">Blockquote <code>blockquote</code></h3>
@@ -418,9 +419,9 @@ Exercise:
 <span id="cb18-8"><a href="#cb18-8"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/blockquote-tag</span></p>
-<iframe src="embeds/html-intro/blockquote-tag.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/blockquote-tag</code></em></small> </legend> <iframe src="embeds/html-intro/blockquote-tag.html" class="embed--output" height="200px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="horizontal-line-hr">Horizontal line: <code>hr</code></h3>
@@ -433,9 +434,9 @@ Exercise:
 <span id="cb19-3"><a href="#cb19-3"></a>Content after...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/hr-tag</span></p>
-<iframe src="embeds/html-intro/hr-tag.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/hr-tag</code></em></small> </legend> <iframe src="embeds/html-intro/hr-tag.html" class="embed--output" height="100px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <hr />
@@ -463,12 +464,12 @@ And notice the difference</li>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/a-tag.html">html-intro/a-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/a-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span>Link to google<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;http://google.com&quot;</span><span class="kw">&gt;</span>Link to google<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/a-tag</span></p>
-<iframe src="embeds/html-intro/a-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/a-tag</code></em></small> </legend> <iframe src="embeds/html-intro/a-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="exercise">
@@ -496,9 +497,9 @@ Exercise:
 <span id="cb21-4"><a href="#cb21-4"></a>line...<span class="kw">&lt;br&gt;&lt;br&gt;</span>Cool right?</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/br-tag</span></p>
-<iframe src="embeds/html-intro/br-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/br-tag</code></em></small> </legend> <iframe src="embeds/html-intro/br-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="inline-preformat-code">Inline preformat: <code>code</code></h3>
@@ -509,9 +510,9 @@ Exercise:
 <div class="sourceCode" id="cb22"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1"></a>This is <span class="kw">&lt;code&gt;</span>preformatted text<span class="kw">&lt;/code&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/code-tag</span></p>
-<iframe src="embeds/html-intro/code-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/code-tag</code></em></small> </legend> <iframe src="embeds/html-intro/code-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="emphasise-text-em">Emphasise text: <code>em</code></h3>
@@ -522,9 +523,9 @@ Exercise:
 <div class="sourceCode" id="cb23"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1"></a>This is <span class="kw">&lt;em&gt;</span>emphasised<span class="kw">&lt;/em&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/em-tag</span></p>
-<iframe src="embeds/html-intro/em-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/em-tag</code></em></small> </legend> <iframe src="embeds/html-intro/em-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="small-text-small">Small text: <code>small</code></h3>
@@ -535,9 +536,9 @@ Exercise:
 <div class="sourceCode" id="cb24"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1"></a>This is <span class="kw">&lt;small&gt;</span>small<span class="kw">&lt;/small&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/small-tag</span></p>
-<iframe src="embeds/html-intro/small-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/small-tag</code></em></small> </legend> <iframe src="embeds/html-intro/small-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="inline-wrap-text-span">Inline wrap text: <code>span</code></h3>
@@ -548,9 +549,9 @@ Exercise:
 <div class="sourceCode" id="cb25"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1"></a>This is <span class="kw">&lt;span&gt;</span>span<span class="kw">&lt;/span&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/span-tag</span></p>
-<iframe src="embeds/html-intro/span-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/span-tag</code></em></small> </legend> <iframe src="embeds/html-intro/span-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="strike-text-strike">Strike text: <code>strike</code></h3>
@@ -561,9 +562,9 @@ Exercise:
 <div class="sourceCode" id="cb26"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb26-1"><a href="#cb26-1"></a>This is <span class="kw">&lt;strike&gt;</span>strike<span class="kw">&lt;/strike&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/strike-tag</span></p>
-<iframe src="embeds/html-intro/strike-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/strike-tag</code></em></small> </legend> <iframe src="embeds/html-intro/strike-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="bold-text-strong">Bold text: <code>strong</code></h3>
@@ -574,9 +575,9 @@ Exercise:
 <div class="sourceCode" id="cb27"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1"></a>This is <span class="kw">&lt;strong&gt;</span>strong<span class="kw">&lt;/strong&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/strong-tag</span></p>
-<iframe src="embeds/html-intro/strong-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/strong-tag</code></em></small> </legend> <iframe src="embeds/html-intro/strong-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="inline-quote-text-q">Inline quote text: <code>q</code></h3>
@@ -587,9 +588,9 @@ Exercise:
 <div class="sourceCode" id="cb28"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb28-1"><a href="#cb28-1"></a>This is <span class="kw">&lt;q&gt;</span>quote<span class="kw">&lt;/q&gt;</span> inline...</span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/quote-tag</span></p>
-<iframe src="embeds/html-intro/quote-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/quote-tag</code></em></small> </legend> <iframe src="embeds/html-intro/quote-tag.html" class="embed--output" height="50px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h3 id="image-img">Image <code>img</code></h3>
@@ -597,7 +598,7 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/img-tag.html">html-intro/img-tag</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/img-tag.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;/assets/img/php-elephant.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A local location&quot;</span><span class="ot"> height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;/assets/img/php-elephant.png&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;A local location&quot;</span> <span class="er">height</span><span class="ot">=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a></span>
 <span id="cb29-3"><a href="#cb29-3"></a><span class="kw">&lt;img</span></span>
 <span id="cb29-4"><a href="#cb29-4"></a><span class="ot">   src=</span><span class="st">&quot;https://raw.githubusercontent.com/asoete/howest-webtechnology/master/docs/assets/img/php-elephant.png&quot;</span></span>
@@ -605,9 +606,9 @@ Exercise:
 <span id="cb29-6"><a href="#cb29-6"></a><span class="ot">   height=</span><span class="st">&quot;100px&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/img-tag</span></p>
-<iframe src="embeds/html-intro/img-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/img-tag</code></em></small> </legend> <iframe src="embeds/html-intro/img-tag.html" class="embed--output" height="125px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="exercise">
@@ -659,9 +660,9 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 <span id="cb30-4"><a href="#cb30-4"></a><span class="kw">&lt;/fieldset&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/fieldset</span></p>
-<iframe src="embeds/html-intro/fieldset.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/fieldset</code></em></small> </legend> <iframe src="embeds/html-intro/fieldset.html" class="embed--output" height="100px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <p>This container is often used to group related from items together.</p>
@@ -678,9 +679,9 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 <span id="cb31-5"><a href="#cb31-5"></a><span class="kw">&lt;/ul&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/list-unordered</span></p>
-<iframe src="embeds/html-intro/list-unordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/list-unordered</code></em></small> </legend> <iframe src="embeds/html-intro/list-unordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h4 id="ordered-lists-ol">Ordered lists <code>ol</code></h4>
@@ -694,9 +695,9 @@ It is used to dynamically generate <abbr title="HyperText Markup Language">HTML<
 <span id="cb32-5"><a href="#cb32-5"></a><span class="kw">&lt;/ol&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/list-ordered</span></p>
-<iframe src="embeds/html-intro/list-ordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/list-ordered</code></em></small> </legend> <iframe src="embeds/html-intro/list-ordered.html" class="embed--output" height="100px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="exercise">
@@ -741,9 +742,9 @@ Exercise:
 <span id="cb33-18"><a href="#cb33-18"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/simple-table</span></p>
-<iframe src="embeds/html-intro/simple-table.html" class="embed--output" height="120px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/simple-table</code></em></small> </legend> <iframe src="embeds/html-intro/simple-table.html" class="embed--output" height="120px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="exercise">
@@ -770,35 +771,35 @@ Exercise:
 <h3 id="class">Class</h3>
 <p>The class attribute holds a space separated list class-names. The element is member of all the classes specified in the attribute. These classes can be used to style a group of elements the same way.</p>
 <p>For example all the elements which are member of the same class (have the same class-name in the class attribute) should have the text colour set to red…</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;class1&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;class1 class-two&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <h3 id="id">Id</h3>
 <p>The <code>id</code>-attribute lets you assign a unique identifier to an element.</p>
 <p>This identifier should be unique for the whole page and thus occur only once.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;unique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;unique-identifier&quot;</span> <span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p><small> If the id is specified in the URL prefixed by a pound symbol (<code>#</code>), the element will be automatically scrolled into view.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb36-1"><a href="#cb36-1"></a><span class="co">&lt;!-- http://WWW.example.com/script.php#chapter --&gt;</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a></span>
-<span id="cb36-3"><a href="#cb36-3"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;chapter1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;chapter1&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb36-4"><a href="#cb36-4"></a>Scroll into view...</span>
 <span id="cb36-5"><a href="#cb36-5"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p></small></p>
 <h3 id="style-1">Style</h3>
 <p>The style attribute can be used to apply <abbr title="Cascading Style Sheets">CSS</abbr>-rules to a single element.</p>
 <p>Generally speaking you should not set the styles via this tag. A dedicated style block in the <code>head</code> of page or an external style sheet are better, more scalable, options. It can however come in handy in this introduction to <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;background: red; color: green;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>See <a href="html-and-css.html"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></a> for more info about styling an element.</p>
 <h3 id="title-1">Title</h3>
 <p>The title attribute lets you assign a title to an element. This title will be displayed as a tooltip when hovering with the mouse over this element.</p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/html-intro/title-attribute.html">html-intro/title-attribute</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/html-intro/title-attribute.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb38-1"><a href="#cb38-1"></a><span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;Some title for this element&quot;</span><span class="kw">&gt;</span>Hover over me...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb38-1"><a href="#cb38-1"></a><span class="kw">&lt;p</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Some title for this element&quot;</span><span class="kw">&gt;</span>Hover over me...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of html-intro/title-attribute</span></p>
-<iframe src="embeds/html-intro/title-attribute.html" class="embed--output" height="40px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>html-intro/title-attribute</code></em></small> </legend> <iframe src="embeds/html-intro/title-attribute.html" class="embed--output" height="40px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h2 id="exercises">Exercises</h2>
@@ -807,8 +808,9 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a <abbr title="HyperText Markup Language">HTML</abbr> page resembling your CV.</p>
-<iframe src="embeds/exercises/html/cv.html" class="embed--output" height="250px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/html/cv.html" class="embed--output" height="250px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/html/cv.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/cv.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -819,8 +821,9 @@ Exercise:
 </h4>
 <p>Add a table of contents (TOC) to the previous page (cv.html).</p>
 <p>The TOC should contain all headers, clicking a header should take the user to this header/section</p>
-<iframe src="embeds/exercises/html/cv-with-toc.html" class="embed--output" height="250px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/html/cv-with-toc.html" class="embed--output" height="250px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/html/cv-with-toc.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/cv-with-toc.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -830,8 +833,9 @@ Exercise:
 Exercise:
 </h4>
 <p>Re-create the <abbr title="HyperText Markup Language">HTML</abbr> skeleton of a wiki page: <a href="https://en.wikipedia.org/wiki/FASTA_format" class="uri">https://en.wikipedia.org/wiki/FASTA_format</a></p>
-<iframe src="embeds/exercises/html/wiki-fasta_format.html" class="embed--output" height frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/html/wiki-fasta_format.html" class="embed--output" height="" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/html/wiki-fasta_format.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/html/wiki-fasta_format.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -841,7 +845,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2021-10-26
+                  at 2022-09-19
                </p>
             </footer>
          </div>

@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2021-10-26" />
+        <meta name="date" content="2022-09-19" />
    
    
    <title>Introduction - BIT02 Web Technologies</title>
@@ -17,6 +17,7 @@
          pre > code.sourceCode { white-space: pre; position: relative; }
          pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
          pre > code.sourceCode > span:empty { height: 1.2em; }
+         .sourceCode { overflow: visible; }
          code.sourceCode > span { color: inherit; text-decoration: inherit; }
          div.sourceCode { margin: 1em 0; }
          pre.sourceCode { margin: 0; }
@@ -225,21 +226,21 @@
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="kw">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">if</span><span class="ot">(</span> <span class="fu">array_key_exists</span><span class="ot">(</span> <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="kw">$_POST</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="cf">if</span>( <span class="fu">array_key_exists</span>( <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="va">$_POST</span> ) ) {</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">unset</span><span class="ot">(</span><span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;KEY&#39;</span><span class="ot">]);</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">unset</span>(<span class="va">$_POST</span>[<span class="st">&#39;KEY&#39;</span>])<span class="ot">;</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>}</span>
 <span id="cb1-9"><a href="#cb1-9"></a></span>
 <span id="cb1-10"><a href="#cb1-10"></a><span class="kw">?&gt;</span></span>
 <span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a>&lt;p&gt;</span>
-<span id="cb1-13"><a href="#cb1-13"></a>   Markup is interpreted by the browser <span class="kw">and</span> formatted accordingly..</span>
-<span id="cb1-14"><a href="#cb1-14"></a>&lt;/p&gt;</span></code></pre></div>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>   <span class="cn">M</span>arkup is interpreted by the browser <span class="op">and</span> formatted accordingly<span class="op">..</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="op">&lt;/</span>p<span class="op">&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of introduction/embed_example</span></p>
-<iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>introduction/embed_example</code></em></small> </legend> <iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
          <div class="row">
@@ -247,7 +248,7 @@
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2021-10-26
+                  at 2022-09-19
                </p>
             </footer>
          </div>

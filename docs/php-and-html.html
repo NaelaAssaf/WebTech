@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2021-10-26" />
+        <meta name="date" content="2022-09-19" />
    
    
    <title>PHP and HTML - BIT02 Web Technologies</title>
@@ -17,6 +17,7 @@
          pre > code.sourceCode { white-space: pre; position: relative; }
          pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
          pre > code.sourceCode > span:empty { height: 1.2em; }
+         .sourceCode { overflow: visible; }
          code.sourceCode > span { color: inherit; text-decoration: inherit; }
          div.sourceCode { margin: 1em 0; }
          pre.sourceCode { margin: 0; }
@@ -203,9 +204,9 @@
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> has a built in web-server. This means that no external server like Apache or Nginx is required to start a web-site and interlink the pages on this site.</p>
 <h3 id="starting-a-server">Starting a server</h3>
 <p>The server is started with one command on the command line:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">php</span> -S localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> [-t /path/to/folder]</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">php</span> <span class="at">-S</span> localhost:<span class="op">&lt;</span>port<span class="op">&gt;</span> [-t /path/to/folder]</span></code></pre></div>
 <p>Example:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">php</span> -S localhost:8080</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">php</span> <span class="at">-S</span> localhost:8080</span></code></pre></div>
 <p>This previous command will start a web-server in the current working directory and will be accessible at the URL: <code>http://localhost:8080</code>.</p>
 <p>You can pick any port, as long as it is between 1024 and 65535. By convention <code>8000</code> or <code>8080</code> are picked because of the resemblance with the official HTTP-port: <code>80</code>.</p>
 <p>As mentioned before, by default the server will start in the current working directory. If you wish the root of the site to be another directory, specify it via the <code>-t</code> option.</p>
@@ -217,7 +218,7 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mkdir</span> my-website</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="bu">cd</span> my-website</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="bu">echo</span> <span class="st">&quot;Hello world&quot;</span> <span class="op">&gt;</span> index.html</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="ex">php</span> -S localhost:8080</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="ex">php</span> <span class="at">-S</span> localhost:8080</span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="ex">firefox</span> localhost:8080</span></code></pre></div>
 <p>You should be greeted with <code>Hello world</code>…</p>
 <p>Because the web-pages are served via a <abbr title="Hypertext Preprocessor">PHP</abbr> server, all <abbr title="Hypertext Preprocessor">PHP</abbr> files (ending in <code>.php</code>) will be interpreted by the webserver. This allows us to generate the <abbr title="HyperText Markup Language">HTML</abbr> content dynamically.</p>
@@ -227,8 +228,9 @@
 Exercise:
 </h4>
 <p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that prints <code>hello world</code> when served by a web-server</p>
-<iframe src="embeds/exercises/php-and-html/hello-world.html" class="embed--output" height="70px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/php-and-html/hello-world.html" class="embed--output" height="70px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/php-and-html/hello-world.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/hello-world.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -238,8 +240,9 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a <abbr title="Hypertext Preprocessor">PHP</abbr> page that resembles your CV.</p>
-<iframe src="embeds/exercises/php-and-html/cv.html" class="embed--output" height="250px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/php-and-html/cv.html" class="embed--output" height="250px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/php-and-html/cv.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/cv.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -253,8 +256,9 @@ Exercise:
 <li>an ordered list of three your three favourite dishes (dynamically)</li>
 <li>a list of (three) hobbies</li>
 </ul>
-<iframe src="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" class="embed--output" height="180px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" class="embed--output" height="180px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/list-hobbys-and-dishes.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -282,8 +286,9 @@ Exercise:
 <li>list</li>
 </ul></li>
 </ul>
-<iframe src="embeds/exercises/php-and-html/inter-link-pages/home.html" class="embed--output" height="250px" frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/php-and-html/inter-link-pages/home.html" class="embed--output" height="250px" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/php-and-html/inter-link-pages/home.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -291,9 +296,9 @@ Exercise:
 <h2 id="include-require">Include / Require</h2>
 <p><abbr title="Hypertext Preprocessor">PHP</abbr> allows us to include one file into another. This is done via the <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=include" target="_blank"><code>include</code></a> or <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=require" target="_blank"><code>require</code></a>;</p>
 <p>The difference between the two is that <code>require</code> will fail if the specified file can’t be included where <code>include</code> will merely warn about the failed inclusion.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">include</span><span class="ot">(</span><span class="st">&#39;path/to/file.php&#39;</span><span class="ot">);</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">include</span>(<span class="st">&#39;path/to/file.php&#39;</span>)<span class="ot">;</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">require</span><span class="ot">(</span><span class="st">&#39;path/to/another-file.php&#39;</span><span class="ot">);</span></span></code></pre></div>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">require</span>(<span class="st">&#39;path/to/another-file.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 <div class="exercise">
 <h4>
 Exercise:
@@ -304,7 +309,7 @@ Exercise:
 <p>Forms can be used to send data from the web-page to the server. This data can be read and processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <p>A form is composed out of a form-tag and data tags.</p>
 <h3 id="form-tag">Form tag</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">action&gt;&quot;</span><span class="ot"> method=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">method&gt;&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">action&gt;&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">method&gt;&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>    <span class="co">&lt;!-- content --&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
 <p>The form tag has two required attributes:</p>
@@ -315,8 +320,8 @@ Exercise:
 <h4 id="action">Action</h4>
 <p>This attribute specifies the page the data should be sent to.</p>
 <p>To send the data back to the same page, specify: <code>#</code> or the URL of the current page.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;http://server.com/script-handle-data,php&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;http://server.com/script-handle-data,php&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <h4 id="method">Method</h4>
 <p>The method defines how the data should be send to the server.</p>
 <p>There are two main methods:</p>
@@ -338,13 +343,13 @@ Exercise:
 <p><code>POST</code> The post method comes in where <code>GET</code> falls short.</p>
 <p>The data is sent in the body of the HTTP request and is this invisible and not limited by size.</p>
 <p>This method is most often used to send data from forms back to the server</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;get&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;#&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;get&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;#&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <h3 id="data-tags">Data tags</h3>
 <p>Other special tags are used to present or request data from the user.</p>
 <p>In order to send the data, contained in the elements, back to the server, the name attribute must be set on the elements. This name can than be used on the backend to retrieve the values entered by the user.</p>
 <h4 id="input">Input</h4>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;&quot;</span><span class="ot"> name=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <p>The input tag encompasses a lot of <em>“data types”</em>. The <code>type</code>-attribute can be used to modify the behaviour of this tag.</p>
 <p>Types:</p>
 <ul>
@@ -362,39 +367,39 @@ Exercise:
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/input.html">php-and-html/input</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/input.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">&lt;ul&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;email&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello.world@mail.com&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-email&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;file&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-file&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;hidden&quot;</span><span class="ot"> value=</span><span class="st">&quot;Don&#39;t show this input to the user&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-hidden&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;42&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-number&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;password&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-password&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> checked name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-10"><a href="#cb10-10"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-submit&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a>   <span class="kw">&lt;li&gt;&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;hello world&quot;</span><span class="ot"> name=</span><span class="st">&quot;input-type-text&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;checkbox&quot;</span> <span class="er">checked</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;checkbox&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-checkbox&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;email&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;hello.world@mail.com&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-email&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;file&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;Hello World&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-file&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;hidden&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;Don&#39;t show this input to the user&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-hidden&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;number&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;42&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-number&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;password&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;hello world&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-password&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;radio&quot;</span> <span class="er">checked</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;radio&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-radio&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;submit&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;hello world&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-submit&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>   <span class="kw">&lt;li&gt;&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;hello world&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;input-type-text&quot;</span><span class="kw">&gt;&lt;/li&gt;</span></span>
 <span id="cb10-13"><a href="#cb10-13"></a><span class="kw">&lt;/ul&gt;</span></span>
 <span id="cb10-14"><a href="#cb10-14"></a></span>
 <span id="cb10-15"><a href="#cb10-15"></a></span>
 <span id="cb10-16"><a href="#cb10-16"></a></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of php-and-html/input</span></p>
-<iframe src="embeds/php-and-html/input.html" class="embed--output" height="330px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>php-and-html/input</code></em></small> </legend> <iframe src="embeds/php-and-html/input.html" class="embed--output" height="330px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <div class="alert alert-info">
 <p><strong>Info:</strong> In order to send files to the server, the form attribute: <code>enctype</code> must be set to <code>multipart/form-data</code></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="ot"> enctype=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;#&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;post&quot;</span> <span class="er">enctype</span><span class="ot">=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="kw">&gt;&lt;/form&gt;</span></span></code></pre></div>
 <p>See later for more details on how to upload files…</p>
 </div>
 <h4 id="select">Select</h4>
 <p>The select tag allows the user to choose options out of a predefined set:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">&lt;select</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb12-5"><a href="#cb12-5"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 <p>As can be seen in the example, a select is composed out of multiple options.</p>
 <p>The default behaviour is that only one option can be selected at once.</p>
@@ -402,62 +407,62 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/select.html">php-and-html/select</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">&lt;select</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb13-5"><a href="#cb13-5"></a><span class="kw">&lt;/select&gt;</span></span>
 <span id="cb13-6"><a href="#cb13-6"></a></span>
 <span id="cb13-7"><a href="#cb13-7"></a><span class="kw">&lt;br&gt;</span></span>
 <span id="cb13-8"><a href="#cb13-8"></a></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a>    <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="kw">&lt;select</span> <span class="er">multiple</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>    <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb13-13"><a href="#cb13-13"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of php-and-html/select</span></p>
-<iframe src="embeds/php-and-html/select.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>php-and-html/select</code></em></small> </legend> <iframe src="embeds/php-and-html/select.html" class="embed--output" height="200px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <p>Sub-group can be created via <code>optgroup</code></p>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/select-groups.html">php-and-html/select-groups</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/select-groups.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">&lt;select</span><span class="ot"> name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">&lt;select</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>   <span class="kw">&lt;optgroup</span> <span class="er">label</span><span class="ot">=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb14-6"><a href="#cb14-6"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-10"><a href="#cb14-10"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>   <span class="kw">&lt;optgroup</span> <span class="er">label</span><span class="ot">=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb14-11"><a href="#cb14-11"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
 <span id="cb14-12"><a href="#cb14-12"></a><span class="kw">&lt;/select&gt;</span></span>
 <span id="cb14-13"><a href="#cb14-13"></a></span>
 <span id="cb14-14"><a href="#cb14-14"></a><span class="kw">&lt;br&gt;</span></span>
 <span id="cb14-15"><a href="#cb14-15"></a></span>
-<span id="cb14-16"><a href="#cb14-16"></a><span class="kw">&lt;select</span><span class="ot"> multiple name=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-17"><a href="#cb14-17"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a>      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="kw">&lt;select</span> <span class="er">multiple</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-backend&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a>   <span class="kw">&lt;optgroup</span> <span class="er">label</span><span class="ot">=</span><span class="st">&quot;numbers&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>Option 1<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Option 2<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a>      <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;3&quot;</span><span class="kw">&gt;</span>Option 3<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb14-21"><a href="#cb14-21"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a>   <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a>         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a>   <span class="kw">&lt;optgroup</span> <span class="er">label</span><span class="ot">=</span><span class="st">&quot;letters&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;a&quot;</span><span class="kw">&gt;</span>Option a<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;b&quot;</span><span class="kw">&gt;</span>Option b<span class="kw">&lt;/option&gt;</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a>         <span class="kw">&lt;option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;c&quot;</span><span class="kw">&gt;</span>Option c<span class="kw">&lt;/option&gt;</span></span>
 <span id="cb14-26"><a href="#cb14-26"></a>   <span class="kw">&lt;/optgroup&gt;</span></span>
 <span id="cb14-27"><a href="#cb14-27"></a><span class="kw">&lt;/select&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of php-and-html/select-groups</span></p>
-<iframe src="embeds/php-and-html/select-groups.html" class="embed--output" height="200px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>php-and-html/select-groups</code></em></small> </legend> <iframe src="embeds/php-and-html/select-groups.html" class="embed--output" height="200px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h4 id="textarea">Textarea</h4>
@@ -465,7 +470,7 @@ Exercise:
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/textarea.html">php-and-html/textarea</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/textarea.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">&lt;textarea</span><span class="ot"> name=</span><span class="st">&quot;name-sent-to-server&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">&lt;textarea</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name-sent-to-server&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a>Write</span>
 <span id="cb15-3"><a href="#cb15-3"></a></span>
 <span id="cb15-4"><a href="#cb15-4"></a>Multiline content</span>
@@ -474,9 +479,9 @@ Exercise:
 <span id="cb15-7"><a href="#cb15-7"></a><span class="kw">&lt;/textarea&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of php-and-html/textarea</span></p>
-<iframe src="embeds/php-and-html/textarea.html" class="embed--output" height="100px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>php-and-html/textarea</code></em></small> </legend> <iframe src="embeds/php-and-html/textarea.html" class="embed--output" height="100px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h4 id="label">Label</h4>
@@ -488,27 +493,27 @@ Exercise:
 <p><span class="embed--srcfile"><a href="embeds/php-and-html/label.html">php-and-html/label</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-and-html/label.php" taret="_blank">src</a></span></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource html php numberLines embed--src"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">&lt;label&gt;</span></span>
 <span id="cb16-2"><a href="#cb16-2"></a>   Name:</span>
-<span id="cb16-3"><a href="#cb16-3"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;jonh Doe&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>   <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;jonh Doe&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb16-4"><a href="#cb16-4"></a><span class="kw">&lt;/label&gt;</span></span>
 <span id="cb16-5"><a href="#cb16-5"></a></span>
 <span id="cb16-6"><a href="#cb16-6"></a><span class="kw">&lt;br&gt;</span></span>
 <span id="cb16-7"><a href="#cb16-7"></a></span>
 <span id="cb16-8"><a href="#cb16-8"></a><span class="kw">&lt;label&gt;</span></span>
 <span id="cb16-9"><a href="#cb16-9"></a>   Age:</span>
-<span id="cb16-10"><a href="#cb16-10"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;21&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a>   <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;21&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb16-11"><a href="#cb16-11"></a><span class="kw">&lt;/label&gt;</span></span>
 <span id="cb16-12"><a href="#cb16-12"></a></span>
 <span id="cb16-13"><a href="#cb16-13"></a><span class="kw">&lt;br&gt;</span></span>
 <span id="cb16-14"><a href="#cb16-14"></a></span>
 <span id="cb16-15"><a href="#cb16-15"></a><span class="kw">&lt;label&gt;</span></span>
 <span id="cb16-16"><a href="#cb16-16"></a>   Loves ice-cream:</span>
-<span id="cb16-17"><a href="#cb16-17"></a>   <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;loves-ice-cream&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-17"><a href="#cb16-17"></a>   <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;checkbox&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;loves-ice-cream&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb16-18"><a href="#cb16-18"></a><span class="kw">&lt;/label&gt;</span></span></code></pre></div>
 </div>
 <div class="col-md-6 iframe-wrapper">
-<p><span class="embed--srcfile">output of php-and-html/label</span></p>
-<iframe src="embeds/php-and-html/label.html" class="embed--output" height="150px" frameborder="0" scrolling="no">
-</iframe>
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>php-and-html/label</code></em></small> </legend> <iframe src="embeds/php-and-html/label.html" class="embed--output" height="150px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
 </div>
 </div>
 <h2 id="php-special-data-arrays">PHP special data arrays</h2>
@@ -521,12 +526,12 @@ Exercise:
 <li><code>$_FILES</code>: Holds all the info about the uploaded files.</li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;#&quot;</span><span class="ot"> method=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> value=</span><span class="st">&quot;Hello World&quot;</span><span class="ot"> name=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> value=</span><span class="st">&quot;21 World&quot;</span><span class="ot"> name=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a>    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;Submit&quot;</span><span class="ot"> name=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource html numberLines"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">&lt;form</span> <span class="er">action</span><span class="ot">=</span><span class="st">&quot;#&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;post&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>    <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;Hello World&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;number&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;21 World&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;age&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;submit&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;Submit&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;submit&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb17-5"><a href="#cb17-5"></a><span class="kw">&lt;/form&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">print_r</span><span class="ot">(</span> <span class="kw">$_POST</span> <span class="ot">);</span></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">print_r</span>( <span class="va">$_POST</span> )<span class="ot">;</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a></span>
 <span id="cb18-3"><a href="#cb18-3"></a><span class="co">/*</span></span>
 <span id="cb18-4"><a href="#cb18-4"></a><span class="co">Array(</span></span>
@@ -537,7 +542,7 @@ Exercise:
 <p>This data can now be processed via <abbr title="Hypertext Preprocessor">PHP</abbr>.</p>
 <p>To test if data was submitted, the value of the <em>submit button</em> can be used.</p>
 <p>In the previous example was the value: <code>submit</code>.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">if</span><span class="ot">(</span> <span class="kw">isset</span><span class="ot">(</span> <span class="kw">$_POST</span><span class="ot">[</span><span class="st">&#39;submit&#39;</span><span class="ot">]</span> <span class="ot">)</span> <span class="ot">)</span> {</span>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb19-1"><a href="#cb19-1"></a><span class="cf">if</span>( <span class="kw">isset</span>( <span class="va">$_POST</span>[<span class="st">&#39;submit&#39;</span>] ) ) {</span>
 <span id="cb19-2"><a href="#cb19-2"></a></span>
 <span id="cb19-3"><a href="#cb19-3"></a>    <span class="co">/* Do stuff with data */</span></span>
 <span id="cb19-4"><a href="#cb19-4"></a>}</span></code></pre></div>
@@ -556,8 +561,9 @@ Exercise:
 <li>indigo</li>
 <li>violet</li>
 </ul>
-<iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height frameborder="0">
-</iframe>
+<fieldset>
+<legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;"> Example Solution: </legend> <iframe src="embeds/exercises/css/rainbow-pyramid.html" class="embed--output" height="" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <p><small> <a href="embeds/exercises/css/rainbow-pyramid.html" target="_blank">Full Screen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/docs/embeds/exercises/css/rainbow-pyramid.html" target="_blank">Solution (github)</a> </small></p>
 </div>
@@ -756,7 +762,7 @@ Exercise:
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2021-10-26
+                  at 2022-09-19
                </p>
             </footer>
          </div>

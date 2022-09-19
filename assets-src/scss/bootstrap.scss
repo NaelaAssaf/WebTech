@@ -41,7 +41,7 @@ $lightgray-bg : #f6f6f6;
 @import "vendor/bootstrap/assets/stylesheets/bootstrap/alerts";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/panels";
 // @import "vendor/bootstrap/assets/stylesheets/bootstrap/badges";
-// @import "vendor/bootstrap/assets/stylesheets/bootstrap/labels";
+@import "vendor/bootstrap/assets/stylesheets/bootstrap/labels";
 
 // ========================================================================== //
 // TOC
@@ -165,7 +165,7 @@ div.sourceCode{
    // padding-bottom: 0;
    // margin-bottom: 0.5em;
    font-size: 0.9em;
-   box-shadow: 2px 2px 8px grey;
+   // box-shadow: 2px 2px 8px grey;
    border-radius: 5px;
 }
 
@@ -203,11 +203,13 @@ div.sourceCode{
 }
 
 .embed--output {
-
-   border: solid lightblue  1px;
-   border-left: solid lightblue  0.5em;
-   box-shadow: 2px 2px 8px grey;
+   margin-left: 1em;
    resize: vertical;
+   // opacity: 0.5;
+
+   &:hover {
+      opacity: 1;
+   }
 }
 
 .run--output {

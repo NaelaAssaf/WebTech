@@ -58,12 +58,16 @@ m4_include($1.php)
 
 </div><div class="col-md-6">
 
+<fieldset>
+   <legend>
 <span class="embed--srcfile">output of $1</span>
+   </legend>
 
 ```{.embed--output style="height:$2;"}
 m4_include(m4_embed_doc($1))
 ```
 
+</fieldset>
 </div></div>
 ]])
 
@@ -80,13 +84,13 @@ m4_include($1.php)
 ```
 
 </div><div class="col-md-6 iframe-wrapper">
-
-<span class="embed--srcfile">output of $1</span>
-
+<fieldset><legend style="opacity: 0.75">
+      <small><em><code>$1</code></em></small>
+</legend>
+m4_dnl <span class="embed--srcfile">output of $1</span>
 m4_dnl <iframe src="embeds/$1.html" class="embed--output" height="$2" frameborder="0" scrolling="no"></iframe>
 <iframe src="embeds/$1.html" class="embed--output" height="$2" frameborder="0" scrolling="no"></iframe>
-
-</div></div>
+</fieldset></div></div>
 ]])
 
 m4_dnl -----------------------------------------------------------------------
@@ -108,7 +112,12 @@ m4_esyscmd([[ cd exercises/$1 && php $2 $3 ]])
 m4_dnl -----------------------------------------------------------------------
 
 m4_define(m4_embed,[[
+<fieldset>
+   <legend class="label label-default" style="font-weight: normal; background-color: #eee; color: #888; font-style: italic;">
+   Example Solution:
+   </legend>
 <iframe src="embeds/exercises/$1.html" class="embed--output" height="$2" frameborder="0"></iframe>
+</fieldset>
 <div class="text-right">
 <small>
 <a href="embeds/exercises/$1.html" target="_blank">Full Screen</a>
