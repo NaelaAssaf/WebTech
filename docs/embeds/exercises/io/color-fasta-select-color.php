@@ -134,6 +134,29 @@
       </div>
 
       <div>
+         <label>
+			<input type="checkbox" name="group_nts" value="10">
+			Group nucleotides in groups of 10.
+			
+         </label>
+      </div>
+
+      <div>
+         <label>
+		<input type="radio" name="err_handling" value="ignore" checked>
+		Ignore invalid NTs
+         </label>
+         <label>
+		<input type="radio" name="err_handling" value="remove">
+		Remove invalid NTs
+         </label>
+         <label>
+		<input type="radio" name="err_handling" value="highlight">
+		Highlight invalid NTs
+         </label>
+      </div>
+
+      <div>
          <input type="submit" name="submit">
       </div>
    </form>
@@ -181,6 +204,8 @@ if( isset($_POST['submit']) ) {
       die("Invalid fasta upload type, should be 'paste' or 'file'");
    }
 
+   $group_nts = isset( $_POST['group_nts'] );
+
    # ------------------------------------------------------------------------- #
    # Parse fasta
 
@@ -204,11 +229,25 @@ if( isset($_POST['submit']) ) {
                $fasta_output[$current_header] .= "\n";
                $fill_line_count = 0;
             }
+	    elseif( $group_nts && $fill_line_count % 10 == 0 && $fill_line_count != 0 ) {
+
+               $fasta_output[$current_header] .= " ";
+	    }
 
             if( !isset( $freq[$current_header][$nt] ) ) {
                $freq[$current_header][$nt] = 0;
             }
-			$color = $colors[$nt];
+
+	    $color = "";
+	    if( isset($colors[$nt]) ) {
+	       $color = $colors[$nt];
+	    }
+	    elseif( $_POST['err_handling'] == 'highlight' ) {
+	       $color = "red";
+	    }
+	    elseif( $_POST['err_handling'] == 'remove' ) {
+	       continue;
+	    }
             $freq[$current_header][$nt]++;
             $tot_len[$current_header]++;
             $fasta_output[$current_header] .= "<span style=\"background: $color;\">$nt</span>";

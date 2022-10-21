@@ -243,12 +243,19 @@ m4_dnl -----------------------------------------------------------------------
 m4_exercise([[
 Create a web-page which allows to upload or paste multi-fasta data and:
 
-* print the sequences:
-    - fasta header is header
-    - (inter)link to fasta blocks
-    - nucleotides are monospaced, 80 characters wide
-    - each nucleotide should have its own color the user can select from a list of options
-* Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, ...)
+* Print the sequences:
+  * fasta header is header
+  * (inter)link to fasta blocks
+  * nucleotides are monospaced, 80 characters wide
+  * each nucleotide should have its own color the user can select from a list of options
+  * add an option (checkbox) indicating the nucleotides should be grouped in groups of 10.
+    (Example: ATGCATCGAT GCATCGATGC ATCGATGCA)
+* Handle invalid nucleotides in one of three ways:
+  * Ingore: do nothing: handle the invalid NT as a valid NT.
+  * Remove: remove the invalid NT from the output
+  * Highlight: highlight the invalid NT in the sequence.
+* Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, …)
+
 
 m4_page(io/color-fasta-select-color, 500px)
 ]])

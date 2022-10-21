@@ -8,7 +8,7 @@
 
         <meta name="author" content="Arne Soete" />
    
-        <meta name="date" content="2022-09-19" />
+        <meta name="date" content="2022-10-21" />
    
    
    <title>Beyond this course - BIT02 Web Technologies</title>
@@ -4711,12 +4711,19 @@ Exercise:
 </h4>
 <p>Create a web-page which allows to upload or paste multi-fasta data and:</p>
 <ul>
-<li>print the sequences:
+<li>Print the sequences:
 <ul>
 <li>fasta header is header</li>
 <li>(inter)link to fasta blocks</li>
 <li>nucleotides are monospaced, 80 characters wide</li>
 <li>each nucleotide should have its own color the user can select from a list of options</li>
+<li>add an option (checkbox) indicating the nucleotides should be grouped in groups of 10. (Example: ATGCATCGAT GCATCGATGC ATCGATGCA)</li>
+</ul></li>
+<li>Handle invalid nucleotides in one of three ways:
+<ul>
+<li>Ingore: do nothing: handle the invalid NT as a valid NT.</li>
+<li>Remove: remove the invalid NT from the output</li>
+<li>Highlight: highlight the invalid NT in the sequence.</li>
 </ul></li>
 <li>Display the nucleotide frequencies in a bar graph. (A: xx%, T: xx%, …)</li>
 </ul>
@@ -5011,7 +5018,7 @@ Symfony is a set of reusable <abbr title="Hypertext Preprocessor">PHP</abbr> com
                <p class="text-center text-muted">
                   Last modified by
                   <a href="mailto:arne.soete@howest.be">Arne Soete</a>
-                  at 2022-09-19
+                  at 2022-10-21
                </p>
             </footer>
          </div>
