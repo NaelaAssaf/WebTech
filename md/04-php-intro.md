@@ -779,6 +779,18 @@ The m4_phpfunc(str_split) function parses a string into individual characters an
 
 m4_embed_php(php-basics/str_split)
 
+[[###]] m4_phpfunc(strtolower)
+
+The m4_phpfunc(strtolower) returns a string with all alphabetic characters converted to lowercase. 
+
+m4_embed_php(php-basics/strtolower)
+
+[[###]] m4_phpfunc(strtoupper)
+
+The m4_phpfunc(strtoupper) returns a string with all alphabetic characters converted to uppercase. 
+
+m4_embed_php(php-basics/strtoupper)
+
 [[###]] m4_phpfunc(explode)
 
 The m4_phpfunc(explode) function parses a string into individual pieces based on a delimiter and returns an array where each item in the array corresponds to a section in the original string separated by the delimiter.
