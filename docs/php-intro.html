@@ -1558,6 +1558,86 @@ Key: `100` has value: `hello`
 </fieldset>
 </div>
 </div>
+<h3 id="flow-control">Flow control</h3>
+<p>Sometimes (based on a condition) you want to skip a loop iteration or stop the loop prematurely. Tis can be accomplished by use of <code>continue</code> or <code>break</code>,</p>
+<h4 id="continue"><a href="https://www.php.net/manual/en/control-structures.continue.php"><code>continue</code></a></h4>
+<p>Stop running the code in the current loop iteration and start the next iteration.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/continue.html">php-basics/continue</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/continue.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb80-1"><a href="#cb80-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb80-2"><a href="#cb80-2"></a></span>
+<span id="cb80-3"><a href="#cb80-3"></a><span class="kw">echo</span> <span class="st">&quot;Loop start</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb80-4"><a href="#cb80-4"></a></span>
+<span id="cb80-5"><a href="#cb80-5"></a><span class="cf">for</span>( <span class="va">$count</span> <span class="op">=</span> <span class="dv">0</span> <span class="ot">;</span> <span class="va">$count</span> <span class="op">&lt;</span> <span class="dv">10</span> <span class="ot">;</span> <span class="va">$count</span><span class="op">++</span> ) {</span>
+<span id="cb80-6"><a href="#cb80-6"></a></span>
+<span id="cb80-7"><a href="#cb80-7"></a></span>
+<span id="cb80-8"><a href="#cb80-8"></a>   <span class="cf">if</span>( <span class="va">$count</span> <span class="op">==</span> <span class="dv">3</span> <span class="op">or</span> <span class="va">$count</span> <span class="op">==</span> <span class="dv">6</span> ) {</span>
+<span id="cb80-9"><a href="#cb80-9"></a></span>
+<span id="cb80-10"><a href="#cb80-10"></a>      <span class="kw">echo</span> <span class="st">&quot;Count is 3 or 6; start next iteration...</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb80-11"><a href="#cb80-11"></a>      <span class="cf">continue</span><span class="ot">;</span></span>
+<span id="cb80-12"><a href="#cb80-12"></a>   }</span>
+<span id="cb80-13"><a href="#cb80-13"></a></span>
+<span id="cb80-14"><a href="#cb80-14"></a>   <span class="kw">echo</span> <span class="st">&quot;Current count == </span><span class="va">$count</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb80-15"><a href="#cb80-15"></a>}</span>
+<span id="cb80-16"><a href="#cb80-16"></a></span>
+<span id="cb80-17"><a href="#cb80-17"></a><span class="kw">echo</span> <span class="st">&quot;Loop end</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<fieldset>
+<p><legend> <span class="embed--srcfile">output of php-basics/continue</span> </legend></p>
+<pre class="embed--output" style="height:;"><code>Loop start
+Current count == 0
+Current count == 1
+Current count == 2
+Count is 3 or 6; start next iteration...
+Current count == 4
+Current count == 5
+Count is 3 or 6; start next iteration...
+Current count == 7
+Current count == 8
+Current count == 9
+Loop end
+</code></pre>
+</fieldset>
+</div>
+</div>
+<h4 id="break"><a href="https://www.php.net/manual/en/control-structures.break.php"><code>break</code></a></h4>
+<p>Stop executing the loop iteration and break out of the loop.</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/php-basics/break.html">php-basics/break</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/break.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb82-1"><a href="#cb82-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb82-2"><a href="#cb82-2"></a></span>
+<span id="cb82-3"><a href="#cb82-3"></a><span class="kw">echo</span> <span class="st">&quot;Loop start.</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb82-4"><a href="#cb82-4"></a></span>
+<span id="cb82-5"><a href="#cb82-5"></a><span class="cf">for</span>( <span class="va">$count</span> <span class="op">=</span> <span class="dv">0</span> <span class="ot">;</span> <span class="va">$count</span> <span class="op">&lt;</span> <span class="dv">10</span> <span class="ot">;</span> <span class="va">$count</span><span class="op">++</span> ) {</span>
+<span id="cb82-6"><a href="#cb82-6"></a></span>
+<span id="cb82-7"><a href="#cb82-7"></a></span>
+<span id="cb82-8"><a href="#cb82-8"></a>   <span class="cf">if</span>( <span class="va">$count</span> <span class="op">==</span> <span class="dv">3</span> ) {</span>
+<span id="cb82-9"><a href="#cb82-9"></a></span>
+<span id="cb82-10"><a href="#cb82-10"></a>      <span class="kw">echo</span> <span class="st">&quot;Count is 3: stop this loop...</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb82-11"><a href="#cb82-11"></a>      <span class="cf">break</span><span class="ot">;</span></span>
+<span id="cb82-12"><a href="#cb82-12"></a>   }</span>
+<span id="cb82-13"><a href="#cb82-13"></a></span>
+<span id="cb82-14"><a href="#cb82-14"></a>   <span class="kw">echo</span> <span class="st">&quot;Current count == </span><span class="va">$count</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb82-15"><a href="#cb82-15"></a>}</span>
+<span id="cb82-16"><a href="#cb82-16"></a></span>
+<span id="cb82-17"><a href="#cb82-17"></a><span class="kw">echo</span> <span class="st">&quot;Loop end.</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span></code></pre></div>
+</div>
+<div class="col-md-6">
+<fieldset>
+<p><legend> <span class="embed--srcfile">output of php-basics/break</span> </legend></p>
+<pre class="embed--output" style="height:;"><code>Loop start.
+Current count == 0
+Current count == 1
+Current count == 2
+Count is 3: stop this loop...
+Loop end.
+</code></pre>
+</fieldset>
+</div>
+</div>
 <h2 id="commonly-used-builtin-functions">Commonly used (builtin) functions</h2>
 <h3 id="isset"><a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a></h3>
 <p>The <a class="w3c-ref" href="http://php.net/manual-lookup.php?pattern=isset" target="_blank"><code>isset</code></a> function checks whether a <abbr title="Hypertext Preprocessor">PHP</abbr> variable was created / assigned.</p>
@@ -1565,20 +1645,20 @@ Key: `100` has value: `hello`
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/isset.html">php-basics/isset</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/isset.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb80-1"><a href="#cb80-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb80-2"><a href="#cb80-2"></a></span>
-<span id="cb80-3"><a href="#cb80-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb80-4"><a href="#cb80-4"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb80-5"><a href="#cb80-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb80-6"><a href="#cb80-6"></a></span>
-<span id="cb80-7"><a href="#cb80-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb80-8"><a href="#cb80-8"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
-<span id="cb80-9"><a href="#cb80-9"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb80-10"><a href="#cb80-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb80-11"><a href="#cb80-11"></a></span>
-<span id="cb80-12"><a href="#cb80-12"></a><span class="kw">echo</span> <span class="st">&quot;test null variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb80-13"><a href="#cb80-13"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
-<span id="cb80-14"><a href="#cb80-14"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb84-1"><a href="#cb84-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb84-2"><a href="#cb84-2"></a></span>
+<span id="cb84-3"><a href="#cb84-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb84-4"><a href="#cb84-4"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb84-5"><a href="#cb84-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb84-6"><a href="#cb84-6"></a></span>
+<span id="cb84-7"><a href="#cb84-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb84-8"><a href="#cb84-8"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
+<span id="cb84-9"><a href="#cb84-9"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb84-10"><a href="#cb84-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb84-11"><a href="#cb84-11"></a></span>
+<span id="cb84-12"><a href="#cb84-12"></a><span class="kw">echo</span> <span class="st">&quot;test null variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb84-13"><a href="#cb84-13"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb84-14"><a href="#cb84-14"></a><span class="fu">var_dump</span>( <span class="kw">isset</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1601,24 +1681,24 @@ bool(false)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/empty.html">php-basics/empty</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/empty.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb82-1"><a href="#cb82-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb82-2"><a href="#cb82-2"></a></span>
-<span id="cb82-3"><a href="#cb82-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-4"><a href="#cb82-4"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb82-5"><a href="#cb82-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-6"><a href="#cb82-6"></a></span>
-<span id="cb82-7"><a href="#cb82-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-8"><a href="#cb82-8"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
-<span id="cb82-9"><a href="#cb82-9"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb82-10"><a href="#cb82-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-11"><a href="#cb82-11"></a></span>
-<span id="cb82-12"><a href="#cb82-12"></a><span class="kw">echo</span> <span class="st">&quot;test empty variables</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb82-13"><a href="#cb82-13"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
-<span id="cb82-14"><a href="#cb82-14"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb82-15"><a href="#cb82-15"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span></span>
-<span id="cb82-16"><a href="#cb82-16"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
-<span id="cb82-17"><a href="#cb82-17"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
-<span id="cb82-18"><a href="#cb82-18"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb86-1"><a href="#cb86-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb86-2"><a href="#cb86-2"></a></span>
+<span id="cb86-3"><a href="#cb86-3"></a><span class="kw">echo</span> <span class="st">&quot;test undeclared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb86-4"><a href="#cb86-4"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb86-5"><a href="#cb86-5"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb86-6"><a href="#cb86-6"></a></span>
+<span id="cb86-7"><a href="#cb86-7"></a><span class="kw">echo</span> <span class="st">&quot;test declared variable</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb86-8"><a href="#cb86-8"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;hello world&quot;</span><span class="ot">;</span></span>
+<span id="cb86-9"><a href="#cb86-9"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb86-10"><a href="#cb86-10"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb86-11"><a href="#cb86-11"></a></span>
+<span id="cb86-12"><a href="#cb86-12"></a><span class="kw">echo</span> <span class="st">&quot;test empty variables</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb86-13"><a href="#cb86-13"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
+<span id="cb86-14"><a href="#cb86-14"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb86-15"><a href="#cb86-15"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span></span>
+<span id="cb86-16"><a href="#cb86-16"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span>
+<span id="cb86-17"><a href="#cb86-17"></a><span class="va">$some_variable</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb86-18"><a href="#cb86-18"></a><span class="fu">var_dump</span>( <span class="kw">empty</span>(<span class="va">$some_variable</span>) )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1642,11 +1722,11 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/strlen.html">php-basics/strlen</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/strlen.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb84-1"><a href="#cb84-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb84-2"><a href="#cb84-2"></a></span>
-<span id="cb84-3"><a href="#cb84-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;The length of this string is: &quot;</span><span class="ot">;</span></span>
-<span id="cb84-4"><a href="#cb84-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
-<span id="cb84-5"><a href="#cb84-5"></a><span class="kw">echo</span> <span class="fu">strlen</span>( <span class="va">$string</span> )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb88-1"><a href="#cb88-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb88-2"><a href="#cb88-2"></a></span>
+<span id="cb88-3"><a href="#cb88-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;The length of this string is: &quot;</span><span class="ot">;</span></span>
+<span id="cb88-4"><a href="#cb88-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
+<span id="cb88-5"><a href="#cb88-5"></a><span class="kw">echo</span> <span class="fu">strlen</span>( <span class="va">$string</span> )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1660,13 +1740,13 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/str_split.html">php-basics/str_split</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/str_split.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb86-1"><a href="#cb86-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb86-2"><a href="#cb86-2"></a></span>
-<span id="cb86-3"><a href="#cb86-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;split into chars&quot;</span><span class="ot">;</span></span>
-<span id="cb86-4"><a href="#cb86-4"></a></span>
-<span id="cb86-5"><a href="#cb86-5"></a><span class="va">$array_of_chars</span> <span class="op">=</span> <span class="fu">str_split</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
-<span id="cb86-6"><a href="#cb86-6"></a></span>
-<span id="cb86-7"><a href="#cb86-7"></a><span class="fu">print_r</span>( <span class="va">$array_of_chars</span> )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb90-1"><a href="#cb90-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb90-2"><a href="#cb90-2"></a></span>
+<span id="cb90-3"><a href="#cb90-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;split into chars&quot;</span><span class="ot">;</span></span>
+<span id="cb90-4"><a href="#cb90-4"></a></span>
+<span id="cb90-5"><a href="#cb90-5"></a><span class="va">$array_of_chars</span> <span class="op">=</span> <span class="fu">str_split</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
+<span id="cb90-6"><a href="#cb90-6"></a></span>
+<span id="cb90-7"><a href="#cb90-7"></a><span class="fu">print_r</span>( <span class="va">$array_of_chars</span> )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1699,12 +1779,12 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/strtolower.html">php-basics/strtolower</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/strtolower.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb88-1"><a href="#cb88-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb88-2"><a href="#cb88-2"></a></span>
-<span id="cb88-3"><a href="#cb88-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;This is a MIXED case string&quot;</span><span class="ot">;</span></span>
-<span id="cb88-4"><a href="#cb88-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
-<span id="cb88-5"><a href="#cb88-5"></a><span class="va">$string</span> <span class="op">=</span> <span class="fu">strtolower</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
-<span id="cb88-6"><a href="#cb88-6"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb92-1"><a href="#cb92-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb92-2"><a href="#cb92-2"></a></span>
+<span id="cb92-3"><a href="#cb92-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;This is a MIXED case string&quot;</span><span class="ot">;</span></span>
+<span id="cb92-4"><a href="#cb92-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
+<span id="cb92-5"><a href="#cb92-5"></a><span class="va">$string</span> <span class="op">=</span> <span class="fu">strtolower</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
+<span id="cb92-6"><a href="#cb92-6"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1718,12 +1798,12 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/strtoupper.html">php-basics/strtoupper</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/strtoupper.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb90-1"><a href="#cb90-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb90-2"><a href="#cb90-2"></a></span>
-<span id="cb90-3"><a href="#cb90-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;This is a MIXED case string&quot;</span><span class="ot">;</span></span>
-<span id="cb90-4"><a href="#cb90-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
-<span id="cb90-5"><a href="#cb90-5"></a><span class="va">$string</span> <span class="op">=</span> <span class="fu">strtoupper</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
-<span id="cb90-6"><a href="#cb90-6"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb94-1"><a href="#cb94-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb94-2"><a href="#cb94-2"></a></span>
+<span id="cb94-3"><a href="#cb94-3"></a><span class="va">$string</span> <span class="op">=</span>  <span class="st">&quot;This is a MIXED case string&quot;</span><span class="ot">;</span></span>
+<span id="cb94-4"><a href="#cb94-4"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span>
+<span id="cb94-5"><a href="#cb94-5"></a><span class="va">$string</span> <span class="op">=</span> <span class="fu">strtoupper</span>( <span class="va">$string</span> )<span class="ot">;</span></span>
+<span id="cb94-6"><a href="#cb94-6"></a><span class="kw">echo</span> <span class="va">$string</span><span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1737,13 +1817,13 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/explode.html">php-basics/explode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb92-1"><a href="#cb92-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb92-2"><a href="#cb92-2"></a></span>
-<span id="cb92-3"><a href="#cb92-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;This is the first section of a semicolon separated string;This is the second section;And this the third!&quot;</span><span class="ot">;</span></span>
-<span id="cb92-4"><a href="#cb92-4"></a></span>
-<span id="cb92-5"><a href="#cb92-5"></a><span class="va">$array_of_sections</span> <span class="op">=</span> <span class="fu">explode</span>(<span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="va">$string</span>)<span class="ot">;</span></span>
-<span id="cb92-6"><a href="#cb92-6"></a></span>
-<span id="cb92-7"><a href="#cb92-7"></a><span class="fu">print_r</span>( <span class="va">$array_of_sections</span> )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb96-1"><a href="#cb96-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb96-2"><a href="#cb96-2"></a></span>
+<span id="cb96-3"><a href="#cb96-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;This is the first section of a semicolon separated string;This is the second section;And this the third!&quot;</span><span class="ot">;</span></span>
+<span id="cb96-4"><a href="#cb96-4"></a></span>
+<span id="cb96-5"><a href="#cb96-5"></a><span class="va">$array_of_sections</span> <span class="op">=</span> <span class="fu">explode</span>(<span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="va">$string</span>)<span class="ot">;</span></span>
+<span id="cb96-6"><a href="#cb96-6"></a></span>
+<span id="cb96-7"><a href="#cb96-7"></a><span class="fu">print_r</span>( <span class="va">$array_of_sections</span> )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1762,18 +1842,18 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/explode-newline.html">php-basics/explode-newline</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/explode-newline.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb94-1"><a href="#cb94-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb94-2"><a href="#cb94-2"></a></span>
-<span id="cb94-3"><a href="#cb94-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;&gt;Random Sequence (250 nts sampled from ATGC)</span></span>
-<span id="cb94-4"><a href="#cb94-4"></a><span class="st">GCCAATGGTATGTCAACTCAGTCTCCCCAACTCTCGTAACTGGTAGAAGG</span></span>
-<span id="cb94-5"><a href="#cb94-5"></a><span class="st">GTGGAGCATGAATCATGCCATCCATCTCGTATTCGAATCCGTGCGCGCGG</span></span>
-<span id="cb94-6"><a href="#cb94-6"></a><span class="st">AGCCGAATATTTAAGTATACACACCCGCAGCACGAGCATCGTACTTTGCC</span></span>
-<span id="cb94-7"><a href="#cb94-7"></a><span class="st">TTTCCAGCATAATTATGCATGAGGTGATAGCGAGATGATTCGGGGTAATG</span></span>
-<span id="cb94-8"><a href="#cb94-8"></a><span class="st">CCGTTGTACCCGGCCTCGGTCTTTCCGACGACGTCCCAACGCCGACACCA&quot;</span><span class="ot">;</span></span>
-<span id="cb94-9"><a href="#cb94-9"></a></span>
-<span id="cb94-10"><a href="#cb94-10"></a><span class="va">$lines</span> <span class="op">=</span> <span class="fu">explode</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="va">$string</span>)<span class="ot">;</span></span>
-<span id="cb94-11"><a href="#cb94-11"></a></span>
-<span id="cb94-12"><a href="#cb94-12"></a><span class="fu">print_r</span>( <span class="va">$lines</span> )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb98-1"><a href="#cb98-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb98-2"><a href="#cb98-2"></a></span>
+<span id="cb98-3"><a href="#cb98-3"></a><span class="va">$string</span> <span class="op">=</span> <span class="st">&quot;&gt;Random Sequence (250 nts sampled from ATGC)</span></span>
+<span id="cb98-4"><a href="#cb98-4"></a><span class="st">GCCAATGGTATGTCAACTCAGTCTCCCCAACTCTCGTAACTGGTAGAAGG</span></span>
+<span id="cb98-5"><a href="#cb98-5"></a><span class="st">GTGGAGCATGAATCATGCCATCCATCTCGTATTCGAATCCGTGCGCGCGG</span></span>
+<span id="cb98-6"><a href="#cb98-6"></a><span class="st">AGCCGAATATTTAAGTATACACACCCGCAGCACGAGCATCGTACTTTGCC</span></span>
+<span id="cb98-7"><a href="#cb98-7"></a><span class="st">TTTCCAGCATAATTATGCATGAGGTGATAGCGAGATGATTCGGGGTAATG</span></span>
+<span id="cb98-8"><a href="#cb98-8"></a><span class="st">CCGTTGTACCCGGCCTCGGTCTTTCCGACGACGTCCCAACGCCGACACCA&quot;</span><span class="ot">;</span></span>
+<span id="cb98-9"><a href="#cb98-9"></a></span>
+<span id="cb98-10"><a href="#cb98-10"></a><span class="va">$lines</span> <span class="op">=</span> <span class="fu">explode</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="va">$string</span>)<span class="ot">;</span></span>
+<span id="cb98-11"><a href="#cb98-11"></a></span>
+<span id="cb98-12"><a href="#cb98-12"></a><span class="fu">print_r</span>( <span class="va">$lines</span> )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1796,21 +1876,21 @@ bool(true)
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/implode.html">php-basics/implode</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/implode.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb96-1"><a href="#cb96-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb96-2"><a href="#cb96-2"></a></span>
-<span id="cb96-3"><a href="#cb96-3"></a><span class="va">$array_of_sections</span> <span class="op">=</span> [</span>
-<span id="cb96-4"><a href="#cb96-4"></a>   <span class="st">&quot;section 1&quot;</span><span class="ot">,</span></span>
-<span id="cb96-5"><a href="#cb96-5"></a>   <span class="st">&quot;section 2&quot;</span><span class="ot">,</span></span>
-<span id="cb96-6"><a href="#cb96-6"></a>   <span class="st">&quot;section 3&quot;</span><span class="ot">,</span></span>
-<span id="cb96-7"><a href="#cb96-7"></a>   <span class="st">&quot;section 4&quot;</span><span class="ot">,</span></span>
-<span id="cb96-8"><a href="#cb96-8"></a>]<span class="ot">;</span></span>
-<span id="cb96-9"><a href="#cb96-9"></a></span>
-<span id="cb96-10"><a href="#cb96-10"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by semicolons: </span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb96-11"><a href="#cb96-11"></a><span class="kw">echo</span> <span class="fu">implode</span>(<span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="va">$array_of_sections</span>)<span class="ot">;</span></span>
-<span id="cb96-12"><a href="#cb96-12"></a></span>
-<span id="cb96-13"><a href="#cb96-13"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb96-14"><a href="#cb96-14"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by newlines: </span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb96-15"><a href="#cb96-15"></a><span class="kw">echo</span> <span class="fu">implode</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="va">$array_of_sections</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb100-1"><a href="#cb100-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb100-2"><a href="#cb100-2"></a></span>
+<span id="cb100-3"><a href="#cb100-3"></a><span class="va">$array_of_sections</span> <span class="op">=</span> [</span>
+<span id="cb100-4"><a href="#cb100-4"></a>   <span class="st">&quot;section 1&quot;</span><span class="ot">,</span></span>
+<span id="cb100-5"><a href="#cb100-5"></a>   <span class="st">&quot;section 2&quot;</span><span class="ot">,</span></span>
+<span id="cb100-6"><a href="#cb100-6"></a>   <span class="st">&quot;section 3&quot;</span><span class="ot">,</span></span>
+<span id="cb100-7"><a href="#cb100-7"></a>   <span class="st">&quot;section 4&quot;</span><span class="ot">,</span></span>
+<span id="cb100-8"><a href="#cb100-8"></a>]<span class="ot">;</span></span>
+<span id="cb100-9"><a href="#cb100-9"></a></span>
+<span id="cb100-10"><a href="#cb100-10"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by semicolons: </span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb100-11"><a href="#cb100-11"></a><span class="kw">echo</span> <span class="fu">implode</span>(<span class="st">&quot;;&quot;</span><span class="ot">,</span> <span class="va">$array_of_sections</span>)<span class="ot">;</span></span>
+<span id="cb100-12"><a href="#cb100-12"></a></span>
+<span id="cb100-13"><a href="#cb100-13"></a><span class="kw">echo</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb100-14"><a href="#cb100-14"></a><span class="kw">echo</span> <span class="st">&quot;Create a new string delimited by newlines: </span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb100-15"><a href="#cb100-15"></a><span class="kw">echo</span> <span class="fu">implode</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">,</span> <span class="va">$array_of_sections</span>)<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1831,13 +1911,13 @@ section 4</code></pre>
 <div class="row">
 <div class="col-md-6">
 <p><span class="embed--srcfile"><a href="embeds/php-basics/preg_match.html">php-basics/preg_match</a> | <a href="https://github.com/asoete/howest-webtechnology/tree/master/embeds/php-basics/preg_match.php" taret="_blank">src</a></span></p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb98-1"><a href="#cb98-1"></a><span class="kw">&lt;?php</span></span>
-<span id="cb98-2"><a href="#cb98-2"></a></span>
-<span id="cb98-3"><a href="#cb98-3"></a><span class="kw">echo</span> <span class="st">&quot;We want to match a leading &gt; symbol:</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
-<span id="cb98-4"><a href="#cb98-4"></a><span class="co">//       Pattern  Find pattern in this</span></span>
-<span id="cb98-5"><a href="#cb98-5"></a><span class="fu">var_dump</span>( <span class="fu">preg_match</span>(<span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;&gt;MultiFasta Sequence Header&quot;</span>) )<span class="ot">;</span></span>
-<span id="cb98-6"><a href="#cb98-6"></a></span>
-<span id="cb98-7"><a href="#cb98-7"></a><span class="fu">var_dump</span>( <span class="fu">preg_match</span>(<span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;Hello World&quot;</span>) )<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb102-1"><a href="#cb102-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb102-2"><a href="#cb102-2"></a></span>
+<span id="cb102-3"><a href="#cb102-3"></a><span class="kw">echo</span> <span class="st">&quot;We want to match a leading &gt; symbol:</span><span class="sc">\n</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb102-4"><a href="#cb102-4"></a><span class="co">//       Pattern  Find pattern in this</span></span>
+<span id="cb102-5"><a href="#cb102-5"></a><span class="fu">var_dump</span>( <span class="fu">preg_match</span>(<span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;&gt;MultiFasta Sequence Header&quot;</span>) )<span class="ot">;</span></span>
+<span id="cb102-6"><a href="#cb102-6"></a></span>
+<span id="cb102-7"><a href="#cb102-7"></a><span class="fu">var_dump</span>( <span class="fu">preg_match</span>(<span class="st">&quot;/^&gt;/&quot;</span><span class="ot">,</span>  <span class="st">&quot;Hello World&quot;</span>) )<span class="ot">;</span></span></code></pre></div>
 </div>
 <div class="col-md-6">
 <fieldset>
@@ -1861,7 +1941,7 @@ Exercise:
 <li>counts back from this number to zero</li>
 <li>counts from zero to the number in steps of three</li>
 </ul>
-<div class="sourceCode" id="cb100"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> count-to-number.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> count-to-number.php 9</span></code></pre></div>
 <pre class="run--output"><code>Count up from 0 to 9: 
 0
 1
@@ -1899,7 +1979,7 @@ Count up from 0 to 9 in steps of 3:
 Exercise:
 </h4>
 <p>Create a script that prints a line of a asterisks <code>*</code> defined by a command line parameter.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-asterisks.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-asterisks.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 </code></pre>
 <div class="text-right">
@@ -1915,7 +1995,7 @@ Exercise:
 <li>prints a square of a asterisks <code>*</code> if one parameter is defined</li>
 <li>Prints a block with width and height if both parameters are defined.</li>
 </ul>
-<div class="sourceCode" id="cb104"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-square-of-asterisks.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-square-of-asterisks.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 *********
 *********
@@ -1930,7 +2010,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-square-of-asterisks.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb106"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-square-of-asterisks.php 15 5</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-square-of-asterisks.php 15 5</span></code></pre></div>
 <pre class="run--output"><code>***************
 ***************
 ***************
@@ -1947,7 +2027,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a left + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-left-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-left-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*
 **
 ***
@@ -1967,7 +2047,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a right + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-right-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-right-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>        *
        **
       ***
@@ -1988,7 +2068,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that prints a center + bottom balanced triangle of asterisks with base defined by parameter.</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-center-bottom-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-center-bottom-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>     
     **
    ****
@@ -2005,7 +2085,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create al the triangles again but the base (maximum number of asterisks) should be on top instead of at the bottom…</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-left-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-left-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
 ********
 *******
@@ -2021,7 +2101,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-left-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb116"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-right-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-right-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
  ********
   *******
@@ -2036,7 +2116,7 @@ Exercise:
 <div class="text-right">
 <p><small> <a href="https://github.com/asoete/howest-webtechnology/tree/master/exercises/php-basics/print-right-top-balanced-triangle.php" target="_blank">Solution (github)</a> </small></p>
 </div>
-<div class="sourceCode" id="cb118"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-center-top-balanced-triangle.php 9</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> print-center-top-balanced-triangle.php 9</span></code></pre></div>
 <pre class="run--output"><code>*********
  *******
   *****
@@ -2053,7 +2133,7 @@ Exercise:
 Exercise:
 </h4>
 <p>Create a script that counts the number of parameters provided</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> count-argv.php 9 12 3 5 4 1 8 5</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> count-argv.php 9 12 3 5 4 1 8 5</span></code></pre></div>
 <pre class="run--output"><code>8 arguments where provided
 </code></pre>
 <div class="text-right">
@@ -2074,7 +2154,7 @@ Exercise:
 <li>(prints the list backwards (bonus))</li>
 <li>(prints the list sorted (bonus))</li>
 </ul>
-<div class="sourceCode" id="cb122"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> number-statistics.php 9 12 3 5 4 1 8 5</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> number-statistics.php 9 12 3 5 4 1 8 5</span></code></pre></div>
 <pre class="run--output"><code>The numbers received:
 number 0: 9
 number 1: 12
@@ -2127,13 +2207,13 @@ Numbers from smallest to largest:
 Exercise:
 </h4>
 <p>Create a script which stores the keys of an array as values of another array. (Extract the keys from an array)</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb124-1"><a href="#cb124-1"></a><span class="va">$array</span> <span class="op">=</span> <span class="dt">array</span>(</span>
-<span id="cb124-2"><a href="#cb124-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb124-3"><a href="#cb124-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb124-4"><a href="#cb124-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb124-5"><a href="#cb124-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb124-6"><a href="#cb124-6"></a>)<span class="ot">;</span></span></code></pre></div>
-<div class="sourceCode" id="cb125"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> array-keys.php </span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb128-1"><a href="#cb128-1"></a><span class="va">$array</span> <span class="op">=</span> <span class="dt">array</span>(</span>
+<span id="cb128-2"><a href="#cb128-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb128-3"><a href="#cb128-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb128-4"><a href="#cb128-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb128-5"><a href="#cb128-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb128-6"><a href="#cb128-6"></a>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> array-keys.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (
     [0] =&gt; position 1
@@ -2154,13 +2234,13 @@ Exercise:
 <li>Create a script which reverses an array.</li>
 <li>Create a script which reverses an array and preserves the keys</li>
 </ul>
-<div class="sourceCode" id="cb127"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb127-1"><a href="#cb127-1"></a><span class="va">$array</span> <span class="op">=</span> <span class="dt">array</span>(</span>
-<span id="cb127-2"><a href="#cb127-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
-<span id="cb127-3"><a href="#cb127-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
-<span id="cb127-4"><a href="#cb127-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
-<span id="cb127-5"><a href="#cb127-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
-<span id="cb127-6"><a href="#cb127-6"></a>)<span class="ot">;</span></span></code></pre></div>
-<div class="sourceCode" id="cb128"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> array-reverse.php </span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode numberSource php numberLines"><code class="sourceCode php"><span id="cb131-1"><a href="#cb131-1"></a><span class="va">$array</span> <span class="op">=</span> <span class="dt">array</span>(</span>
+<span id="cb131-2"><a href="#cb131-2"></a>    <span class="st">&#39;position 1&#39;</span> =&gt; <span class="st">&#39;hello&#39;</span><span class="ot">,</span></span>
+<span id="cb131-3"><a href="#cb131-3"></a>    <span class="st">&#39;position 2&#39;</span> =&gt; <span class="st">&#39;world&#39;</span><span class="ot">,</span></span>
+<span id="cb131-4"><a href="#cb131-4"></a>    <span class="dv">3</span>            =&gt; <span class="st">&#39;three&#39;</span><span class="ot">,</span></span>
+<span id="cb131-5"><a href="#cb131-5"></a>    <span class="st">&#39;four&#39;</span>       =&gt; <span class="dv">4</span></span>
+<span id="cb131-6"><a href="#cb131-6"></a>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> array-reverse.php </span></code></pre></div>
 <pre class="run--output"><code>Array
 (
     [0] =&gt; 4
@@ -2185,7 +2265,7 @@ Array
 Exercise:
 </h4>
 <p>Create a script that generates the reverse complement of DNA string:</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
 <div class="text-right">
@@ -2193,7 +2273,7 @@ comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 </div>
 <p>Bonus:</p>
 <p>Print bonds:</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement-with-bonds.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG</code></pre>
@@ -2216,7 +2296,7 @@ Exercise:
 <li>white space</li>
 <li>unvalid nucleotides (and report these)</li>
 </ul>
-<div class="sourceCode" id="cb134"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-reverse-complement-robust.php <span class="st">&#39;ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>orig.: ATgCXCgAtAgg  ACTAtgGaCtA X  TCtA g aGaTc TatCAgAgaatAtiXXATCcgggATAATcggAtATCggCGaTaC
 comp.: TACGGCTATCCTGATACCTGATAGATCTCTAGATAGTCTCTTATATAGGCCCTATTAGCCTATAGCCGCTATG
 
@@ -2234,7 +2314,7 @@ Exercise:
 </h4>
 <p>Create a script that prints the nucleotide frequency of a DNA strand.</p>
 <p>Additional: Create a simple bar plot to visualise the percentages.</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> dna-frequency.php <span class="st">&#39;ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>input: ATGCCGATAGGACTATGGACTATCTAGAGATCTATCAGAGAATATATCCGGGATAATCGGATATCGGCGATAC
 
    STATS:
@@ -2264,7 +2344,7 @@ Exercise:
 <li>sort by character (and reverse)</li>
 <li>case-insensitive (bonus)</li>
 </ul>
-<div class="sourceCode" id="cb138"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> character-frequency.php <span class="st">&#39;Hello world, this is a random 123#$ string.&#39;</span></span></code></pre></div>
 <pre class="run--output"><code>input: Hello world, this is a random 123#$ string.
 
 STATS:

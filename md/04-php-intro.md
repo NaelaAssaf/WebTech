@@ -749,6 +749,22 @@ block but are only interested in the values...
 
 m4_embed_php(php-basics/loops-foreach)
 
+### Flow control
+
+Sometimes (based on a condition) you want to skip a loop iteration or stop the loop prematurely. Tis can be accomplished by use of `continue` or `break`,
+
+#### [`continue`](https://www.php.net/manual/en/control-structures.continue.php)
+
+Stop running the code in the current loop iteration and start the next iteration.
+
+m4_embed_php(php-basics/continue)
+
+#### [`break`](https://www.php.net/manual/en/control-structures.break.php)
+
+Stop executing the loop iteration and break out of the loop.
+
+m4_embed_php(php-basics/break)
+
 ## Commonly used (builtin) functions
 
 [[###]] m4_phpfunc(isset)
