@@ -1,0 +1,21 @@
+body {
+
+	background: #eee;
+}
+
+h1 {
+
+	text-decoration: underline;
+	color: indigo;
+	font-weight: bold;
+}
+
+.navbar {
+	text-align: center;
+	border-bottom: solid indigo 1px;;
+}
+.navbar li {
+
+	display: inline-block;
+	padding: 0.5em 1em;
+}

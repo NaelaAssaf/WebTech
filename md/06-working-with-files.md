@@ -280,6 +280,25 @@ a list of terms.
 m4_page(io/highlight-words,500px)
 ]])
 
+m4_dnl -----------------------------------------------------------------------
+
+m4_exercise([[
+In the previous exercises we created a single page application capable of
+receiving DNA sequences and displaying the nucleotides sequences colored on
+screen with an additional frequency graph.
+
+Let's now extend this single page application into a multi page web-app.
+
+This app is composed out of three pages:
+
+* Home (index.php)
+* Submit a new job (submit.php)
+* Visualise the sequences (color.php)
+
+All pages also share a common navigation bar and styles.
+
+m4_page(io/color-fasta-select-app/index.php, 500px)
+]])
 
 m4_dnl m4_dnl -----------------------------------------------------------------------
 
