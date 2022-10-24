@@ -82,17 +82,19 @@ if( $upload_type == "paste" ) {
 
       $errors[] = "ERROR: Upload method paste paste, but no data was pasted...";
    }
-
-   $lines = explode("\n", $_POST['paste'] );
+   else{
+      $lines = explode("\n", $_POST['paste'] );
+   }
 }
 elseif( $upload_type == "file" ) {
 
-   if( !isset( $_FILES['file'] ) or empty( $_FILES['file'] ) ) {
+   if( !isset( $_FILES['file']['tmp_name'] ) or empty( $_FILES['file']['tmp_name'] ) ) {
 
       $errors[] = "ERROR: Upload method is file, but no file was selected...";
    }
-
-   $lines = file( $_FILES['file']['tmp_name'] );
+   else{
+      $lines = file( $_FILES['file']['tmp_name'] );
+   }
 }
 else {
 
