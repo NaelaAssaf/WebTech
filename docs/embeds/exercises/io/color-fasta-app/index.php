@@ -4,6 +4,20 @@
    <meta charset="UTF-8">
    <title>Home</title>
    <link rel="stylesheet" href="styles.css">
+   <style type="text/css">
+
+      .submit-btn {
+
+         background: deeppink;
+         padding: 0.5em 1em;
+         color: white;
+         font-weight: bold;;
+         text-decoration: none;;
+      }
+      .submit-btn:hover {
+         color: pink;
+      }
+   </style>
    
 </head>
 <body>
@@ -29,7 +43,7 @@ This is an more elaborate example / exercise, combining and intertwining HTML, C
    The navigation and styles shared between the pages are not repeated but extracted and included where required
 </p>
 
-<a href="submit.php">Submit a new coloring job</a>
+<a class="submit-btn" href="submit.php">Submit a new coloring job</a>
 
 </body>
 </html>

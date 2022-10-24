@@ -20,8 +20,10 @@
       margin: 1em 0;
       margin-left: 1em;
       padding-left: 1em;
-      border-left : solid indigo 1px;
+      border-left : solid deeppink 1px;
    }
+
+   textarea {border: solid deeppink 1px;}
 
    h3 { margin-top: 2em; }
    </style>

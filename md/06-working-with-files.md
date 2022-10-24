@@ -297,7 +297,7 @@ This app is composed out of three pages:
 
 All pages also share a common navigation bar and styles.
 
-m4_page(io/color-fasta-select-app/index.php, 500px)
+m4_page(io/color-fasta-app/index, 500px)
 ]])
 
 m4_dnl m4_dnl -----------------------------------------------------------------------
