@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+   <link rel="icon" type="image/png" href="http://www.howest.be/favicon.ico">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="generator" content="pandoc" />
+
+        <meta name="author" content="Mathias Verbeke" />
+   
+        <meta name="date" content="2022-10-24" />
+   
+   
+   <title>Introduction - BIT02 Web Technologies</title>
+
+         <style type="text/css">
+         pre > code.sourceCode { white-space: pre; position: relative; }
+         pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+         pre > code.sourceCode > span:empty { height: 1.2em; }
+         .sourceCode { overflow: visible; }
+         code.sourceCode > span { color: inherit; text-decoration: inherit; }
+         div.sourceCode { margin: 1em 0; }
+         pre.sourceCode { margin: 0; }
+         @media screen {
+         div.sourceCode { overflow: auto; }
+         }
+         @media print {
+         pre > code.sourceCode { white-space: pre-wrap; }
+         pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+         }
+         pre.numberSource code
+           { counter-reset: source-line 0; }
+         pre.numberSource code > span
+           { position: relative; left: -4em; counter-increment: source-line; }
+         pre.numberSource code > span > a:first-child::before
+           { content: counter(source-line);
+             position: relative; left: -1em; text-align: right; vertical-align: baseline;
+             border: none; display: inline-block;
+             -webkit-touch-callout: none; -webkit-user-select: none;
+             -khtml-user-select: none; -moz-user-select: none;
+             -ms-user-select: none; user-select: none;
+             padding: 0 4px; width: 4em;
+             color: #aaaaaa;
+           }
+         pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+         div.sourceCode
+           {  background-color: #f8f8f8; }
+         @media screen {
+         pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+         }
+         code span.al { color: #ef2929; } /* Alert */
+         code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+         code span.at { color: #c4a000; } /* Attribute */
+         code span.bn { color: #0000cf; } /* BaseN */
+         code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+         code span.ch { color: #4e9a06; } /* Char */
+         code span.cn { color: #000000; } /* Constant */
+         code span.co { color: #8f5902; font-style: italic; } /* Comment */
+         code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+         code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+         code span.dt { color: #204a87; } /* DataType */
+         code span.dv { color: #0000cf; } /* DecVal */
+         code span.er { color: #a40000; font-weight: bold; } /* Error */
+         code span.ex { } /* Extension */
+         code span.fl { color: #0000cf; } /* Float */
+         code span.fu { color: #000000; } /* Function */
+         code span.im { } /* Import */
+         code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+         code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+         code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+         code span.ot { color: #8f5902; } /* Other */
+         code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+         code span.sc { color: #000000; } /* SpecialChar */
+         code span.ss { color: #4e9a06; } /* SpecialString */
+         code span.st { color: #4e9a06; } /* String */
+         code span.va { color: #000000; } /* Variable */
+         code span.vs { color: #4e9a06; } /* VerbatimString */
+         code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+         p{text-align: justify;}
+     </style>
+   
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+   
+   
+   </head>
+<body>
+
+   
+
+<div class="container-fluid">
+
+   <div class="row">
+
+      <!-- TOC -->
+
+      <div class="col-md-2 fixedsticky complete-toc">
+                     <h3>Table of contents</h3>
+            <ul>
+            <li><a href="introduction.html#introduction">Introduction</a>
+            <ul>
+            <li><a href="introduction.html#resources">Resources</a></li>
+            <li><a href="introduction.html#contact">Contact</a></li>
+            <li><a href="introduction.html#code-in-this-document">Code in this document</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="getting-started.html#getting-started">Getting started</a>
+            <ul>
+            <li><a href="getting-started.html#get-local-copy-of-this-site.">Get local copy of this site.</a></li>
+            <li><a href="getting-started.html#get-local-copy-of-the-exercises-and-examples-solutions">Get local copy of the <em>exercises and examples</em> solutions</a></li>
+            <li><a href="getting-started.html#editors">Editors</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="html-intro.html#html-basics">HTML Basics</a>
+            <ul>
+            <li><a href="html-intro.html#tags">Tags</a></li>
+            <li><a href="html-intro.html#attributes">Attributes</a></li>
+            <li><a href="html-intro.html#a-valid-html-document">A valid HTML document</a></li>
+            <li><a href="html-intro.html#the-document-head">The document head</a></li>
+            <li><a href="html-intro.html#the-document-body">The document body</a></li>
+            <li><a href="html-intro.html#headers-h">Headers: <code>H*</code></a></li>
+            <li><a href="html-intro.html#containers">Containers</a></li>
+            <li><a href="html-intro.html#inline-tags">Inline tags</a></li>
+            <li><a href="html-intro.html#multi-element-markup">Multi element markup</a></li>
+            <li><a href="html-intro.html#attributes-1">Attributes</a></li>
+            <li><a href="html-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="css.html#css">CSS</a>
+            <ul>
+            <li><a href="css.html#include-style-information">Include style information</a></li>
+            <li><a href="css.html#css-selectors">CSS selectors</a></li>
+            <li><a href="css.html#css-properties">CSS properties</a></li>
+            <li><a href="css.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-intro.html#php-basics">PHP Basics</a>
+            <ul>
+            <li><a href="php-intro.html#what-makes-a-php-script">What makes a PHP-script</a></li>
+            <li><a href="php-intro.html#types-and-variables">Types and variables</a></li>
+            <li><a href="php-intro.html#conditionals">Conditionals</a></li>
+            <li><a href="php-intro.html#loops">Loops</a></li>
+            <li><a href="php-intro.html#commonly-used-builtin-functions">Commonly used (builtin) functions</a></li>
+            <li><a href="php-intro.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-and-html.html#php-and-html">PHP and HTML</a>
+            <ul>
+            <li><a href="php-and-html.html#php-webserver">PHP Webserver</a></li>
+            <li><a href="php-and-html.html#include-require">Include / Require</a></li>
+            <li><a href="php-and-html.html#forms">Forms</a></li>
+            <li><a href="php-and-html.html#php-special-data-arrays">PHP special data arrays</a></li>
+            <li><a href="php-and-html.html#exercises-1">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="working-with-files.html#io">IO</a>
+            <ul>
+            <li><a href="working-with-files.html#read-a-file">Read a file</a></li>
+            <li><a href="working-with-files.html#createwrite-a-file">Create/Write a file</a></li>
+            <li><a href="working-with-files.html#remove-a-file">Remove a file</a></li>
+            <li><a href="working-with-files.html#rename-a-file">Rename a file</a></li>
+            <li><a href="working-with-files.html#directories">Directories</a></li>
+            <li><a href="working-with-files.html#upload-files">Upload files</a></li>
+            <li><a href="working-with-files.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="php-functions.html#php-functions">PHP functions</a>
+            <ul>
+            <li><a href="php-functions.html#return-a-value">Return a value</a></li>
+            <li><a href="php-functions.html#exercises">Exercises</a></li>
+            </ul></li>
+            </ul>
+            <ul>
+            <li><a href="beyond-this-course.html#beyond-this-course">Beyond this course</a>
+            <ul>
+            <li><a href="beyond-this-course.html#javascript">JavaScript</a></li>
+            <li><a href="beyond-this-course.html#css-frameworks">CSS frameworks</a></li>
+            <li><a href="beyond-this-course.html#php-frameworks">PHP frameworks</a></li>
+            </ul></li>
+            </ul>
+                  <hr>
+         <p class="text-center">
+            <small>
+               <a href="cursus.html">This document in one large webpage...</a>
+            </small>
+         </p>
+      </div>
+
+      <!-- MAIN CONTENT -->
+
+      <div class="col-md-10">
+
+         <div class="site-header">
+            BIT02 Web Technologies &mdash; Introduction
+         </div>
+
+<h1 id="introduction">INTRODUCTION</h1>
+<p>Web technologies play a crucial role in modern-day computing, allowing us to create dynamic webpages that can be accessed and interacted with through web browsers. This course aims to provide an introduction to the fundamental web technologies: HTML, CSS and PHP. By the end of this course, the student will be proficient in creating static HTML webpages styled with CSS and making them dynamic using PHP.</p>
+<h2>Embrace Practical Learning</h2>
+<p>This course thrives on hands-on experience. Engaging with exercises and actively tinkering with code forms the most effective method to truly comprehend and master the concepts highlighted throughout this course.</p>
+<h2 id="resources">Resources</h2>
+<p>The primary documentation for this course is hosted on a website accessible at https://mathiasverbeke0.github.io/WebTech. The advantage of using a website as a textbook lies in the fact that the browser can instantly render and format included examples and code snippets.</p>
+<p>Unlike other courses, this course does not rely on slides. Instead, the key concepts will be introduced through practical examples during the lessons. These examples, along with solutions for exercises completed during the course, will be made available in a GitHub repository (<strong>Still has to be made available</strong>).</p>
+<p>An in-depth manual for PHP can be found at <a href="http://php.net">http://php.net</a>. For an HTML and CSS manual, see <a href="http://www.w3schools.com/html">http://www.w3schools.com/html</a> and <a href="http://www.w3schools.com/css">http://www.w3schools.com/css</a></p>
+<h2 id="contact">Contact</h2>
+<p>If you have any questions or get stuck during the course, please ask questions through the discussions on LEHO. I will monitor the discussions page and provide answers there. For any other inquiries, feel free to contact me at <a href="mailto:mathias.verbeke@howest.be">mathias.verbeke@howest.be</a>.</p>
+<h2 id="code-in-this-document">Code in this document</h2>
+<p>This course will extensively feature code demonstrations. The source code for all the mentioned snippets in this manual will be provided. When a snippet is included, you'll find both its source code and the resulting output displayed together for your reference.</p>
+<p>Example:</p>
+<div class="row">
+<div class="col-md-6">
+<p><span class="embed--srcfile"><a href="embeds/introduction/embed_example.html">introduction/embed_example</a> | <a href="https://github.com/mathiasverbeke0/WebTech/tree/master/embeds/introduction/embed_example.php" taret="_blank">src</a></span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource php numberLines embed--src"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">echo</span> <span class="st">&quot;&lt;h1&gt;This is an embed example&lt;/h1&gt;&quot;</span><span class="ot">;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="cf">if</span>( <span class="fu">array_key_exists</span>( <span class="st">&#39;KEY&#39;</span><span class="ot">,</span> <span class="va">$_POST</span> ) ) {</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">unset</span>(<span class="va">$_POST</span>[<span class="st">&#39;KEY&#39;</span>])<span class="ot">;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="kw">?&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>   <span class="cn">M</span>arkup is interpreted by the browser <span class="op">and</span> formatted accordingly<span class="op">..</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="op">&lt;/</span>p<span class="op">&gt;</span></span></code></pre></div>
+</div>
+<div class="col-md-6 iframe-wrapper">
+<fieldset>
+<legend style="opacity: 0.75"> <small><em><code>introduction/embed_example</code></em></small> </legend> <iframe src="embeds/introduction/embed_example.html" class="embed--output" height="105px" frameborder="0" scrolling="no"></iframe>
+</fieldset>
+</div>
+</div>
+         <div class="row">
+            <footer class="col-md-24">
+               <p class="text-center text-muted">
+                  Last modified by
+                  <a href="mailto:mathias.verbeke@howest.be">Mathias Verbeke</a>
+                  at 2023-08-28
+               </p>
+            </footer>
+         </div>
+      </div>
+   </div>
+
+   <!-- FOOTER -->
+
+</div>
+
+<script type="text/javascript">
+(function(){
+
+   var lis = document.querySelectorAll('.complete-toc > ul > li > a');
+
+   var currentPage = location.pathname.split('/').pop();
+
+   for(var i = 0; i < lis.length; ++i ) {
+
+      if( lis[i].pathname.split('/').pop() == currentPage ) {
+
+         console.log(lis[i].parentNode)
+         lis[i].parentNode.classList.add('active');
+      }
+   }
+})()
+</script>
+
+</body>
+</html>
