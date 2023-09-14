@@ -18,7 +18,7 @@ programming language.
 ## Resources
 
 The main documentation for this course is a site and can be found at
-<https://asoete.github.io/howest-webtechnology>. The main advantage of using
+<https://mathiasverbeke0.github.io/WebTech>. The main advantage of using
 a site as a textbook is that the included examples and snippets can be
 rendered/formatted by the browser on the fly.
 

@@ -1,6 +1,6 @@
 # Howest-webtechnology
 
-The sources for <https://asoete.github.io/howest-webtechnology>.
+The sources for <https://mathiasverbeke0.github.io/WebTech>.
 
 ## Local copy
 

@@ -26,7 +26,7 @@ sync with the latest changes and updates**.
 
 This website source can be found at
 <https://github.com/asoete/howest-webtechnology> and the result viewed at
-<https://asoete.github.io/howest-webtechnology>
+<https://mathiasverbeke0.github.io/WebTech>
 
 All the code created during the lessons will be made available at
 <https://github.com/asoete/howest-webtechnology-examples>.
@@ -49,7 +49,7 @@ You can store all your scripts in this folder...
 ## Get local copy of this site.
 
 Although all documents are hosted online
-(<https://asoete.github.io/howest-webtechnology>) **it is recommended to host the
+(<https://mathiasverbeke0.github.io/WebTech>) **it is recommended to host the
 cursus-site locally**.
 
 Github doesn't allow the execution of PHP scripts, so the exercise solution may
