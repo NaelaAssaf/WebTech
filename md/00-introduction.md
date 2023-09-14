@@ -26,9 +26,7 @@ A [PDF version](pdfs/cursus.pdf) of this document is also available. But keep
 in mind that some HTML features will be lost in the conversion to a pdf.
 
 There are no slides available, all the key aspects of this course will
-introduced via examples during the lessons. These examples and example
-solutions to the exercises, made during this course, will be published in a git
-repository on github: <https://github.com/asoete/howest-webtechnology-code>.
+introduced via examples during the lessons. These examples and example solutions to the exercises, made during this course, will be published on LEHO.
 
 This course is a very practical course. Making exercises and exploring/fiddling
 with code is the best way to learn and get acquainted with all the aspects
