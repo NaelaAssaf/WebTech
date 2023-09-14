@@ -8,7 +8,7 @@ The following steps must be taken to start/open the site locally:
 
 * Get an initial copy of the repository:
 ```bash
-git clone https://github.com/asoete/howest-webtechnology.git webtechnology-site
+git clone https://github.com/mathiasverbeke0/WebTech.git
 ```
 * To get the latest version/updates
 ```bash
