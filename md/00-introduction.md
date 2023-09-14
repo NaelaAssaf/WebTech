@@ -49,7 +49,7 @@ fellow students can help you with your problem or questions.
 
 I will also monitor the discussions page and post answers there.
 
-If you have any remaining questions, please contact me via [arne.soete@howest.be](mailto:arne.soete@howest.be)
+If you have any remaining questions, please contact me via [mathias.verbeke@howest.be](mailto:mathias.verbeke@howest.be)
 
 ## Code in this document
 
